@@ -1,0 +1,107 @@
+101,Puneeth,Frontend Engineer,India,85000
+102,Rahul,DevOps Engineer,India,95000
+103,John,Backend Engineer,USA,120000
+104,Alice,Data Engineer,Germany,110000
+105,Sara,SRE,Canada,
+
+Question 1: Extract Employee Names
+
+Expected Output:
+
+Puneeth
+Rahul
+John
+Alice
+Sara
+
+Command:
+
+cut -d',' -f2 employee.csv
+Question 2: Extract Employee Roles
+
+Expected Output:
+
+Frontend Engineer
+DevOps Engineer
+Backend Engineer
+Data Engineer
+SRE
+
+Command:
+
+cut -d',' -f3 employee.csv
+Question 3: Extract Countries
+
+Expected Output:
+
+India
+India
+USA
+Germany
+Canada
+
+Command:
+
+cut -d',' -f4 employee.csv
+Question 4: Extract Salaries
+
+Expected Output:
+
+85000
+95000
+120000
+110000
+130000
+
+Command:
+
+cut -d',' -f5 employee.csv
+Question 5: Extract Employee ID and Name
+
+Expected Output:
+
+101,Puneeth
+102,Rahul
+103,John
+104,Alice
+105,Sara
+
+Command:
+
+cut -d',' -f1,2 employee.csv
+Question 6: Extract Name and Country
+
+Expected Output:
+
+Puneeth,India
+Rahul,India
+John,USA
+Alice,Germany
+Sara,Canada
+
+Command:
+
+cut -d',' -f2,4 employee.csv
+Question 7: Extract Role and Salary
+
+Expected Output:
+
+Frontend Engineer,85000
+DevOps Engineer,95000
+Backend Engineer,120000
+Data Engineer,110000
+SRE,130000
+
+Command:
+
+cut -d',' -f3,5 employee.csv
+Question 8: Extract Employee ID, Role and Salary
+
+Expected Output:
+
+101,Frontend Engineer,85000
+102,DevOps Engineer,95000
+103,Backend Engineer,120000
+104,Data Engineer,110000
+105,SRE,130000
+
