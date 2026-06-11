@@ -1,0 +1,12 @@
+101,Puneeth,Frontend Engineer,India,85000
+102,Rahul,DevOps Engineer,India,95000
+103,John,Backend Engineer,USA,120000
+104,Alice,Data Engineer,Germany,110000
+105,Sara,SRE,Canada,
+
+Example of calculations 
+```
+awk -F',' '$3=="India"' file.txt
+or
+awk -F',' '$4>85000"' file.txt
+```

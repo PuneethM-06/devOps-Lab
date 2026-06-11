@@ -1,0 +1,11 @@
+INFO Server started
+INFO Request received
+ERROR Database connection failed
+WARNING Memory high
+ERROR Timeout on API call
+ERROR Database connection failed
+INFO Request completed
+WARNING Disk usage high
+ERROR Authentication failed
+ERROR Database connection failed
+EOF
