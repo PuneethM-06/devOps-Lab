@@ -362,3 +362,107 @@ Example:
 cut -d',' -f2,4 employee.csv
 ```
 ------
+#### NOTE: TO REMOVE DUPLICATE WE NEED TO DO
+```
+cut -d',' -f1 employee.csv | sort | uniq
+```
+#### UINIQ ALWAYS REMOVES ADJACENT DUPLICATES
+SOLUTION: always use sort before using uniq
+-----
+
+
+## AWK in linux
+- If `grep` can find lines and `cut` can extract columns 
+- `awk` can filter, calculate, format and do other things column by column 
+
+- By default, awk splits each line by whitespace 
+Example:
+```
+awk '{print $1} file.txt
+```
+- $1 is the field we are referring to and 
+- $0 is a special character the prints every line 
+```
+awk '{print $1} file.txt
+or 
+awk -F',' {print $1} file.txt
+```
+
+#### NR -> record numbers (Line numbers)
+Example:
+```
+awk '{print NR, $1} file.txt
+```
+## SED IN LINUX
+
+- grep is used for finding lines
+- find is used for finding files
+- cut is used for finding columns and fields
+- awk is used to process data columns
+- sed is used for editing the text streams 
+
+example:
+```
+sed 's/error/ERROR/g' log.text
+```
+Here;
+s = substitue
+error in the example is old
+ERROR is the new replacement 
+
+- /g = does for all the occurances in the file 
+- `sed 's/error/ERROR` does only for the first occurance in the word
+
+### SAVE OUTPUT FOR ANOTHER FILE
+```
+sed 's/error/ERROR/g' file.txt > modified.txt
+```
+
+### DELETE MATCHING LINES
+Example:
+```
+sed '/INFO/d' file.txt
+```
+
+### DELETING SPECIFIC LINE NUMBERS
+
+```
+sed '3d' file.txt
+```
+### DELETING MULTIPLE LINES AT A TIME 
+```
+sed '2,4d' file.txt
+```
+Deletes all the lines from 2 to 4
+
+### PRINT SPECIFC LINES
+
+```
+sed -n '3p' file.txt
+or
+sed -b '3,5p' file.txt
+```
+
+## tee IN LINUX
+- tee is a command that is used to send the input to the file and also display on the screen 
+
+Example:
+```
+echo "Hello! Welcome to DevOps" | tee modified.log
+or
+echo "Application STOPPED" | tee -a modified log
+```
+#### NOTE - `-a` doesnt rewrite instead it appends to the exisiting one 
+
+## xargs IN LINUX
+- `xargs` takes an input and turns it into command arguement
+```
+echo "file 1 file 2 file 3" | xargs rm 
+```
+
+Real world Example:
+```
+echo "practice.log" | xargs find . -name 
+or 
+find . -name "practice.log" | xargs touch modified.log | cp practice.log modified.log
+```
