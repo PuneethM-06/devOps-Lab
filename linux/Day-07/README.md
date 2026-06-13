@@ -223,3 +223,14 @@ deploy() {
 to call
 deploy /data /devOps
 ```
+
+## SAFETY
+
+1. ### set -e
+- This means exit immediately if any commands fails 
+```
+#!/bin/bash
+set -e 
+cp practice.sh demo.sh
+echo" copied"
+```
