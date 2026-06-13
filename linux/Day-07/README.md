@@ -203,3 +203,23 @@ do
     echo $i
 done 
 ```
+## FUNCTIONS 
+- syntax
+```
+deploy() {
+    echo "Deploying...
+}
+
+to call:
+deploy
+```
+### FUNCTIONS WITH PARAMETERS
+
+```
+deploy() {
+    echo "source: $1"
+    echo "Destination: $2"
+}
+to call
+deploy /data /devOps
+```

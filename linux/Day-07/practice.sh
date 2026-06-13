@@ -1,9 +1,10 @@
-#!/usr/bin/env bash 
-ENV="prod"
-echo "Hey There!"
+deploy() {
+    echo "Deploying...."
+}
+deploy
 
-file="practice.sh"
-for file in *.sh
-do
-    bash $file 
-done
+deployed() {
+    echo "Source: $1"
+    echo "Destination: $2"
+}
+deployed /data /devOps
