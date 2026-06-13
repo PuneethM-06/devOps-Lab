@@ -60,3 +60,37 @@ vim linux.sh
 ```
 # This is a comment in script.sh
 ```
+
+## VARIABLE
+1. ### CREATE VARIABLE 
+- Example
+```
+name="Puneeth"
+```
+- There will be no spaces when we create variables
+
+2. ### ACCESS VARIABLES
+- Example
+```
+echo $name
+```
+3. ### CURRENT USER
+```
+echo $USER
+```
+4. ### CURRENT SHELL
+```
+echo $SHELL
+```
+5. ### CURRENT DIRECTORY
+```
+echo $PWD
+```
+
+## COMMAND SUBSTITUTION
+- Example
+```
+today=$(date)
+ or 
+user=$(whoami)
+```
