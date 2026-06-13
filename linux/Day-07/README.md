@@ -182,3 +182,12 @@ do
     echo 
 done 
 ```
+
+## WHILE LOOP
+- syntax
+``` 
+while read linme
+do
+    echo $line
+done 
+```
