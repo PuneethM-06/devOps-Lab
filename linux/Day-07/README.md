@@ -133,3 +133,24 @@ read name
 
 echo "Hello, $name!"
 ```
+## IF ELSE CONDITION
+
+- syntax 
+```
+if [ condition ]; then
+    commands
+else
+    commands
+fi
+```
+## If Elif CONDITION
+- syntax
+```
+if [ condition ]; then
+    commands
+elif [ condition ]; then 
+    commands
+else 
+    commands
+fi
+```
