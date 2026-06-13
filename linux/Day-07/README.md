@@ -94,3 +94,27 @@ today=$(date)
  or 
 user=$(whoami)
 ```
+---
+## QUOTING 
+
+1. ### DOUBLE QUOTES
+- Example:
+```
+name="Puneeth"
+echo "$name"
+```
+- output:
+```
+Puneeth
+```
+
+2. ### SINGLE QUOTES
+- Example:
+```
+name="Puneeth"
+echo '$name'
+```
+- output:
+```
+'$name'
+```
