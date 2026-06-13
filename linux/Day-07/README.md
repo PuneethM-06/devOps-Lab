@@ -234,3 +234,16 @@ set -e
 cp practice.sh demo.sh
 echo" copied"
 ```
+
+2. ### set -u
+- Fails when using unidentified variables
+ 
+ ```
+ set -u
+ echo "$(USERNAE)"
+ without set -u:
+ We get blank response 
+ with set -u 
+ we get unbound variable and helps us to identify quicky
+ ```
+ 
