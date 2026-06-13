@@ -246,4 +246,14 @@ echo" copied"
  with set -u 
  we get unbound variable and helps us to identify quicky
  ```
+ 3. ### set -0 pipefall 
+ This helps in finding out if any commands in the pipe fails 
+ ```
+ For example
+
+ grep ERROR app.py | sort
+
+ so if the first command fails, it looks because sort would have passed but with set -o pipefall we can identify it 
+ ```
+
  
