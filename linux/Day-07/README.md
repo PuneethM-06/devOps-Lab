@@ -118,3 +118,18 @@ echo '$name'
 ```
 '$name'
 ```
+## READ INPUT FROM USER
+
+```
+read name 
+```
+- Example:
+```
+#!/bin/bash 
+
+echo "Whats your name"
+
+read name
+
+echo "Hello, $name!"
+```
