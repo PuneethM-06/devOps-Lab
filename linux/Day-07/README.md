@@ -256,4 +256,20 @@ echo" copied"
  so if the first command fails, it looks because sort would have passed but with set -o pipefall we can identify it 
  ```
 
- 
+ 4. set -x
+ - It acts as a debugging mode 
+ ```
+ set -x 
+ name="Puneeth"
+ echo "$(name)"
+
+ Output:
+ + name=Puneeth
+ + echo Puneeth 
+Puneeth
+```
+### WHAT WE USUALLY SEE
+```
+set -euo pipefall
+```
+
