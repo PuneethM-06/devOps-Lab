@@ -154,3 +154,24 @@ else
     commands
 fi
 ```
+
+## CONDITIONS 
+1. `-f` - checks if a regular file exists
+2. `-d` - checks if a directory exists
+3. `-e` - checks if anything exists
+4. `-z` - checks if length of a string is empty
+5. `-n` - checks if length of a string is not 0
+
+## CASE STATEMENTS
+- syntax
+```
+case "$VAR" in 
+    pattern1)
+        commands
+    pattern2)
+        commands
+    *)
+        default statement
+        ;;
+esac
+```
