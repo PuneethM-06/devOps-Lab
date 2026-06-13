@@ -13,4 +13,10 @@ echo "What is your name?"
 read name
 echo "Hello, $name!"
 
+# Practice: task 
+
+echo "username=$USER"
+echo "current_dir=$(pwd)"
+echo "date=$(date)"
+echo "hostname=$(hostname)"
 
