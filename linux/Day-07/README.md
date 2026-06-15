@@ -273,3 +273,46 @@ Puneeth
 set -euo pipefall
 ```
 
+## REDIRECTION 
+- Every process gets 3 standard file description
+
+| FD | Name   | Purpose       |
+| -- | ------ | ------------- |
+| 0  | stdin  | Input         |
+| 1  | stdout | Normal output |
+| 2  | stderr | Error output  |
+ ```
+ echo "hello"
+ - this is a example of stdout(1) since the output will be hello
+ ```
+ ```
+ ls unknownfile
+ Exaple of stderr(2)
+ ```
+
+ ### RULE 1
+ - whenever we see `>` it means that we have to redirect it to `1` that is `output`
+ - Example:
+ ```
+ echo "hello" > file.txt
+ means
+ echo "hello" 1> file.txt
+ ```
+
+ ### NOTE: EVERYTHING HERE DEPENDS ON THE FD(FILE DESCRIPTOR)
+ ```
+ echo "hello" > output.log >2&1
+ ```
+ - This means that normal output (FD 1) & error (FD 2) goes to the same file output.log
+ - Lets break it down:
+    - >2 means stderr
+    - &1 - destination meaning the normal output
+
+## wHAT IS `/dev/null` ?
+- `/dev/null/` can be thought as a black hole. 
+- Anything that is sent to this disappears forever
+- Example:
+```
+echo "Hello" > /dev/null
+```
+
