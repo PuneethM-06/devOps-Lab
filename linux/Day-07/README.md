@@ -12,7 +12,7 @@
  -  Shell scripting is simply a file of containing linux commands 
 
  ## SHEBANG
-- `#!/shell/bash` is called as SHEBANG 
+- `#!/bin/bash` is called as SHEBANG 
 - This command mentions the **Interpreter** in which shell scripting should run. 
 
 - `#!` mentions the interpreter it should use after this command 
@@ -52,7 +52,7 @@ vim linux.sh
 ### METHODS OD RUNNING A SCRIPT
 1. `./deploy.sh`
 2. `bash deploy.sh`
-3. `source deploy.h`
+3. `source deploy.sh`
 
 ### COMMENTS 
 - `#` we make use of this for a comment 
@@ -240,13 +240,13 @@ echo" copied"
  
  ```
  set -u
- echo "$(USERNAE)"
+ echo "$USERNAE"
  without set -u:
  We get blank response 
  with set -u 
  we get unbound variable and helps us to identify quicky
  ```
- 3. ### set -0 pipefall 
+ 3. ### set -o pipefall 
  This helps in finding out if any commands in the pipe fails 
  ```
  For example
@@ -261,7 +261,7 @@ echo" copied"
  ```
  set -x 
  name="Puneeth"
- echo "$(name)"
+ echo "$name"
 
  Output:
  + name=Puneeth
@@ -301,7 +301,7 @@ set -euo pipefall
 
  ### NOTE: EVERYTHING HERE DEPENDS ON THE FD(FILE DESCRIPTOR)
  ```
- echo "hello" > output.log >2&1
+ echo "hello" > output.log 2>&1
  ```
  - This means that normal output (FD 1) & error (FD 2) goes to the same file output.log
  - Lets break it down:
