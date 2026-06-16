@@ -26,3 +26,14 @@
 #### Public IPs
 - Public IPs are reachable through internet 
 
+## NETWORK ID AND HOST ID
+- Example:  192.168.1.0/24
+- so we need to think like the first 24 bits identify the host and remaining is the netwok 
+- In the above example: 192.168.1.0 is the network ID and 192.168.1.24 is host and together we write 192.168.1.24
+
+| Address                     | Meaning           |
+| --------------------------- | ----------------- |
+| 192.168.1.0                 | Network Address   |
+| 192.168.1.1 - 192.168.1.254 | Usable Hosts      |
+| 192.168.1.255               | Broadcast Address |
+
