@@ -1,0 +1,318 @@
+## DAY-07 OF LINUX
+
+1. ### WHAT IS SHELL?
+-  Shell is an interface between user and the operating system.
+- Example:
+    - zsh
+    - bash
+    - sh
+ #### NOTE: `echo $SHELL` is the command you can use to check the terminal/interface that you are using 
+
+ 2. ### WHAT IS SHELL SCRIPTING?
+ -  Shell scripting is simply a file of containing linux commands 
+
+ ## SHEBANG
+- `#!/bin/bash` is called as SHEBANG 
+- This command mentions the **Interpreter** in which shell scripting should run. 
+
+- `#!` mentions the interpreter it should use after this command 
+- '/shell/bash` is the interpreter in which we should run. 
+- Example of different interpreters
+```
+1. #!/bin/bash
+2. #!/bin/sh
+3. #!/bin/zsh
+```
+
+#### BEST WAY TO USE SHEBANG
+- `#!/usr/bin/env bash`
+- env finds it automatically
+----
+
+### CREATING YOUR FIRST SCRIPT
+create:
+```
+vim linux.sh
+```
+- Now, to insert input, use `i`
+- To exit, use `Esc` and `:wq`
+
+### To run the script
+- `./linux.sh`
+----
+
+### HOW SHELL SCRIPTING ACTUALLY WORKS
+1. Checks for permission
+2. Reads `shebang` - `#!/bin/bash`
+3. starts bash 
+4. Executes each command line by line 
+5. Displays output
+
+------
+### METHODS OD RUNNING A SCRIPT
+1. `./deploy.sh`
+2. `bash deploy.sh`
+3. `source deploy.sh`
+
+### COMMENTS 
+- `#` we make use of this for a comment 
+- Example:
+```
+# This is a comment in script.sh
+```
+
+## VARIABLE
+1. ### CREATE VARIABLE 
+- Example
+```
+name="Puneeth"
+```
+- There will be no spaces when we create variables
+
+2. ### ACCESS VARIABLES
+- Example
+```
+echo $name
+```
+3. ### CURRENT USER
+```
+echo $USER
+```
+4. ### CURRENT SHELL
+```
+echo $SHELL
+```
+5. ### CURRENT DIRECTORY
+```
+echo $PWD
+```
+
+## COMMAND SUBSTITUTION
+- Example
+```
+today=$(date)
+ or 
+user=$(whoami)
+```
+---
+## QUOTING 
+
+1. ### DOUBLE QUOTES
+- Example:
+```
+name="Puneeth"
+echo "$name"
+```
+- output:
+```
+Puneeth
+```
+
+2. ### SINGLE QUOTES
+- Example:
+```
+name="Puneeth"
+echo '$name'
+```
+- output:
+```
+'$name'
+```
+## READ INPUT FROM USER
+
+```
+read name 
+```
+- Example:
+```
+#!/bin/bash 
+
+echo "Whats your name"
+
+read name
+
+echo "Hello, $name!"
+```
+## IF ELSE CONDITION
+
+- syntax 
+```
+if [ condition ]; then
+    commands
+else
+    commands
+fi
+```
+## If Elif CONDITION
+- syntax
+```
+if [ condition ]; then
+    commands
+elif [ condition ]; then 
+    commands
+else 
+    commands
+fi
+```
+
+## CONDITIONS 
+1. `-f` - checks if a regular file exists
+2. `-d` - checks if a directory exists
+3. `-e` - checks if anything exists
+4. `-z` - checks if length of a string is empty
+5. `-n` - checks if length of a string is not 0
+
+## CASE STATEMENTS
+- syntax
+```
+case "$VAR" in 
+    pattern1)
+        commands
+    pattern2)
+        commands
+    *)
+        default statement
+        ;;
+esac
+```
+## FOR LOOPS
+```
+for i in 1 2 3 4 
+do
+    echo 
+done 
+```
+
+## WHILE LOOP
+- syntax
+``` 
+while read linme
+do
+    echo $line
+done 
+```
+
+## break 
+- Example
+```
+for i in {1..10}
+do
+    if [ $i == 5]; then 
+        break
+    fi
+    echo $i
+done 
+```
+## FUNCTIONS 
+- syntax
+```
+deploy() {
+    echo "Deploying...
+}
+
+to call:
+deploy
+```
+### FUNCTIONS WITH PARAMETERS
+
+```
+deploy() {
+    echo "source: $1"
+    echo "Destination: $2"
+}
+to call
+deploy /data /devOps
+```
+
+## SAFETY
+
+1. ### set -e
+- This means exit immediately if any commands fails 
+```
+#!/bin/bash
+set -e 
+cp practice.sh demo.sh
+echo" copied"
+```
+
+2. ### set -u
+- Fails when using unidentified variables
+ 
+ ```
+ set -u
+ echo "$USERNAE"
+ without set -u:
+ We get blank response 
+ with set -u 
+ we get unbound variable and helps us to identify quicky
+ ```
+ 3. ### set -o pipefall 
+ This helps in finding out if any commands in the pipe fails 
+ ```
+ For example
+
+ grep ERROR app.py | sort
+
+ so if the first command fails, it looks because sort would have passed but with set -o pipefall we can identify it 
+ ```
+
+ 4. set -x
+ - It acts as a debugging mode 
+ ```
+ set -x 
+ name="Puneeth"
+ echo "$name"
+
+ Output:
+ + name=Puneeth
+ + echo Puneeth 
+Puneeth
+```
+### WHAT WE USUALLY SEE
+```
+set -euo pipefall
+```
+
+## REDIRECTION 
+- Every process gets 3 standard file description
+
+| FD | Name   | Purpose       |
+| -- | ------ | ------------- |
+| 0  | stdin  | Input         |
+| 1  | stdout | Normal output |
+| 2  | stderr | Error output  |
+ ```
+ echo "hello"
+ - this is a example of stdout(1) since the output will be hello
+ ```
+ ```
+ ls unknownfile
+ Exaple of stderr(2)
+ ```
+
+ ### RULE 1
+ - whenever we see `>` it means that we have to redirect it to `1` that is `output`
+ - Example:
+ ```
+ echo "hello" > file.txt
+ means
+ echo "hello" 1> file.txt
+ ```
+
+ ### NOTE: EVERYTHING HERE DEPENDS ON THE FD(FILE DESCRIPTOR)
+ ```
+ echo "hello" > output.log 2>&1
+ ```
+ - This means that normal output (FD 1) & error (FD 2) goes to the same file output.log
+ - Lets break it down:
+    - >2 means stderr
+    - &1 - destination meaning the normal output
+
+## wHAT IS `/dev/null` ?
+- `/dev/null/` can be thought as a black hole. 
+- Anything that is sent to this disappears forever
+- Example:
+```
+echo "Hello" > /dev/null
+```
+
