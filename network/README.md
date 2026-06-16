@@ -37,3 +37,14 @@
 | 192.168.1.1 - 192.168.1.254 | Usable Hosts      |
 | 192.168.1.255               | Broadcast Address |
 
+## SUBNET MASK
+- subnet mask acts as a marker to seperate host address and network address
+- Example:
+| CIDR | Subnet Mask     |
+| ---- | --------------- |
+| /8   | 255.0.0.0       |
+| /16  | 255.255.0.0     |
+| /24  | 255.255.255.0   |
+| /32  | 255.255.255.255 |
+- For /16, The first two octect belongs to network address and the rest two belongs to device address
+ 
