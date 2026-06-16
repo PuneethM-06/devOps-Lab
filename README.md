@@ -31,7 +31,7 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 4 — Logs & troubleshooting
 - [x] Day 5 — Text processing (grep, awk, sed, cut)
 - [x] Day 6 — Networking commands (curl, dig, ss, netstat)
-- [ ] Day 7 — Bash scripting (scripts that actually do something)
+- [x] Day 7 — Bash scripting (scripts that actually do something)
 
 #### Networking
 - [ ] Day 8 — IP addresses, subnets, CIDR notation
