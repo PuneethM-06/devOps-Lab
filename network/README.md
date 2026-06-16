@@ -10,3 +10,19 @@
 - each section is called as `octect`
 - It is called as octect because each section contains 8 bits. Hence, 8*4 = 32
 - IP address are actually binary numbers underneath it 
+
+### PUBLIC AND PRIVATE IP's
+
+#### Private IP:
+- Private IP are addresses that someone cannot connect directly from the internet
+- Private IP range from 
+
+| Private IP Range      | Start Address | End Address     | 
+| --------------------- | ------------- | --------------- |
+| Class A Private Range | 10.0.0.0      | 10.255.255.255  | 
+| Class B Private Range | 172.16.0.0    | 172.31.255.255  | 
+| Class C Private Range | 192.168.0.0   | 192.168.255.255 |
+
+#### Public IPs
+- Public IPs are reachable through internet 
+
