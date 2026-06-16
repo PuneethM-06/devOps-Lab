@@ -48,3 +48,6 @@
 | /32  | 255.255.255.255 |
 - For /16, The first two octect belongs to network address and the rest two belongs to device address
  
+ ## NOTE: IMPORTANT QUESTION
+1.  > 192.168.1.0/24; How many devices can exist in this subnet?
+ -  Answer: 2^(host bits) - 2^0 = 2
