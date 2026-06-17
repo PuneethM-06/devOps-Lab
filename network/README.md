@@ -51,3 +51,44 @@
  ## NOTE: IMPORTANT QUESTION
 1.  > 192.168.1.0/24; How many devices can exist in this subnet?
  -  Answer: 2^(host bits) - 2^0 = 2
+
+ 2. > `/25` How many host bits are there?
+ - In an IPv4 total bits is 32 so; 32-25 = 7
+ > How many total address?
+ - 2^(Bits) = 2^7 = 128
+ > Usable hosts
+ - 128-2 = 126 usable hosts
+
+ ## FORMULA FOR ANY SUBNET
+1. Host bits = 32 - CIDR
+2. Total address = 2^(Host bits)
+3. Usable hosts = Total address - 2
+
+
+## BROADCAST ADDRESS
+- consider the example 10.20.30.40/24
+- Here; network address is 10.20.30 right and then the host portion is 40
+- For broadcast to make the largest network address possible it becomes 10.20.30.255/24
+Here 255 is the key
+
+1. > Question 192.168.10.50/24 what is network and broadcast address?
+- Answer: 
+    - Network address - 192.168.10.0
+    - Broadcast address - 192.168.10.255
+
+## NOTE:
+/24 = One big network
+/25 = Split it into 2 smaller networks
+/26 = Split it into 4 smaller networks
+
+- Example:
+> Question: 192.168.1.0/26
+- Answe:
+    - 192.168.1.0 - 192.168.1.63 
+    - 192.168.1.64 - 192.168.1.127 
+    - 192.168.1.128 - 192.168.1.191 
+    - 192.168.1.192 - 192.168.1.255
+
+### NOTE:
+First usable host = Network Address + 1
+Last usable host = Broadcast Address - 1
