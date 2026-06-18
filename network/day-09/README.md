@@ -91,4 +91,16 @@ And it returns the IP and the website loads
  ## NS SERVERS
  - Basically it talks about who is responsible for this domain 
  - Example: google.com may have ns1.cloudflare.com as its authoritative name servers. so when someones wants an information they reach out to these servers
- 
+
+
+## DNS CACHING 
+-  TTL is 36000 - 1 hour 
+- concept remains same as you know 
+- caching is generally stored in Local, OS and browser
+
+## DevOps work
+1. ### QUERY FOR MX RECORDS
+- dig google.com MX
+
+2. #### Which file contains DNS resolver configuration
+- cat /etc/resolv.conf
