@@ -57,3 +57,7 @@ And it returns the IP and the website loads
     - google. is the domain
     - mail is the sub-domain
 
+## FQDN DULLY QUALIFIED DOMAIN NAME
+-  An FQDN contains sub-domain + domain + TLD + Root
+- Example: mail.google.com.
+- It is fully qualified because suppose we are inside a company network and we want to type mail, the system might assume the remaining part and hence it is not fully qualified in this scenario and hence is fully qualified  
