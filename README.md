@@ -35,7 +35,7 @@ No copy-pasted theory. Everything here was typed and run by me.
 
 #### Networking
 - [x] Day 8 — IP addresses, subnets, CIDR notation
-- [ ] Day 9 — DNS — how a domain becomes an IP
+- [x] Day 9 — DNS — how a domain becomes an IP
 - [ ] Day 10 — TCP vs UDP, 3-way handshake, ports
 - [ ] Day 11 — HTTP vs HTTPS, TLS handshake, status codes
 - [ ] Day 12 — Firewalls, security groups, stateful vs stateless
