@@ -106,3 +106,16 @@ Browser Renders Page
 | 8080 | Alternative HTTP |
 
 ## PORT RANGES
+1. 0 - 1023 - **FAMOUS PORTS**
+- 22   SSH
+- 53   DNS
+- 80   HTTP
+- 443  HTTPS
+
+1023 - 49151  **REGISTERED PORTS**
+- 3306  MySQL
+- 5432  PostgreSQL
+- 6379  Redis
+- 8080  HTTP Alternative
+
+49152 - 65535 **EPHEMERAL PORTS**
