@@ -104,3 +104,11 @@ And it returns the IP and the website loads
 
 2. #### Which file contains DNS resolver configuration
 - cat /etc/resolv.conf
+
+### NOTE:
+```
+Network   = Start
+Broadcast = End
+First     = Start + 1
+Last      = End - 1
+```
