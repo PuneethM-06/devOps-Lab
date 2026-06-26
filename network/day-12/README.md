@@ -98,3 +98,19 @@ INPUT - MACHINE TO SERVER
 OUTPUT - SERVER TO MACHINE 
 FORWARD - MACHINE TO VPN ROUTER TO SERVER
 
+- iptables example
+```
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -P INPUT DROP
+```
+- This means that port 22 and 443 are accepted and everything else can be dropped 
+
+## TROUBLE SHOOTING ORDER
+1. Is the application running?
+2. Is it listening on port 443?
+3. Can I connect locally?
+4. Check OS firewall (UFW/iptables).
+5. Check Security Group.
+6. Check Network ACL.
+7. Check DNS and routing.
