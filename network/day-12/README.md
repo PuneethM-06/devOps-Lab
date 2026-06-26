@@ -79,3 +79,22 @@ DROP ❌
 - They operate at the subnet level 
 - They have both ALLOW and DENY
 
+### LINUX FIREWALLS
+- There are three names that we will hear:
+1. iptables
+2. ufw
+3. firewalld
+
+- Here linux has a built in framework what we call as a Netfilter, which is used by iptables to configure our firewalls 
+
+| Scenario                               | Chain     |
+| -------------------------------------- | --------- |
+| `ssh ubuntu@server`                    | ✅ INPUT   |
+| `curl https://google.com`              | ✅ OUTPUT  |
+| Linux machine acting as a router       | ✅ FORWARD |
+| Server calling an external payment API | ✅ OUTPUT  |
+
+INPUT - MACHINE TO SERVER
+OUTPUT - SERVER TO MACHINE 
+FORWARD - MACHINE TO VPN ROUTER TO SERVER
+
