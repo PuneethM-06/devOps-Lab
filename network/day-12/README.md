@@ -32,3 +32,12 @@ Traffic: Laptop --------> Server
 From the servers perspective this is an INBOUND traffic 
 
 - If server sends the response to ubuntu then it is OUTBOUND TRAFFIC
+
+### WHAT INFORMATION DOES A PACKET HAVE?
+- Source IP
+- Destination IP
+- Protocol
+- Destination Ports
+
+### PACKET FILTERING 
+- It is the process where the firewalls examine the data packets to decide whether to allow or drop/refuse the packet based on certain fields 
