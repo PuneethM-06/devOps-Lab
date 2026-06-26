@@ -71,3 +71,11 @@ Laptop <-------- EC2
 
 DROP ❌
 ```
+### SECUIRTY GROUP
+- SG's operate at the instance level
+- It only has allow and there is not explicit DENY, everything else which is not allowed is deined automatically
+
+### NETWORK ACL
+- They operate at the subnet level 
+- They have both ALLOW and DENY
+
