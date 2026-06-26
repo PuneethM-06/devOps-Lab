@@ -41,3 +41,33 @@ From the servers perspective this is an INBOUND traffic
 
 ### PACKET FILTERING 
 - It is the process where the firewalls examine the data packets to decide whether to allow or drop/refuse the packet based on certain fields 
+
+### STATEFUL vs STATELESS FIREWALLS
+
+- **SECURITY GROUP = STATEFUL**
+- **NETWORK ACL = STATELESS**
+
+
+- stateful firewall has memory and it keeps a stable table to identify the next time the request comes where as stateless firewalls do not have memory to remember about it 
+- Stateful firewall can allow the response/return traffic automatically where as in stateless we have to define it else the response will be dropped 
+
+```
+STATEFUL
+
+Laptop --------> EC2
+      SSH Request
+
+Laptop <-------- EC2
+      SSH Response (Automatically Allowed)
+```
+
+```
+STATELESS
+Laptop --------> EC2
+      SSH Request (Allowed)
+
+Laptop <-------- EC2
+      SSH Response (No outbound rule)
+
+DROP ❌
+```
