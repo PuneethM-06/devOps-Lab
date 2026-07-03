@@ -114,3 +114,44 @@ sudo iptables -P INPUT DROP
 5. Check Security Group.
 6. Check Network ACL.
 7. Check DNS and routing.
+
+## OVERALL FLOW
+```
+Browser
+↓
+Browser DNS Cache
+↓
+OS DNS Cache
+↓
+DNS Resolver
+↓
+Root DNS Server
+↓
+TLD Server
+↓
+Authoritative DNS Server
+↓
+IP Address obtained
+↓
+TCP 3-Way Handshake
+↓
+TLS Handshake
+↓
+HTTPS Request
+↓
+Internet
+↓
+Network ACL
+↓
+Security Group
+↓
+OS Firewall (UFW/iptables)
+↓
+Nginx/Application
+↓
+Application processes request
+↓
+HTTPS Response
+↓
+Browser renders page
+```
