@@ -1,48 +1,136 @@
-## DAY 14 CLOUD CONCEPTS
+# Day 14 – IaaS vs PaaS vs SaaS ☁️
 
-## INFRASTRUCTURE AS A SERVICE
+## Infrastructure as a Service (IaaS)
 
-- The provider says here is your server, do whatever you want to do 
-- Here we are going rent:
-    - VM
-    - Networking
-    - Storage
-    - Firewalls
-- AWS manages:
-    - Data centers
-    - Physical servers
-    - Storage hardwares
-- We manage:
-    - OS
-    - Patching 
-    - Users
-    - SSH keys
-    - Applications 
-    - Databases etc
+The provider says:
 
-## PLATFORM AS A SERVICE
-- Provider says, forget about the server and infrastructure. Just give me your code and business logic and we will maintain the infra for you
+> "Here is your infrastructure. Build whatever you want on top of it."
 
-- Provider manages:
-    - Infrastructure
-    - OS
-    - Runtime
-    - Scaling 
-- We manage:
-    - Application 
-    - Business logic
+### You rent:
 
-Cons: This can lead to vendor lock-in because applications are tightly coupled with the platform 
+* Virtual Machines (VMs)
+* Networking
+* Storage
+* Firewalls
+* Load Balancers
 
+### Cloud Provider Manages:
 
-## SOFTWARE AS A SERVICE
-- It is different than the others, here we mainly use the software. We don't build or maintain anything 
-- Example: Outlook, slack, google etc.
+* Data centers
+* Physical servers
+* Storage hardware
+* Networking infrastructure
+* Virtualization layer
 
-- We manage:
-    - Users
-    - Data entering applications
-    - config
-- Provider:
-    - manages everything else
-    
+### Customer Manages:
+
+* Operating System
+* Patching
+* Security updates
+* Users and permissions
+* SSH keys
+* Applications
+* Databases
+* Monitoring
+
+### Examples
+
+* AWS EC2
+* Azure Virtual Machines
+* Google Compute Engine
+
+### When to use IaaS?
+
+* Need full control over infrastructure.
+* Custom operating systems or runtimes.
+* Legacy applications.
+* Special networking requirements.
+
+---
+
+## Platform as a Service (PaaS)
+
+The provider says:
+
+> "Forget the servers. Give me your code and I'll run it for you."
+
+### Provider Manages:
+
+* Infrastructure
+* Operating System
+* Runtime
+* Scaling
+* Availability
+* Patching
+
+### Customer Manages:
+
+* Application code
+* Business logic
+* Data
+
+### Examples
+
+* Heroku
+* Google App Engine
+* Azure App Service
+
+### Advantages
+
+* Faster development.
+* Less operational overhead.
+* Automatic scaling and patching.
+
+### Disadvantages
+
+* Less infrastructure control.
+* Platform limitations.
+* Higher risk of vendor lock-in.
+
+---
+
+## Software as a Service (SaaS)
+
+The provider says:
+
+> "Just use the software."
+
+### Customer Manages:
+
+* Users
+* Configurations
+* Data entered into the application
+
+### Provider Manages:
+
+* Everything else
+
+### Examples
+
+* Outlook
+* Gmail
+* Slack
+* Microsoft Teams
+* Zoom
+
+### Advantages
+
+* No infrastructure management.
+* Quick adoption.
+* Minimal operational overhead.
+
+### Disadvantages
+
+* Limited customization.
+* Provider dependency.
+* Data portability concerns.
+
+---
+
+# One-line Summary
+
+IaaS = Manage Servers.
+
+PaaS = Manage Code.
+
+SaaS = Use Software.
