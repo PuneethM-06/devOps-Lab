@@ -41,11 +41,11 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 12 — Firewalls, security groups, stateful vs stateless
 
 #### Cloud Concepts (Vendor-neutral)
-- [ ] Day 13 — What is cloud, on-prem vs cloud, trade-offs
-- [ ] Day 14 — IaaS vs PaaS vs SaaS with real examples
-- [ ] Day 15 — Regions, availability zones, edge locations
-- [ ] Day 16 — Scalability, high availability, fault tolerance
-- [ ] Day 17 — Shared responsibility model
+- [x] Day 13 — What is cloud, on-prem vs cloud, trade-offs
+- [x] Day 14 — IaaS vs PaaS vs SaaS with real examples
+- [x] Day 15 — Regions, availability zones, edge locations
+- [x] Day 16 — Scalability, high availability, fault tolerance
+- [x] Day 17 — Shared responsibility model
 
 #### Docker
 - [ ] Day 18 — What containers are and why (vs VMs)
