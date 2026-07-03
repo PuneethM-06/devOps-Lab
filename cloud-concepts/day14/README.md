@@ -35,3 +35,14 @@
 Cons: This can lead to vendor lock-in because applications are tightly coupled with the platform 
 
 
+## SOFTWARE AS A SERVICE
+- It is different than the others, here we mainly use the software. We don't build or maintain anything 
+- Example: Outlook, slack, google etc.
+
+- We manage:
+    - Users
+    - Data entering applications
+    - config
+- Provider:
+    - manages everything else
+    
