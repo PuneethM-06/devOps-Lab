@@ -35,3 +35,39 @@ VM3 (Guest OS)
 - Lots of memory since it has applications, OS and also dependencies
 - Slow start up time 
 
+## SOLUTION 2 -  CONTAINERS
+- A container is an isolated process running on a host operating system 
+- A container is not a VM, it is not a mini OS. It is a isolated process that is running on a host OS
+- Containers ensure that each processes are ran under the same kernel.
+
+- Example: Virtual machines
+```
+VM 1
+├── Application
+└── Ubuntu Kernel
+
+VM 2
+├── Application
+└── Ubuntu Kernel
+
+VM 3
+├── Application
+└── Ubuntu Kernel
+```
+- Example: Containers
+```
+Container 1
+├── Application
+
+Container 2
+├── Application
+
+Container 3
+├── Application
+
+↓
+Single Host Kernel
+```
+- VM make use of seperate kernel which are expensive while containers on the other hand ensure that they are run under the same kernel
+
+- Containers share the host kernel but have their own user space.
