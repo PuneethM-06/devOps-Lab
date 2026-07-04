@@ -179,3 +179,11 @@ Application crashes again
 ```
 - This doesnt tell us the root cause but it tells us there is some problem because of which the pods are getting killed and k8s is starting it again 
 
+## REASON WHY COMPANIES STILL USE VMS
+1. stromger isolation since they have their own kernels
+2. We cannot run windows container natively on a linux in containerrsd and but we can do it in VM
+
+## NOTE:
+Containers are lightweight because they do not include a separate guest operating system or kernel. Instead, they package only the application and its dependencies while sharing the host operating system's kernel. This reduces memory and storage consumption significantly.
+
+Containers start faster because they do not need to boot an entire operating system. Starting a container mainly involves creating namespaces, applying cgroups, setting up the filesystem and networking, and starting the application process.
