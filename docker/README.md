@@ -71,3 +71,12 @@ Single Host Kernel
 - VM make use of seperate kernel which are expensive while containers on the other hand ensure that they are run under the same kernel
 
 - Containers share the host kernel but have their own user space.
+
+## NAMESPACES
+
+- A namespace is a linux kernel feature that provides a process it's **own isolated view of a resource**
+- So the process still shares the host OD, but it sees what the namespace allows it to see 
+- without namespaces, all process can see each other.
+- with namespaces, Container A cannot see Container B process
+
+## TYPER OF NAMESPACES
