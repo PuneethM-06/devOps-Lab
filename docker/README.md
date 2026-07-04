@@ -86,3 +86,45 @@ Single Host Kernel
 - If i run the same command inside a container, then i get 3 process.
 - So in reality, container thinks it has only 3 processes but there are actually more which cannot be seen by it and is called as a PROCESS ISOLATION.
 - This is useful because 1 contanier cannot kill or disturb the other container processes.
+
+
+2. ### NET NAMESPACE - NETWORK ISOLATION 
+- Every container gets its own
+    1. IP address
+    2. Network interfaces
+    3. Routing tables
+    4. Port spaces
+- Container A cannot connect to Container B
+
+3. ### MNT NAMESPACES - MOUNT/FILESYSTEM NAMESPACES
+- Every container thinks it has its own filesystem
+- Example: Inside container
+```
+/
+├── app
+├── bin
+├── etc
+└── tmp
+```
+- Example: Host
+```
+/home
+/var
+/opt
+/etc
+```
+Each container can see the mount of file system of its own 
+
+4. ### UTS NAMESPACE - HOSTNAME ISOLATION
+- Each container has its own host name 
+
+5. ### IPC NAMESPACE - INTER-PROCESS COMMUNICATION 
+- Processes communicate through:
+    - Shared memory
+    - Messages Queues
+    - Semaphores
+6. ### USER NAME SPACES
+- `root` inside container is not the same of `root` in a host
+- This is used for providing security to a container 
+
+
