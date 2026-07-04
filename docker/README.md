@@ -187,3 +187,24 @@ Application crashes again
 Containers are lightweight because they do not include a separate guest operating system or kernel. Instead, they package only the application and its dependencies while sharing the host operating system's kernel. This reduces memory and storage consumption significantly.
 
 Containers start faster because they do not need to boot an entire operating system. Starting a container mainly involves creating namespaces, applying cgroups, setting up the filesystem and networking, and starting the application process.
+
+## OVER ALL FLOW
+```
+docker run nginx
+        ↓
+Image Lookup/Pull
+        ↓
+Container Creation
+        ↓
+Namespaces Creation
+        ↓
+Cgroups Creation
+        ↓
+Networking Setup
+        ↓
+Filesystem Mount
+        ↓
+Start nginx Process (PID 1)
+        ↓
+Container Running
+```
