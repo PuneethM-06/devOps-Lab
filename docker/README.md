@@ -128,3 +128,54 @@ Each container can see the mount of file system of its own
 - This is used for providing security to a container 
 
 
+## C GROUPS
+- C group stands for **CONTROL GROUP**
+- C group is a kernel feature where it limits, measures and isolates resource usage of a group of processes.
+
+## NOTE:
+1. **NAMESPACE MAKE SURE WHAT A PROCESS CAN SEE AND COMMUNICATE.**
+2. **CGROUPS MAKE SURE IN WHAT A PROCESS CAN MAKE USE OF**
+
+## RESOURCES CONTROLLED BY CGROUPS
+1. ### CPU
+- This limits the CPU usag
+```
+docker run --cpus="1" nginx
+```
+Container can use only 1 CPU core
+
+2. ### MEMORY
+- Limit memory usage
+```
+docker run -m 512m nginx
+```
+3. ### NETWORK
+- Can also control network usage 
+
+4. ### PIDs
+- Can limit number of proceeses
+
+## OOMKILLED
+- OOMKILLED -  Out of memory killed
+- This is one of the common production incident where kernel kills a container becuase it was using more than the limited memory 
+
+## CPU THROTTLING 
+- This is the situation where kernel doesnt kill a process instead it slows it down 
+
+## WHAT IS CRASHLOOPBACKOFF?
+- It is a situation where /
+```
+Start Container
+      ↓
+Application crashes
+      ↓
+Kubernetes restarts it
+      ↓
+Application crashes again
+      ↓
+Kubernetes restarts it
+      ↓
+Application crashes again
+```
+- This doesnt tell us the root cause but it tells us there is some problem because of which the pods are getting killed and k8s is starting it again 
+
