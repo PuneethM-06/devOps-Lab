@@ -80,3 +80,9 @@ Single Host Kernel
 - with namespaces, Container A cannot see Container B process
 
 ## TYPER OF NAMESPACES
+
+1. ### PID NAME SPACES (PROCESS ISOLATION)
+- Suppose we run `ps -ef`and we get 10 process running as output and then 
+- If i run the same command inside a container, then i get 3 process.
+- So in reality, container thinks it has only 3 processes but there are actually more which cannot be seen by it and is called as a PROCESS ISOLATION.
+- This is useful because 1 contanier cannot kill or disturb the other container processes.
