@@ -183,3 +183,33 @@ docker unpause      docker start
 - Process exists
 - CPU is no longer used
 
+## DOCKER FILE
+- A docker file is a simple recipe for building a docker image.
+
+## WHAT HAPPENS IN A DOCKER BUILD?
+
+- docker build -t myapp .
+So when a user executes this, 
+- docker: Mentions docker
+- build: docker build; mentions the task
+- -t: assigns a tag
+- myapp: Image name 
+- . - build it in the current directory 
+The flow is
+```
+docker build
+       │
+       ▼
+Docker CLI
+       │
+       ▼
+dockerd
+       │
+Reads Dockerfile
+       │
+Executes instructions one by one
+       │
+Creates image layers
+       │
+Stores final image
+```
