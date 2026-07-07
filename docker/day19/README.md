@@ -104,3 +104,7 @@ Create container
 - A single image can create multiple containers
 - Multiple containers can be created from a single image because the image is read-only and shared.
 - Images are immutable and are READ-ONLY
+## QUESTION
+
+1.  If dockerd crashes while 10 containers are already running, what happens to those containers?
+- Answer: These containers that are already running will work fine since it is managed by containerd. But New containers cannot be created because the Docker CLI cannot communicate with the Docker daemon (dockerd), which is responsible for orchestrating container creation and management.
