@@ -88,3 +88,19 @@ Create container
 - Runc is a low-level container runtime 
 - It's job is to create a linux container and start the process
 - It is responsible for creating namespaces, Cgroups
+
+## DOCKER REGISTRY
+- Docker registry is like a collection of container images
+- Example: dockerhub, ECR etc
+
+### REPOSITORY
+- A repositroy are groups of different versions of the same images 
+
+### TAGS
+- Represent the particular version of an image 
+
+## NOTE: Never use latest as default because as versions change and we pull the latest everytimne, there can be a possiblity that our application might behave differently 
+
+- A single image can create multiple containers
+- Multiple containers can be created from a single image because the image is read-only and shared.
+- Images are immutable and are READ-ONLY
