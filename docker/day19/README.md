@@ -108,3 +108,35 @@ Create container
 
 1.  If dockerd crashes while 10 containers are already running, what happens to those containers?
 - Answer: These containers that are already running will work fine since it is managed by containerd. But New containers cannot be created because the Docker CLI cannot communicate with the Docker daemon (dockerd), which is responsible for orchestrating container creation and management.
+
+
+## WHAT IS A DOCKER IMAGE?
+- Docker Image is a blueprint
+- A docker image contains:
+        - Application code
+        - runtime
+        - dependencies
+        - filesystem 
+        - metadata
+- Docker Images are immutable and cannot be changed
+
+## WHAT IS A DOCKER CONTAINER 
+- Running instance of an image
+- unlike an image it is running, writeable
+
+## WHY DOESN'T DOCKER DUPLICATE THE IMAGE?
+- Docker shares the same read-only image among multiple containers, while each container gets its own small writable layer.
+
+## READ-ONLY LAYER vs WRITEABLE LAYER
+- As mentioned, docker doesn;t duplicate the containers, It creates multiple containers for the same read-only image with each container getting it's own writeable layer
+```
+              Ubuntu Image
+             (Read-only)
+                    │
+        ┌───────────┴───────────┐
+        │                       │
+        ▼                       ▼
+Container A              Container B
+Writable Layer          Writable Layer
+```
+- This is the reason why containers are lightweight 
