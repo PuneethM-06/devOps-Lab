@@ -232,3 +232,28 @@ RUN pip install -r requirements.txt
 
 CMD ["python", "app.py"]
 ```
+### ABBREVIATION
+1. `FROM python:3.12` - This mentions the base image
+2. `WORKDIR /app` = Creating workdir
+3. `COPY . .` - Copy files to 
+4. `RUN pip install` - Install dependencies
+5. `CMD` -  store the default command - Basically, CMD runs when container starts running 
+
+Note, not when image is created. But when container starts running 
+
+## OVERALL FLOW
+```
+Dockerfile
+      │
+docker build
+      ▼
+Image
+      │
+docker run
+      ▼
+Container
+```
+
+## NOTE: UNDERSTANDING CMD
+When we execute docker build, the Docker CLI sends the build request to dockerd. The Docker daemon reads the Dockerfile and executes each instruction sequentially. Instructions such as FROM, COPY, and RUN create image layers, while instructions like CMD are stored as metadata in the final image—they are not executed during the build. Once all the instructions are processed, Docker creates the final image. Later, when someone runs docker run using that image, Docker creates and starts a container. At that point, Docker reads the stored CMD instruction and executes it as the container's default startup command, which starts the application inside the container.
+
