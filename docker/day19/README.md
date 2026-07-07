@@ -65,3 +65,28 @@ Start process
         ↓
 Container Running
 ```
+## DOCKER ENGINE IN ACTION 
+```
+You type command
+        │
+        ▼
+Docker CLI
+        │
+(API Request)
+        ▼
+Docker Daemon
+        │
+Checks local images
+        │
+───────────────
+Image exists?
+───────────────
+Yes            No
+ │              │
+ │              ▼
+ │       Pull image
+ │              │
+ └──────────────┘
+        │
+Create container
+```
