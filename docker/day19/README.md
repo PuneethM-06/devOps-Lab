@@ -30,21 +30,6 @@ containerd
 +
 runc
 ```
-
-4. ### CONTAINERD
-- Container lifecycle manager 
-- It is responsible for:
-    - pulling images
-    - managing storage
-    - managing container lifecycle
-
-5. ### RUNC
-- It is container runtime
-- It is responsible for 
-    - Creating namespaces
-    - creating cgroups
-    - starting container process
-
 ## INTERNAL LEVEL FLOW
 ```
 docker run nginx
@@ -90,3 +75,16 @@ Yes            No
         │
 Create container
 ```
+### CONTAINERD AND RUNC
+- Docker orchaestrates the process while the actual container is started by runc
+
+- CONTAINERD is container run time manager. It is reponsible for:
+        - Pulling images
+        - Unpacking images
+        - Managing images
+        - starting and terminating containers
+
+### RUNC
+- Runc is a low-level container runtime 
+- It's job is to create a linux container and start the process
+- It is responsible for creating namespaces, Cgroups
