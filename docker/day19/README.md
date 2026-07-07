@@ -213,3 +213,22 @@ Creates image layers
        │
 Stores final image
 ```
+## ORDER OF A DOCKER FILE 
+1. FROM 
+2. WORKDIR
+3. COPY
+4. RUN 
+5. CMD
+
+- Example:
+```
+FROM python:3.12
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
+```
