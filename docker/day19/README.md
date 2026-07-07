@@ -140,3 +140,46 @@ Container A              Container B
 Writable Layer          Writable Layer
 ```
 - This is the reason why containers are lightweight 
+
+## CONTAINER LIFECYCLE
+```
+             docker create
+                   │
+                   ▼
+               CREATED
+                   │
+          docker start
+                   │
+                   ▼
+               RUNNING
+              ↙       ↘
+docker pause         docker stop
+      │                  │
+      ▼                  ▼
+   PAUSED             STOPPED
+      │                  │
+docker unpause      docker start
+      │                  │
+      └──────────────┬───┘
+                     ▼
+                  RUNNING
+                     │
+              docker rm
+                     ▼
+                  DELETED
+```
+1. ### CREATE
+- Memory is allocated
+- CPU is allocated
+- Process begins to run 
+
+2. ### PAUSE
+- Process is frozen
+- CPU usage stopped
+- Memory remains allocated
+
+3. ### STOP
+- Memory is released
+- Process exists
+- CPU is no longer used
+
