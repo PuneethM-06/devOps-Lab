@@ -257,3 +257,12 @@ Container
 ## NOTE: UNDERSTANDING CMD
 When we execute docker build, the Docker CLI sends the build request to dockerd. The Docker daemon reads the Dockerfile and executes each instruction sequentially. Instructions such as FROM, COPY, and RUN create image layers, while instructions like CMD are stored as metadata in the final image—they are not executed during the build. Once all the instructions are processed, Docker creates the final image. Later, when someone runs docker run using that image, Docker creates and starts a container. At that point, Docker reads the stored CMD instruction and executes it as the container's default startup command, which starts the application inside the container.
 
+## what does FROM do?
+- FROM specifies the base image from which I want to build on 
+- This base image already contains all the needed file system, python, pip and also system libraries 
+
+## WHAT DOES WORKDIR DO?
+- It basically tells, from this point onwards it runs all the instruction in mentioned work directory 
+- If there are multiple WORKDIR, It doesnt replace it instead it appends it 
+- WORKDIR is preferred over RUN cd because every RUN instruction starts in a new shell
+- 
