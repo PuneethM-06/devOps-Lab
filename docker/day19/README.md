@@ -334,3 +334,9 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 - ANSWER: Use `COPY` for copying files and directories. Use `ADD` when you want to make use of one of its 2 features that is extract local archives or download files from a URL
 
 ## DOCKER INSTRUCTION RUN 
+- Docker runs this while building an image and the result becomes the part of the image forever
+- Every RUN creates a layer 
+
+## DOCKER INSTRUCTION ENTRY POINT
+- Here ENTRYPOINT acts as the The executable while CMD acts as the default arguements
+
