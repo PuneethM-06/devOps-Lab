@@ -265,4 +265,61 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 - It basically tells, from this point onwards it runs all the instruction in mentioned work directory 
 - If there are multiple WORKDIR, It doesnt replace it instead it appends it 
 - WORKDIR is preferred over RUN cd because every RUN instruction starts in a new shell
-- 
+
+## WHAT DOES COPY DO?
+- COPY files from your host machine to the docker image 
+- General syntax is COPY <source> <destination>
+- COPY ..  means copy everything from the build context from the host machine to current workdir in the image 
+- COPY ..  can be expensive and hence it is a better approach if we can COPY needed files 
+- Build context is a set of local files and directories that DOCKER CLI packs and sends to Docker daemonm
+
+## Docker Build Workflow
+
+```text
+                     User
+                      │
+                      ▼
+             docker build -t myapp .
+                      │
+                      ▼
+                Docker CLI
+                      │
+        Sends Build Context + Dockerfile
+          to dockerd (REST API)
+                      │
+                      ▼
+             Docker Daemon (dockerd)
+                      │
+         Reads Dockerfile Line by Line
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 1. FROM python:3.12             │
+        │    • Pull base image if needed  │
+        │    • Use as foundation          │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 2. WORKDIR /app                 │
+        │    • Set current directory      │
+        │    • Create /app if missing     │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 3. COPY . .                     │
+        │    • Copy build context         │
+        │      (host → image)             │
+        │    • Into current WORKDIR       │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+          Create Image Layers (Cache Aware)
+                      │
+                      ▼
+          Store Final Docker Image Locally
+                      │
+                      ▼
+            Image Ready for docker run
+```
