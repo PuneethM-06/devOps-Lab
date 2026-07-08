@@ -345,3 +345,12 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 - ENV PORT=8080 - so when the application starts by default it will be heard from port 8080
 - This will be stored as metadata and will be executed when the container starts running and not when the image is created
 - ENV or metadata will not create a layer in the docker image 
+
+## DOCKER INSTRUCTION ARGS
+- ARG defines the build time variable 
+- we need ARG to make the DOCKERFILE resuable and configurable 
+
+## DOCKER INSTRUCTION EXPOSE
+- It tells where the application is listening 
+- Like ENV and ARG it is also a metadata and does not create a layer
+- It does not expose a port, it says where it is listening 
