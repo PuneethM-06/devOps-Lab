@@ -354,3 +354,7 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 - It tells where the application is listening 
 - Like ENV and ARG it is also a metadata and does not create a layer
 - It does not expose a port, it says where it is listening 
+
+## DOCKER INSTRUCTION LABEL 
+- Stores metadata about the image 
+- Label cannot affect the application or also wont create any layers
