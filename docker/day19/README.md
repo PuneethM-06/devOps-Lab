@@ -382,3 +382,5 @@ becomes:
 ├── usr
 └── app
 ```
+## WHAT IS A BUILD CACHE 
+- It is used by docker to provide speed and save storage while making use of the image layers that are unchanged
