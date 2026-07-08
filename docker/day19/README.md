@@ -358,3 +358,27 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 ## DOCKER INSTRUCTION LABEL 
 - Stores metadata about the image 
 - Label cannot affect the application or also wont create any layers
+
+## IMAGE LAYERS
+- An immutable read-only file that represents a specific set of silesystem changes is called as a Image Layer
+- Read-only ensures that there is consistency, Reproducibility, safe sharing and efficient stoarage and importantly nothing breaks 
+
+
+### UNION FILESYSTEM 
+- Merges multiple directories into a single logical view
+```
+Layer A
+/bin
+
+Layer B
+/usr
+
+Layer C
+/app
+
+becomes:
+/
+├── bin
+├── usr
+└── app
+```
