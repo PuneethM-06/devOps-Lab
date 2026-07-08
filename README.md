@@ -48,9 +48,9 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 17 — Shared responsibility model
 
 #### Docker
-- [ ] Day 18 — What containers are and why (vs VMs)
-- [ ] Day 19 — Writing a Dockerfile, image layers, caching
-- [ ] Day 20 — Multi-stage builds, image size optimisation
+- [x] Day 18 — What containers are and why (vs VMs)
+- [x] Day 19 — Writing a Dockerfile, image layers, caching
+- [x] Day 20 — Multi-stage builds, image size optimisation
 - [ ] Day 21 — docker-compose — multi-container apps
 - [ ] Day 22 — Networking between containers
 - [ ] Day 23 — Volumes — persistent data
