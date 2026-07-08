@@ -67,3 +67,36 @@ EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
+
+## CHOOSING THE RIGHT BASE IMAGE 
+1. UBUNTU
+2. ALPINE
+3. DEBIAN
+4. SLIM
+5. DISTROLESS
+6. SCRATCH
+
+1. ### UBUNTU
+- It is a full Linux distribution 
+- Large image 
+
+2. ### DEBIAN
+- Debian is the parent distribution of ubuntu
+- Debian is usually smaller than Ubuntu
+
+3. ### ALPINE LINUX
+- Tiny image 
+- Fast downloads
+- Lower storage
+
+4. ### SLIM IMAGES
+- Its like UBUNTU -> REMOVE UNWANTED PACKAGES -> SLIM
+- Smaller than full images
+- Easier debugging
+
+| Base Image |       Size | Compatibility          | Debugging | Typical Use                  |
+| ---------- | ---------: | ---------------------- | --------- | ---------------------------- |
+| Ubuntu     |      Large | Excellent              | Easy      | Development, general-purpose |
+| Debian     |     Medium | Excellent              | Easy      | Production servers           |
+| Slim       |      Small | Excellent              | Easy      | Most production apps         |
+| Alpine     | Very Small | Can require extra work | Harder    | Lightweight services         |
