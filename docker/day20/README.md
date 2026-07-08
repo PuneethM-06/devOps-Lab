@@ -100,3 +100,41 @@ CMD ["nginx", "-g", "daemon off;"]
 | Debian     |     Medium | Excellent              | Easy      | Production servers           |
 | Slim       |      Small | Excellent              | Easy      | Most production apps         |
 | Alpine     | Very Small | Can require extra work | Harder    | Lightweight services         |
+
+## NOTE:
+- Alpine is not always the best choice because if our application is making use of packages that are compiled against glibc, moving to alpine can break the application 
+
+## IMAGE OPTIMIZATION 
+
+1. ### EVERY LAYER MATTERS
+- Here combining RUN commands can optimize the docker image and also ensure that we have a better image history
+```
+FROM debian:bookworm-slim
+
+RUN apt update && \
+    apt install -y curl git
+```
+
+### QUESTION: Does having fewer layers always make an image smaller?
+- No, If both docker files install the same software, the size maybe almost the same but the advantage is cleaner image history, Better maintainability, Easier cleanup
+
+2. ### CLEAN PACKAGE CACHE
+- After the image is created, docker may still have the APT package lists and which are not needed and hence we can do `rm -rf /var/lib/apt/lists/*`
+```
+RUN apt update && \
+    apt install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+```
+
+3. ### INSTALL ONLY WHAT IS NEEDED
+-  Instead of installing git, curl, vim etc. Which is not needed we can install only what is needed
+
+4. ### ORDER MATTERS
+- As we already know we need to follow the right order
+
+5. ### USE .dockerignore
+- Using dockerignore can make the image smaller and deployments faster and also save from secrets getting leaked
+
+6. ### USE MULTI-STAGE BUILDS
+- We've covered this, usiong multi-stage builds make cleaner history and also faster deployments, No build tools in runtime and all 
+
