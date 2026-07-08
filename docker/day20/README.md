@@ -138,3 +138,15 @@ RUN apt update && \
 6. ### USE MULTI-STAGE BUILDS
 - We've covered this, usiong multi-stage builds make cleaner history and also faster deployments, No build tools in runtime and all 
 
+## DISTROLESS IMAGES
+- Distroless image is a image that contains:
+    - Application
+    - Runtime needed
+    - Essential shared lib
+- It doesnt not have anything else like curl, bash, apt or ps etc.
+
+- Dsitroless images were created for production env which gives it a better scurity ensuring that attackers have limited access to tools that they can make use to exploit
+
+## TRADE OFF
+- But the catch is since we do not have many tools installed already, the problem is that debugging wil be hard
+- We cannot install needed things in the container and debug instead we have to make use of docker and k8s logs 
