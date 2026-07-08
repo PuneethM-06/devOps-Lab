@@ -257,3 +257,161 @@ Container
 ## NOTE: UNDERSTANDING CMD
 When we execute docker build, the Docker CLI sends the build request to dockerd. The Docker daemon reads the Dockerfile and executes each instruction sequentially. Instructions such as FROM, COPY, and RUN create image layers, while instructions like CMD are stored as metadata in the final image—they are not executed during the build. Once all the instructions are processed, Docker creates the final image. Later, when someone runs docker run using that image, Docker creates and starts a container. At that point, Docker reads the stored CMD instruction and executes it as the container's default startup command, which starts the application inside the container.
 
+## what does FROM do?
+- FROM specifies the base image from which I want to build on 
+- This base image already contains all the needed file system, python, pip and also system libraries 
+
+## WHAT DOES WORKDIR DO?
+- It basically tells, from this point onwards it runs all the instruction in mentioned work directory 
+- If there are multiple WORKDIR, It doesnt replace it instead it appends it 
+- WORKDIR is preferred over RUN cd because every RUN instruction starts in a new shell
+
+## WHAT DOES COPY DO?
+- COPY files from your host machine to the docker image 
+- General syntax is COPY <source> <destination>
+- COPY ..  means copy everything from the build context from the host machine to current workdir in the image 
+- COPY ..  can be expensive and hence it is a better approach if we can COPY needed files 
+- Build context is a set of local files and directories that DOCKER CLI packs and sends to Docker daemonm
+
+## Docker Build Workflow
+
+```text
+                     User
+                      │
+                      ▼
+             docker build -t myapp .
+                      │
+                      ▼
+                Docker CLI
+                      │
+        Sends Build Context + Dockerfile
+          to dockerd (REST API)
+                      │
+                      ▼
+             Docker Daemon (dockerd)
+                      │
+         Reads Dockerfile Line by Line
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 1. FROM python:3.12             │
+        │    • Pull base image if needed  │
+        │    • Use as foundation          │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 2. WORKDIR /app                 │
+        │    • Set current directory      │
+        │    • Create /app if missing     │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │ 3. COPY . .                     │
+        │    • Copy build context         │
+        │      (host → image)             │
+        │    • Into current WORKDIR       │
+        └─────────────────────────────────┘
+                      │
+                      ▼
+          Create Image Layers (Cache Aware)
+                      │
+                      ▼
+          Store Final Docker Image Locally
+                      │
+                      ▼
+            Image Ready for docker run
+```
+## DOCKER INSTRUCTION ADD 
+- COPY and ADD are mostly the same but they have 2 differences
+- ADD = COPY + 2 EXTRA FEATURES
+- Those 2 features are:
+        - Automatically extract local compressed archives
+        - Download files from a URL
+
+### QUESTION:When should you use ADD instead of COPY?
+- ANSWER: Use `COPY` for copying files and directories. Use `ADD` when you want to make use of one of its 2 features that is extract local archives or download files from a URL
+
+## DOCKER INSTRUCTION RUN 
+- Docker runs this while building an image and the result becomes the part of the image forever
+- Every RUN creates a layer 
+
+## DOCKER INSTRUCTION ENTRY POINT
+- Here ENTRYPOINT acts as the The executable while CMD acts as the default arguements
+
+## DOCKERFILE INSTRUCTION - ENV
+- Sets enviornment variable inside the image 
+- ENV PORT=8080 - so when the application starts by default it will be heard from port 8080
+- This will be stored as metadata and will be executed when the container starts running and not when the image is created
+- ENV or metadata will not create a layer in the docker image 
+
+## DOCKER INSTRUCTION ARGS
+- ARG defines the build time variable 
+- we need ARG to make the DOCKERFILE resuable and configurable 
+
+## DOCKER INSTRUCTION EXPOSE
+- It tells where the application is listening 
+- Like ENV and ARG it is also a metadata and does not create a layer
+- It does not expose a port, it says where it is listening 
+
+## DOCKER INSTRUCTION LABEL 
+- Stores metadata about the image 
+- Label cannot affect the application or also wont create any layers
+
+## IMAGE LAYERS
+- An immutable read-only file that represents a specific set of silesystem changes is called as a Image Layer
+- Read-only ensures that there is consistency, Reproducibility, safe sharing and efficient stoarage and importantly nothing breaks 
+
+
+### UNION FILESYSTEM 
+- Merges multiple directories into a single logical view
+```
+Layer A
+/bin
+
+Layer B
+/usr
+
+Layer C
+/app
+
+becomes:
+/
+├── bin
+├── usr
+└── app
+```
+## WHAT IS A BUILD CACHE 
+- It is used by docker to provide speed and save storage while making use of the image layers that are unchanged
+
+## DOCKER IGNRORE FILE
+- The issue is that when we do a COPY .., all the files lets say node_modules which is 855mb will also be copied and to prevent that we need docker igore file
+- Basically, to send the needed files 
+- It is similar to gitignore
+- for most projects
+```
+.git
+.gitignore
+node_modules
+coverage
+logs
+*.log
+*.tmp
+.env
+.vscode
+.idea
+```
+
+### EXAMPLE DOCKER FILE 
+```
+FROM node:22-alpine
+WORKDIR app/
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
