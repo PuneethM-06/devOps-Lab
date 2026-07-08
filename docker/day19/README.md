@@ -384,3 +384,21 @@ becomes:
 ```
 ## WHAT IS A BUILD CACHE 
 - It is used by docker to provide speed and save storage while making use of the image layers that are unchanged
+
+## DOCKER IGNRORE FILE
+- The issue is that when we do a COPY .., all the files lets say node_modules which is 855mb will also be copied and to prevent that we need docker igore file
+- Basically, to send the needed files 
+- It is similar to gitignore
+- for most projects
+```
+.git
+.gitignore
+node_modules
+coverage
+logs
+*.log
+*.tmp
+.env
+.vscode
+.idea
+```
