@@ -340,3 +340,8 @@ When we execute docker build, the Docker CLI sends the build request to dockerd.
 ## DOCKER INSTRUCTION ENTRY POINT
 - Here ENTRYPOINT acts as the The executable while CMD acts as the default arguements
 
+## DOCKERFILE INSTRUCTION - ENV
+- Sets enviornment variable inside the image 
+- ENV PORT=8080 - so when the application starts by default it will be heard from port 8080
+- This will be stored as metadata and will be executed when the container starts running and not when the image is created
+- ENV or metadata will not create a layer in the docker image 
