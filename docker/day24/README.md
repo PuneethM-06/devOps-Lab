@@ -58,3 +58,54 @@ Fails       to Registry
 2. Multi-stage builds
 3. Remove unnecessary packages
 4. Keep images updated
+
+## GITHUB CONTAINER REGISTRY
+- Container regstry is a place to store a Docker image 
+
+### IMAGE NAMING
+- `ghcr.io/puneeth/my-app:v1`
+- ghcr.o - Registry
+- puneethm - Github name 
+- my-app - Repo or image name 
+- v1 - Tag
+
+### PUSH
+- Push docker image layers as a single image to registry 
+
+### PULL
+- docker downloads the image '
+
+ ### PUBLIC
+- No Login required
+
+### PRIVATE
+- Login required
+
+## REAL WORKFLOW
+```
+Developer
+     │
+     ▼
+Git Push
+     │
+     ▼
+CI/CD Pipeline
+     │
+     ▼
+Build Docker Image
+     │
+     ▼
+Run Tests
+     │
+     ▼
+Trivy Scan
+     │
+     ▼
+Tag Image
+     │
+     ▼
+Push to GHCR
+     │
+     ▼
+Deploy to Kubernetes
+```
