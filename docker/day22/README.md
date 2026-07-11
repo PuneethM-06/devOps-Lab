@@ -121,3 +121,47 @@ Container B
 - example: Running agents on host to monitor etc. 
 
 ## CUSTOM BRIDGE NETWORK
+- We need CUSTOM BRIDGE NETWORK to solve the problem of "Containers IP are not stable"
+- Example: Lets say, backend is running on 172.17.0.2 and frontend is listening on 172.17.0.2:80 and for some reason if docker rm backend and start again, now backend might be listening on 172.17.0.5 and hence the connecttion fails and hence we need custom brifdge  network 
+
+- So custom bridge network helps you create your own network, and run applications on it so here we do not have to use `http://172.17.0.2:8000` instead we can use `http://backend:8000` and docker resolves backend automatically in the url 
+
+## Advantgae
+1. Can be used for Prod
+2. Easy to manage
+3. Dont have to worry about changing IP
+4. Better isolation 
+
+### command to create
+- docker network create app-network
+
+```
+Interview Questions
+1. Why use a custom bridge network instead of the default bridge?
+
+Answer:
+Because it provides automatic DNS-based service discovery, making containers communicate using names instead of changing IP addresses.
+
+2. How do containers communicate on a custom bridge network?
+
+By using container names, which Docker resolves to the correct IP through its built-in DNS.
+
+Example:
+
+http://backend:8080
+3. What problem does Docker DNS solve?
+
+It removes the need to hardcode container IP addresses, which can change when containers are recreated.
+
+4. What command creates a custom bridge network?
+docker network create app-network
+```
+
+## DOCKER DNS
+- Docker has its own DNS server
+- Which behaves as the DNS server and helps in providing IP address to each container for communication 
+
+### WHY DO WE NEED DOCKER DNS
+- Suppose we have a backend container that resolves to `172.18.0.3`. If the backend container restarts for some reason. The container may now get `172.18.0.5` because of which the application might not work as expected and hence we make use of DOCKER DNS 
+
+- DOCKER DNS resolves the container name automatically and ensures that there are IP corrections made accordingly for seamless communication and up running of application 
