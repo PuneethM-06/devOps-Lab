@@ -48,3 +48,13 @@ Critical Vulnerability?
 Pipeline    Push Image
 Fails       to Registry
 ```
+
+## IMAGE HARDENING 
+- Reducing the attack surafce of a docker image by keeping only what the application needs
+- Fewer packages means fewer vulns and safer the image 
+
+### HOW TO HARDEN AN IMAGE 
+1. Use smaller base images
+2. Multi-stage builds
+3. Remove unnecessary packages
+4. Keep images updated
