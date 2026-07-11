@@ -51,11 +51,11 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 18 — What containers are and why (vs VMs)
 - [x] Day 19 — Writing a Dockerfile, image layers, caching
 - [x] Day 20 — Multi-stage builds, image size optimisation
-- [ ] Day 21 — docker-compose — multi-container apps
-- [ ] Day 22 — Networking between containers
-- [ ] Day 23 — Volumes — persistent data
-- [ ] Day 24 — Security — non-root user, Trivy scanning
-- [ ] Day 25 — Push to GitHub Container Registry (GHCR)
+- [x] Day 21 — docker-compose — multi-container apps
+- [x] Day 22 — Networking between containers
+- [x] Day 23 — Volumes — persistent data
+- [x] Day 24 — Security — non-root user, Trivy scanning
+- [x] Day 25 — Push to GitHub Container Registry (GHCR)
 
 #### Git (professional level)
 - [ ] Day 26 — Branching strategy, branch protection on main
