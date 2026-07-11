@@ -90,3 +90,28 @@ Attach to New Container
       ▼
 Data Still Available 
 ```
+
+## VOLUME PLUGINS 
+- A volume plugin lets docker store volume data somewhere other than the local disks 
+- If a server crashes, the volumes inside the server also die and we might lose the data but with help of plugins.
+If server A crashes, we can use plugins give the stored data to server B and use 
+
+- Docker supports multiple plugins but the default is local 
+- Syntax
+```
+docker volume create \
+  --driver <driver-name> \
+  my-volume
+```
+## COMMANDS TO KNOW
+```
+docker volume ls
+
+docker volume inspect <volume>
+
+docker volume rm <volume>
+
+docker volume prune
+
+docker inspect <container>
+```
