@@ -85,3 +85,21 @@ B
 ### LIMITATIONS
 - Does not provide automatic DNS
 - communication is limited to containers on the same docker host
+## COMMUNICATION FLOW
+```
+Container A
+    │
+   eth0
+    │
+  veth
+    │
++-------------------+
+| docker0 bridge    |   ← Virtual switch
++-------------------+
+    │
+  veth
+    │
+   eth0
+    │
+Container B
+```
