@@ -137,3 +137,30 @@ ports:
 Docker reads it as:
 8080:80
 ```
+### WHY ENVIORNMENT VARIABLES ARE NOT SECURE?
+- Because anyone inside the container can see it and hence we need to make use of docker secrets or k8s secrets
+
+## DEPENDS_ON
+- Lets say for an example
+```
+Backend
+
+↓
+
+PostgreSQL
+```
+- Backend container starts are it immediately tries connecting to PostgreSQL, since it is still starting. We will get an error called as Connection is Refused 
+```
+
+services:
+
+  backend:
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+```
+
+Now compose starts postgres and then starts Backend 
+
