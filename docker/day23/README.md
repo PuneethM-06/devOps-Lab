@@ -46,4 +46,11 @@ Development → Bind Mounts
 Production → Docker Volumes
 
 ### WHY AREN'T BIND MOUNTS PREFERRED FOR PRODUCTION
-- Because they depend on host-specific directory paths 
+- Because they depend on host-specific directory paths, reducing portability and these volumes are not managed by docker
+
+## NAMED VOLUMES vs BIND VOLUMES
+
+- Named volumes are under docker and it decides its storage path 
+- Named volumes are used for production 
+- Bind volumes are used for development 
+- Bind volumes storage is not decided by docker and it is stored in our local system
