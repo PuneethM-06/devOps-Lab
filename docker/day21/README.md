@@ -98,3 +98,42 @@ Create containers
         ▼
 Start containers
 ```
+### WHEN TO USE BUILD?
+- Use build when we are building our own application and have our own docker file 
+- use images when we are using images from the registry 
+
+### WHY DO WE NEED PORT MAPPING 
+- Containers have their own network namespaces. Port mapping exposes a containers internal port to the host
+
+## ENVIORNMENTAL VARIABLES 
+- Here the idea is to give security to secret credenrtials and also ensure that passwords and important details are injected in the process so that we do not have to do a rebuild of an image when passwords or something changes.
+- Here we can also make use of `.env` file to do the same 
+- Example:
+```
+DB_USER=admin
+DB_PASSWORD=password123
+DB_NAME=mydb
+
+then; in yaml 
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+```
+
+### VARIABLE SUBSTITUTION
+- .env
+```
+APP_PORT=8080
+
+Then in yaml
+
+ports:
+ - "${APP_PORT}:8080"
+
+Docker reads it as:
+8080:80
+```
