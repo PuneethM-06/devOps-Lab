@@ -54,3 +54,39 @@ Production → Docker Volumes
 - Named volumes are used for production 
 - Bind volumes are used for development 
 - Bind volumes storage is not decided by docker and it is stored in our local system
+
+## ANONYMOUS VOLUMES
+- A docker managed volume without a user-defined name 
+```
+Example of named vol: docker run -v mysql-data:/var/lib/mysql mysql
+Example of Anonymous volume: docker run -v /var/lib/mysql mysql
+```
+
+## VOLUME LIFECYCLE
+1. CREATE A VOLUME 
+2. ATTACH IT TO A CONTAINER
+3. STOP THE CONTAINER
+4. REMOVE THE CONTAINER
+5. START A NEW CONTAINER 
+
+```
+Create Volume
+      │
+      ▼
+Attach to Container
+      │
+      ▼
+Stop Container
+      │
+      ▼
+Remove Container
+      │
+      ▼
+Volume Still Exists 
+      │
+      ▼
+Attach to New Container
+      │
+      ▼
+Data Still Available 
+```
