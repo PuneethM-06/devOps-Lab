@@ -173,3 +173,12 @@ docker network create app-network
 ```
 docker run -p <host-port>:<container-port> image
 ```
+## OVERLAY NETWORK
+- Everything that we have learned so far works on one docker host
+- Bridge networks and everything 
+- when we have containers on different hosts and we need to communicate, that is when we make use of Overlay networks 
+
+## MACVLAN NETWORK
+- Normally, containers get their own private IP 
+- with macvlan, containers get their IP from physical LAN 
+- The container behaves like another physical machine on your network 
