@@ -165,3 +165,11 @@ docker network create app-network
 - Suppose we have a backend container that resolves to `172.18.0.3`. If the backend container restarts for some reason. The container may now get `172.18.0.5` because of which the application might not work as expected and hence we make use of DOCKER DNS 
 
 - DOCKER DNS resolves the container name automatically and ensures that there are IP corrections made accordingly for seamless communication and up running of application 
+
+## PORT PUBLISHING 
+- Docker allows you to map host port to a container port
+- This helps to access applications outside the container port
+- syntax
+```
+docker run -p <host-port>:<container-port> image
+```
