@@ -164,3 +164,7 @@ services:
 
 Now compose starts postgres and then starts Backend 
 
+### DOES `depends_on` wait until postgreSQL is ready?
+- NO
+- It only waits until the container is ready, database initializing inside might be still happening 
+
