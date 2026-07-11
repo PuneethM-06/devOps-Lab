@@ -22,3 +22,29 @@ RUN apt-get update && apt-get install ...
 Then 
 USER appuser
 ```
+## WHY DO WE NEED TRIVY 
+- Trivy is used to scan for known critical vulnerabilities inside a image
+- Installing an image with vulnerability can be used to exploit the application 
+
+## HOW DO WE FIX VULNERABILITY
+1. Upgrade base image
+2. Upgrade affected packages
+3. Remove unnecessary software
+
+```
+Git Push
+     │
+     ▼
+Build Docker Image
+     │
+     ▼
+Trivy Scan
+     │
+     ▼
+Critical Vulnerability?
+     │
+  Yes      No
+   │        │
+Pipeline    Push Image
+Fails       to Registry
+```
