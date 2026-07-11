@@ -103,3 +103,21 @@ Container A
     │
 Container B
 ```
+
+## HOST NETWORK
+- By default, Docker created network for each host. Without HOST NETWORK, Docker does not create a seperate network
+- Instead, it shares the host machines network
+
+## ADVANTAGES
+- No seperate configurations needed
+- slightly better performance in network
+
+## DISADVANTAGES
+- No network isolation 
+- Port conflicts
+
+### WHEN DO WE USE HOST NETWORK OVER BRIDGE NETWORK?
+- We use when application needs Host's network directly instead of its own.
+- example: Running agents on host to monitor etc. 
+
+## CUSTOM BRIDGE NETWORK
