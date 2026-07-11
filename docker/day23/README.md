@@ -24,3 +24,26 @@ docker run -d \
 - mysql-data -> This is the docker volume
 - /var/lib/mysql -> This is the folder path inside the container 
 
+## WHAT IS A BIND MOUNT 
+- A bind mount maps a specific folder from your host machine to a container 
+- Unlike a docker volume, Docker does not manage this storage 
+
+- Syntax
+```
+docker run -v <host-path>:<container-path> image
+```
+```
+Host
+/home/puneeth/project
+        │
+        ▼
+Container
+/app
+```
+### BIND MOUNTS ARE USUALLY PREFFERED FOR LARGE APPLICATIONS BECAUSE OF LIVE SYNCHRONISATION OF FILES 
+
+Development → Bind Mounts
+Production → Docker Volumes
+
+### WHY AREN'T BIND MOUNTS PREFERRED FOR PRODUCTION
+- Because they depend on host-specific directory paths 
