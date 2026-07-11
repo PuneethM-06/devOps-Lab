@@ -182,3 +182,20 @@ docker run -p <host-port>:<container-port> image
 - Normally, containers get their own private IP 
 - with macvlan, containers get their IP from physical LAN 
 - The container behaves like another physical machine on your network 
+
+## DEBUGGING CHECKLIST
+```
+1. Is the container running?
+        ↓
+2. Same Docker network?
+        ↓
+3. DNS resolves?
+        ↓
+4. Correct port?
+        ↓
+5. Application listening on 0.0.0.0?
+        ↓
+6. Test with curl
+        ↓
+7. Check logs
+```
