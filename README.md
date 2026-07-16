@@ -58,11 +58,11 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 25 — Push to GitHub Container Registry (GHCR)
 
 #### Git (professional level)
-- [ ] Day 26 — Branching strategy, branch protection on main
-- [ ] Day 27 — Conventional commits, commit discipline
-- [ ] Day 28 — Rebase vs merge, interactive rebase, squashing
-- [ ] Day 29 — Pre-commit hooks — lint before every commit
-- [ ] Day 30 — git bisect, git blame, git stash
+- [x] Day 26 — Branching strategy, branch protection on main
+- [x] Day 27 — Conventional commits, commit discipline
+- [x] Day 28 — Rebase vs merge, interactive rebase, squashing
+- [x] Day 29 — Pre-commit hooks — lint before every commit
+- [x] Day 30 — git bisect, git blame, git stash
 
 #### Python & Bash (automation focus)
 - [ ] Day 31 — Variables, loops, functions, error handling
