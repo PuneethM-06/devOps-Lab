@@ -15,3 +15,16 @@
 - Used by Meta, Google and Amazon 
 - Developers continously create tiny features that live only for hours
 - Requires execellent CI
+
+## BRANCH PROTECTION
+- This is github's most important security repository settings.
+- Without this anyone can do, `git push origin main`
+- This rule includes:
+    1. No direct pushing to main 
+    2. require PR before merging
+    3. At least one approval required
+    4. CI checks must pass
+    5. Branch must be upto date with the base branch 
+    6. Restrict force pushes 
+    7. Restrict branch deletion
+
