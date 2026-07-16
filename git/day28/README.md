@@ -82,3 +82,6 @@ A --- B --- C --- F --- G --- D' --- E'
 - Lets you reorder the commits
 
 ### NOTE: ALL OF THE ABOVE CAN BE PERFORMED IN A INTERACTIVE REBASE 
+
+### NOTE: We have to do a forece push after rebase because rebase changes hashes
+we need `git push --force-with-lease` and not `git push --force`
