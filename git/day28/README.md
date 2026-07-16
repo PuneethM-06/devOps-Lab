@@ -85,3 +85,5 @@ A --- B --- C --- F --- G --- D' --- E'
 
 ### NOTE: We have to do a forece push after rebase because rebase changes hashes
 we need `git push --force-with-lease` and not `git push --force`
+
+### I would use git rebase on my own feature branch to keep the commit history clean and linear before opening or updating a pull request. I would avoid rebasing shared branches because rebase rewrites commit history by creating new commit hashes, which can cause problems for other developers who have already based their work on those commits.
