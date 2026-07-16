@@ -71,3 +71,12 @@ A --- B --- C --- F --- G --- D' --- E'
 
 ### SQAUSHING COMMITS
 - To take multiple commit records and combine them to a single commit is called as squashing commits
+
+### REWORD
+- Lets us rename our commits made
+
+### DROP
+- Droping unwanted or mistakenly added commits
+
+### REORDER
+- 
