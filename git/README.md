@@ -10,3 +10,8 @@
 3. BUGFIX - For fixing bugs
 4. HOTFIX - Code changes or fixes that goes directly to prod
 5. RELEASE - Release branch only receieve fixes before production 
+
+## TRUNK BASED DEVELOPMENT
+- Used by Meta, Google and Amazon 
+- Developers continously create tiny features that live only for hours
+- Requires execellent CI
