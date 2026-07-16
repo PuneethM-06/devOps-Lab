@@ -37,3 +37,27 @@ Merge branch 'main'
 
 Merge branch 'main'
 ```
+
+## WHAT IS REBASE
+- Instead of creating a merge commit
+- Git moves your commits on top of the main 
+- Before:
+```
+A --- B --- C --- F --- G
+           \
+            D --- E
+```
+After:
+```
+A --- B --- C --- F --- G --- D' --- E'
+```
+- History becomes linear
+
+### ADVANTAGES:
+1. Very clean history
+2. Looks linear
+3. Perfect for feature branches
+
+### DISADVANTAGES
+1. It writes history 
+2. Never rebase a branch other people are working on
