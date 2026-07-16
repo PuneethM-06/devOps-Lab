@@ -14,3 +14,25 @@
 ## GIT BALME 
 - Git blame shows who last modified each line of the file.
 
+## GIT BISECT
+- git bisect helps you understand the actual commit that introduced the bug using binary search 
+- It checks the middle co mmit 
+```
+1  2  3  4  5  6  7  8
+```
+Git checks:
+```
+1 2 3 4 5 6 7 8
+        ↑
+```
+- If commit 4 is good then the bug must be in 5,6,7,8
+- Now get checks the middle again:
+```
+5 6 7 8
+  ↑
+```
+- If commit 6 is bad then the bug is between:
+```
+5 6
+```
+git checks 5
