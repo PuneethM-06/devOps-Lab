@@ -28,3 +28,60 @@
     6. Restrict force pushes 
     7. Restrict branch deletion
 
+## GITHUB FLOW
+```
+main
+
+↓
+
+Create feature branch
+
+↓
+
+Commit
+
+↓
+
+Push
+
+↓
+
+PR
+
+↓
+
+Review
+
+↓
+
+Merge
+
+↓
+
+Delete branch
+```
+
+Git Flow
+```
+main
+
+↓
+
+develop
+
+↓
+
+feature
+
+↓
+
+develop
+
+↓
+
+release
+
+↓
+
+main
+```
