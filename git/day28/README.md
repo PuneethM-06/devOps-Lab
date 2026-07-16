@@ -23,3 +23,17 @@ A --- B --- C --- F --- G
            \             \
             D --- E ------ M
 ```
+### ADVANTAGES
+1. Never rewrites history
+2. safe for shared branches
+3. Easy to understand 
+
+### DISADVANTAGES
+1. History becomes messy 
+```
+Merge branch 'main'
+
+Merge branch 'main'
+
+Merge branch 'main'
+```
