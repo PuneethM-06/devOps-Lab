@@ -61,3 +61,13 @@ A --- B --- C --- F --- G --- D' --- E'
 ### DISADVANTAGES
 1. It writes history 
 2. Never rebase a branch other people are working on
+
+| Merge                     | Rebase                           |
+| ------------------------- | -------------------------------- |
+| Creates a merge commit    | Rewrites commits                 |
+| Preserves history         | Creates linear history           |
+| Safe for shared branches  | Best for your own feature branch |
+| Doesn't change commit IDs | Creates new commit IDs           |
+
+### SQAUSHING COMMITS
+- To take multiple commit records and combine them to a single commit is called as squashing commits
