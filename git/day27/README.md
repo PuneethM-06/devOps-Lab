@@ -23,3 +23,13 @@
 - CI/CD changes Example = ci: add GitHub Action workflow
 9. perf:
 - Performance improvements
+
+## ATOMIC COMMITS
+- Commiting a single commit that has lots of code changes is hard to review and also understand.
+- Instead commiting every logical code changes makes it atomic commits, easy to understand and also review 
+
+### WHY DO WE NEED ATOMIC COMMITS
+- Easier debugging
+- Easy to understand
+- Better release notes
+
