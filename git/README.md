@@ -61,7 +61,7 @@ Merge
 Delete branch
 ```
 
-Git Flow
+## Git Flow
 ```
 main
 
