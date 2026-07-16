@@ -79,4 +79,6 @@ A --- B --- C --- F --- G --- D' --- E'
 - Droping unwanted or mistakenly added commits
 
 ### REORDER
-- 
+- Lets you reorder the commits
+
+### NOTE: ALL OF THE ABOVE CAN BE PERFORMED IN A INTERACTIVE REBASE 
