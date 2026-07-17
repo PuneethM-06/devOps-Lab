@@ -164,3 +164,32 @@ subprocess.run(
 )
 ```
 - Raises an error when timeout occurs
+
+## MODULE 5 JSON 
+- Read, Write and parse JSON data in python 
+
+| Python         | JSON        |
+| -------------- | ----------- |
+| `dict`         | Object `{}` |
+| `list`         | Array `[]`  |
+| `str`          | String      |
+| `int`, `float` | Number      |
+| `True`         | `true`      |
+| `False`        | `false`     |
+| `None`         | `null`      |
+
+- Example:
+```
+server = {
+    "name": "web01",
+    "cpu": 80
+}
+```
+
+```
+{
+    "name": "web01",
+    "cpu": 80
+}
+```
+
