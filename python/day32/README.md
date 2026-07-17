@@ -37,3 +37,25 @@ with open("server.txt", "w") as file:
 ### append
 with open("server.txt". "w") as file:
     file.write("Health OK\n")
+
+### create
+`with open("servers.txt", "x") as file:`
+
+### read
+```
+with open("servers.txt", "r") as file:
+    data = file.read()
+```
+### readline
+- reads one line 
+```
+with open("servers.txt") as file:
+    line = file.readline()
+```
+### readlines()
+```
+with open("servers.txt") as file:
+    lines = file.readlines()
+```
+- returns a list
+
