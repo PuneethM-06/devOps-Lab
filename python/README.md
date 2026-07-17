@@ -374,3 +374,19 @@ for server in servers:
 if cpu > 90:
     pass
 ```
+## FUNCTIONS 
+- writes reusable blocks of code 
+- It can take single and multiple parameters. Not adding in notes since known 
+- `**kwargs` accept any number of arguements
+```
+def create_server(**config):
+    print(config)
+
+create_server(cpu=4, memory=16)
+
+output:
+{
+    "cpu": 4,
+    "memory": 16
+}
+```
