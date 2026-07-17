@@ -30,3 +30,13 @@ port = int(port)
 ```
 - similarly we can do for float and other data types
 
+### MULTIPLE ASSIGNEMENT 
+- Instead of:
+```
+cpu = 70
+usage = 80
+mem = 90
+```
+- we can do 
+```
+cpu, usage, mem = 70, 80, 90 
