@@ -40,7 +40,7 @@ mem = 90
 - we can do 
 ```
 cpu, usage, mem = 70, 80, 90 
-
+```
 ### SWAPPING VARIABLES
 - We can swap variables making use of multiple assignments
 ```
@@ -49,3 +49,24 @@ b = 20
 
 a, b = b, a
 ```
+
+### NAMING CONVENTION
+- Python uses snake_case instead of camel_casing unlike Java
+- Example: `int_cpu_usge`
+
+### IDENTITY vs EQUALITY
+- This is a common interview question 
+```
+a = [1, 2]
+b = [1, 2]
+
+print(a == b)
+```
+- output: True
+- The above is Equality
+
+- We can also do like:
+` a is b`
+- this is called as identity
+
+### NOTE: For `None` we can never do ` value == None` instead we have to do ` value is None`
