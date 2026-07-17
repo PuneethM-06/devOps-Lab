@@ -390,3 +390,40 @@ output:
     "memory": 16
 }
 ```
+
+## MODULE 9 SCOPE
+- understand where variables exist and who can access them.
+1. Variable created inside a function exist inside that function 
+2. Variables defined outside the functions are global 
+
+### MODIFYING GLOBAL VAR
+```
+count = 0
+
+def increment():
+    count += 1
+
+output: UnboundLocalError
+
+Right way of doing 
+count = 0
+
+def increment():
+    global count
+    count += 1
+```
+
+- Whenever python looks for variable it looks in this order 
+- L → Local
+- E → Enclosing
+- G → Global
+- B → Built-in
+
+### CONSTANTS
+- Instead of globals that change we define CONSTANTS
+- Example:
+```
+MAX_RETRIES = 3
+AWS_REGION = "us-east-1"
+DEFAULT_TIMEOUT = 30
+```
