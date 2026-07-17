@@ -121,3 +121,47 @@ response = httpx.get(
 data = response.json()
 print(data)
 ```
+
+## CUSTOM HEADERS
+```
+headers = {
+    "User-Agent": "MyApp"
+}
+
+response = httpx.get(
+    "https://httpbin.org/headers",
+    headers=headers
+)
+
+print(response.json())
+```
+
+### TIMEOUT
+- Never let our program or wait for response forever and hence we make use of this
+
+```
+response = httpx.get(
+    "https://example.com",
+    timeout=5
+)
+```
+## EXCEPTION HANDLING 
+- Easy to catch errors and debug
+
+```
+import httpx
+
+try:
+    response = httpx.get(
+        "https://example.com"
+        timeout=5
+    )
+    response.raise_for_status()
+    print(response.json())
+
+except httpx.HTTPStatusError as e:
+    print("HTTP error": e)
+```
+### Why raise_for_status()?
+- without it, a 404 response doesnt raise an exception and we have to checkout ourselves and hence.
+
