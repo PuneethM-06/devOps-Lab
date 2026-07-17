@@ -427,3 +427,14 @@ MAX_RETRIES = 3
 AWS_REGION = "us-east-1"
 DEFAULT_TIMEOUT = 30
 ```
+
+## MODULE 10 - ERROR HANDLING 
+
+- Exception is an error that occurs while running the program 
+- Basic syntax:
+```
+try:
+    num = int("100")
+except ValueError:
+    print("Invalid number")
+```
