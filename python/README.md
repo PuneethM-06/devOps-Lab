@@ -69,6 +69,8 @@ print(a == b)
 ` a is b`
 - this is called as identity
 
+### NOTE: is compares object identity (whether two variables refer to the same object in memory).
+
 ### NOTE: For `None` we can never do ` value == None` instead we have to do ` value is None`
 
 ## MODULE 2 - OPERATORS
@@ -119,3 +121,23 @@ if "web01" in servers:
 ```
 
 
+5. ### ASSIGNMENT OPERATORS
+```
+count += 1
+count -= 1
+count *= 2
+count /= 2
+```
+
+### TERNARY OPERATORS
+- Instead of
+```
+if cpu > 80:
+    status = "High"
+else:
+    status = "Normal"
+```
+- Write
+```
+status = "High" if cpu > 80 else status = "Normal"
+```
