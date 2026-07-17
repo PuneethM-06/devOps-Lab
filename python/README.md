@@ -233,3 +233,16 @@ b = a
 ```
 - Note: Both variables point to the same list and hence doing `b.append("ABC")` now a will be ``` a = ["web01", "web02", "ABC"]`
 
+### LIST COMPREHENSION
+- One of python's best feature
+- Instead of
+```
+sqaures = [] 
+for x in range(5):
+    squares.append(x*x)
+```
+- We can do
+```
+sqaures = [x*x for x in range(5)]
+```
+
