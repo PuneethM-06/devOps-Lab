@@ -33,3 +33,18 @@ Python Program
 - Read → GET
 - Update → PUT/PATCH
 - Delete → DELETE
+
+### INSTALLING HTTPX AND GET REQUEST
+- Command used for installing HTTPX - `pip3 install httpx`
+- Example:
+```
+import httpx
+```
+
+### GET REQUEST
+```
+import httpx
+
+response = httpx.get("https://jsonplaceholder.typicode.com/posts/1")
+print(response)
+```
