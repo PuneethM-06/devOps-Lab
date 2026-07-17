@@ -103,3 +103,21 @@ output:
 'userId':1
 }
 ```
+## PASSING QUERY PARAMETERS
+- Params are passed to extract specific data 
+
+- Example:
+```
+import httpx
+
+params = {
+    "userId":1
+}
+
+response = httpx.get(
+    "https://jsonplaceholder.typicode.com/posts",
+    params=params
+)
+data = response.json()
+print(data)
+```
