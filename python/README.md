@@ -462,3 +462,18 @@ cpu = 110
 if cpu > 100:
     raise ValueError("Invalid CPU percentage")
 ```
+### finally
+```
+try:
+    ...
+finally:
+    cleanup()
+```
+
+### except Exception as e
+```
+try:
+    ...
+except Exception as e:
+    logging.exception(e)
+```
