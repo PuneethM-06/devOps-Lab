@@ -193,3 +193,18 @@ server = {
 }
 ```
 
+## JSON LOADS
+- Converts a JSON string to python object
+```
+import json 
+data = '{"name":"Puneeth", "age":"32"};
+
+server = json.loads(data)
+print(server)
+
+output:
+{
+    'name':'Puneeth',
+    'age':'32'
+}
+```
