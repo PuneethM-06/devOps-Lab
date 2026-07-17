@@ -163,3 +163,18 @@ print(f"checking + {server}")
 ```
 print(f" Checking CPU={CPU}% and MEM={MEM}%")
 ```
+
+### COMMON STRING METHODS
+1. upper() - convert to uppercase
+2. lower() - convert to lowercase
+3. strip() - rmeove trailing whitespaces
+4. replace() - replace("string to be replaced", "new string")
+5. split() - split strings - split(",")
+6. join() - Opposite of split - print(",".join(servers))
+7. startswith() - search strings - filename.startswith("error")
+8. endswith() - search strings that end with - filename.endswith(".log")
+9. string slicing - string[start:end]
+10. Length - len(str)
+11. Escape character - print("Hello\nworld")
+
+### STRINGS ARE IMMUTABLE IN NATURE AND CANNOT BE MODIFIED AT DESIRED LOCATIONS 
