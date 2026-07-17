@@ -224,3 +224,19 @@ output:
     "age":"32"
 }
 ```
+
+## READING JSON FILES
+- config.json
+```
+{
+    "region": "us-east-1",
+    "instance": "web01"
+}
+```
+```
+import json
+
+with open("config.json","r") as file:
+    config = json.load(file)
+print(config["region"])
+```
