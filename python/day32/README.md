@@ -59,3 +59,29 @@ with open("servers.txt") as file:
 ```
 - returns a list
 
+### WRITING MULTIPLE LINES
+- Instead of:
+```
+file.write("web01\n")
+file.write("web02\n")
+file.write("db01\n")
+```
+- Use:
+```
+servers = [
+    "ABC",
+    "DEF"
+]
+file.writelines(servers)
+```
+
+### tell()
+- Used to say the current position in the file 
+
+### seek()
+- file.seek(0) - moves pointer back to the beginning 
+
+### File Encoding 
+```
+with open("servers.txt", encoding="utf-8") as file:
+```
