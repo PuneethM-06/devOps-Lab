@@ -85,3 +85,21 @@ file.writelines(servers)
 ```
 with open("servers.txt", encoding="utf-8") as file:
 ```
+
+## MODULE 2 PATHLIB
+- Instead of:
+```
+import os
+
+if os.path.exists("config.json")"
+    print("Found")
+```
+- We can do:
+```
+from pathlib import Path
+
+path = Path("config.json")
+
+if path.exists():
+    print("Found")
+```
