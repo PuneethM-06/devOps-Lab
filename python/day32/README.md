@@ -103,3 +103,13 @@ path = Path("config.json")
 if path.exists():
     print("Found")
 ```
+- We can also do
+```
+path.exists()      # Does it exist?
+path.is_file()     # Is it a file?
+path.is_dir()      # Is it a directory?
+path.mkdir()       # Create a directory
+path.unlink()      # Delete the file
+path.read_text()   # Read the file
+path.write_text()  # Write to the file
+```
