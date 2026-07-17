@@ -246,3 +246,6 @@ for x in range(5):
 sqaures = [x*x for x in range(5)]
 ```
 
+### NOTE:
+1. `sort` Modifies the exisiting list, while `sorted` creates a new list
+2. `append` appends to last of the list while `insert(0, "ABC")` inserts at a specific location
