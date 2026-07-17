@@ -75,3 +75,12 @@ print(response.url)
 | 403  | Forbidden    |
 | 404  | Not Found    |
 | 500  | Server Error |
+
+### READING TEXT RESPONSE
+
+```
+response = httpx.get("
+    "https://jsonplaceholder.typicode.com/posts/1"
+)
+print(response.text)
+```
