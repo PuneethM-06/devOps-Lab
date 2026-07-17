@@ -133,6 +133,34 @@ env = "prod"
 ```
 import subprocess
 
-subprocess.run(["df", "-h"], capture_output=True, text =True)
+subprocess.run(["df", "-h"], capture_output=True, text=True)
 ```
 
+### RETURNCODE
+
+```
+import subprocess
+result = subprocess.run(["ls"], capture_output=True, text=True)
+
+print(result.returncode)
+```
+- 0 means success
+- Non-Zero - Failure
+
+### stderr
+- Executed when a command fails to understand the error or reason for failing 
+```
+import subprocess
+result = subprocess.run(["ls"], capture_output=True, text=True)
+
+print(result.stderr)
+```
+
+### TIMEOUTS
+```
+subprocess.run(
+    ["sleep", "10"],
+    timeout=5
+)
+```
+- Raises an error when timeout occurs
