@@ -200,8 +200,10 @@ The core difference is that response.text gives you the raw payload as a plain s
 
 - httpx automatically converts the Python dictionary into a JSON string.
 - default content type is application/json
+- use when server expects an JSON request body 
 
 `httpx.post(url, data=payload)` - What it sends
 
 - The dictionary is form-encoded instead of JSON.
 - Content-Type: application/x-www-form-urlencoded
+- use it when server excepts HTML 
