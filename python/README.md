@@ -70,3 +70,19 @@ print(a == b)
 - this is called as identity
 
 ### NOTE: For `None` we can never do ` value == None` instead we have to do ` value is None`
+
+## MODULE 2 - OPERATORS
+
+1. ### ARTHAMETIC OPERATORS
+```
+a = 10
+b = 3
+
+print(a + b)   # 13
+print(a - b)   # 7
+print(a * b)   # 30
+print(a / b)   # 3.333...
+print(a // b)  # 3
+print(a % b)   # 1
+print(a ** b)  # 1000
+```
