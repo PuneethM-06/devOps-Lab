@@ -178,3 +178,58 @@ print(f" Checking CPU={CPU}% and MEM={MEM}%")
 11. Escape character - print("Hello\nworld")
 
 ### STRINGS ARE IMMUTABLE IN NATURE AND CANNOT BE MODIFIED AT DESIRED LOCATIONS 
+
+### MODULE 4 - LISTS
+- Unlike strings, Lists are mutable and can be done by making use of index positions 
+
+1. Creating a List - `servers = ["web01", "web02", "db01"]`
+2. Accessing Elements - 
+```
+servers = ["web01", "web02", "db01"]
+
+print(servers[0])
+```
+3. Slicing lists
+```
+servers = ["web01", "web02", "web03", "db01"]
+
+print(servers[:2])
+```
+4. Adding elements
+```
+servers.append("cache01")
+```
+5. Removing elements
+```
+servers.remove("web02")
+```
+6. Length
+```
+len(servers)
+```
+7. Looping through lists
+```
+for server in servers:
+    print(server)
+```
+- With index
+```
+for index, server in enumerate(servers):
+    print(index, server)
+```
+8. sorting 
+```
+servers.sort()
+```
+9. Reverse
+```
+servers.reverse()
+```
+10. Copying lists
+```
+a = ["web01", "web02"]
+
+b = a
+```
+- Note: Both variables point to the same list and hence doing `b.append("ABC")` now a will be ``` a = ["web01", "web02", "ABC"]`
+
