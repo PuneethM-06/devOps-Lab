@@ -249,3 +249,53 @@ sqaures = [x*x for x in range(5)]
 ### NOTE:
 1. `sort` Modifies the exisiting list, while `sorted` creates a new list
 2. `append` appends to last of the list while `insert(0, "ABC")` inserts at a specific location
+
+## MODULE 5: DICTIONARIES
+
+1. Creating dictionaries
+```
+server = {
+    "name": "web01",
+    "cpu": 78,
+    "memory": 62
+}
+```
+2. Accessing values
+```
+print(server["cpu"]) or print(server.get("cpu"))
+```
+
+3. updating values
+` server["cpu"] = 90`
+
+4. Adding new keys
+`server["disk"] = 90`
+
+5. Removing keys
+` server.pop("disk")
+
+6. Looping through dict
+```
+for key in servers:
+    print(key)
+```
+or
+```
+for key, value in server.items():
+    print(key, valur)
+```
+
+### NESTED DICT
+```
+instance = {
+    "id": "123"
+    "name": "puneeth"
+    "state": {
+        "name": "ABC"
+    }
+}
+
+Accessing them 
+print(instance["state"]["name"])
+```
+
