@@ -86,3 +86,20 @@ print(a // b)  # 3
 print(a % b)   # 1
 print(a ** b)  # 1000
 ```
+
+2. ### COMPARISON OPERATORS
+```
+==
+!=
+<
+>
+<=
+>=
+```
+
+3. ### LOGICAL OPERATORS
+```
+and
+or
+not
+```
