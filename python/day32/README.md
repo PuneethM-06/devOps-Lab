@@ -113,3 +113,26 @@ path.unlink()      # Delete the file
 path.read_text()   # Read the file
 path.write_text()  # Write to the file
 ```
+
+## MODULE 3 - argparse
+- Accept command-line arguements instead of hardcoding it 
+
+- Bad:
+```
+server = "web01"
+env = "prod"
+```
+- Better:
+`python deploy.py --server web01 --env prod`
+
+## MODULE 4: SUBPROCESS
+- Execute shell commands from python 
+
+- instead of asking the user to run we can execute using subprocess
+
+```
+import subprocess
+
+subprocess.run(["df", "-h"], capture_output=True, text =True)
+```
+
