@@ -1,237 +1,161 @@
-# Day 32 – Module 5: JSON (Interview Notes)
+# Day 32 – JSON Interview Questions
 
-## What is JSON?
+## Question 1
 
-JSON (JavaScript Object Notation) is a lightweight data-interchange format used by:
-
-* REST APIs
-* AWS SDK (boto3)
-* Kubernetes
-* Docker
-* GitHub API
-* Configuration files
-
-Python represents JSON using dictionaries and lists.
+**What is JSON, and why is it important in Python and DevOps?**
 
 ---
 
-# Python vs JSON
+## Question 2
 
-| Python      | JSON        |
-| ----------- | ----------- |
-| dict        | Object `{}` |
-| list        | Array `[]`  |
-| str         | String      |
-| int / float | Number      |
-| True        | true        |
-| False       | false       |
-| None        | null        |
+**What is the difference between `json.load()` and `json.loads()`?**
+
+- Explain the difference.
+- Give one example for each.
 
 ---
 
-# json.load()
+## Question 3
 
-**Purpose:** Read JSON from a file and convert it into a Python object.
+**What is the difference between `json.dump()` and `json.dumps()`?**
 
-Example
+- Explain the difference.
+- Give one example for each.
 
-```python
-import json
+---
 
-with open("config.json", "r") as file:
-    config = json.load(file)
+## Question 4
 
-print(config)
+**Why do `loads()` and `dumps()` have an `s` at the end? What does the `s` represent?**
+
+---
+
+## Question 5
+
+Suppose you have a file named **`config.json`**.
+
+**How would you read it into a Python dictionary?**
+
+Write the code.
+
+---
+
+## Question 6
+
+An API returns the following response as a JSON string:
+
+```text
+'{"cpu":80,"memory":60}'
 ```
 
-Input:
+**Which JSON method would you use before accessing `cpu`, and why?**
 
-* JSON File
-
-Output:
-
-* Python Dictionary
+Write the code.
 
 ---
 
-# json.loads()
+## Question 7
 
-**Purpose:** Convert a JSON string into a Python object.
-
-Example
+You have the following Python dictionary:
 
 ```python
-import json
-
-data = '{"region":"us-east-1","instance":"web01"}'
-
-config = json.loads(data)
-
-print(config)
-```
-
-Input:
-
-* JSON String
-
-Output:
-
-* Python Dictionary
-
----
-
-# json.dump()
-
-**Purpose:** Write a Python object into a JSON file.
-
-Example
-
-```python
-import json
-
-config = {
-    "region": "us-east-1",
-    "instance": "web01"
+report = {
+    "status": "SUCCESS",
+    "servers": 5
 }
-
-with open("config.json", "w") as file:
-    json.dump(config, file, indent=4)
 ```
 
-Input:
+You want to save it as **`report.json`**.
 
-* Python Dictionary
-
-Output:
-
-* JSON File
+**Write the code you would use.**
 
 ---
 
-# json.dumps()
+## Question 8
 
-**Purpose:** Convert a Python object into a JSON string.
-
-Example
-
-```python
-import json
-
-config = {
-    "region": "us-east-1",
-    "instance": "web01"
-}
-
-json_string = json.dumps(config)
-
-print(json_string)
-```
-
-Input:
-
-* Python Dictionary
-
-Output:
-
-* JSON String
-
----
-
-# Easy Way to Remember
-
-**The letter "s" stands for String.**
-
-| Method  | Reads/Writes | Source/Destination          |
-| ------- | ------------ | --------------------------- |
-| load()  | Read         | JSON File → Python Object   |
-| loads() | Read         | JSON String → Python Object |
-| dump()  | Write        | Python Object → JSON File   |
-| dumps() | Write        | Python Object → JSON String |
-
----
-
-# Common Interview Questions
-
-### Q1. Difference between load() and loads()?
-
-* `load()` reads JSON from a file.
-* `loads()` reads JSON from a string.
-
----
-
-### Q2. Difference between dump() and dumps()?
-
-* `dump()` writes JSON to a file.
-* `dumps()` converts a Python object into a JSON string.
-
----
-
-### Q3. Why is JSON important?
-
-JSON is the standard format used by REST APIs, AWS services, Kubernetes, Docker, GitHub, and most modern cloud applications.
-
----
-
-### Q4. Which methods are used most in DevOps?
-
-* `json.load()` → Read configuration files.
-* `json.loads()` → Parse JSON strings from APIs.
-* `json.dump()` → Save reports/configuration.
-* `json.dumps()` → Prepare request payloads for APIs.
-
----
-
-# Real DevOps Examples
-
-### Read Configuration
-
-```python
-with open("config.json") as f:
-    config = json.load(f)
-```
-
----
-
-### Parse API Response
-
-```python
-data = json.loads(api_response)
-```
-
----
-
-### Save Report
-
-```python
-with open("report.json", "w") as f:
-    json.dump(report, f, indent=4)
-```
-
----
-
-### Send API Payload
+You have the following Python dictionary:
 
 ```python
 payload = {
     "name": "web01",
     "status": "running"
 }
-
-body = json.dumps(payload)
 ```
+
+You need to send it as the **body of an HTTP POST request**.
+
+- Which JSON method would you use?
+- Why?
 
 ---
 
-# Quick Revision
+## Question 9
 
-* `load()` → File → Python Object
-* `loads()` → String → Python Object
-* `dump()` → Python Object → File
-* `dumps()` → Python Object → String
+Explain the difference between:
 
-## Interview Trick
+```python
+json.load(file)
+```
+
+and
+
+```python
+json.loads(data)
+```
+
+Don't just say "file" and "string".
+
+Explain:
+- What each method does.
+- When you would use each one.
+
+---
+
+## Question 10 (Most Important)
+
+Complete the table from memory.
+
+| Method | Input | Output |
+|---------|-------|--------|
+| `json.load()` | ? | ? |
+| `json.loads()` | ? | ? |
+| `json.dump()` | ? | ? |
+| `json.dumps()` | ? | ? |
+
+---
+
+# Bonus Question (Real DevOps)
+
+You're writing a Python automation script that:
+
+1. Reads `config.json`.
+2. Calls an AWS API.
+3. Saves the response to `report.json`.
+
+**Which JSON methods would you use at each step, and why?**
+
+---
+
+# Interview Tips
+
+### Easy Trick
 
 **"s" = String**
 
-If there is an **`s`**, it works with **strings**.
-If there is **no `s`**, it works with **files**.
+| Method | Remember |
+|---------|----------|
+| `load()` | Read from a File |
+| `loads()` | Read from a String |
+| `dump()` | Write to a File |
+| `dumps()` | Convert to a JSON String |
+
+---
+
+### Common Follow-up Questions
+
+- Why is JSON important in DevOps?
+- Where is JSON used in AWS?
+- Why is `json.dumps()` used before sending an HTTP request?
+- Why is `json.load()` used for configuration files?
+- What Python data structures does JSON become?
+- Why is `.get()` preferred over `[]` when reading API responses?
