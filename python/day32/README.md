@@ -240,3 +240,14 @@ with open("config.json","r") as file:
     config = json.load(file)
 print(config["region"])
 ```
+
+## WRITING JSON FILES
+```
+import json
+
+config = {
+    "name":"us-east-1"
+}
+with open("config.json", "w") as file:
+    json.dump(config, file, indent=4)
+```
