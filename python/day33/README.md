@@ -183,3 +183,13 @@ response = httpx.post(
 print(response.status_code)
 print(response.json())
 ```
+
+### NOTE:
+1. What is the difference between response.text and response.json()?
+
+Expected Answer
+
+response.text returns the response body as a string.
+respons
+
+"response is an httpx.Response object returned by the server after making an HTTP request. It contains metadata such as the status code, headers, URL, cookies, and the response body. The body can be accessed as plain text using response.text or parsed into a Python dictionary using response.json(). The response object itself is neither JSON nor a Python dictionary."
