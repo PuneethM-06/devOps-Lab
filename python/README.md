@@ -438,3 +438,27 @@ try:
 except ValueError:
     print("Invalid number")
 ```
+
+### CATCH SPECIFIC EXCEPTIONS 
+```
+try:
+    ...
+except FileNotFoundError:
+    ...
+except ValueError:
+    ...
+```
+- not like:
+```
+except:
+    print("Something went wrong")
+```
+
+### RAISING EXCEPTIONS
+- We can raise our own exceptions 
+```
+cpu = 110
+
+if cpu > 100:
+    raise ValueError("Invalid CPU percentage")
+```
