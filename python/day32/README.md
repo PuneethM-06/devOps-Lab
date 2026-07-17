@@ -208,3 +208,19 @@ output:
     'age':'32'
 }
 ```
+## JSON DUMPS
+- Converts a Python Object to Json string 
+```
+server = {
+    'name':'Puneeth',
+    'age':'32'
+}
+dumps = json.dumps(server)
+print(dumps)
+
+output:
+{
+    "name":"Puneeth",
+    "age":"32"
+}
+```
