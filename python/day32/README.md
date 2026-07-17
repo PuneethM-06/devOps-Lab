@@ -251,3 +251,84 @@ config = {
 with open("config.json", "w") as file:
     json.dump(config, file, indent=4)
 ```
+
+1. load() vs loads()?
+load() → Reads JSON from a file.
+loads() → Reads JSON from a string.
+
+2. dump() vs dumps()?
+dump() → Writes JSON to a file.
+dumps() → Converts an object to a JSON string.
+
+
+### Example of json load 
+```
+suppose we have a config.json
+{
+    "region": "us-east-1",
+    "instance": "web01"
+}
+
+import json
+
+with open("config.json", "r") as file:
+    config = json.load(file)
+
+print(config)
+
+ouput:
+{
+    "region": "us-east-1",
+    "instance": "web01"
+}
+```
+### Example of json loads 
+```
+import json
+
+data = '{"region":"us-east-1","instance":"web01"}'
+
+config = json.loads(data)
+
+print(config)
+
+{
+    "region": "us-east-1",
+    "instance": "web01"
+}
+```
+### json.dump
+```
+config
+config = {
+    "region": "us-east-1",
+    "instance": "web01"
+}
+
+import json
+
+with open("config.json", "w") as file:
+    json.dump(config, file, indent=4)
+
+output:
+{
+    "region": "us-east-1",
+    "instance": "web01"
+}
+```
+
+### json dumps
+```
+import json
+
+config = {
+    "region": "us-east-1",
+    "instance": "web01"
+}
+
+json_string = json.dumps(config)
+
+print(json_string)
+
+{"region": "us-east-1", "instance": "web01"}
+```
