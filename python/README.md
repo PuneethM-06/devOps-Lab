@@ -312,7 +312,65 @@ instances = [
     }
 ]
 ```
+```
 Loop:
 for instance in instances:
     print(instances["id"])
+```
+### CONDITIONS IN PYTHON 
+- Already known and hence skipping the notes here
+
+### LOOPS
+1. for Loop:
+- Basic Examples:
+```
+servers = ["web01", "web02", "db01"]
+
+for server in servers:
+    print(server)
+
+for i in range(5):
+    print(i)
+```
+
+2. enumerate()
+- Very useful when you need both the index and the value.
+```
+for index, server in enumerate(servers):
+    print(index, server)
+```
+
+3. while Loop
+- Runs until a condition becomes false
+```
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+4. break
+- stops the loop immediately
+```
+servers = ["web01", "web02", "db01"]
+
+for server in servers:
+    if server == "web02":
+        break
+    print(server)
+```
+5. continue
+- skip the current iteration 
+```
+for server in servers:
+    if server == "web02":
+        continue
+    print(server)
+```
+6. pass
+- Placeholder that does nothing 
+```
+if cpu > 90:
+    pass
 ```
