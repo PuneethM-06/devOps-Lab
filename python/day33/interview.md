@@ -48,3 +48,30 @@ import httpx
 response = httpx.get("https://jsonplaceholder.typicode.com/posts/1")
 print(response)
 ```
+### UNDERSTANDING RESPONSE OBJECT
+
+```
+import httpx
+
+response = httpx.get("https://jsonplaceholder.typicode.com/posts/1")
+
+print(response.status_code)
+
+print(response.headers)
+
+print(response.text)
+
+print(response.url)
+```
+
+## STATUS CODES
+| Code | Meaning      |
+| ---- | ------------ |
+| 200  | Success      |
+| 201  | Created      |
+| 204  | No Content   |
+| 400  | Bad Request  |
+| 401  | Unauthorized |
+| 403  | Forbidden    |
+| 404  | Not Found    |
+| 500  | Server Error |
