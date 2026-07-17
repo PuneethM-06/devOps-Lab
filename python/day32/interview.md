@@ -235,3 +235,5 @@ body = json.dumps(payload)
 
 If there is an **`s`**, it works with **strings**.
 If there is **no `s`**, it works with **files**.
+
+"JSON stands for JavaScript Object Notation. It is a lightweight data-interchange format used to exchange structured data between systems. In Python, JSON is typically converted into dictionaries and lists using the json module. In DevOps, JSON is widely used for REST APIs, AWS services, Kubernetes, Docker, GitHub APIs, and configuration files, making it one of the most important data formats to understand."
