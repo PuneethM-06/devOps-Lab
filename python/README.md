@@ -141,3 +141,25 @@ else:
 ```
 status = "High" if cpu > 80 else status = "Normal"
 ```
+## MODULE 3 -  STRINGS
+1. ### CREATING STRINGS
+- Python supports:
+    - single quotes ' ' 
+    - double quotes "" 
+    - tripe quotes for multi line strings """" """
+
+2. ### STRING FORMATING 
+- Traditional way of handling 
+```
+server = "web01"
+print("checking" + server)
+```
+- MODERN WAY OF HANDLING IS USING fstrings
+```
+server = "web01"
+print(f"checking + {server}")
+```
+- Multiple variables
+```
+print(f" Checking CPU={CPU}% and MEM={MEM}%")
+```
