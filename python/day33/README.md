@@ -195,3 +195,13 @@ respons
 "response is an httpx.Response object returned by the server after making an HTTP request. It contains metadata such as the status code, headers, URL, cookies, and the response body. The body can be accessed as plain text using response.text or parsed into a Python dictionary using response.json(). The response object itself is neither JSON nor a Python dictionary."
 
 The core difference is that response.text gives you the raw payload as a plain string, while response.json() parses that string into a structured data format (like a Python dictionary or a JavaScript object).
+
+`httpx.post(url, json=payload)` - What it sends
+
+- httpx automatically converts the Python dictionary into a JSON string.
+- default content type is application/json
+
+`httpx.post(url, data=payload)` - What it sends
+
+- The dictionary is form-encoded instead of JSON.
+- Content-Type: application/x-www-form-urlencoded
