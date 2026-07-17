@@ -40,3 +40,12 @@ mem = 90
 - we can do 
 ```
 cpu, usage, mem = 70, 80, 90 
+
+### SWAPPING VARIABLES
+- We can swap variables making use of multiple assignments
+```
+a = 10
+b = 20
+
+a, b = b, a
+```
