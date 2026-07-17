@@ -299,3 +299,20 @@ Accessing them
 print(instance["state"]["name"])
 ```
 
+### LIST OF DICT
+```
+instances = [
+    {
+        "id": "i-111",
+        "state": "running"
+    },
+    {
+        "id": "i-222",
+        "state": "stopped"
+    }
+]
+```
+Loop:
+for instance in instances:
+    print(instances["id"])
+```
