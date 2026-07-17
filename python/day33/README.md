@@ -165,3 +165,21 @@ except httpx.HTTPStatusError as e:
 ### Why raise_for_status()?
 - without it, a 404 response doesnt raise an exception and we have to checkout ourselves and hence.
 
+## POST REQUEST
+
+```
+import httpx
+
+payload = {
+    "title":"Hello",
+    "body":"Testing",
+    "userId":1
+}
+
+response = httpx.post(
+    "https://jsonplaceholder.typicode.com/posts",
+    json=payload
+)
+print(response.status_code)
+print(response.json())
+```
