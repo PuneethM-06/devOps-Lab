@@ -84,3 +84,22 @@ response = httpx.get("
 )
 print(response.text)
 ```
+### JSON
+- JSON stands for JavaScript object notation
+- It is the string that is sent over network 
+
+```
+import httpx
+
+x = httpx.get("https://jsonplaceholder.typicode.com/posts/1")
+data = response.json()
+print(data) or print(data["title"])
+
+output:
+{
+'id':1,
+'title':'...',
+'body':'...',
+'userId':1
+}
+```
