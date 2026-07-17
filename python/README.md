@@ -22,3 +22,11 @@
 name = "Puneeth"
 print(type(name))
 ```
+### TPYPE CONVERSION
+- It is very common in automation for making string to int and int to string 
+```
+port = "8080"
+port = int(port)
+```
+- similarly we can do for float and other data types
+
