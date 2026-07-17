@@ -103,3 +103,19 @@ and
 or
 not
 ```
+- Unlike Java, python doesn't use &&, ||, ! for logical operators
+
+4. ### MEMBERSHIP OPERATORS
+```
+in
+not in
+```
+- Example:
+```
+servers = ["web01", "web02", "db01"]
+
+if "web01" in servers:
+    print("Found")
+```
+
+
