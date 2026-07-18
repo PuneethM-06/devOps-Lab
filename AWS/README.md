@@ -248,3 +248,17 @@ We are responsible for:
     - OLTP
     - Relational & NoSQL databases 
     - Cache for in-memory databases
+
+## INTRODUCTION TO SECURITY GROUPS
+- They will control how traffic will move IN & OUT of the Ec2 instances
+- They have rules that refer by IP address of by Security group 
+- They regulate to:
+    - Access to ports
+    - Validate IP range 
+    - control inbound and outbound network
+
+### NOTE: SECURITY GROUP BY DEFAULT WILL ALLOW OUTBOUND RULE 
+
+- Security groups can be attached to multiple instances
+- Locked down to a region or a VPC combination 
+- It is a good practise to maintain a seperate security group for SSH
