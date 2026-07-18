@@ -209,3 +209,7 @@ We are responsible for:
 - Network attached - EFS & EBS
 -  Networking and Security group
 
+- **BOOTSTRAPPING** - means launching commands when a machine starts 
+- It runs only run once at the instance start 
+- It does installing updates, softwares etc.
+- EC2 runs as a root user
