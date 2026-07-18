@@ -270,3 +270,10 @@ We are responsible for:
 4. HTTPS - Port 443
 5. 3389 - RDP
 6. 80 - HTTP
+
+### SSH SUMMARY TABLE 
+- For linux servers we can use this
+- We connect **insiders of our servers** to perform maintaience
+- SSH can be used for Mac, Linux and then windows >=10
+- We can use Putty for Windows < 10
+- EC2 instance connect - Available for all( Mac, windows and linux)
