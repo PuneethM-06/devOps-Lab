@@ -120,3 +120,14 @@
 ## AWS POINTS OF PRESENCE OR EDGE LOCATIONS
 - Have more than 400 
 - It is used for CDN for low latency 
+
+# IAM SECTION
+
+- IAM - IDENTITY AND ACCESS MANAGEMENT 
+- It is a global service
+- **USERS** - People within in orgaization 
+- **GROUP** - People can be grouped
+
+### NOTE: Group contains users, and a single user can belong to multiple groups
+- These groups and users will be assigned permissions to ensure what services can be accessed and also to restrict what can be accessed.
+
