@@ -161,3 +161,9 @@
 1. Virtual MFA device - Google authenticator, Authy
 2. Universal 2nd Factor - U2F security device - Yubikey is an example 
 
+### HOW CAN USERS ACCESS AWS
+1. AWS CONSOLE - Protected by MFA and password
+2. CLI - command line interface
+3. SDK - AWS Software development kit - Code
+
+- CLI and SDK are protected by **Access Keys**
