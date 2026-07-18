@@ -169,3 +169,7 @@
 - CLI and SDK are protected by **Access Keys**
 
 - Similar to terminal in CLI, we can make use of Cloudshell. But it is important to note that Cloudshell is not available for all regions 
+
+## IAM ROLES FOR SERVICES
+- Some AWS services will need permissions to perform certain operations 
+- So we make use of **IAM ROLES**
