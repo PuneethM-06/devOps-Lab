@@ -277,3 +277,6 @@ We are responsible for:
 - SSH can be used for Mac, Linux and then windows >=10
 - We can use Putty for Windows < 10
 - EC2 instance connect - Available for all( Mac, windows and linux)
+
+### RULE OF THUMB - NEVER ENTER ACCESS KEY AND ACCESS SECRET IN EC2 INSTANCE
+- Instead make use of **IAM ROLES**
