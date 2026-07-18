@@ -213,3 +213,20 @@ We are responsible for:
 - It runs only run once at the instance start 
 - It does installing updates, softwares etc.
 - EC2 runs as a root user
+
+### NAMING CONVENTION
+- m5.2xlarge
+
+- m - instance class
+- 5 - Generation
+- 2xlarge - Size
+
+## EC2 INSTANCE TYPES
+
+1. ### GENERAL PURPOSE 
+-  Great for webservers and code repo
+- Balance between:
+    - compute
+    - memory
+    - network
+
