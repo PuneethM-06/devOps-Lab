@@ -167,3 +167,5 @@
 3. SDK - AWS Software development kit - Code
 
 - CLI and SDK are protected by **Access Keys**
+
+- Similar to terminal in CLI, we can make use of Cloudshell. But it is important to note that Cloudshell is not available for all regions 
