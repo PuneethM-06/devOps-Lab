@@ -132,3 +132,16 @@
 - These groups and users will be assigned permissions to ensure what services can be accessed and also to restrict what can be accessed.
 
 - **LEAST PREVILIGE PERMISSION** - Not to give more permissions than needed
+
+## IAM POLICIES INHENRITANCE
+- Attaching policy at a group level applies policy to everyone in the group 
+- **INLINE POLICY** used for applying policy for a user not in any group 
+- IAM policy consists of:
+    - Version 
+    - ID
+    - Statement
+    - SID - Statement ID
+    - Affect - allow or deny
+    - Principal - Account, user or role 
+    - Action - List of API calls
+    - Resources - List of resources to which the action will be applied 
