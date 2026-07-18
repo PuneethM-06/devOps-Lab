@@ -40,3 +40,17 @@
 1. Private + Public cloud
 2. Few services On-prem while some are on Cloud
 
+## FIVE CHARACTERISTICS OF CLOUD COMPUTING A
+1. Completely **ON-DEMAND**
+2. Broad Network Access
+3. Multi-tenancy and resource pooling  - Multiple customers can use the same services having complete privacy
+4. Rapid Elasticity and Scalability - Quickly and easily scalable 
+5. Measured services
+
+## SIX ADVANTAGES OF CLOUD
+1. Tade **CAPITAL EXPENSES FOR OPERATIONAL EXPENSES, CAPEX FOR OPEX** 
+2. Benefit of scaling 
+3. stop guessing capaciy 
+4. Increased speed and agility
+5. stop spending money and running data centres
+
