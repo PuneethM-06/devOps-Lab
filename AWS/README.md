@@ -262,3 +262,11 @@ We are responsible for:
 - Security groups can be attached to multiple instances
 - Locked down to a region or a VPC combination 
 - It is a good practise to maintain a seperate security group for SSH
+
+### CLASSIC PORTS TO KNOW 
+1. SSH - Port 22
+2. FTP - Port 21
+3. SFTP - Port 22
+4. HTTPS - Port 443
+5. 3389 - RDP
+6. 80 - HTTP
