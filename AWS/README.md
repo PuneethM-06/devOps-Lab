@@ -100,3 +100,23 @@
 1. COMPUTE - Pay for compute time 
 2. Storage - Data stored
 3. Network - Pay when Data transfer is outside of cloud
+
+## AWS REGIONS
+- Regions have name. Example:  us-east-1
+- It is going to be a cluster of Data centres
+- **MOST SERVICES ARE REGION SPECIFIC**
+
+### HOW TO CHOOSE A AWS REGION 
+1. Compliance - Sometimes Govt needs your data to be local 
+2. Latency - Close to users
+3. Available services - Not all regions have all services
+4. Pricing
+
+## AVAILABILITY ZONES
+- Minimum is 3 and Maximum is 6
+- It is one or more discrete Data centres
+- They're seperated from eachother, to avoid disasters
+
+## AWS POINTS OF PRESENCE OR EDGE LOCATIONS
+- Have more than 400 
+- It is used for CDN for low latency 
