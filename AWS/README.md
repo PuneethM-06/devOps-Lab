@@ -95,3 +95,8 @@
 - Is managed by rest is done by CSP
 
 
+## PRICING ON CLOUD
+- It is mainly pay-as-you-go but it depends 
+1. COMPUTE - Pay for compute time 
+2. Storage - Data stored
+3. Network - Pay when Data transfer is outside of cloud
