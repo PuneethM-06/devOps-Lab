@@ -229,4 +229,18 @@ We are responsible for:
     - compute
     - memory
     - network
+- They are of name m
+
+2. ### COMPUTE OPTIMIZED
+- Great for compute-intensive tasks
+- Requires high performance processors
+- Example: Batch processing workloads, dedicated gaming servers, machine learning 
+- They are of name C
+
+3. ### MEMORY OPTIMIZED
+- Fast performance for workloads that process large datasets
+- They are used for :
+    - High performance, relational and non relational databases
+    - In-memory databases optimized for BI
+- They are of name R
 
