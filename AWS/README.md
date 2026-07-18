@@ -131,3 +131,4 @@
 ### NOTE: Group contains users, and a single user can belong to multiple groups
 - These groups and users will be assigned permissions to ensure what services can be accessed and also to restrict what can be accessed.
 
+- **LEAST PREVILIGE PERMISSION** - Not to give more permissions than needed
