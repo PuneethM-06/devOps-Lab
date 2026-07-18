@@ -22,3 +22,21 @@
 - **pay-as-you-go pricing**
 - Access almost these resources **instantly**
 
+### NOTE: WE NEVER PAY FOR THE INFRASTRUCTURE, WE PAY FOR THE RESOURCES USED.
+
+## DEPLOYMENT MODELS IN CLOUD
+1. ### PRIVATE CLOUD
+- Private infrastructure
+- Cloud servivce is not exposed to public 
+- Complete control
+- More security 
+
+2. ### PUBLIC CLOUD
+- AWS, GCP and Azure
+- Cloud services are owned and operated by third-party
+- They are delivered over internet
+
+3. ### HYBRID CLOUD 
+1. Private + Public cloud
+2. Few services On-prem while some are on Cloud
+
