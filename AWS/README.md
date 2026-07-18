@@ -345,3 +345,15 @@ We are responsible for:
 ## EC2 CAPACITY RESERVATIONS 
 - Reserve On-Demand instance capacity in a specific AZ
 - No time commitment and No **Billing Discounts** 
+
+## SHARED RESPONSIBILITY MODEL
+
+- AWS:
+    - Infrastructure
+    - Isolation on physical hosts
+    - Replacing faulty hardware
+- US:
+    - Security group roles
+    - IAM roles
+    - OS patches
+    - Data security 
