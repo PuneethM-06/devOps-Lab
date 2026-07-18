@@ -54,3 +54,44 @@
 4. Increased speed and agility
 5. stop spending money and running data centres
 
+## DIFFERENT TYPES OF CLOUD COMPUTING 
+
+1. ### INFRASTRUCTURE AS A SERVICE - IaaS
+- Provides **networking, computers, data storage space**
+- Highest level of flexibility
+- Provide building blocks for cloud IT.
+- EC2
+
+2. ### PLATFORM AS A SERVICE - PaaS
+- Remove the need to manage the underlying infrastructure
+- Manage on deployment and managing applications
+- Elastic Beanstalk
+
+3. ### SOFTWARE AS A SERVICE - SaaS
+- Completed product that is run and managed by service providers
+- Gmail
+
+### ON-PREM WE MANAGE:
+1. Applications 
+2. Data
+3. Runtime
+4. Middleware
+5. O/S
+6. Virtulization
+7. Servers
+8. Storage
+9. Networking 
+
+### IaaS
+1. Applications
+2. Data
+3. Runtime
+4. Middleware
+5. O/S is maintained by us, rest is done by CSP
+
+### PaaS
+1. Application
+2. Data
+- Is managed by rest is done by CSP
+
+
