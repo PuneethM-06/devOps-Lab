@@ -186,3 +186,12 @@
 - Create Roles fore giving permissions to AWS services
 
 
+## SHARED RESPONSIBILITY MODEL
+AWS is responsible for:
+    - Infrastructure and security
+    - Config and vulnerability analysis
+We are responsible for:
+    - Creating roles
+    - enabling MFA
+    - Assigning permissions
+    - Rotate keys often
