@@ -195,3 +195,17 @@ We are responsible for:
     - enabling MFA
     - Assigning permissions
     - Rotate keys often
+
+# EC2 INSTANCES 
+
+- EC2 instances are capable of:
+    1. Renting VM's
+    2. Storing data 
+    3. Distribute load across
+
+- Operating system offered: Linux, Windows and Mac OS
+- CPU
+- RAM
+- Network attached - EFS & EBS
+-  Networking and Security group
+
