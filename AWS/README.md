@@ -229,7 +229,6 @@ We are responsible for:
     - compute
     - memory
     - network
-- They are of name m
 
 2. ### COMPUTE OPTIMIZED
 - Great for compute-intensive tasks
@@ -242,5 +241,10 @@ We are responsible for:
 - They are used for :
     - High performance, relational and non relational databases
     - In-memory databases optimized for BI
-- They are of name R
 
+4. ### STORAGE OPTIMIZED
+- Great for storag-intensive tasks, for reading and writing large data sets 
+- Uses cases:
+    - OLTP
+    - Relational & NoSQL databases 
+    - Cache for in-memory databases
