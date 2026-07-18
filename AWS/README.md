@@ -145,3 +145,19 @@
     - Principal - Account, user or role 
     - Action - List of API calls
     - Resources - List of resources to which the action will be applied 
+
+### IAM PASSWORD POLICY
+- Stronger password = More security
+- We can set a customized password security:
+    - Number of characters
+    - character case
+    - non-alphanumeric characters
+    - Allow IAM users to change their own pwd
+
+### MULTI-FACTOR AUTHENTICATION 
+- MFA is a combination of **password we know + secruity device we own**
+
+### MFA OPTIONS
+1. Virtual MFA device - Google authenticator, Authy
+2. Universal 2nd Factor - U2F security device - Yubikey is an example 
+
