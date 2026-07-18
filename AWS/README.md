@@ -181,4 +181,8 @@
 
 ## IAM BEST PRACTICES
 - Principle of least privelige
+- Assign users to groups
+- Create a strong pwd
+- Create Roles fore giving permissions to AWS services
+
 
