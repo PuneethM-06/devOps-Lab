@@ -2,7 +2,7 @@
 
 ### WHAT IS A SERVER COMPOSED OF?
 1. CPU
-2. RAM -Memory
+2. RAM-Memory
 3. Storage - Database
 4. Networking Aspects - Routers, DNS etc.
 
@@ -268,7 +268,7 @@ We are responsible for:
 2. FTP - Port 21
 3. SFTP - Port 22
 4. HTTPS - Port 443
-5. 3389 - RDP
+5. RDP - 3389
 6. 80 - HTTP
 
 ### SSH SUMMARY TABLE 
@@ -282,30 +282,6 @@ We are responsible for:
 - Instead make use of **IAM ROLES**
 
 ## EC2 INSTANCES PURCHASING OPTIONS 
-
-1. ### ON-DEMAND 
-- short workload
-- pay by second 
-
-2. ### RESERVED INSTANCES
-- Long workloads
-- 1 to 3 years
-
-3. ### SAVINGS PLAN
-- commitment to a amount of usage in dollars
-
-4. ### SPOT INSTANCES
-- cheap
-- very short workloads
-
-5. ### DEDICATED HOSTS
-- book an entire physical server, control instance placement
-
-6. ### DEDICATED INSTANCES 
-- no other customers will share your hardware
-
-7. ### CAPACITY RESERVATION
-- Reserver capacity in a specific AZ for any duration 
 
 ## EC2 ON DEMAND
 - Linux or windows - Billing per second 
