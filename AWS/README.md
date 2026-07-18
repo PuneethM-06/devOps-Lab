@@ -173,3 +173,9 @@
 ## IAM ROLES FOR SERVICES
 - Some AWS services will need permissions to perform certain operations 
 - So we make use of **IAM ROLES**
+
+## IAM SECURITY TOOLS
+- **IAM Credentials report** - a report that lists all your account users and the status of their credentials 
+
+- **IAM ACCESS ADVISOR** - Shows service permissions granted to a user and when were they last accessed
+
