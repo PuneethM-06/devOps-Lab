@@ -307,3 +307,37 @@ We are responsible for:
 7. ### CAPACITY RESERVATION
 - Reserver capacity in a specific AZ for any duration 
 
+## EC2 ON DEMAND
+- Linux or windows - Billing per second 
+- For all billing per hour
+- Has the highest cost but no upfront payment 
+- No commitments
+
+## EC2 RESERVED INSTANCES
+- **72% discount** compared to On-Demand 
+- We reserve a specific type of instances (Regions, Os )
+- Payment - No upfront, partial upfront and All upfront 
+- Scope: Region or Zone
+- Can BUY AND SELL in market place
+
+## EC2 SAVINGS
+- same 72% savings compared to On-demand 
+- Commit to a certain type of usage
+- Example: I want to use 10$ per hour for next 3 years
+- Anything above savings plan is **On-demand**
+
+## EC2 SPOT INSTANCES
+- **90%** discount 
+- Instances can be lost, as we define a max price we can pay. Once moved out it will be terminated 
+- Not suited for critical workloads
+
+## EC2 DEDICATED HOSTS
+- dedicated physical server 
+- Used for compliance requirements
+- We can use On-demand or Reserved
+- Useful for **BYOL - BRING YOUR OWN LICENESE**
+- Instance placement in hand 
+
+## EC2 DEDICATED INSANCES
+- Instance hardware is dedicated to you
+- No control over placement
