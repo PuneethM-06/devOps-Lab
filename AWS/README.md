@@ -179,3 +179,6 @@
 
 - **IAM ACCESS ADVISOR** - Shows service permissions granted to a user and when were they last accessed
 
+## IAM BEST PRACTICES
+- Principle of least privelige
+
