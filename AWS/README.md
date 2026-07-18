@@ -280,3 +280,30 @@ We are responsible for:
 
 ### RULE OF THUMB - NEVER ENTER ACCESS KEY AND ACCESS SECRET IN EC2 INSTANCE
 - Instead make use of **IAM ROLES**
+
+## EC2 INSTANCES PURCHASING OPTIONS 
+
+1. ### ON-DEMAND 
+- short workload
+- pay by second 
+
+2. ### RESERVED INSTANCES
+- Long workloads
+- 1 to 3 years
+
+3. ### SAVINGS PLAN
+- commitment to a amount of usage in dollars
+
+4. ### SPOT INSTANCES
+- cheap
+- very short workloads
+
+5. ### DEDICATED HOSTS
+- book an entire physical server, control instance placement
+
+6. ### DEDICATED INSTANCES 
+- no other customers will share your hardware
+
+7. ### CAPACITY RESERVATION
+- Reserver capacity in a specific AZ for any duration 
+
