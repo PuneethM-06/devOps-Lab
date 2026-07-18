@@ -341,3 +341,7 @@ We are responsible for:
 ## EC2 DEDICATED INSANCES
 - Instance hardware is dedicated to you
 - No control over placement
+
+## EC2 CAPACITY RESERVATIONS 
+- Reserve On-Demand instance capacity in a specific AZ
+- No time commitment and No **Billing Discounts** 
