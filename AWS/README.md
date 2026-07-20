@@ -640,3 +640,19 @@ Use case
 
 ### AURORA DATABASES SHARE SAME STORAGE VOLUME
 
+## RDS DEPLOYMENTS
+1. ## READ REPLICAS
+- We are gonna create read replicas allowing applications to manage loads
+- We can **CREATE 15 READ REPLICAS**
+- **WRITING DATA IS DONE TO THE MAIN DB**
+
+### MULTI AZ
+- We use this during AZ failover
+- We are gonna read write to the main RDS, but we create a **Failover DB** in AWS RDS
+- We can have one AZ as a Failover DB
+
+### MULTI REGIONS
+- This is for **READ REPLICAS**
+- But here we are dealing with Multiple regions instead of AZ
+
+But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
