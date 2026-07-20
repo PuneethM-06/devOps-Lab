@@ -447,3 +447,4 @@ We are responsible for:
 ## AUTO-SCALING GROUPS
 - In real-life, the load on websites can change and hence 
 - ASG can scale out and scale in by number of request coming in 
+- ASG can terminate unhealthy EC2 instances and replace them with healthy EC2
