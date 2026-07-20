@@ -466,7 +466,8 @@ We are responsible for:
 # AMAZON S3
 - It is used for backup and storage 
 - S3 buckets are regional level. 
-- **NAMING** - GLOBALLY UNIQUE but now we can have **Account Regional Namespace** So we can make use of it at different tregions 
+- **NAMING** - GLOBALLY UNIQUE but now we can have **Account Regional Namespace** So we can make use of it at different regions
+- Here AWS, will add  suffix themselves
 - Naming conventions:
     - No uppercase, No underscore
     - Not an IP
@@ -477,3 +478,21 @@ We are responsible for:
 - **KEY = FULL PATH**
 - KEY is made of **PREFIX NAME + OBJECT**
 - Max size to upload once is **50TB**
+
+## AMAZON S3 - SECURITY
+1. ### USER BASED
+- IAM Policies 
+
+2. ### RESOURCE BASED
+- Bucket policies 
+- Object Access Control List - ACL - can be disabled
+- Bucket Access Control List - can be disabled 
+- Encryption keys 
+
+## S3 BUCKET POLICIES
+- JSON based policies
+- RESOURCES - bucket url
+- Effect - Allow or deny
+- Actions - Set of API to allow or deny 
+- Principal - The account user to apply 
+
