@@ -448,3 +448,17 @@ We are responsible for:
 - In real-life, the load on websites can change and hence 
 - ASG can scale out and scale in by number of request coming in 
 - ASG can terminate unhealthy EC2 instances and replace them with healthy EC2
+
+## AUTO SCALING STRATERGIES
+1. ### MANUAL SCALING
+- Scale manually
+
+2. ### DYNAMIC SCALING 
+- Do when a certain event occur like a cloudwatch trigger
+- **TARGET SCALING** - I want the average CPU to stay around 40%
+
+3. ### SCHEDULED SCALING 
+- Anticiapating ahead of time 
+
+4. ### PREDICTIVE SCALING 
+- Use ML for past patterns and scale accordingly 
