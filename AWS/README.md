@@ -718,3 +718,11 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - It is for **Time series data**
 - It is data that is **evolving overtime**
 - It is **serverless**
+
+## AWS GLUE
+- It is a **ETL** service
+- IT is to Extract a dataset, Transform the data and then load it for analysis 
+
+## DMS - DATABASE MIGRATION SERVICE
+- Extract the data from source DB and inject in Target DB
+- Source DB remains during migration 
