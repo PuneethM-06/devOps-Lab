@@ -611,6 +611,7 @@ Use case
 - 1. ## RELATIONAL DATABASES
 - Each column is linked to each other 
 - can use SQL for querying 
+- Good for **OLTP**
 
 2. ## NOSQL DATABASES
 - Non relational databases
@@ -671,4 +672,14 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 ## DYNAMODB ACCELERATOR - DAX
 - It is the **in-memory cache for DynamoDB**
 - 10x performance improvement 
-- 
+
+## DYNAMODB - GLOBAL TABLES
+- Make a DynamoDB table accessible with low latency in multiple-regions 
+- Users can read and write to these table since it has **active-replication**
+
+## REDSHIFT OVERVIEW
+- It is used for PostgresSQL
+- It is good for **OLAP**
+- **Load data every hour, not every second**
+- it is good for **analysing and processing data**
+- Integrated for **AWS Quicksight or Tableau**
