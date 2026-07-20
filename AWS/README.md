@@ -407,4 +407,22 @@ We are responsible for:
 - Can be connected to comput instances or server. 
 - It can make use of S3 for storing data
 
+# ELASTIC LOAD BALANCING AND AUTO SCALING 
+### SCALABILITY 
+- Means application can handle greater loads by adapting 
+- There are two kinds:
+    - Vertical scaling 
+    - Horizontal scaling = Elasticity
+### VERTICAL SCALING 
+- Increase the size 
+- Example; t2.micro to t2.large
+- Example: Database
+- Limit of hardware
 
+### HORIZONTAL SCALING
+- Increasing the number of systems/ EC2
+- We need distributed system 
+
+## HIGH AVAILABILITY
+- Goes hand in hand with horizontal scaling 
+- **RUNNING IN ATLEAST 2 AZ**
