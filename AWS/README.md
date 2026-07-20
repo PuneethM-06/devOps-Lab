@@ -656,3 +656,19 @@ Use case
 - But here we are dealing with Multiple regions instead of AZ
 
 But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
+
+## AWS ELASTICACHE 
+- **In-memory databases**
+- Helps reduce load off databases for read intensive workloads using CACHE.
+- AWS manages this DB with availability, OS updates and patching etc.
+
+## DYNAMODB
+- **NOSQL DATABASES**
+- **SERVERLESS DB**
+- It is highly available with **3AZ**
+- It can handle **millions of request at a time single digit milli-second**
+
+## DYNAMODB ACCELERATOR - DAX
+- It is the **in-memory cache for DynamoDB**
+- 10x performance improvement 
+- 
