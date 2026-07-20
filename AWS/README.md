@@ -462,3 +462,267 @@ We are responsible for:
 
 4. ### PREDICTIVE SCALING 
 - Use ML for past patterns and scale accordingly 
+
+# AMAZON S3
+- It is used for backup and storage 
+- S3 buckets are regional level. 
+- **NAMING** - GLOBALLY UNIQUE but now we can have **Account Regional Namespace** So we can make use of it at different regions
+- Here AWS, will add  suffix themselves
+- Naming conventions:
+    - No uppercase, No underscore
+    - Not an IP
+    - Must start lowercase or Number 
+    
+## AMAZON S3 KEY
+- Objects have keys 
+- **KEY = FULL PATH**
+- KEY is made of **PREFIX NAME + OBJECT**
+- Max size to upload once is **50TB**
+
+## AMAZON S3 - SECURITY
+1. ### USER BASED
+- IAM Policies 
+
+2. ### RESOURCE BASED
+- Bucket policies 
+- Object Access Control List - ACL - can be disabled
+- Bucket Access Control List - can be disabled 
+- Encryption keys 
+
+## S3 BUCKET POLICIES
+- JSON based policies
+- RESOURCES - bucket url
+- Effect - Allow or deny
+- Actions - Set of API to allow or deny 
+- Principal - The account user to apply 
+
+## AMAZON S3 - STATIC WEBSITE HOSTING 
+- S3 can host static website and URL deoends on bucket region and aws-region 
+
+## AMAZON S3 VERSIONING 
+- We can version files in Amazon S3
+- It is enabled at bucket level 
+- Everytime we make a change or add a new file we can keep track of it and then it helps is restoring and maintaining
+- Suspending versioning will not remove old versions 
+
+## S3 REPLICATION OVERVIEW
+### CRR - CROSS REGION RELICATION 
+### SRR - SAME REGION REPLICATION 
+
+- We **must enable versioning**
+- We need IAM permission for reading and writing 
+
+Use case
+- CRR
+    1. Compliance, low latency
+- SRR
+    1. Logs and make replications in prod and other env 
+
+# AMAZON S3 STORAGE CLASSES
+1. ### DURABILITY - how many times object is lost (11 9's)
+2. ### AVAILABILITY - how readily it is available 99.99%
+
+1. ### S3 STORAGE CLASS
+- 99.99% availability
+- Low latency and high throughput 
+- used for frequent data access
+- Use case: Big data analytics, mobile and gaming applications 
+
+2. ### S3 INFREQUENT ACCESS
+- Less frequently accessed, but **requires rapid access** when needed
+- It is lesser in cost compared to general S3, but will be costed for retrieval 
+- 99.99% available 
+- Use case - Disaster recovery and Backus
+
+3. ### S3 ONE ZONE INFREQUENT ACCESS
+- High durability in a single AZ
+- Data lost when AZ is destroyed
+- **99.5% availability**
+- Use case - store secondary copy of data
+
+4. ### S3 GLACIER STORAGE CLASSES
+- Low cost object storage
+- Pricing - Price for storage + Object retrieval cost
+
+5. ### S3 GLACIER INSTANT RETRIEVAL
+- Millisecond and **rapid retrieval**
+- Minimum storage is **90 days**
+
+6. ### S3 GLACIER FLEXIBLE RETRIEVAL
+- Expedited (1 to 5 days), Standard(3 to 5 hours), Bulk(5 to 12 hours)
+- Minimum storage is 90 days 
+
+7. ### S3 GLACIER DEEP ARCHIVE
+- minimum storage is **180 days**
+- standard(12 hours), Bulk(48 hours)
+
+8. ### S3 INTILLIGENT-TIERING
+- smoothly moving between storage classes based on usage
+- We have to pay auto-tiering fee 
+
+
+## S3 EXPRESS ONE ZONE
+
+- High performance, but **single AZ** storage class
+- Stored in **Directory**
+- Handles millions of requests in single digit millisecond latency
+- upto **10x better performance** than S3 standard
+- Highly durable and available 
+
+## S3 ENCRYPTION
+1. **SERVER SIDE ENCRYPTION**
+- **BY DEFAULT ENCRYPTED BY AWS**
+
+2. **CLIENT SIDE ENCRYPTION**
+- Client does the encryption 
+
+## IAM ACCESS ANALYZER FOR S3
+- Ensured only intended people can access your S3
+- Powered by IAM Access Analyzer
+
+## SHARED RESPONSBILITY MODEL
+
+- AWS
+    - Durability
+    - Availability
+    - Internal and CVE
+- US
+    - S3 versioning 
+    - S3 bucket policies
+    - Loggina nd monitoring 
+    - Storage class
+    - Encryption on client side 
+
+## AWS SNOWBALL FAMILY 
+- Highly-secure, portable device to move data in and out of AWS
+- **SNOWBALL EDGE STORAGE OPTIMIZIED** - 210 B STORAGE
+- **SNOWBALL EDGE COMPUTE OPTIMIZIED** - 28 TB STORAGE
+
+### SNOWBALL EDGE PRICING 
+- **Device usage** and **data transfer out of AWS**
+- Data into AWS is **free**
+
+### AWS STORAGE GATEWAY
+- BRIDGE **ON-PREM TO CLOUD**
+- Hybrid storage services allow on-prem to seamlessly use the AWS cloud
+
+# DATABASE SECTION
+
+- 1. ## RELATIONAL DATABASES
+- Each column is linked to each other 
+- can use SQL for querying 
+- Good for **OLTP**
+
+2. ## NOSQL DATABASES
+- Non relational databases
+- Flexible schema 
+- JSON is the common way of expressing data 
+
+## RDS - RELATIONAL DATABSE
+- **Relational databases**
+- It can use **SQL** for querying 
+- Aurora is AWS database
+- Since RDS and Aurora are AWS managed:
+    - Automated is provisioned
+    - OS patching 
+    - Monitor Dashboard
+    - we can do maintainence
+- ###### WE CANNOT SSH
+
+## AURORA
+- Aurora is a proprietary
+- PostgresSQL and MySQL are supported
+- Aurora costs more than 20%
+
+## AURORA SERVERLESS
+- **automated auto-scaling**
+- PostgresSQL and MySQL are both supported
+- **PAY PER SECOND**
+
+### AURORA DATABASES SHARE SAME STORAGE VOLUME
+
+## RDS DEPLOYMENTS
+1. ## READ REPLICAS
+- We are gonna create read replicas allowing applications to manage loads
+- We can **CREATE 15 READ REPLICAS**
+- **WRITING DATA IS DONE TO THE MAIN DB**
+
+### MULTI AZ
+- We use this during AZ failover
+- We are gonna read write to the main RDS, but we create a **Failover DB** in AWS RDS
+- We can have one AZ as a Failover DB
+
+### MULTI REGIONS
+- This is for **READ REPLICAS**
+- But here we are dealing with Multiple regions instead of AZ
+
+But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
+
+## AWS ELASTICACHE 
+- **In-memory databases**
+- Helps reduce load off databases for read intensive workloads using CACHE.
+- AWS manages this DB with availability, OS updates and patching etc.
+
+## DYNAMODB
+- **NOSQL DATABASES**
+- **SERVERLESS DB**
+- It is highly available with **3AZ**
+- It can handle **millions of request at a time single digit milli-second**
+
+## DYNAMODB ACCELERATOR - DAX
+- It is the **in-memory cache for DynamoDB**
+- 10x performance improvement 
+
+## DYNAMODB - GLOBAL TABLES
+- Make a DynamoDB table accessible with low latency in multiple-regions 
+- Users can read and write to these table since it has **active-replication**
+
+## REDSHIFT OVERVIEW
+- It is used for PostgresSQL
+- It is good for **OLAP**
+- **Load data every hour, not every second**
+- it is good for **analysing and processing data**
+- Integrated for **AWS Quicksight or Tableau**
+
+## RESSHIFT SERVERLESS
+- WE dont have to worry about scaling and AWS will handle it 
+
+## AMAZON EMR
+- It stands for **ELASTIC MAPREDUCE**
+- It used to do Bigdata using **Hadoop cluster**
+- Has Auto-scaling
+- Use-case: Data processing, Ml and bigdata
+
+## ATHENA OVERViEW
+- **Serverless** query service to perform analytics agaist **S3 OBJECTS**
+- Uses standard SQL query to analyse data 
+- Pricing 5$ per TB
+
+## AMAZON QUICKSIGHT
+- It is serverless for creating interactive dashboards using ML
+- It is automatically scalable 
+- It can run on Aurors, Redshift
+
+## DOCUMENTDB
+- It is the same for **MongoDB**
+- It is a **NOSQL**
+- It stores JSON data
+- It is stored in **3AZ**
+
+## AMAZON NEPTUNE
+- It is fully managed **GRAPH DATABASE**
+- A popular graph dataset 
+- It is across 3AZ
+
+## AMAZON TIMESTREAM
+- It is for **Time series data**
+- It is data that is **evolving overtime**
+- It is **serverless**
+
+## AWS GLUE
+- It is a **ETL** service
+- IT is to Extract a dataset, Transform the data and then load it for analysis 
+
+## DMS - DATABASE MIGRATION SERVICE
+- Extract the data from source DB and inject in Target DB
+- Source DB remains during migration 
