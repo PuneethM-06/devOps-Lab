@@ -347,3 +347,13 @@ We are responsible for:
 2. ### EBS SNAPSHOT
 - We can take a EBS and perform a **snapshot = BACKUP**
 - We can COPY **SNAPSHOTS ACROSS REGIONS AND AZ**
+
+### EBS SNAPSHOT ARCHIVE
+- 75% cheaper to store an snapshot 
+- Takes 24 to 72 hours for a restore
+
+## AMI OVERVIEW
+- AMI = AMAZON MACHINE IMAGE 
+- We can customize an EC2 using AMI
+- We can install softwares, configs and OS.
+- AMI are built for a **specific region** and can be copied
