@@ -605,3 +605,14 @@ Use case
 ### AWS STORAGE GATEWAY
 - BRIDGE **ON-PREM TO CLOUD**
 - Hybrid storage services allow on-prem to seamlessly use the AWS cloud
+
+# DATABASE SECTION
+
+- 1. ## RELATIONAL DATABASES
+- Each column is linked to each other 
+- can use SQL for querying 
+
+2. ## NOSQL DATABASES
+- Non relational databases
+- Flexible schema 
+
