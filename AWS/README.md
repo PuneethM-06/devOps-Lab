@@ -333,3 +333,13 @@ We are responsible for:
     - IAM roles
     - OS patches
     - Data security 
+
+## STORAGE FOR EC2 INSTANCES
+
+1. ### EBS - ELASTIC BLOCK STORAGE
+
+- It acts as a **NETRWORK volume** that is attached to EC2 instances
+- They store the data even after termination 
+- They can be **mounted only to a single EC2 instance**
+- They are bound to specific **AVAILABILITY ZONE**
+- Example: An EBS created us-east-1a cannot be attached to us-east-1b, but **we can move volumes across AZ**
