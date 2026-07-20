@@ -602,3 +602,6 @@ Use case
 - **Device usage** and **data transfer out of AWS**
 - Data into AWS is **free**
 
+### AWS STORAGE GATEWAY
+- BRIDGE **ON-PREM TO CLOUD**
+- Hybrid storage services allow on-prem to seamlessly use the AWS cloud
