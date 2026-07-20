@@ -333,3 +333,132 @@ We are responsible for:
     - IAM roles
     - OS patches
     - Data security 
+
+## STORAGE FOR EC2 INSTANCES
+
+1. ### EBS - ELASTIC BLOCK STORAGE
+
+- It acts as a **NETRWORK volume** that is attached to EC2 instances
+- They store the data even after termination 
+- They can be **mounted only to a single EC2 instance**
+- They are bound to specific **AVAILABILITY ZONE**
+- Example: An EBS created us-east-1a cannot be attached to us-east-1b, but **we can move volumes across AZ**
+
+2. ### EBS SNAPSHOT
+- We can take a EBS and perform a **snapshot = BACKUP**
+- We can COPY **SNAPSHOTS ACROSS REGIONS AND AZ**
+
+### EBS SNAPSHOT ARCHIVE
+- 75% cheaper to store an snapshot 
+- Takes 24 to 72 hours for a restore
+
+## AMI OVERVIEW
+- AMI = AMAZON MACHINE IMAGE 
+- We can customize an EC2 using AMI
+- We can install softwares, configs and OS.
+- AMI are built for a **specific region** and can be copied
+
+## EC2 IMAGE BUILDER
+- **Automated creation of VM's and Container images**
+- EC2 image builder creates a Builder EC2 instances where we customixze and then a our custom AMI will be created. EC2 builder will perform tests on it 
+- And then we can make use of it 
+- It can be **run on a schedule**
+
+## EC2 INSTANCE STORE
+- Since EBS are network volumes and are limited. WE can make use of EC2 instance store 
+- And EC2 Instance **LOSE THEIR DATA IF STORED**
+
+## EFS - ELASTIC FILE SYSTEM
+- This can be attached to EC2 (shared network file system)
+- It can be **mounted to 100s of EC2 instances**
+- Works for **LINNUX EC2**
+- Expesnsive 
+- It can be attached **ACROSS AZ**
+
+## EBS vs EFS
+1. EBS one instance and one AZ, EFS can be done in other way. But we can move EBS to different AZ using Snapcshot
+
+## EFS-IA
+- Cost optimized, 92% discount 
+- Files that are not accessed frequently 
+- We can create policy, Like *If a file not accessed for 60 days, move to EFS-IA*
+
+## SHARED RESPONSIBILITY
+- AWS
+    - Infrastructure
+    - Replication for data
+    - Replacing faulty hardware
+- US
+    - snapshot / backup procedures
+    - Setting up for data encryption 
+    - Responsbility of any data on drives
+
+## AMAZON FSX
+- managed system for getting **3rd party file system**
+
+### FSX FOR WINDOWS FILER SERVER
+- Windows native shared file system 
+- meant for **Windows based EC2**
+- It is has **SMB and Windows NTFS**
+
+### AMAZON FSX LUSTRE
+- For High Performance Computer (HPC)
+- Used for ML, video processing etc
+- Can be connected to comput instances or server. 
+- It can make use of S3 for storing data
+
+# ELASTIC LOAD BALANCING AND AUTO SCALING 
+### SCALABILITY 
+- Means application can handle greater loads by adapting 
+- There are two kinds:
+    - Vertical scaling 
+    - Horizontal scaling = Elasticity
+### VERTICAL SCALING 
+- **SCALE UP OR DOWN**
+- Increase the size 
+- Example; t2.micro to t2.large
+- Example: Database
+- Limit of hardware
+
+### HORIZONTAL SCALING
+- **SCALE OUT AND SCALE IN**
+- Increasing the number of systems/ EC2
+- We need distributed system 
+
+## HIGH AVAILABILITY
+- Goes hand in hand with horizontal scaling 
+- **RUNNING IN ATLEAST 2 AZ**
+
+### SCALBILITY - ACCOMODATE LARGER LOAD (SCALE UP AND DOWN)
+### ELASTICITY - AUTO SCALING (SCALE OUT AND SCALE IN)
+### AGILITY - REDUCE TIME AND FASTER
+
+## WHAT IS LOAD BALANCING 
+- Servers that forward internet traffic to multiple EC2 instances based on worklaod
+- We can use **across multiple AZs**
+- AWS takes care of ALB and we are responsible for configuring.
+- 4 Kind of load balancers
+    - ALB - Application Load balancers - HTTP and HTTPS - Layer 7
+    - NLB - Network Load balacners - Layer 4
+    - GATEWAY LOAD BALANCER - Layer 3- **GENEVE protocol**
+
+![Load balancers](image-2.png)
+
+## AUTO-SCALING GROUPS
+- In real-life, the load on websites can change and hence 
+- ASG can scale out and scale in by number of request coming in 
+- ASG can terminate unhealthy EC2 instances and replace them with healthy EC2
+
+## AUTO SCALING STRATERGIES
+1. ### MANUAL SCALING
+- Scale manually
+
+2. ### DYNAMIC SCALING 
+- Do when a certain event occur like a cloudwatch trigger
+- **TARGET SCALING** - I want the average CPU to stay around 40%
+
+3. ### SCHEDULED SCALING 
+- Anticiapating ahead of time 
+
+4. ### PREDICTIVE SCALING 
+- Use ML for past patterns and scale accordingly 
