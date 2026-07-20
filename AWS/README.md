@@ -462,3 +462,18 @@ We are responsible for:
 
 4. ### PREDICTIVE SCALING 
 - Use ML for past patterns and scale accordingly 
+
+# AMAZON S3
+- It is used for backup and storage 
+- S3 buckets are regional level. 
+- **NAMING** - GLOBALLY UNIQUE but now we can have **Account Regional Namespace** So we can make use of it at different tregions 
+- Naming conventions:
+    - No uppercase, No underscore
+    - Not an IP
+    - Must start lowercase or Number 
+    
+## AMAZON S3 KEY
+- Objects have keys 
+- **KEY = FULL PATH**
+- KEY is made of **PREFIX NAME + OBJECT**
+- Max size to upload once is **50TB**
