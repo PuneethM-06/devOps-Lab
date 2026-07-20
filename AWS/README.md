@@ -575,3 +575,21 @@ Use case
 
 2. **CLIENT SIDE ENCRYPTION**
 - Client does the encryption 
+
+## IAM ACCESS ANALYZER FOR S3
+- Ensured only intended people can access your S3
+- Powered by IAM Access Analyzer
+
+## SHARED RESPONSBILITY MODEL
+
+- AWS
+    - Durability
+    - Availability
+    - Internal and CVE
+- US
+    - S3 versioning 
+    - S3 bucket policies
+    - Loggina nd monitoring 
+    - Storage class
+    - Encryption on client side 
+
