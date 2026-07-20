@@ -343,3 +343,7 @@ We are responsible for:
 - They can be **mounted only to a single EC2 instance**
 - They are bound to specific **AVAILABILITY ZONE**
 - Example: An EBS created us-east-1a cannot be attached to us-east-1b, but **we can move volumes across AZ**
+
+2. ### EBS SNAPSHOT
+- We can take a EBS and perform a **snapshot = BACKUP**
+- We can COPY **SNAPSHOTS ACROSS REGIONS AND AZ**
