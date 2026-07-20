@@ -505,3 +505,16 @@ We are responsible for:
 - Everytime we make a change or add a new file we can keep track of it and then it helps is restoring and maintaining
 - Suspending versioning will not remove old versions 
 
+## S3 REPLICATION OVERVIEW
+### CRR - CROSS REGION RELICATION 
+### SRR - SAME REGION REPLICATION 
+
+- We **must enable versioning**
+- We need IAM permission for reading and writing 
+
+Use case
+- CRR
+    1. Compliance, low latency
+- SRR
+    1. Logs and make replications in prod and other env 
+
