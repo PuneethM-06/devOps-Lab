@@ -566,7 +566,7 @@ Use case
 - High performance, but **single AZ** storage class
 - Stored in **Directory**
 - Handles millions of requests in single digit millisecond latency
-- upto 10x better performance than S3 standard
+- upto **10x better performance** than S3 standard
 - Highly durable and available 
 
 ## S3 ENCRYPTION
@@ -592,4 +592,13 @@ Use case
     - Loggina nd monitoring 
     - Storage class
     - Encryption on client side 
+
+## AWS SNOWBALL FAMILY 
+- Highly-secure, portable device to move data in and out of AWS
+- **SNOWBALL EDGE STORAGE OPTIMIZIED** - 210 B STORAGE
+- **SNOWBALL EDGE COMPUTE OPTIMIZIED** - 28 TB STORAGE
+
+### SNOWBALL EDGE PRICING 
+- **Device usage** and **data transfer out of AWS**
+- Data into AWS is **free**
 
