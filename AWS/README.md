@@ -499,3 +499,9 @@ We are responsible for:
 ## AMAZON S3 - STATIC WEBSITE HOSTING 
 - S3 can host static website and URL deoends on bucket region and aws-region 
 
+## AMAZON S3 VERSIONING 
+- We can version files in Amazon S3
+- It is enabled at bucket level 
+- Everytime we make a change or add a new file we can keep track of it and then it helps is restoring and maintaining
+- Suspending versioning will not remove old versions 
+
