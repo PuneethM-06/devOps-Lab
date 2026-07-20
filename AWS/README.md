@@ -496,3 +496,6 @@ We are responsible for:
 - Actions - Set of API to allow or deny 
 - Principal - The account user to apply 
 
+## AMAZON S3 - STATIC WEBSITE HOSTING 
+- S3 can host static website and URL deoends on bucket region and aws-region 
+
