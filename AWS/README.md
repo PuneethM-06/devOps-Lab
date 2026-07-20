@@ -357,3 +357,13 @@ We are responsible for:
 - We can customize an EC2 using AMI
 - We can install softwares, configs and OS.
 - AMI are built for a **specific region** and can be copied
+
+## EC2 IMAGE BUILDER
+- **Automated creation of VM's and Container images**
+- EC2 image builder creates a Builder EC2 instances where we customixze and then a our custom AMI will be created. EC2 builder will perform tests on it 
+- And then we can make use of it 
+- It can be **run on a schedule**
+
+## EC2 INSTANCE STORE
+- Since EBS are network volumes and are limited. WE can make use of EC2 instance store 
+- And EC2 Instance **LOSE THEIR DATA IF STORED**
