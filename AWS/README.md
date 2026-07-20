@@ -708,3 +708,13 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - It is a **NOSQL**
 - It stores JSON data
 - It is stored in **3AZ**
+
+## AMAZON NEPTUNE
+- It is fully managed **GRAPH DATABASE**
+- A popular graph dataset 
+- It is across 3AZ
+
+## AMAZON TIMESTREAM
+- It is for **Time series data**
+- It is data that is **evolving overtime**
+- It is **serverless**
