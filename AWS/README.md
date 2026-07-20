@@ -377,3 +377,34 @@ We are responsible for:
 
 ## EBS vs EFS
 1. EBS one instance and one AZ, EFS can be done in other way. But we can move EBS to different AZ using Snapcshot
+
+## EFS-IA
+- Cost optimized, 92% discount 
+- Files that are not accessed frequently 
+- We can create policy, Like *If a file not accessed for 60 days, move to EFS-IA*
+
+## SHARED RESPONSIBILITY
+- AWS
+    - Infrastructure
+    - Replication for data
+    - Replacing faulty hardware
+- US
+    - snapshot / backup procedures
+    - Setting up for data encryption 
+    - Responsbility of any data on drives
+
+## AMAZON FSX
+- managed system for getting **3rd party file system**
+
+### FSX FOR WINDOWS FILER SERVER
+- Windows native shared file system 
+- meant for **Windows based EC2**
+- It is has **SMB and Windows NTFS**
+
+### AMAZON FSX LUSTRE
+- For High Performance Computer (HPC)
+- Used for ML, video processing etc
+- Can be connected to comput instances or server. 
+- It can make use of S3 for storing data
+
+
