@@ -683,3 +683,28 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - **Load data every hour, not every second**
 - it is good for **analysing and processing data**
 - Integrated for **AWS Quicksight or Tableau**
+
+## RESSHIFT SERVERLESS
+- WE dont have to worry about scaling and AWS will handle it 
+
+## AMAZON EMR
+- It stands for **ELASTIC MAPREDUCE**
+- It used to do Bigdata using **Hadoop cluster**
+- Has Auto-scaling
+- Use-case: Data processing, Ml and bigdata
+
+## ATHENA OVERViEW
+- **Serverless** query service to perform analytics agaist **S3 OBJECTS**
+- Uses standard SQL query to analyse data 
+- Pricing 5$ per TB
+
+## AMAZON QUICKSIGHT
+- It is serverless for creating interactive dashboards using ML
+- It is automatically scalable 
+- It can run on Aurors, Redshift
+
+## DOCUMENTDB
+- It is the same for **MongoDB**
+- It is a **NOSQL**
+- It stores JSON data
+- It is stored in **3AZ**
