@@ -615,4 +615,28 @@ Use case
 2. ## NOSQL DATABASES
 - Non relational databases
 - Flexible schema 
+- JSON is the common way of expressing data 
+
+## RDS - RELATIONAL DATABSE
+- **Relational databases**
+- It can use **SQL** for querying 
+- Aurora is AWS database
+- Since RDS and Aurora are AWS managed:
+    - Automated is provisioned
+    - OS patching 
+    - Monitor Dashboard
+    - we can do maintainence
+- ###### WE CANNOT SSH
+
+## AURORA
+- Aurora is a proprietary
+- PostgresSQL and MySQL are supported
+- Aurora costs more than 20%
+
+## AURORA SERVERLESS
+- **automated auto-scaling**
+- PostgresSQL and MySQL are both supported
+- **PAY PER SECOND**
+
+### AURORA DATABASES SHARE SAME STORAGE VOLUME
 
