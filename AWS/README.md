@@ -367,3 +367,13 @@ We are responsible for:
 ## EC2 INSTANCE STORE
 - Since EBS are network volumes and are limited. WE can make use of EC2 instance store 
 - And EC2 Instance **LOSE THEIR DATA IF STORED**
+
+## EFS - ELASTIC FILE SYSTEM
+- This can be attached to EC2 (shared network file system)
+- It can be **mounted to 100s of EC2 instances**
+- Works for **LINNUX EC2**
+- Expesnsive 
+- It can be attached **ACROSS AZ**
+
+## EBS vs EFS
+1. EBS one instance and one AZ, EFS can be done in other way. But we can move EBS to different AZ using Snapcshot
