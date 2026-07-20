@@ -518,3 +518,44 @@ Use case
 - SRR
     1. Logs and make replications in prod and other env 
 
+# AMAZON S3 STORAGE CLASSES
+1. ### DURABILITY - how many times object is lost (11 9's)
+2. ### AVAILABILITY - how readily it is available 99.99%
+
+1. ### S3 STORAGE CLASS
+- 99.99% availability
+- Low latency and high throughput 
+- used for frequent data access
+- Use case: Big data analytics, mobile and gaming applications 
+
+2. ### S3 INFREQUENT ACCESS
+- Less frequently accessed, but **requires rapid access** when needed
+- It is lesser in cost compared to general S3, but will be costed for retrieval 
+- 99.99% available 
+- Use case - Disaster recovery and Backus
+
+3. ### S3 ONE ZONE INFREQUENT ACCESS
+- High durability in a single AZ
+- Data lost when AZ is destroyed
+- **99.5% availability**
+- Use case - store secondary copy of data
+
+4. ### S3 GLACIER STORAGE CLASSES
+- Low cost object storage
+- Pricing - Price for storage + Object retrieval cost
+
+5. ### S3 GLACIER INSTANT RETRIEVAL
+- Millisecond and **rapid retrieval**
+- Minimum storage is **90 days**
+
+6. ### S3 GLACIER FLEXIBLE RETRIEVAL
+- Expedited (1 to 5 days), Standard(3 to 5 hours), Bulk(5 to 12 hours)
+- Minimum storage is 90 days 
+
+7. ### S3 GLACIER DEEP ARCHIVE
+- minimum storage is **180 days**
+- standard(12 hours), Bulk(48 hours)
+
+8. ### S3 INTILLIGENT-TIERING
+- smoothly moving between storage classes based on usage
+- We have to pay auto-tiering fee 
