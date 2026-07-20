@@ -559,3 +559,19 @@ Use case
 8. ### S3 INTILLIGENT-TIERING
 - smoothly moving between storage classes based on usage
 - We have to pay auto-tiering fee 
+
+
+## S3 EXPRESS ONE ZONE
+
+- High performance, but **single AZ** storage class
+- Stored in **Directory**
+- Handles millions of requests in single digit millisecond latency
+- upto 10x better performance than S3 standard
+- Highly durable and available 
+
+## S3 ENCRYPTION
+1. **SERVER SIDE ENCRYPTION**
+- **BY DEFAULT ENCRYPTED BY AWS**
+
+2. **CLIENT SIDE ENCRYPTION**
+- Client does the encryption 
