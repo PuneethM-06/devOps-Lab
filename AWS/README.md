@@ -414,15 +414,36 @@ We are responsible for:
     - Vertical scaling 
     - Horizontal scaling = Elasticity
 ### VERTICAL SCALING 
+- **SCALE UP OR DOWN**
 - Increase the size 
 - Example; t2.micro to t2.large
 - Example: Database
 - Limit of hardware
 
 ### HORIZONTAL SCALING
+- **SCALE OUT AND SCALE IN**
 - Increasing the number of systems/ EC2
 - We need distributed system 
 
 ## HIGH AVAILABILITY
 - Goes hand in hand with horizontal scaling 
 - **RUNNING IN ATLEAST 2 AZ**
+
+### SCALBILITY - ACCOMODATE LARGER LOAD (SCALE UP AND DOWN)
+### ELASTICITY - AUTO SCALING (SCALE OUT AND SCALE IN)
+### AGILITY - REDUCE TIME AND FASTER
+
+## WHAT IS LOAD BALANCING 
+- Servers that forward internet traffic to multiple EC2 instances based on worklaod
+- We can use **across multiple AZs**
+- AWS takes care of ALB and we are responsible for configuring.
+- 4 Kind of load balancers
+    - ALB - Application Load balancers - HTTP and HTTPS - Layer 7
+    - NLB - Network Load balacners - Layer 4
+    - GATEWAY LOAD BALANCER - Layer 3- **GENEVE protocol**
+
+![Load balancers](image-2.png)
+
+## AUTO-SCALING GROUPS
+- In real-life, the load on websites can change and hence 
+- ASG can scale out and scale in by number of request coming in 
