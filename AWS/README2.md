@@ -411,3 +411,8 @@
 - We can see **if our changes are complient or no over time **
 - It can be stored to S3 
 - We can aggregate over all the resources and accounts 
+
+## AMAZON MACIE
+- **Discover and protect sensitive data using ML **
+- PII - Personally identifiable information (PII)
+- 
