@@ -117,3 +117,8 @@
 ## AWS WAVELENGTH
 - Able to deploy few AWS services on edge of 5G networks
 - ultra-low latency through 5G networks
+
+## AWS LOCAL ZONES
+- **Place AWS compute storage or databases closer to users**
+- Extend your VPC to more locations **Extension of AWS regions**
+- Basically, we can extend a local zone for a region and then host our EC2 there for better latency and availability
