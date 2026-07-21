@@ -234,10 +234,10 @@
 ![alt text](assets/image-8.png)
 
 ## INTERNET GATEWAY
-- Helps VPC instances to connect to internet
+- Helps **VPC** to connect to internet
 
 ## NAT GATEWAY
-- allows instances to connect to internet using NAT GATEWAY
+- allows **instances** to connect to internet using NAT GATEWAY
 - NAT GATEWAY - converts private IP to public IP 
 ![alt text](assets/image9.png)
 
