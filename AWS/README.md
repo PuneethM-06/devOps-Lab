@@ -753,3 +753,23 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - In EKS we will have **EKS Node**, containers will be run inside these nodes
 - Can be used in cloud like GCP, Azure or AWS
 
+## LAMBDA OVERVIEW
+- **SERVERLESS**
+- We only have **virutal functions**
+- It **RUNS ON DEMAND**
+- Pricing:
+    - Pay **Per request**
+    - Pay **Per compute time**
+- It will be **Event driven**
+
+## API GATEWAY OVERVIEW
+- It is used for building **serverless HTTPS API**
+- We want an external client accessing lambda function, since lambda is not exposed as an external API that is when we get API Gateway in picture 
+![API Gateway](image.png) 
+- Supports **RESTful API and Websockets API**
+
+## AWS BATCH
+- Helps in batch processing 
+- Run 1000000's of batch processing 
+- It starts with **start and end time**
+- Batch will dynamically launch **EC2 instances and spot instances**
