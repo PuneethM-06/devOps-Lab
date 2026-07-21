@@ -39,4 +39,11 @@
 - **Compile source code, test and the output which is a package can be deployed**
 - **PAY FOR TIME USED TO BUILD THE CODE**
 
+## AWS CODEPIPELINE
+- **We can connect CodeCommit and CodeBuild using a CodePipeline**
+- It is basis for **CI/CD**
+- Code -> Build -> Test -> Deploy
 
+## OVERALL WORKFLOW
+
+![alt text](image-2.png)
