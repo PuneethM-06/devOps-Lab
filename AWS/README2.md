@@ -385,3 +385,8 @@
 - It will e**ncrypted by making use of KMS**
 - We can store secrets for a service like RDS etc.
 
+## AWS ARTIFACTS OVERVIEW 
+- Portal that gives access to **compliance reports**
+- we get:
+    - Artifact reports
+    - artifact agreements
