@@ -279,8 +279,8 @@
 ## SITE TO SITE VPN
 - **Connecting On-Prem Data centre to VPC on AWS we use SITE TO SITE VPN**
 - It goes over public internet 
+- We need **CUSTOMER GATEWAY** ON **CUSTOMER SIDE** and **VIRTUAL PRIVATE GATEWAY** on AWS side
 
 ## DIRECT CONNECT
 - Establish a physical connection between On-Prem and AWS
-- But more private and secure and expensive 
-
+- But more **private and secure and expensive **
