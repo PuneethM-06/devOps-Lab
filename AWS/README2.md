@@ -289,3 +289,6 @@
 - connect your computer using **OpenVPN** to your VPC
 - It goes over to internet and if VPC is connected to On-prem we can access On-prem as well 
 
+## TRANSIT GATEWAY
+- It helps in **connecting thousands of VPC's**
+- **VPC PEERING WAS TOO HECTIC AND CREATED COMPLEX NETWORK TOPOLOGY** and hence we used Transit Gateway
