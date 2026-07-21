@@ -98,3 +98,7 @@
 - it **caches the content across Points of presence or Edge locations**
 - We get **DDoS protection**
 - Cloudfront has origins like S3, so for the first time. Edge location gets from origin and stores in cache for the next times 
+
+## AWS GLOBAL ACCELERATOR
+- Increase uploads and downloads for S3 bucket
+- When we need to upload a file from Australia to a bucket in England, then during the process it gets uploaded to a edge location first and through a **internal network** it gets uploaded to bucket in England super fast
