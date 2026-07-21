@@ -189,3 +189,4 @@
 - **schdeule Cron Jobs**
 - We can react to event occuring and also for a service happening 
 - Example: Give a alert to security group if a user is logging in through a Root user
+![alt text](assets/image7.png)
