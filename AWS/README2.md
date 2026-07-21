@@ -205,3 +205,10 @@
     - Find errors and services
     - Identify users who are going to be impacted 
 
+## AWS HEALTH DASHBOARD - SERVICE HISTORY
+- Gives a health check on **AWS services across all regions **
+
+## AWS HEALTH DASHBOARD - YOUR ACCOUNT 
+- It provides alerts and remediation whe AWS is performing certain actions that will be affecting services in our account 
+- Gives alert on schedules maintainence from AWS etc
+
