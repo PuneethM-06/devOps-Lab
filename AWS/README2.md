@@ -327,9 +327,18 @@
 - Protects from SQL injection etc.
 
 ## AWS NETWORK FIREWALL
+
 - Give protection from Layer 3 to layer 7
 - It takes complete control of:
     - VPC to VPC traffic
     - Outbound to inbound 
     - inbound to outbound 
     - Direct connect & site to site VPN
+    
+## AWS FIREWALL MANAGER
+- **Centralized place for managing all security groups in our infrastructure**
+- We can manage:
+    - VPC security groups
+    - WAF rules
+    - AWS shield Advances
+    - AWS network firewall
