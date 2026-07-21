@@ -747,3 +747,9 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Private docker **registry to store docker images**
 - It will be later leveraged by ECS and Fargate 
 
+## AMAZON EKS
+- EKS = Elastic k8s service
+- It is **used to manage k8s cluster on AWS**
+- In EKS we will have **EKS Node**, containers will be run inside these nodes
+- Can be used in cloud like GCP, Azure or AWS
+
