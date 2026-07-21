@@ -284,3 +284,8 @@
 ## DIRECT CONNECT
 - Establish a physical connection between On-Prem and AWS
 - But more **private and secure and expensive **
+
+## AWS CLIENT VPN
+- connect your computer using **OpenVPN** to your VPC
+- It goes over to internet and if VPC is connected to On-prem we can access On-prem as well 
+
