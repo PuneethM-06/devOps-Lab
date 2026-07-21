@@ -342,3 +342,34 @@
     - WAF rules
     - AWS shield Advances
     - AWS network firewall
+
+## PENETRATION TESTING
+- Attack our own infrastructure to check security in our cloud
+
+## ENCRYPTION WITH KMS AND CLOUDHSM
+- We have 2 types:
+    - Encryption at rest (Data at rest) - S3, EFS, DB
+    - Encryption in transit - Data in transit - moving data from On-prem to AWS
+
+## AWS KMS
+- KMS - Key management service
+- We don't have keys and **AWS will manage but we define who can access it**
+
+## CLOUDHSM
+- We manage the **encryption KEYS** here, AWS gives the **encryption hardware**
+- HSM - HARDWARE SECURITY MODULE
+
+## TYPES OF KSM
+1. ### CUSTOMER MANAGED KEY
+- **created and managed by customer.**
+- Customer can enable or disable 
+
+2. ### AWS MANAGED KEY
+- **Created and managed by AWS behalf of customer **
+- `aws/` - means managed by AWS
+
+3. ### AWS OWNED KEY
+- collection of CMK's that is managed by AWS to use in multiple accounts
+
+4. ### CLOUDHSM KEYS
+- Keys that are created from our own CLOUDHSM hardware
