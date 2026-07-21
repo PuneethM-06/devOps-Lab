@@ -16,3 +16,9 @@
 - Code is **compiled into a cloudformation template**
 ![CDK](image-1.png)
 
+## AWS ELASTIC BEANSTALK
+- Generally we make use of 3 tier for Web application, that is, ELB -> EC2 -> DB
+- Elastic beanstalk is a **developer centric view of deploying an application to AWS**
+- **BEANSTALK - PaaS**
+- Here **developer is managing the code while AWS is responsible for deployments and managing**
+
