@@ -150,3 +150,8 @@
 - **PUB/SUB INTEGRATION**
 - Publishers will send messages to **SINGLE SNS TOPIC** and **SUBSCRIBERS TO THAT SNS TOPIC** will get message from that 
 ![alt text](assets/image6.png)
+
+## AMAZON MQ
+- **SQS and SNS are cloud native**
+- **On-Prem** makes use of **MQTT** etc.
+- so **when migrated to cloud, to continue with those servers we make use of AMAZON MQ**
