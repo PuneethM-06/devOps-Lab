@@ -93,3 +93,8 @@
 - we will have primary and Failover instances
 - DNS performs a health check on primary and then routes to failover if primary is unhealthy 
 
+## CLOUDFRONT OVERVIEW
+- It is a CDN - CONTENT DELIVERY NETWORK
+- it **caches the content across Points of presence or Edge locations**
+- We get **DDoS protection**
+- Cloudfront has origins like S3, so for the first time. Edge location gets from origin and stores in cache for the next times 
