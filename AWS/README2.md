@@ -6,7 +6,7 @@
 
 - **It is a declarative way of outlining AWS infrastructure**
 - Benefits are:
-    - Infrastructure as code - No resources are created manually
+    - **    **
     - Cost - Resource creation and termination can be automated
     - Generated diagram for our template
     - Leverage existing templates
@@ -155,3 +155,37 @@
 - **SQS and SNS are cloud native**
 - **On-Prem** makes use of **MQTT** etc.
 - so **when migrated to cloud, to continue with those servers we make use of AMAZON MQ**
+
+# CLOUD MONITORING 
+
+## CLOUD WATCH METRICS
+- Metrics are variable to monitor 
+- metrics will have timestamps
+- We can look at:
+    - CPU utilization 
+    - Status checks
+    - Network
+
+## AWS CLOUDWATCH ALARMS
+- Trigger a cloud watch alarm for any metric 
+- Alarm actions:
+    - Auto scaling 
+    - EC2 actions 
+    - SNS notifications 
+- We can create a billing alarm 
+
+## CLOUDWATCH LOGS
+- It is used to collect log files
+- We can collect logs from:
+    - EBS
+    - ECS
+    - Route53
+- We can also retention the logs 
+
+### CLOUD WATCH LOGS FOR EC2
+- By default it will not send we need to install agent and then we can send what logs needs to be sent '
+
+## EVENT BRIDGE 
+- **schdeule Cron Jobs**
+- We can react to event occuring and also for a service happening 
+- Example: Give a alert to security group if a user is logging in through a Root user
