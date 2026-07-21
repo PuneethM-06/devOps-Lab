@@ -270,3 +270,8 @@
     - Better security 
     - low latency 
 - ### VPC ENDPOINT GATEWAY IS FOR S3 AND DYNAMODB ALONE FOR OTHERS IT IS VPC ENDPOINT INTERFACE
+
+## AWS PRIVATELINK 
+- ** It is the most secure and scalable way to expose a service to thousands of VPC's**
+- ** It allows service running in your VPC exposed to other VPC's**
+![alt text](assets/image10.png)
