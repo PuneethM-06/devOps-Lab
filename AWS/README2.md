@@ -275,3 +275,12 @@
 - ** It is the most secure and scalable way to expose a service to thousands of VPC's**
 - ** It allows service running in your VPC exposed to other VPC's**
 ![alt text](assets/image10.png)
+
+## SITE TO SITE VPN
+- **Connecting On-Prem Data centre to VPC on AWS we use SITE TO SITE VPN**
+- It goes over public internet 
+
+## DIRECT CONNECT
+- Establish a physical connection between On-Prem and AWS
+- But more private and secure and expensive 
+
