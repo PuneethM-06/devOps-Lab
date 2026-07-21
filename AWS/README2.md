@@ -397,4 +397,10 @@
 - It looks after the CloudTrail Events logs, VPC flow logs, DNS logs etc and performs the actions
 - We can also input optional logs like S3 logs, EBS logs, Lambda network activity etc
 
-
+## AWS INSPECTOR OVERVIEW
+- Automated security assessments on:
+    - Vms leveraging SSM
+    - Amazon ECR
+    - Lambda functions 
+- It will check for **vulnerabilities **
+- It can generate** reports or report in AWS security Hub **
