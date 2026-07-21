@@ -14,7 +14,7 @@
 ## AWS CLOUD DEVELOPMENT KIT (CDK)
 - Defining **cloud infrastructure using a familiar coding language**
 - Code is **compiled into a cloudformation template**
-![CDK](image-1.png)
+![CDK](assets/image-1.png)
 
 ## AWS ELASTIC BEANSTALK - PaaS
 - Generally we make use of 3 tier for Web application, that is, ELB -> EC2 -> DB
@@ -46,7 +46,7 @@
 
 ## OVERALL WORKFLOW
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ## AWS CODE ARTIFACT
 
@@ -74,7 +74,7 @@
 ## AMAZON ROUTE 53
 - It is a managed DNS(Domain name system)
 - It helps find client reach their right destination by providing IP address
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 ### ROUTING POLICIES:
 1. **SIMPLE ROUTING POLICY**
@@ -84,10 +84,11 @@
 2. **WEIGHTED ROUTING POLICY**
 - We do have health-checks
 -  allows us to distribute weights acorss multiple EC2 instances
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
 3. **LATENCY ROUTING POLICY**
 - Checks for user location and redirects user request to nearest server 
+
 
 4. **FAILOVER ROUTING POLICY**
 - we will have primary and Failover instances
@@ -119,6 +120,23 @@
 - ultra-low latency through 5G networks
 
 ## AWS LOCAL ZONES
+**EXTEND VPC's IN A REGION TO LOCAL ZONES**
 - **Place AWS compute storage or databases closer to users**
 - Extend your VPC to more locations **Extension of AWS regions**
 - Basically, we can extend a local zone for a region and then host our EC2 there for better latency and availability
+
+# CLOUD INTEGRATIONS
+- There are 2 ways of application communicating eachother:
+    1. Synchronous communication (Application to Application)
+    2. Asynchronous/Event based (Application -> Queue -> Application)
+
+## AWS SQS
+- SQS = Simple Queue Service
+- Producers send messages to Queue and once it is stored in queue, consumer can poll these messages and complete the work
+- Once completed, the message will be deleted in the queue
+- **SERVERLESS**
+- It is used to **DECOUPLE APPLICATIONS**
+- default retention is **4 days to 14 days**
+- **It used FIFO - FIRST IN FIRST OUT**
+- Example:
+![alt text](assets/image5.png)
