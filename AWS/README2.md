@@ -216,11 +216,27 @@
 
 ## IP ADDRESSES IN AWS
 - IPv4 - 4.3 billion addresses
-- Ipv6 - almost unlimited 
+- Ipv6 - almost unlimited (3.4 * 10^38)
 - EC2 instances get new IP everytime we start and stop - **PUBLIC IP ADDRESS**
 
 **Private IPv4 **- It is not public and will be the same even if we stop and restart and cannot be accessed by internet
 - ### ELASTIC IP - Gets a fixed public IPv4 address to a Ec2 instance
 
 
+- IPv6 is free on AWS while EIP and Ipv4 charges 0.005$
+
+## VPC - VIRTUAL PRIVATE CLOUD
+- **It is linked to a region**
+- **Subnets** - **Part of a VPC and it will be associated to a AZ**
+- Here we can have:
+    1. **Public Subnet** - accessed by public
+    2. **Private subnet** - cannot be accessed by public 
+![alt text](assets/image-8.png)
+
+## INTERNET GATEWAY
+- Helps VPC instances to connect to internet
+
+## NAT GATEWAY
+- allows instances to connect to internet using NAT GATEWAY
+- NAT GATEWAY - converts private IP to public IP 
 
