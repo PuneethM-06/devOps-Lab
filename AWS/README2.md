@@ -47,3 +47,15 @@
 ## OVERALL WORKFLOW
 
 ![alt text](image-2.png)
+
+## AWS CODE ARTIFACT
+
+- Storing and retrieving these dependencies is called **ARTIFACT MANAGEMENT**
+- **Developers and CodeBuild can retrieve dependencies from CodeArtifact**
+
+## AWS SSM - SYSTEM MANAGER
+- Manage **Fleet of EC2 instances in On-prem and cloud**
+- It is **HYBRID**
+- We can do **AUTOMATED PATCHING**
+- We need to install **SSM agent in EC2**
+
