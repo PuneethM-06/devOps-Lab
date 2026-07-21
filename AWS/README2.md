@@ -379,3 +379,8 @@
 - Used to provide **encryption for websites (HTTPS)**
 - Supports both **public and private TLS certificates**
 
+## AWS SECRET MANAGER
+- To **store secrets**
+- We can **force the rotation every X** number of days 
+- It will e**ncrypted by making use of KMS**
+
