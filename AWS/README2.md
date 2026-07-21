@@ -404,3 +404,10 @@
     - Lambda functions 
 - It will check for **vulnerabilities **
 - It can generate** reports or report in AWS security Hub **
+- Generates a **Risk score for prioritization**
+
+## AWS CONFIG
+- Helps in **auditing and recording compliance of AWS resources**
+- We can see **if our changes are complient or no over time **
+- It can be stored to S3 
+- We can aggregate over all the resources and accounts 
