@@ -415,4 +415,16 @@
 ## AMAZON MACIE
 - **Discover and protect sensitive data using ML **
 - PII - Personally identifiable information (PII)
-- 
+
+## AWS SECURITY HUB 
+- It is a** central security tool** to **manage and automate security checks around AWS infrastructure** 
+- Partners with tools:
+    - AWS firewall
+    - AWS system manager
+    - Inspector
+    - WAF 
+    - Macie
+    - config
+    - Health and many more 
+
+- And we can see them in our dashboard 
