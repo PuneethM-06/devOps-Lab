@@ -212,3 +212,15 @@
 - It provides alerts and remediation whe AWS is performing certain actions that will be affecting services in our account 
 - Gives alert on schedules maintainence from AWS etc
 
+# VPC AND NETWORKING 
+
+## IP ADDRESSES IN AWS
+- IPv4 - 4.3 billion addresses
+- Ipv6 - almost unlimited 
+- EC2 instances get new IP everytime we start and stop - **PUBLIC IP ADDRESS**
+
+**Private IPv4 **- It is not public and will be the same even if we stop and restart and cannot be accessed by internet
+- ### ELASTIC IP - Gets a fixed public IPv4 address to a Ec2 instance
+
+
+
