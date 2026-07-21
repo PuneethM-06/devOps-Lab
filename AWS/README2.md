@@ -240,3 +240,14 @@
 - allows instances to connect to internet using NAT GATEWAY
 - NAT GATEWAY - converts private IP to public IP 
 ![alt text](assets/image9.png)
+
+## NACL AND SECURITY GROUPS
+1. ## NACL 
+**- It is at VPC level 
+- can allow or deny rules 
+- they are not stateful 
+
+2. ## SECURITY GROUPS
+**- It is at instances level
+**- they are stateful
+**- support allow rules, everything else is explicitly denied**
