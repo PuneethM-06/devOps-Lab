@@ -325,3 +325,11 @@
 - Protects web application from web exploits on **layer 7**
 - we define Web ACL rules to protect us from attacks 
 - Protects from SQL injection etc.
+
+## AWS NETWORK FIREWALL
+- Give protection from Layer 3 to layer 7
+- It takes complete control of:
+    - VPC to VPC traffic
+    - Outbound to inbound 
+    - inbound to outbound 
+    - Direct connect & site to site VPN
