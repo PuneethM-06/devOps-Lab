@@ -428,3 +428,7 @@
     - Health and many more 
 
 - And we can see them in our dashboard 
+
+## AMAZON DETECTIVE
+- It is used to analyze the** Root cause of security findings **
+- It makes use of **graph and ML**
