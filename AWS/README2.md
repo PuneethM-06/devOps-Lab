@@ -16,7 +16,7 @@
 - Code is **compiled into a cloudformation template**
 ![CDK](image-1.png)
 
-## AWS ELASTIC BEANSTALK
+## AWS ELASTIC BEANSTALK - PaaS
 - Generally we make use of 3 tier for Web application, that is, ELB -> EC2 -> DB
 - Elastic beanstalk is a **developer centric view of deploying an application to AWS**
 - **BEANSTALK - PaaS**
@@ -59,3 +59,7 @@
 - We can do **AUTOMATED PATCHING**
 - We need to install **SSM agent in EC2**
 
+## AWS SSM Parameter Store
+- **SERVERLESS**
+- **Secure storage for configuration and secrets**
+- **Version tracking and encryption is there**
