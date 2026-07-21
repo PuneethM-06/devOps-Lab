@@ -99,6 +99,11 @@
 - We get **DDoS protection**
 - Cloudfront has origins like S3, so for the first time. Edge location gets from origin and stores in cache for the next times 
 
-## AWS GLOBAL ACCELERATOR
+## AWS S3 TRANSFER ACCELERATOR
 - Increase uploads and downloads for S3 bucket
 - When we need to upload a file from Australia to a bucket in England, then during the process it gets uploaded to a edge location first and through a **internal network** it gets uploaded to bucket in England super fast
+
+## AWS GLOBAL ACCELERATOR
+- Here we leverage, **AWS internal network to optmize the route to our application**
+- We access applications through **static IP**
+- We **connect to an Edge location and from there we move internal**
