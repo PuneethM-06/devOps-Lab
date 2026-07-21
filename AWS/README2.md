@@ -140,3 +140,13 @@
 - **It used FIFO - FIRST IN FIRST OUT**
 - Example:
 ![alt text](assets/image5.png)
+
+## AWS KINESIS DATASTREAM
+- It is used to **collect and analyze live streaming data**
+
+## AWS SNS
+- SNS = Simple notification service
+- Sending a single message to thousands of users
+- **PUB/SUB INTEGRATION**
+- Publishers will send messages to **SINGLE SNS TOPIC** and **SUBSCRIBERS TO THAT SNS TOPIC** will get message from that 
+![alt text](assets/image6.png)
