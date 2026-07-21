@@ -678,7 +678,7 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Users can read and write to these table since it has **active-replication**
 
 ## REDSHIFT OVERVIEW
-- It is used for PostgresSQL
+- It is used for PostgresSQL, **DATAWAREHOUSE**
 - It is good for **OLAP**
 - **Load data every hour, not every second**
 - it is good for **analysing and processing data**
@@ -726,3 +726,10 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 ## DMS - DATABASE MIGRATION SERVICE
 - Extract the data from source DB and inject in Target DB
 - Source DB remains during migration 
+
+## WHAT IS A DOCKER
+- Docker is a software development platform for deploying apps
+- We will package the apps something called as container 
+- Running the container runs the application 
+- Scalability can be done in seconds 
+
