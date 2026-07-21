@@ -432,3 +432,14 @@
 ## AMAZON DETECTIVE
 - It is used to analyze the** Root cause of security findings **
 - It makes use of **graph and ML**
+
+## ROOT USER PRIVILEGES
+- Root user = Account owner
+- Some actions are performed by Root user:
+    -   Change account name and password
+    - Close AWS account 
+    - view tax and invoices
+    - Sell Reserved instances in marketplace
+    - Change or cancel AWS support plan 
+    - S3 bucked to have MFA
+    - signup for GovCloud
