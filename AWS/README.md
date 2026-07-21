@@ -733,3 +733,17 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Running the container runs the application 
 - Scalability can be done in seconds 
 
+## ECS - ELASTIC CONTAINER SERVICE
+- This is used to launch docker containers to run on AWS
+- We need to manage the infra by creating EC instance before
+- AWS will take care about **scaling**
+- ECS will **place containers on EC2 instances** 
+
+## FARGATE - SERVERLESS
+- Launch docker containers on AWS
+- This is **serverless and infrastructure is handled by AWS.**
+
+## ECR -  ELASTIC CONTAINER REGISTRY
+- Private docker **registry to store docker images**
+- It will be later leveraged by ECS and Fargate 
+
