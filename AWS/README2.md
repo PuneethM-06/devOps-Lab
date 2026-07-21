@@ -251,3 +251,11 @@
 **- It is at instances level
 **- they are stateful
 **- support allow rules, everything else is explicitly denied**
+
+## VPC FLOW LOGS AND VPC PEERING 
+- We can get:
+    - VPC flow log
+    - Subnet flow log
+- This can be used for debugging networking issues 
+- It can go to S3 or cloudwatch logs
+
