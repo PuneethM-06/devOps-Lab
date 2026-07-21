@@ -114,3 +114,6 @@
 - **AWS will setup and manage**
 - But we will be responsible for security of the server racks 
 
+## AWS WAVELENGTH
+- Able to deploy few AWS services on edge of 5G networks
+- ultra-low latency through 5G networks
