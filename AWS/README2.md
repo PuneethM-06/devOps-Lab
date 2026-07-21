@@ -190,3 +190,8 @@
 - We can react to event occuring and also for a service happening 
 - Example: Give a alert to security group if a user is logging in through a Root user
 ![alt text](assets/image7.png)
+
+## AWS CLOUDTRAIL
+- It **provides, governance, compliance and audit for AWS account** 
+- Everything that is done in an account will be logged in cloudtrail.
+- We can send this to **S3 or CloudWatch logs**
