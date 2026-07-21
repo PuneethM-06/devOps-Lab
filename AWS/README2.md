@@ -26,4 +26,17 @@
 ## AWS CODE DEPLOY
 - It is a **HYBRID SERVICE - ONPREM AND CLOUD**
 - It is a way to **deploy application automatically**
+- It helps in **UPGRADING APPLICATIONS FROM V1 TO V2 IN FEW CLICKS**
+
+## AWS CODECOMMIT
+- It is a **code repository, using the git technology**
+- CodeCommit is a way of **storing code before moving it to deployment in AWS**
+- Private, secure
+
+## AWS CODEBUILD
+- **SERVERLESS**
+- Build code in the cloud
+- **Compile source code, test and the output which is a package can be deployed**
+- **PAY FOR TIME USED TO BUILD THE CODE**
+
 
