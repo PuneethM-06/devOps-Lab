@@ -21,4 +21,9 @@
 - Elastic beanstalk is a **developer centric view of deploying an application to AWS**
 - **BEANSTALK - PaaS**
 - Here **developer is managing the code while AWS is responsible for deployments and managing**
+- **ELASTIC BEANSTALK HAS ITS OWN HEALTH MONITORING** 
+
+## AWS CODE DEPLOY
+- It is a **HYBRID SERVICE - ONPREM AND CLOUD**
+- It is a way to **deploy application automatically**
 
