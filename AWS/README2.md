@@ -63,3 +63,11 @@
 - **SERVERLESS**
 - **Secure storage for configuration and secrets**
 - **Version tracking and encryption is there**
+
+# GLOBAL INFRASTRUCTURE 
+- Deploying application in multiple regions or Edge locations mkaing it a global application 
+- Reasons:
+    - Decreased Latency
+    - Disaster recovery 
+    - Attack protection
+
