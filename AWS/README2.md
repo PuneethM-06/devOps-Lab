@@ -195,3 +195,13 @@
 - It **provides, governance, compliance and audit for AWS account** 
 - Everything that is done in an account will be logged in cloudtrail.
 - We can send this to **S3 or CloudWatch logs**
+
+## X-RAY OVERVIEW
+- Debugging in production inlcudes reading logs and making fix and re-deploying 
+- AWS **X-ray can do tracing and give visual representation of each services and see where it is failing **
+- We can:
+    - Troubleshooting 
+    - Pinpoint service
+    - Find errors and services
+    - Identify users who are going to be impacted 
+
