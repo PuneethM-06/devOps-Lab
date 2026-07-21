@@ -390,3 +390,11 @@
 - we get:
     - Artifact reports
     - artifact agreements
+
+## AWS GUARDDUTY 
+- It helps **Intelligent Threat discovery**
+- Uses** Machine learning and 3rd party data **
+- It looks after the CloudTrail Events logs, VPC flow logs, DNS logs etc and performs the actions
+- We can also input optional logs like S3 logs, EBS logs, Lambda network activity etc
+
+
