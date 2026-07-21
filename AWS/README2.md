@@ -305,3 +305,23 @@
     - OS patchonog and IAM 
     - encryption
 ![alt text](assets/image11.png)
+
+
+## WHAT IS A DDOS ATTACK
+- Distributed denial of service
+- Attacker launches master servers and these will create bots and these bots will send millions of requests
+- We can tackle using:
+    - AWS SHIELD STANDARD - free
+    - AWS SHIELD ADVANCED 24/7
+    - AWS WAF - Filter certain type of requests
+
+## AWS SHIELD
+- Generally on Layer 3 and Layer 4
+- We have:
+    - **Shield standard** - free
+    - **Shield advanced **- 3000$ per month
+
+## AWS WAF
+- Protects web application from web exploits on **layer 7**
+- we define Web ACL rules to protect us from attacks 
+- Protects from SQL injection etc.
