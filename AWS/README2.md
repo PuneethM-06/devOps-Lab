@@ -107,3 +107,10 @@
 - Here we leverage, **AWS internal network to optmize the route to our application**
 - We access applications through **static IP**
 - We **connect to an Edge location and from there we move internal**
+
+## AWS OUTPOSTS
+- It is about HYBRID CLOUD
+- **Outposts are server racks that offers same AWS infrastructuree services on On-prem**
+- **AWS will setup and manage**
+- But we will be responsible for security of the server racks 
+
