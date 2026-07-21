@@ -443,3 +443,8 @@
     - Change or cancel AWS support plan 
     - S3 bucked to have MFA
     - signup for GovCloud
+
+## AWS IAM ACCESS ANALYZER
+- Find out resources that are shared externally
+- Zone of trust = AWS account or for AWS organization 
+-  If it is out of Zone of Trust, then we will be notified 
