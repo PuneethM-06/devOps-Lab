@@ -761,6 +761,8 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
     - Pay **Per request**
     - Pay **Per compute time**
 - It will be **Event driven**
+- **TIME LIMIT IS 15 MINS** 
+
 
 ## API GATEWAY OVERVIEW
 - It is used for building **serverless HTTPS API**
@@ -773,3 +775,9 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Run 1000000's of batch processing 
 - It starts with **start and end time**
 - Batch will dynamically launch **EC2 instances and spot instances**
+
+## AWS LIGHTSAIL
+- We can get VM's, storage DB and networking 
+- Great for people with **Little cloud experience**
+- Use cases: simple web applications, websites etc.
+
