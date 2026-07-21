@@ -373,3 +373,9 @@
 
 4. ### CLOUDHSM KEYS
 - Keys that are created from our own CLOUDHSM hardware
+
+## AWS CERTIFICATE MANAGER
+- Manage and deploy **SSL and TLS certifcates**
+- Used to provide **encryption for websites (HTTPS)**
+- Supports both **public and private TLS certificates**
+
