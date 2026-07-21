@@ -1,4 +1,4 @@
-# AWS - CLOUD PRACTITIONER
+# AWS - CLOUD PRACTITIONER PAGE 1
 
 ### WHAT IS A SERVER COMPOSED OF?
 1. CPU
@@ -678,7 +678,7 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Users can read and write to these table since it has **active-replication**
 
 ## REDSHIFT OVERVIEW
-- It is used for PostgresSQL
+- It is used for PostgresSQL, **DATAWAREHOUSE**
 - It is good for **OLAP**
 - **Load data every hour, not every second**
 - it is good for **analysing and processing data**
@@ -726,3 +726,58 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 ## DMS - DATABASE MIGRATION SERVICE
 - Extract the data from source DB and inject in Target DB
 - Source DB remains during migration 
+
+## WHAT IS A DOCKER
+- Docker is a software development platform for deploying apps
+- We will package the apps something called as container 
+- Running the container runs the application 
+- Scalability can be done in seconds 
+
+## ECS - ELASTIC CONTAINER SERVICE
+- This is used to launch docker containers to run on AWS
+- We need to manage the infra by creating EC instance before
+- AWS will take care about **scaling**
+- ECS will **place containers on EC2 instances** 
+
+## FARGATE - SERVERLESS
+- Launch docker containers on AWS
+- This is **serverless and infrastructure is handled by AWS.**
+
+## ECR -  ELASTIC CONTAINER REGISTRY
+- Private docker **registry to store docker images**
+- It will be later leveraged by ECS and Fargate 
+
+## AMAZON EKS
+- EKS = Elastic k8s service
+- It is **used to manage k8s cluster on AWS**
+- In EKS we will have **EKS Node**, containers will be run inside these nodes
+- Can be used in cloud like GCP, Azure or AWS
+
+## LAMBDA OVERVIEW
+- **SERVERLESS**
+- We only have **virutal functions**
+- It **RUNS ON DEMAND**
+- Pricing:
+    - Pay **Per request**
+    - Pay **Per compute time**
+- It will be **Event driven**
+- **TIME LIMIT IS 15 MINS** 
+
+
+## API GATEWAY OVERVIEW
+- It is used for building **serverless HTTPS API**
+- We want an external client accessing lambda function, since lambda is not exposed as an external API that is when we get API Gateway in picture 
+![API Gateway](image.png) 
+- Supports **RESTful API and Websockets API**
+
+## AWS BATCH
+- Helps in batch processing 
+- Run 1000000's of batch processing 
+- It starts with **start and end time**
+- Batch will dynamically launch **EC2 instances and spot instances**
+
+## AWS LIGHTSAIL
+- We can get VM's, storage DB and networking 
+- Great for people with **Little cloud experience**
+- Use cases: simple web applications, websites etc.
+
