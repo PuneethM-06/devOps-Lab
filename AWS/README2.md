@@ -292,3 +292,16 @@
 ## TRANSIT GATEWAY
 - It helps in **connecting thousands of VPC's**
 - **VPC PEERING WAS TOO HECTIC AND CREATED COMPLEX NETWORK TOPOLOGY** and hence we used Transit Gateway
+
+# SECURITY AND COMPLIANCE
+
+## AWS SHARED RESPONSIBILITY MODEL
+- AWS is responsible for security **of** the cloud 
+- Users responsible is for security **in** the cloud 
+- AWS
+    - managed services like S3, dynamoDb
+
+- USERS
+    - OS patchonog and IAM 
+    - encryption
+![alt text](assets/image11.png)
