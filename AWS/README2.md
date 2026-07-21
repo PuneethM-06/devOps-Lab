@@ -71,3 +71,25 @@
     - Disaster recovery 
     - Attack protection
 
+## AMAZON ROUTE 53
+- It is a managed DNS(Domain name system)
+- It helps find client reach their right destination by providing IP address
+![alt text](image-3.png)
+
+### ROUTING POLICIES:
+1. **SIMPLE ROUTING POLICY**
+- No health checks 
+-  simple goes to DNS and gets the IP
+
+2. **WEIGHTED ROUTING POLICY**
+- We do have health-checks
+-  allows us to distribute weights acorss multiple EC2 instances
+![alt text](image-4.png)
+
+3. **LATENCY ROUTING POLICY**
+- Checks for user location and redirects user request to nearest server 
+
+4. **FAILOVER ROUTING POLICY**
+- we will have primary and Failover instances
+- DNS performs a health check on primary and then routes to failover if primary is unhealthy 
+
