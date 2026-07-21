@@ -259,3 +259,14 @@
 - This can be used for debugging networking issues 
 - It can go to S3 or cloudwatch logs
 
+## VPC PEERING
+- connecting 2 VPC's privately using AWS network
+- Must not have **overlapping CIDR**
+- VPC peering is not **TRANSITIVE IN NATURE**
+
+## VPC ENDPOINTS
+- Endpoints allow you to **connect to AWS services using a private network**
+- It ensures we have:
+    - Better security 
+    - low latency 
+- ### VPC ENDPOINT GATEWAY IS FOR S3 AND DYNAMODB ALONE FOR OTHERS IT IS VPC ENDPOINT INTERFACE
