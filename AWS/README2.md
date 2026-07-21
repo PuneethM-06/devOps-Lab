@@ -383,4 +383,5 @@
 - To **store secrets**
 - We can **force the rotation every X** number of days 
 - It will e**ncrypted by making use of KMS**
+- We can store secrets for a service like RDS etc.
 
