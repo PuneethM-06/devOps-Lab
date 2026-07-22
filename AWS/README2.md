@@ -243,14 +243,14 @@
 
 ## NACL AND SECURITY GROUPS
 1. ## NACL 
-**- It is at VPC level 
+- **It is at VPC level**
 - can allow or deny rules 
 - they are not stateful 
 
 2. ## SECURITY GROUPS
-**- It is at instances level
-**- they are stateful
-**- support allow rules, everything else is explicitly denied**
+- **It is at instances level**
+- **they are stateful**
+- support allow rules, everything else is explicitly denied**
 
 ## VPC FLOW LOGS AND VPC PEERING 
 - We can get:
@@ -272,8 +272,8 @@
 - ### VPC ENDPOINT GATEWAY IS FOR S3 AND DYNAMODB ALONE FOR OTHERS IT IS VPC ENDPOINT INTERFACE
 
 ## AWS PRIVATELINK 
-- ** It is the most secure and scalable way to expose a service to thousands of VPC's**
-- ** It allows service running in your VPC exposed to other VPC's**
+- **It is the most secure and scalable way to expose a service to thousands of VPC's**
+- **It allows service running in your VPC exposed to other VPC's**
 ![alt text](assets/image10.png)
 
 ## SITE TO SITE VPN
@@ -365,7 +365,7 @@
 - Customer can enable or disable 
 
 2. ### AWS MANAGED KEY
-- **Created and managed by AWS behalf of customer **
+- **Created and managed by AWS behalf of customer**
 - `aws/` - means managed by AWS
 
 3. ### AWS OWNED KEY
@@ -393,7 +393,7 @@
 
 ## AWS GUARDDUTY 
 - It helps **Intelligent Threat discovery**
-- Uses** Machine learning and 3rd party data **
+- Uses **Machine learning and 3rd party data**
 - It looks after the CloudTrail Events logs, VPC flow logs, DNS logs etc and performs the actions
 - We can also input optional logs like S3 logs, EBS logs, Lambda network activity etc
 
@@ -402,8 +402,8 @@
     - Vms leveraging SSM
     - Amazon ECR
     - Lambda functions 
-- It will check for **vulnerabilities **
-- It can generate** reports or report in AWS security Hub **
+- It will check for **vulnerabilities**
+- It can generate** reports or report in AWS security Hub**
 - Generates a **Risk score for prioritization**
 
 ## AWS CONFIG
@@ -448,3 +448,512 @@
 - Find out resources that are shared externally
 - Zone of trust = AWS account or for AWS organization 
 -  If it is out of Zone of Trust, then we will be notified 
+
+# MACHINE LEARNING 
+
+## AMAZON REKOGNITION
+- It is used to **recognise text, image and scenes and videos using ML**
+- Images can be reecognuised and labeled.
+- Face detection analysis 
+
+## AMAZON TRANSCRIBE 
+- Automatically **convert speech to text**
+- We can **automatically remove PII** and it is called **readaction**
+
+## AMAZON POLLY
+- Automatically converts **text to speech**
+
+## AMAZON TRANSLATE
+- **Language translation **
+
+## AMAZON LEX & CONNECT
+- Amazon lex powers **ALEXA**
+- We get **ASR - Automatic speech recognition** and convert speech to text
+
+- **Amazon connect**, create flows like recevieve calls and virtual connect 
+- we can connect to **CRM**
+
+## AWS COMPHREHEND
+- It is for NLP -**Natural Language Processing**
+- Use ML to find **insights and relationships in text **
+- Use case: Understand customer emails etc.
+
+## AWS SAGEMAKER
+- Fully managed service for **developers to build ML models**
+- We build the model using historical data and then we have to train and tune it and this will be managed by sagemaker
+
+## AWS KENDRA
+- Fully managed **document search** 
+- We can find **certain texts from a document**
+- It makes use of indexing
+
+## AMAZON PERSONALIZE
+- Real time ML-service to provide personalized recommendations 
+- Used by e-commerce and amazon itself
+
+## AMAZON TEXTRACT
+- It is used to **extract text** from any scanned copy
+
+# ACCOUNT MANAGEMENT AND BILLING
+
+## AWS ORGANIZATION
+- **GLOBAL SERVICE**
+- **Manage multiple accounts**
+- uses:
+    - Consolidated Billing 
+    - Pricing benefits from aggregated usage 
+    - **Reserved instances can be pooled to multiple account** 
+    - **Restrict account privilges using SCP**
+
+- **ROOT OU - Master account** and we can have miultiple later
+
+## SERVICE CONTROL POLICIES
+- **SCP can be applied at OU or account level and they are IAM restrictions**
+- **SCP CANNOT BE APPLIED FOR MASTER ACCOUNT** 
+- SCP must have **EXPLICIT ALLOW**
+
+## CONSOLIDATED BILLING
+1. ### IT GIVES COMBINE USAGE
+    - Combine usage across all AWS accounts
+2. ### ONE BILL
+    - Gives a single bill
+
+## AWS CONTROL TOWER
+- Easy way to s**etup and govern secure and compilant multi-account AWS environment**
+- We **can automate the multi-account** 
+- We can **detect policy violations**
+
+## AWS RESOURCE ACCESS MANAGER
+- **We can share resources from one account to another within or out of AWS organizations**
+- Example: WE can share VPC between 2 accounts
+
+## AWS SERVICE CATALOG
+- Self service portal to launch a set of resources that are pre-approved by admins 
+- Users gets a **product list** of resources they can create from this 
+
+## PRICING MODELS IN AWS
+1. PAY-AS-YOU-GO
+2. SAVE WHEN YOU RESERVE - Long term requirements
+3. PAY LESS BY USING MORE
+4. PAY LESS AS AWS GROWS
+
+## LAMBDA
+- **Pay per call**
+- **Pay per duration** 
+
+## S3
+- **Number and size of objects** 
+- **Number and type of requests**
+- **Data transfer OUT of the S3 region** 
+
+## EBS
+- volume type
+- store volume in GB per month
+- Number of snapshots
+
+## RDS
+- Depends on size, engine and memory class
+- **Per hour billing**
+- Backup storage is free
+- Number of input and output requests per month 
+
+## NETWORKING COST
+- Inbount to EC2 is free
+- EC2 talking to each other in same AZ - FREE
+- EC2 talking to different AZ - Public IP - 0.02$
+- EC2 talking to different AZ - private IP - 0.01$
+
+## SAVINGS PLAN 
+- commit to a certain $ for 1 to 3 years
+- EC2 saving plan - 72% discount 
+
+### COMPUTE SAVING PLAN
+- 66% discount copared to On-Demand 
+
+## AWS COMPUTE OPTIMIZER
+- Reduce costs and improve performance by recommending optimal AWS resources
+
+## BILLING AND COSTING TOOL
+
+1. ### AWS PRICING CALCULATOR
+- **ESTIMATE COST FOR SOLUTION ARCHITECTURE WE HAVE**
+
+2. ### BILLING DASHBOARD
+- Show all the **cost for the month and also forecast**
+
+3. ### COST ALLOCATION TAG
+- Allow to track AWS cost on detailed level 
+- Used to organize resources
+- **AWS generated tags** - Generated by AWS
+- **USER-DEFINED TAGS** is also available 
+
+4. ## COST AND USAGE REPORTS
+- **Deep diver in costing** 
+- AWS cost and usage data 
+- It can be done for IAM users for hour dat etc
+- **This can be integrated to athena** 
+
+5. ## COST EXPLORER - FORECAST
+- visualize, understand and manage AWS costs over time 
+- It can be done hourly, weekly monthly
+- **FORECAST TOOL FOR 12 MONTHS**
+
+## MONITORING COSTS IN CLOUD
+
+## BILLING ALARMS IN CLOUDWATCH
+- It is stored only in **`us-east-1`**
+
+## AWS BUDGETS
+- s**end alarm when cost and forecast exist budget**
+- It ha 4 types:
+    - Usage
+    - Cost
+    - Reservation 
+    - Savings plans 
+
+- UPTO 5 SNS NOTIFICATION PER BUDGET 
+
+## AWS COST ANOMALY
+- **Use ML to watch billings and then alert when unsual billing happens**
+- It will **send Anomaly report with Root cause**
+
+## AWS SERVICE QUOTAS
+- Notify when you're close to a service quota threshold
+- We can create cloudwatch alarm 
+- Example: Give me a alert when Lambda function hits 1000 triggers in a day 
+
+## AWS TRUSTED ADVISOR
+- **High level account assessment**
+- 6 catgeories:
+    1. Cost optimization 
+    2. Performance
+    3. Security
+    4. Fault tolerance
+    5. Service limits
+    6. Operational excellence 
+- With Enterprise plan we have access to more features and also programattic access to Trsuter Advisor 
+
+# AWS SUPPORT PLAN
+
+1. ## BASIC SUPPORT PLAN 
+- 24/7 access to Customer service
+- AWS Trusted Advisor - 7 Core checks
+- AWS personal health dashboard
+
+2. ## AWS BUSINESS SUPPORT+ PLAN
+- Intended to have **production workloads**
+- Trusted Advisor - Full set of checks + API access
+- 24/7 phone, web and chat access to cloud engineer
+- **unlimited cases / unlimited contacts**
+- **MAX 30 MINUTES WAITING**
+
+3. ## AWS ENTERPRISE SUPPORT PLAN 
+- Business critical workload
+- Access to designated **TAM (TECHINCAL ACCOUNT MANAGERE)**
+- **LESS THAN 15 MINUTES**
+- Business review from **AWS Experts**
+
+4. ## AWS UNIFIED OPERATIONS SUPPORT PLAN 
+- **Application architecture Guidance**
+- Access to:
+    - **TAM**
+    - **DSE** - DOMAIN SPECIALIST ENGINEER
+    - **SBAS** - SENIOR BILLING AND ACCOUNT SPECIALIST
+    - **MIGRATION SPECIALIST**
+- **AWS countdown premium** and A**WS customer incident response team** 
+
+## AWS STS - SECURITY TOKEN SERVICE
+- Generates **short term credentials for acccessing AWS resources**
+- It will have expiration 
+
+## COGNITO OVERVIEW 
+- Provide **identity to web and mobile users**
+
+## DIRECTORY SERVICES
+- Microsoft AD is **found on any windows server and these are objects in DB**
+- WE **can create accounts, assign permissions etc**
+- We can login to multiple resources using this 
+
+- We can extend AWS directory services to do the same 
+    - AWS managed Microsoft AD
+    - AD connector - Proxy
+    - Simple AD
+
+## AWS IAM IDENTITY CENTER
+- Successor to **AWS SSO**
+- **One login to all AWS accounts in organization**
+- We can store information for SSO in 3rd part like Okta or in IAM idetity center
+
+# OTHER SERVICES
+
+## AWS WORKSPACE - VDI
+- **DAAS - Desktop as a service** **for provisoning windows or linux desktops**
+- Greate to eliminate management of on-prem VDI
+- Pay-as-you-go service for hour
+
+## AppStream 2.0
+- **Desktop application Streaming Service**
+- Delivery to any computer without acquiring provision infrastructure 
+- **STREAM DESKTOP APPLICATION TO WEB BROWSERS**
+
+## AWS IoT CORE
+- IoT - Internet of things 
+- **Connect IoT devices to AWS cloud** 
+- **Serverless and secure**
+- Acts as a **Pub/Sub**
+
+## AWS APPSYNC
+- Build **backend for mobile or web application** 
+- It is built by making use of **GRAPHQL**
+
+## AWS AMPLIFY
+- Set of tools and service for **develop and deploy full stack  application**
+
+## AWS INFRASTRUCTURE COMPOSER
+- Visually **design and build serverless applications quickly on AWS**
+- **Generates IaC**
+
+## DEVICE FARM
+- tests web and mobile apps against desktop and mobile browsers
+- Sends reports, log and bugs
+
+## AWS BACKUP
+- Fully managed service to manage and automate backups across AWS
+- We can define schedules to do so 
+- Retention policy, frequency etc. can be designed for the backup to happen 
+
+## AWS DISASTER RECOVERY STRATERGY
+1. ### BACKUP AND RESTORE
+- Backup in cloud and restore on prem when disaster
+- **CHEAP**
+
+2. ### PILOT LIGHT
+- Run core functionality in cloud
+- Example: Run DB in cloud 
+- The size of the app will be less, need to scale and use 
+
+3. ### WARM STANDBY
+- **Expensive**
+- Full version of the app in cloud 
+
+4. ### MULTI-SITE/HOT-SITE
+- full size of the app will be in cloud 
+- ready to use but **MOST EXPENSIVE**
+
+## AWS ELASTIC DISASTER RECOVERY
+- Quickly and easily recover your physical, virtual and cloud based server into AWS
+- **WE DO BLOCK LEVEL REPLICATION FROM ON-PREM TO CLOUD**
+- **We will store this in staging env and when disaster we move to prod** 
+
+## AWS DATASYNC
+- Move large amount of data from On-Prem to cloud 
+- We can do scheduled
+- The replicaton sync are **INCREMENTAL**
+
+## CLOUD MIGRATION STRATERGY - 7R's
+1. **RETIRE** - Things that are off and do not need to part of migration 
+2. **RETAIN** - Do nothing for now, if it is still a decision to make 
+3. **RELOCATE** - Move On-prem to its cloud version Ex: Moving Ec2 to different VPX
+4. **REHOST (LIFT AND SHIFT)** - Simple migration - Rehost on cloud 
+5. **REPLATFORM** (LIFT AND RESHAPE) - Leverage with cloud optmization with migration 
+6. **REPURCHASE (DROP AND SHOP)** - MOVE TO DIFFERENT PRODUCT LIKE SaaS etc
+7. **REFACTOR / RE-ARCHITECT** - Move to cloud and also re-architect using cloud native features
+- Example: Monolithic to micro-services
+
+## AWS APPLICATION DISCOVERY SERVICE
+- Scan servers to get data for analyzing the migration 
+- Two types:
+    - Agentless
+    - Agent based
+- Resulting data can be seen in **AWS migration Hub**
+
+## APPLICATION MIGRATION SERVICE (MGN)
+- **Lift and shift (rehost)**
+- **Replication agent on the On-prem does continous replication in staging env and then we cut to prod** 
+
+## AWS MIGRATION EVALUATOR
+- Helps you build **data driven business case for migration from On-Prem to AWS** 
+- **Take snapshot from On-prem, analyze current state and then plan how it looks like in AWS**
+
+## AWS MIGRATION HUB
+- Central location to gather data of migration for LIFT and SHIFT
+- **TRACKS MIGRATION AND ORCHESTRATION**
+
+## AWS FAULT INJECTION SIMULATOR (FIS)
+- **Chaos engineering** - Stressing an application to behave how application reacts to that scenrio
+
+## STEP FUNCTIONS
+- Build serverless visual workflow to perfrom orchestration 
+- **We build a graph and in case of pass and fail what happens?**
+- **Done for error handling**
+
+## AWS GROUND STATION 
+- Control satellite communication, process data and scale satellite operations
+- Allow you to **download satellite data to AWS VPC within seconds**
+
+## AWS PINPOINT 
+- Scalable **2-way marketing communication**
+- Supports, emails, SMS etc.
+
+# AWS ARCHITECTING AND ECOSYSTEM SECTION 
+
+## GENERAL GUIDING PRINCIPLES
+1. Stop guessing capacity - Use auto-scaling 
+2. Test at production scale
+3. Automate architectural experimentation 
+4. Allow architecture to evolve 
+5. Drive architecture using data 
+
+## DESIGN PRINCIPLE
+1. Scalability
+2. Disposable Resources - Servers should be disposable and easily configured
+3. Automation 
+4. Loose coupling 
+5. Think in services, not servers
+
+## WELL ARCHITECTED FRAMEWORK
+1. Operational Excellence
+2. Security
+3. Reliability 
+4. Performance Efficiency
+5. Cost optimization 
+6. Sustainability 
+
+1. ## OPERATIONAL EXCELLENCE
+- Includes ability to run to **delivery business value and continously support processess and procedures**
+- Deign principles:
+    1. IaC
+    2. **Make frequent, small and changeable changes** 
+    3. Refine operation procedures 
+    4. **Anticipate failures**
+    5. Use managed services
+
+2. ## SECURITY
+- **ability to protect information and system while delivering business outcomes** 
+- Desgin principles:
+    - **Implement a strong identity foundation** 
+    - Apply security at all layers
+    - **Automate security best practices**
+    - **Keep people away from data**
+
+3. ## RELIABILITY 
+- **Ability of a sytem to recover from disaster** 
+- Design princples:
+    - T**est recovery procedure**
+    - **Automatically recover from failure**
+    - **Stop guessing capacity**
+    - **Manage change in automation** 
+
+4. ## PERFORMANCE EFFICIENCY
+- ability to use **compute resource efficiently to meet system requirements**
+- Design principles:
+    - **Go global in minutes**
+    - **Use serverless architecture**
+    - **Experiment more often**
+    - **Mechanical sympathy** - Try to know more about AWS available resources 
+
+5. ## COST OPTIMIZATION
+- ability to run systems to deliver business values at lower cost possible 
+- Design principles
+    - Adopt consumption mode
+    - Measure overall efficiency
+    - stop spending money on data centre operation 
+
+6. ## SUSTAINABILITY 
+- focus on minimizing enviornmental impacts of running cloud workloads
+- Principles:
+    - understand your impact
+    - establish sustainability goals
+    - anticipate and adopt new technology or solutions 
+
+## AWS WELL ARCHITECTED TOOL
+- Free tool to review your architecture against the six pillars 
+
+## AWS CUSTOMER CARBON FOOTPRINT 
+- Track carbon emissions generated from your AWS infrastructure used
+
+## AWS CAF - CLOUD ADOPTION FRAMEWORK
+- Helps you build and then execute a **comphrensive plan for digital transformation with AWS**
+- Makes use of 1000s of AWS customers
+- They are categorized as:
+
+1. ### BUSINESS
+- **Ensure cloud transformation accelerate digital transformation and bring business outcomes** 
+
+2. ### PEOPLE 
+- **Bridge between technology and business**
+- Focus on culture, workforce 
+
+3. ## GOVERNANCE
+- **orchestrate cloud initiatives while maximizing organizational bendefits**
+
+4. ## PLATFORM PERSPECTIVE
+- **Build enterprise grade scalable platform**
+
+5. ## SECURITY
+- **helps achieve confidence and integrity and availbility of data and cloud workloads**
+
+6. ## OPERATIONS 
+- **Cloud services deliver outcomes that meet your business needs**
+
+## CAF TRANSFORMATION DOMAINS 
+
+1. ### TECHNOLOGY
+- Leverage cloud for moving from legacy way
+
+2. ### PROCESS
+- leveraging ML and data analytics
+
+3. ### ORANIZATION 
+- Reimagining your opertional model in your company 
+
+4. ### PRODUCT
+- reimaging business models by creating new value and propositions 
+
+## AWS CAF TRANSFORMATION PHASES
+1. ### ENVISION
+- See **how cloud trasformation can bring the change** 
+
+2. ### ALIGN 
+- See at **6 CAF and see capability Gaps**
+
+3. ## LAUNCH 
+- **build and deliver in production and demonstrate incremental business value**
+
+4. ## SCALE
+- **expand exisiting features meeting business requirements** 
+
+## AWS RIGHT SIZING 
+- Process of matching instance size and type by meeting business needs
+
+## AWS ECOSYSTEM 
+- AWS blogs 
+- AWS forums - developers
+- AWS whitepaers and guides
+
+## AWS DEVELOPER. - AWS SUPPORT
+- Business hours email access to cloud support associates
+- **General guidance less than 24 hours**
+- **system impaired less than 12 hours**
+
+## AWS BUSINESS 
+- Business hours email access, call and chat to cloud support engineers
+- **Production impaired less than 4 hours**
+- **Production downtime less than 1 hour**
+
+## AWS ENTERPRISE
+- **Access to TAM**
+- Billing best practises 
+- Less than 15 mins
+
+## APN TECHNOLOGY PARTNERS
+- Provide hardware and software
+
+## APN CONSULTION PARTNERS
+- **Professional services firm to help us build**
+
+## APN TRAINING PARTNER
+- Learn AWS
+
+## AWS COMPETENCY PROGRAM
+- Gives to APN partners who helped customer success
