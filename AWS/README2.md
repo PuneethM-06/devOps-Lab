@@ -791,3 +791,23 @@
 - Control satellite communication, process data and scale satellite operations
 - Allow you to **download satellite data to AWS VPC within seconds**
 
+## AWS PINPOINT 
+- Scalable **2-way marketing communication**
+- Supports, emails, SMS etc.
+
+# AWS ARCHITECTING AND ECOSYSTEM SECTION 
+
+## GENERAL GUIDING PRINCIPLES
+1. Stop guessing capacity - Use auto-scaling 
+2. Test at production scale
+3. Automate architectural experimentation 
+4. Allow architecture to evolve 
+5. Drive architecture using data 
+
+## DESIGN PRINCIPLE
+1. Scalability
+2. Disposable Resources - Servers should be disposable and easily configured
+3. Automation 
+4. Loose coupling 
+5. Think in services, not servers
+6. 
