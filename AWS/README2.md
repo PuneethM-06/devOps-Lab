@@ -512,3 +512,18 @@
 - **SCP CANNOT BE APPLIED FOR MASTER ACCOUNT** 
 - SCP must have **EXPLICIT ALLOW**
 
+## CONSOLIDATED BILLING
+1. ### IT GIVES COMBINE USAGE
+    - Combine usage across all AWS accounts
+2. ### ONE BILL
+    - Gives a single bill
+
+## AWS CONTROL TOWER
+- Easy way to s**etup and govern secure and compilant multi-account AWS environment**
+- We **can automate the multi-account** 
+- We can **detect policy violations**
+
+## AWS RESOURCE ACCESS MANAGER
+- **We can share resources from one account to another within or out of AWS organizations**
+- Example: WE can share VPC between 2 accounts
+- 
