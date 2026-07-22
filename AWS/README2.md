@@ -760,3 +760,14 @@
 7. **REFACTOR / RE-ARCHITECT** - Move to cloud and also re-architect using cloud native features
 - Example: Monolithic to micro-services
 
+## AWS APPLICATION DISCOVERY SERVICE
+- Scan servers to get data for analyzing the migration 
+- Two types:
+    - Agentless
+    - Agent based
+- Resulting data can be seen in **AWS migration Hub**
+
+## APPLICATION MIGRATION SERVICE (MGN)
+- **Lift and shift (rehost)**
+- **Replication agent on the On-prem does continous replication in staging env and then we cut to prod** 
+
