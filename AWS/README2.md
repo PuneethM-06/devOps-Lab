@@ -537,3 +537,20 @@
 3. PAY LESS BY USING MORE
 4. PAY LESS AS AWS GROWS
 
+## LAMBDA
+- **Pay per call**
+- **Pay per duration** 
+
+## S3
+- **Number and size of objects** 
+- **Number and type of requests**
+- **Data transfer OUT of the S3 region** 
+
+## EBS
+- volume type
+- store volume in GB per month
+- Number of snapshots
+
+## RDS
+- Depends on size, engine and memory class
+- **Per hour billing**
