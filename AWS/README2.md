@@ -922,3 +922,26 @@
 
 4. ## SCALE
 - **expand exisiting features meeting business requirements** 
+
+## AWS RIGHT SIZING 
+- Process of matching instance size and type by meeting business needs
+
+## AWS ECOSYSTEM 
+- AWS blogs 
+- AWS forums - developers
+- AWS whitepaers and guides
+
+## AWS DEVELOPER. - AWS SUPPORT
+- Business hours email access to cloud support associates
+- General guidance less than 24 hours
+- system impaired less than 12 hours
+
+## AWS BUSINESS 
+- Business hours email access, call and chat to cloud support engineers
+- Production impaired less than 4 hours
+- Production downtime less than 1 hour
+
+## AWS ENTERPRISE
+- Access to TAM
+- Billing best practises 
+- Less than 15 mins
