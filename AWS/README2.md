@@ -894,4 +894,18 @@
 - **helps achieve confidence and integrity and availbility of data and cloud workloads**
 
 6. ## OPERATIONS 
-- Cloud services deliver outcomes that meet your business needs 
+- **Cloud services deliver outcomes that meet your business needs**
+
+## CAF TRANSFORMATION DOMAINS 
+
+1. ### TECHNOLOGY
+- Leverage cloud for moving from legacy way
+
+2. ### PROCESS
+- leveraging ML and data analytics
+
+3. ### ORANIZATION 
+- Reimagining your opertional model in your company 
+
+4. ### PRODUCT
+- reimaging business models by creating new value and propositions 
