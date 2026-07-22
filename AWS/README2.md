@@ -665,3 +665,17 @@
 ## AWS STS - SECURITY TOKEN SERVICE
 - Generates **short term credentials for acccessing AWS resources**
 - It will have expiration 
+
+## COGNITO OVERVIEW 
+- Provide **identity to web and mobile users**
+
+## DIRECTORY SERVICES
+- Microsoft AD is **found on any windows server and these are objects in DB**
+- WE **can create accounts, assign permissions etc**
+- We can login to multiple resources using this 
+
+- We can extend AWS directory services to do the same 
+    - AWS managed Microsoft AD
+    - AD connector - Proxy
+    - Simple AD
+
