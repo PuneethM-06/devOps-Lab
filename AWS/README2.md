@@ -714,3 +714,11 @@
 - **Generates IaC**
 
 ## DEVICE FARM
+- tests web and mobile apps against desktop and mobile browsers
+- Sends reports, log and bugs
+
+## AWS BACKUP
+- Fully managed service to manage and automate backups across AWS
+- We can define schedules to do so 
+- Retention policy, frequency etc. can be designed for the backup to happen 
+
