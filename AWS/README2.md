@@ -750,3 +750,13 @@
 - We can do scheduled
 - The replicaton sync are **INCREMENTAL**
 
+## CLOUD MIGRATION STRATERGY - 7R's
+1. **RETIRE** - Things that are off and do not need to part of migration 
+2. **RETAIN** - Do nothing for now, if it is still a decision to make 
+3. **RELOCATE** - Move On-prem to its cloud version Ex: Moving Ec2 to different VPX
+4. **REHOST (LIFT AND SHIFT)** - Simple migration - Rehost on cloud 
+5. **REPLATFORM** (LIFT AND RESHAPE) - Leverage with cloud optmization with migration 
+6. **REPURCHASE (DROP AND SHOP)** - MOVE TO DIFFERENT PRODUCT LIKE SaaS etc
+7. **REFACTOR / RE-ARCHITECT** - Move to cloud and also re-architect using cloud native features
+- Example: Monolithic to micro-services
+
