@@ -470,7 +470,7 @@
 - Amazon lex powers **ALEXA**
 - We get **ASR - Automatic speech recognition** and convert speech to text
 
-- Amazon connect, create flows like recevieve calls and virtual connect 
+- **Amazon connect**, create flows like recevieve calls and virtual connect 
 - we can connect to **CRM**
 
 ## AWS COMPHREHEND
@@ -482,3 +482,14 @@
 - Fully managed service for **developers to build ML models**
 - We build the model using historical data and then we have to train and tune it and this will be managed by sagemaker
 
+## AWS KENDRA
+- Fully managed **document search** 
+- We can find **certain texts from a document**
+- It makes use of indexing
+
+## AMAZON PERSONALIZE
+- Real time ML-service to provide personalized recommendations 
+- Used by e-commerce and amazon itself
+
+## AMAZON TEXTRACT
+- 
