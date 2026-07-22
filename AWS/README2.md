@@ -946,3 +946,14 @@
 - Billing best practises 
 - Less than 15 mins
 
+## APN TECHNOLOGY PARTNERS
+- Provide hardware and software
+
+## APN CONSULTION PARTNERS
+- **Professional services firm to help us build**
+
+## APN TRAINING PARTNER
+- Learn AWS
+
+## AWS COMPETENCY PROGRAM
+- Gives to APN partners who helped customer success
