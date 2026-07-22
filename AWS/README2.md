@@ -739,3 +739,14 @@
 4. ### MULTI-SITE/HOT-SITE
 - full size of the app will be in cloud 
 - ready to use but **MOST EXPENSIVE**
+
+## AWS ELASTIC DISASTER RECOVERY
+- Quickly and easily recover your physical, virtual and cloud based server into AWS
+- **WE DO BLOCK LEVEL REPLICATION FROM ON-PREM TO CLOUD**
+- **We will store this in staging env and when disaster we move to prod** 
+
+## AWS DATASYNC
+- Move large amount of data from On-Prem to cloud 
+- We can do scheduled
+- The replicaton sync are **INCREMENTAL**
+
