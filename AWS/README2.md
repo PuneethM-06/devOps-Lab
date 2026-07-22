@@ -633,3 +633,32 @@
     6. Operational excellence 
 - With Enterprise plan we have access to more features and also programattic access to Trsuter Advisor 
 
+# AWS SUPPORT PLAN
+
+1. ## BASIC SUPPORT PLAN 
+- 24/7 access to Customer service
+- AWS Trusted Advisor - 7 Core checks
+- AWS personal health dashboard
+
+2. ## AWS BUSINESS SUPPORT+ PLAN
+- Intended to have **production workloads**
+- Trusted Advisor - Full set of checks + API access
+- 24/7 phone, web and chat access to cloud engineer
+- **unlimited cases / unlimited contacts**
+- **MAX 30 MINUTES WAITING**
+
+3. ## AWS ENTERPRISE SUPPORT PLAN 
+- Business critical workload
+- Access to designated **TAM (TECHINCAL ACCOUNT MANAGERE)**
+- **LESS THAN 15 MINUTES**
+- Business review from **AWS Experts**
+
+4. ## AWS UNIFIED OPERATIONS SUPPORT PLAN 
+- **Application architecture Guidance**
+- Access to:
+    - TAM
+    - DSE - DOMAIN SPECIALIST ENGINEER
+    - SBAS - SENIOR BILLING AND ACCOUNT SPECIALIST
+    - MIGRATION SPECIALIST
+- AWS countdown premium and AWS customer incident response team 
+
