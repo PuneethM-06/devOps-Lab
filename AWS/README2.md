@@ -563,3 +563,9 @@
 - EC2 talking to different AZ - Public IP - 0.02$
 - EC2 talking to different AZ - private IP - 0.01$
 
+## SAVINGS PLAN 
+- commit to a certain $ for 1 to 3 years
+- EC2 saving plan - 72% discount 
+
+### COMPUTE SAVING PLAN
+- 66% discount copared to On-Demand 
