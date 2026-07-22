@@ -835,3 +835,12 @@
     - Apply security at all layers
     - **Automate security best practices**
     - **Keep people away from data**
+
+3. ## RELIABILITY 
+- **Ability of a sytem to recover from disaster** 
+- Design princples:
+    - T**est recovery procedure**
+    - **Automatically recover from failure**
+    - **Stop guessing capacity**
+    - **Manage change in automation** 
+4. 
