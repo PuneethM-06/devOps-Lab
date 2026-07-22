@@ -679,3 +679,8 @@
     - AD connector - Proxy
     - Simple AD
 
+## AWS IAM IDENTITY CENTER
+- Successor to **AWS SSO**
+- **One login to all AWS accounts in organization**
+- We can store information for SSO in 3rd part like Okta or in IAM idetity center
+
