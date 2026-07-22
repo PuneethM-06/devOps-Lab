@@ -656,9 +656,12 @@
 4. ## AWS UNIFIED OPERATIONS SUPPORT PLAN 
 - **Application architecture Guidance**
 - Access to:
-    - TAM
-    - DSE - DOMAIN SPECIALIST ENGINEER
-    - SBAS - SENIOR BILLING AND ACCOUNT SPECIALIST
-    - MIGRATION SPECIALIST
-- AWS countdown premium and AWS customer incident response team 
+    - **TAM**
+    - **DSE** - DOMAIN SPECIALIST ENGINEER
+    - **SBAS** - SENIOR BILLING AND ACCOUNT SPECIALIST
+    - **MIGRATION SPECIALIST**
+- **AWS countdown premium** and A**WS customer incident response team** 
 
+## AWS STS - SECURITY TOKEN SERVICE
+- Generates **short term credentials for acccessing AWS resources**
+- It will have expiration 
