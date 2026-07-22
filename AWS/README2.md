@@ -933,15 +933,16 @@
 
 ## AWS DEVELOPER. - AWS SUPPORT
 - Business hours email access to cloud support associates
-- General guidance less than 24 hours
-- system impaired less than 12 hours
+- **General guidance less than 24 hours**
+- **system impaired less than 12 hours**
 
 ## AWS BUSINESS 
 - Business hours email access, call and chat to cloud support engineers
-- Production impaired less than 4 hours
-- Production downtime less than 1 hour
+- **Production impaired less than 4 hours**
+- **Production downtime less than 1 hour**
 
 ## AWS ENTERPRISE
-- Access to TAM
+- **Access to TAM**
 - Billing best practises 
 - Less than 15 mins
+
