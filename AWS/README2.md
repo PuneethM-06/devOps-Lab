@@ -810,4 +810,28 @@
 3. Automation 
 4. Loose coupling 
 5. Think in services, not servers
-6. 
+
+## WELL ARCHITECTED FRAMEWORK
+1. Operational Excellence
+2. Security
+3. Reliability 
+4. Performance Efficiency
+5. Cost optimization 
+6. Sustainability 
+
+1. ## OPERATIONAL EXCELLENCE
+- Includes ability to run to **delivery business value and continously support processess and procedures**
+- Deign principles:
+    1. IaC
+    2. **Make frequent, small and changeable changes** 
+    3. Refine operation procedures 
+    4. **Anticipate failures**
+    5. Use managed services
+
+2. ## SECURITY
+- **ability to protect information and system while delivering business outcomes** 
+- Desgin principles:
+    - **Implement a strong identity foundation** 
+    - Apply security at all layers
+    - **Automate security best practices**
+    - **Keep people away from data**
