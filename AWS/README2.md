@@ -463,3 +463,12 @@
 ## AMAZON POLLY
 - Automatically converts **text to speech**
 
+## AMAZON TRANSLATE
+- **Language translation **
+
+## AMAZON LEX & CONNECT
+- Amazon lex powers **ALEXA**
+- We get **ASR - Automatic speech recognition **
+
+- Amazon connect, create flows like recevieve calls and virtual connect 
+- we can connect to **CRM**
