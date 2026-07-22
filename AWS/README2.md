@@ -569,3 +569,7 @@
 
 ### COMPUTE SAVING PLAN
 - 66% discount copared to On-Demand 
+
+## AWS COMPUTE OPTIMIZER
+- Reduce costs and improve performance by recommending optimal AWS resources
+
