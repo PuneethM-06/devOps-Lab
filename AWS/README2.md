@@ -885,4 +885,13 @@
 - Focus on culture, workforce 
 
 3. ## GOVERNANCE
-- **orchestrate cloud initiatives while maximizing organizational bendefits **
+- **orchestrate cloud initiatives while maximizing organizational bendefits**
+
+4. ## PLATFORM PERSPECTIVE
+- **Build enterprise grade scalable platform**
+
+5. ## SECURITY
+- **helps achieve confidence and integrity and availbility of data and cloud workloads**
+
+6. ## OPERATIONS 
+- Cloud services deliver outcomes that meet your business needs 
