@@ -909,3 +909,16 @@
 
 4. ### PRODUCT
 - reimaging business models by creating new value and propositions 
+
+## AWS CAF TRANSFORMATION PHASES
+1. ### ENVISION
+- See **how cloud trasformation can bring the change** 
+
+2. ### ALIGN 
+- See at **6 CAF and see capability Gaps**
+
+3. ## LAUNCH 
+- **build and deliver in production and demonstrate incremental business value**
+
+4. ## SCALE
+- **expand exisiting features meeting business requirements** 
