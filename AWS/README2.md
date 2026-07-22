@@ -243,14 +243,14 @@
 
 ## NACL AND SECURITY GROUPS
 1. ## NACL 
-**- It is at VPC level 
+- **It is at VPC level**
 - can allow or deny rules 
 - they are not stateful 
 
 2. ## SECURITY GROUPS
-**- It is at instances level
-**- they are stateful
-**- support allow rules, everything else is explicitly denied**
+- **It is at instances level**
+- **they are stateful**
+- support allow rules, everything else is explicitly denied**
 
 ## VPC FLOW LOGS AND VPC PEERING 
 - We can get:
@@ -272,8 +272,8 @@
 - ### VPC ENDPOINT GATEWAY IS FOR S3 AND DYNAMODB ALONE FOR OTHERS IT IS VPC ENDPOINT INTERFACE
 
 ## AWS PRIVATELINK 
-- ** It is the most secure and scalable way to expose a service to thousands of VPC's**
-- ** It allows service running in your VPC exposed to other VPC's**
+- **It is the most secure and scalable way to expose a service to thousands of VPC's**
+- **It allows service running in your VPC exposed to other VPC's**
 ![alt text](assets/image10.png)
 
 ## SITE TO SITE VPN
@@ -365,7 +365,7 @@
 - Customer can enable or disable 
 
 2. ### AWS MANAGED KEY
-- **Created and managed by AWS behalf of customer **
+- **Created and managed by AWS behalf of customer**
 - `aws/` - means managed by AWS
 
 3. ### AWS OWNED KEY
@@ -393,7 +393,7 @@
 
 ## AWS GUARDDUTY 
 - It helps **Intelligent Threat discovery**
-- Uses** Machine learning and 3rd party data **
+- Uses **Machine learning and 3rd party data**
 - It looks after the CloudTrail Events logs, VPC flow logs, DNS logs etc and performs the actions
 - We can also input optional logs like S3 logs, EBS logs, Lambda network activity etc
 
@@ -402,8 +402,8 @@
     - Vms leveraging SSM
     - Amazon ECR
     - Lambda functions 
-- It will check for **vulnerabilities **
-- It can generate** reports or report in AWS security Hub **
+- It will check for **vulnerabilities**
+- It can generate** reports or report in AWS security Hub**
 - Generates a **Risk score for prioritization**
 
 ## AWS CONFIG
@@ -448,3 +448,10 @@
 - Find out resources that are shared externally
 - Zone of trust = AWS account or for AWS organization 
 -  If it is out of Zone of Trust, then we will be notified 
+
+# MACHINE LEARNING 
+
+## AMAZON REKOGNITION
+- It is used to **recognise text, image and scenes and videos using ML**
+- Images can be reecognuised and labeled.
+- Face detection analysis 
