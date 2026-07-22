@@ -701,3 +701,16 @@
 - **Connect IoT devices to AWS cloud** 
 - **Serverless and secure**
 - Acts as a **Pub/Sub**
+
+## AWS APPSYNC
+- Build **backend for mobile or web application** 
+- It is built by making use of **GRAPHQL**
+
+## AWS AMPLIFY
+- Set of tools and service for **develop and deploy full stack  application**
+
+## AWS INFRASTRUCTURE COMPOSER
+- Visually **design and build serverless applications quickly on AWS**
+- **Generates IaC**
+
+## DEVICE FARM
