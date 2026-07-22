@@ -612,3 +612,13 @@
     - Savings plans 
 
 - UPTO 5 SNS NOTIFICATION PER BUDGET 
+
+## AWS COST ANOMALY
+- **Use ML to watch billings and then alert when unsual billing happens**
+- It will **send Anomaly report with Root cause**
+
+## AWS SERVICE QUOTAS
+- Notify when you're close to a service quota threshold
+- We can create cloudwatch alarm 
+- Example: Give me a alert when Lambda function hits 1000 triggers in a day 
+
