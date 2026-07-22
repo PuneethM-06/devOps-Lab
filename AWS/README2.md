@@ -505,3 +505,10 @@
     - **Reserved instances can be pooled to multiple account** 
     - **Restrict account privilges using SCP**
 
+- **ROOT OU - Master account** and we can have miultiple later
+
+## SERVICE CONTROL POLICIES
+- **SCP can be applied at OU or account level and they are IAM restrictions**
+- **SCP CANNOT BE APPLIED FOR MASTER ACCOUNT** 
+- SCP must have **EXPLICIT ALLOW**
+
