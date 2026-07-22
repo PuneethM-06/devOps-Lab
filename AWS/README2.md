@@ -493,3 +493,15 @@
 
 ## AMAZON TEXTRACT
 - It is used to **extract text** from any scanned copy
+
+# ACCOUNT MANAGEMENT AND BILLING
+
+## AWS ORGANIZATION
+- **GLOBAL SERVICE**
+- **Manage multiple accounts**
+- uses:
+    - Consolidated Billing 
+    - Pricing benefits from aggregated usage 
+    - **Reserved instances can be pooled to multiple account** 
+    - **Restrict account privilges using SCP**
+
