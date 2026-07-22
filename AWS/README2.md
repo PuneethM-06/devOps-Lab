@@ -957,3 +957,11 @@
 
 ## AWS COMPETENCY PROGRAM
 - Gives to APN partners who helped customer success
+
+## AWS KNOWLEDGE CENTRE
+- Frequent questions and featured questions 
+
+## AWS MANAGED SERVICES
+- **A team of people who give Infrastructure supports**
+- **Manage and operate our infrastructure**
+
