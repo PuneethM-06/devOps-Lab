@@ -781,3 +781,13 @@
 
 ## AWS FAULT INJECTION SIMULATOR (FIS)
 - **Chaos engineering** - Stressing an application to behave how application reacts to that scenrio
+
+## STEP FUNCTIONS
+- Build serverless visual workflow to perfrom orchestration 
+- **We build a graph and in case of pass and fail what happens?**
+- **Done for error handling**
+
+## AWS GROUND STATION 
+- Control satellite communication, process data and scale satellite operations
+- Allow you to **download satellite data to AWS VPC within seconds**
+
