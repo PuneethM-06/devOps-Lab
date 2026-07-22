@@ -871,3 +871,18 @@
 
 ## AWS CUSTOMER CARBON FOOTPRINT 
 - Track carbon emissions generated from your AWS infrastructure used
+
+## AWS CAF - CLOUD ADOPTION FRAMEWORK
+- Helps you build and then execute a **comphrensive plan for digital transformation with AWS**
+- Makes use of 1000s of AWS customers
+- They are categorized as:
+
+1. ### BUSINESS
+- **Ensure cloud transformation accelerate digital transformation and bring business outcomes** 
+
+2. ### PEOPLE 
+- **Bridge between technology and business**
+- Focus on culture, workforce 
+
+3. ## GOVERNANCE
+- **orchestrate cloud initiatives while maximizing organizational bendefits **
