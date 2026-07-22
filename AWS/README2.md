@@ -492,4 +492,4 @@
 - Used by e-commerce and amazon itself
 
 ## AMAZON TEXTRACT
-- 
+- It is used to **extract text** from any scanned copy
