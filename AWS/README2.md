@@ -771,3 +771,13 @@
 - **Lift and shift (rehost)**
 - **Replication agent on the On-prem does continous replication in staging env and then we cut to prod** 
 
+## AWS MIGRATION EVALUATOR
+- Helps you build **data driven business case for migration from On-Prem to AWS** 
+- **Take snapshot from On-prem, analyze current state and then plan how it looks like in AWS**
+
+## AWS MIGRATION HUB
+- Central location to gather data of migration for LIFT and SHIFT
+- **TRACKS MIGRATION AND ORCHESTRATION**
+
+## AWS FAULT INJECTION SIMULATOR (FIS)
+- **Chaos engineering** - Stressing an application to behave how application reacts to that scenrio
