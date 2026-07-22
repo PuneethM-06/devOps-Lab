@@ -859,3 +859,10 @@
     - Measure overall efficiency
     - stop spending money on data centre operation 
 
+6. ## SUSTAINABILITY 
+- focus on minimizing enviornmental impacts of running cloud workloads
+- Principles:
+    - understand your impact
+    - establish sustainability goals
+    - anticipate and adopt new technology or solutions 
+
