@@ -593,7 +593,22 @@
 - It can be done for IAM users for hour dat etc
 - **This can be integrated to athena** 
 
-5. ## COST EXPLORER
+5. ## COST EXPLORER - FORECAST
 - visualize, understand and manage AWS costs over time 
 - It can be done hourly, weekly monthly
 - **FORECAST TOOL FOR 12 MONTHS**
+
+## MONITORING COSTS IN CLOUD
+
+## BILLING ALARMS IN CLOUDWATCH
+- It is stored only in **`us-east-1`**
+
+## AWS BUDGETS
+- s**end alarm when cost and forecast exist budget**
+- It ha 4 types:
+    - Usage
+    - Cost
+    - Reservation 
+    - Savings plans 
+
+- UPTO 5 SNS NOTIFICATION PER BUDGET 
