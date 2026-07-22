@@ -468,7 +468,17 @@
 
 ## AMAZON LEX & CONNECT
 - Amazon lex powers **ALEXA**
-- We get **ASR - Automatic speech recognition **
+- We get **ASR - Automatic speech recognition** and convert speech to text
 
 - Amazon connect, create flows like recevieve calls and virtual connect 
 - we can connect to **CRM**
+
+## AWS COMPHREHEND
+- It is for NLP -**Natural Language Processing**
+- Use ML to find **insights and relationships in text **
+- Use case: Understand customer emails etc.
+
+## AWS SAGEMAKER
+- Fully managed service for **developers to build ML models**
+- We build the model using historical data and then we have to train and tune it and this will be managed by sagemaker
+
