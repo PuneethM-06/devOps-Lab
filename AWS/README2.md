@@ -684,3 +684,20 @@
 - **One login to all AWS accounts in organization**
 - We can store information for SSO in 3rd part like Okta or in IAM idetity center
 
+# OTHER SERVICES
+
+## AWS WORKSPACE - VDI
+- **DAAS - Desktop as a service** **for provisoning windows or linux desktops**
+- Greate to eliminate management of on-prem VDI
+- Pay-as-you-go service for hour
+
+## AppStream 2.0
+- **Desktop application Streaming Service**
+- Delivery to any computer without acquiring provision infrastructure 
+- **STREAM DESKTOP APPLICATION TO WEB BROWSERS**
+
+## AWS IoT CORE
+- IoT - Internet of things 
+- **Connect IoT devices to AWS cloud** 
+- **Serverless and secure**
+- Acts as a **Pub/Sub**
