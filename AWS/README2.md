@@ -852,3 +852,10 @@
     - **Experiment more often**
     - **Mechanical sympathy** - Try to know more about AWS available resources 
 
+5. ## COST OPTIMIZATION
+- ability to run systems to deliver business values at lower cost possible 
+- Design principles
+    - Adopt consumption mode
+    - Measure overall efficiency
+    - stop spending money on data centre operation 
+
