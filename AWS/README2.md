@@ -843,4 +843,12 @@
     - **Automatically recover from failure**
     - **Stop guessing capacity**
     - **Manage change in automation** 
-4. 
+
+4. ## PERFORMANCE EFFICIENCY
+- ability to use **compute resource efficiently to meet system requirements**
+- Design principles:
+    - **Go global in minutes**
+    - **Use serverless architecture**
+    - **Experiment more often**
+    - **Mechanical sympathy** - Try to know more about AWS available resources 
+
