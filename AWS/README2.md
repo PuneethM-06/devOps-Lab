@@ -455,3 +455,11 @@
 - It is used to **recognise text, image and scenes and videos using ML**
 - Images can be reecognuised and labeled.
 - Face detection analysis 
+
+## AMAZON TRANSCRIBE 
+- Automatically **convert speech to text**
+- We can **automatically remove PII** and it is called **readaction**
+
+## AMAZON POLLY
+- Automatically converts **text to speech**
+
