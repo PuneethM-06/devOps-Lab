@@ -622,3 +622,14 @@
 - We can create cloudwatch alarm 
 - Example: Give me a alert when Lambda function hits 1000 triggers in a day 
 
+## AWS TRUSTED ADVISOR
+- **High level account assessment**
+- 6 catgeories:
+    1. Cost optimization 
+    2. Performance
+    3. Security
+    4. Fault tolerance
+    5. Service limits
+    6. Operational excellence 
+- With Enterprise plan we have access to more features and also programattic access to Trsuter Advisor 
+
