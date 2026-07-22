@@ -526,4 +526,14 @@
 ## AWS RESOURCE ACCESS MANAGER
 - **We can share resources from one account to another within or out of AWS organizations**
 - Example: WE can share VPC between 2 accounts
-- 
+
+## AWS SERVICE CATALOG
+- Self service portal to launch a set of resources that are pre-approved by admins 
+- Users gets a **product list** of resources they can create from this 
+
+## PRICING MODELS IN AWS
+1. PAY-AS-YOU-GO
+2. SAVE WHEN YOU RESERVE - Long term requirements
+3. PAY LESS BY USING MORE
+4. PAY LESS AS AWS GROWS
+
