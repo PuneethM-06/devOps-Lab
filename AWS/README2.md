@@ -722,3 +722,20 @@
 - We can define schedules to do so 
 - Retention policy, frequency etc. can be designed for the backup to happen 
 
+## AWS DISASTER RECOVERY STRATERGY
+1. ### BACKUP AND RESTORE
+- Backup in cloud and restore on prem when disaster
+- **CHEAP**
+
+2. ### PILOT LIGHT
+- Run core functionality in cloud
+- Example: Run DB in cloud 
+- The size of the app will be less, need to scale and use 
+
+3. ### WARM STANDBY
+- **Expensive**
+- Full version of the app in cloud 
+
+4. ### MULTI-SITE/HOT-SITE
+- full size of the app will be in cloud 
+- ready to use but **MOST EXPENSIVE**
