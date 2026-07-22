@@ -866,3 +866,8 @@
     - establish sustainability goals
     - anticipate and adopt new technology or solutions 
 
+## AWS WELL ARCHITECTED TOOL
+- Free tool to review your architecture against the six pillars 
+
+## AWS CUSTOMER CARBON FOOTPRINT 
+- Track carbon emissions generated from your AWS infrastructure used
