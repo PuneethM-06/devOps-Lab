@@ -554,3 +554,12 @@
 ## RDS
 - Depends on size, engine and memory class
 - **Per hour billing**
+- Backup storage is free
+- Number of input and output requests per month 
+
+## NETWORKING COST
+- Inbount to EC2 is free
+- EC2 talking to each other in same AZ - FREE
+- EC2 talking to different AZ - Public IP - 0.02$
+- EC2 talking to different AZ - private IP - 0.01$
+
