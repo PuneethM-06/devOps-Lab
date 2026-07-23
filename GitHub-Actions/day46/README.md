@@ -20,3 +20,44 @@
 4. **JOB** - A workflow can have one or more jobs in a workflow script 
 5. **STEPS** - These are "steps" inside every job 
 6. **ACTIONS** - Actions are reusable code written by GitHub or the community that can be reused
+
+## OVERALL WORKFLOW
+```
+You push code
+        │
+        ▼
+Event occurs
+(push)
+        │
+        ▼
+Workflow starts
+(ci.yml)
+        │
+        ▼
+GitHub creates Runner
+(Ubuntu VM)
+        │
+        ▼
+Job starts
+(Build)
+        │
+        ▼
+Step 1
+Checkout Code
+        │
+        ▼
+Step 2
+Install Python
+        │
+        ▼
+Step 3
+Run Tests
+        │
+        ▼
+Step 4
+Build Application
+        │
+        ▼
+Workflow finishes
+```
+
