@@ -781,3 +781,23 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - Great for people with **Little cloud experience**
 - Use cases: simple web applications, websites etc.
 
+## GITHUB SKELETONW WORKFLOW 
+```
+Workflow
+│
+├── Event
+│
+└── Jobs
+      │
+      ├── Job 1
+      │      │
+      │      └── Steps
+      │             │
+      │             ├── Action
+      │             ├── Action
+      │             └── Shell Command
+      │
+      └── Job 2
+             │
+             └── Steps
+```
