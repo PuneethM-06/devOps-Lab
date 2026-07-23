@@ -801,3 +801,14 @@ Workflow
              │
              └── Steps
 ```
+## GITHUB ACTIONS VOCABULARY 
+
+1. **name** - gives your workflow human readable name 
+2. **on** - says when should the workflow start
+3. **job** - These are tasks that will be executed once the workflow stars executing
+4. **runs-on** - Tells where the jobs should run Example: ubuntu-latest, windows-latest, macos-latest
+5. **steps** - organized way of executing commands or following the workflow in a job 
+6. **uses** - Execute a resuable action created by GitHub or the community
+7. **run** - Used to execute commands 
+8. **with** - When we use an action, we need input with the action and that's when we use with 
+
