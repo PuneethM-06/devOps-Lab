@@ -630,7 +630,7 @@ Use case
 - ###### WE CANNOT SSH
 
 ## AURORA
-- Aurora is a proprietary
+- **Aurora is a proprietary**
 - PostgresSQL and MySQL are supported
 - Aurora costs more than 20%
 
@@ -684,7 +684,7 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - it is good for **analysing and processing data**
 - Integrated for **AWS Quicksight or Tableau**
 
-## RESSHIFT SERVERLESS
+## REDSHIFT SERVERLESS
 - WE dont have to worry about scaling and AWS will handle it 
 
 ## AMAZON EMR
@@ -724,7 +724,7 @@ But **WRITE CAN BE DONE TO THE MAIN DB ALONE AND NOT FOR READ REPLICAS**
 - IT is to Extract a dataset, Transform the data and then load it for analysis 
 
 ## DMS - DATABASE MIGRATION SERVICE
-- Extract the data from source DB and inject in Target DB
+- **Extract the data from source DB and inject in Target DB**
 - Source DB remains during migration 
 
 ## WHAT IS A DOCKER
