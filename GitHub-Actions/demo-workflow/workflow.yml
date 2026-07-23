@@ -1,1 +1,4 @@
 name: CI Pipeline
+on:
+  push:
+    
