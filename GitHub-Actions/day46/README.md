@@ -71,3 +71,14 @@ Workflow finishes
 6. **uses** - Execute a resuable action created by GitHub or the community
 7. **run** - Used to execute commands 
 8. **with** - When we use an action, we need input with the action and that's when we use with 
+
+## COMMON EVENTS
+
+| Event               | Meaning                    | Typical Use                 |
+| ------------------- | -------------------------- | --------------------------- |
+| `push`              | Code is pushed             | CI                          |
+| `pull_request`      | PR opened/updated          | CI before merge             |
+| `workflow_dispatch` | Manual trigger             | Manual deployments          |
+| `schedule`          | Cron schedule              | Nightly jobs                |
+| `release`           | GitHub Release created     | Publish artifacts           |
+| `workflow_call`     | Called by another workflow | Reusable workflows (Day 50) |
