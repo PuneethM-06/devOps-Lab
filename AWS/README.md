@@ -107,13 +107,13 @@
 - **MOST SERVICES ARE REGION SPECIFIC**
 
 ### HOW TO CHOOSE A AWS REGION 
-1. Compliance - Sometimes Govt needs your data to be local 
-2. Latency - Close to users
-3. Available services - Not all regions have all services
-4. Pricing
+1. **Compliance** - Sometimes Govt needs your data to be local 
+2. **Latency** - Close to users
+3. **Available services** - Not all regions have all services
+4. **Pricing**
 
 ## AVAILABILITY ZONES
-- Minimum is 3 and Maximum is 6
+- Minimum is **3 and Maximum is 6**
 - It is one or more discrete Data centres
 - They're seperated from eachother, to avoid disasters
 
@@ -159,7 +159,7 @@
 
 ### MFA OPTIONS
 1. Virtual MFA device - Google authenticator, Authy
-2. Universal 2nd Factor - U2F security device - Yubikey is an example 
+2. Universal 2nd Factor - U2F security device - **Yubikey** is an example 
 
 ### HOW CAN USERS ACCESS AWS
 1. AWS CONSOLE - Protected by MFA and password
@@ -224,28 +224,28 @@ We are responsible for:
 ## EC2 INSTANCE TYPES
 
 1. ### GENERAL PURPOSE 
--  Great for webservers and code repo
+-  **Great for webservers and code repo**
 - Balance between:
     - compute
     - memory
     - network
 
 2. ### COMPUTE OPTIMIZED
-- Great for compute-intensive tasks
-- Requires high performance processors
+- Great for **compute-intensive tasks**
+- Requires **high performance processors**
 - Example: Batch processing workloads, dedicated gaming servers, machine learning 
 - They are of name C
 
 3. ### MEMORY OPTIMIZED
-- Fast performance for workloads that process large datasets
+- Fast performance for workloads that **process large datasets**
 - They are used for :
     - High performance, relational and non relational databases
-    - In-memory databases optimized for BI
+    - In-memory **databases optimized for BI**
 
 4. ### STORAGE OPTIMIZED
-- Great for storag-intensive tasks, for reading and writing large data sets 
+- Great for **storage-intensive tasks**, for reading and writing large data sets 
 - Uses cases:
-    - OLTP
+    - **OLTP**
     - Relational & NoSQL databases 
     - Cache for in-memory databases
 
