@@ -5,6 +5,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
       - name: Print Greeting
         run: echo "Hello from GitHub Actions!"
 
