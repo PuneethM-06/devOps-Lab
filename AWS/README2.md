@@ -6,7 +6,7 @@
 
 - **It is a declarative way of outlining AWS infrastructure**
 - Benefits are:
-    - **    **
+    - **IaC**
     - Cost - Resource creation and termination can be automated
     - Generated diagram for our template
     - Leverage existing templates
@@ -95,7 +95,7 @@
 - DNS performs a health check on primary and then routes to failover if primary is unhealthy 
 
 ## CLOUDFRONT OVERVIEW
-- It is a CDN - CONTENT DELIVERY NETWORK
+- It is a **CDN - CONTENT DELIVERY NETWORK**
 - it **caches the content across Points of presence or Edge locations**
 - We get **DDoS protection**
 - Cloudfront has origins like S3, so for the first time. Edge location gets from origin and stores in cache for the next times 
@@ -131,7 +131,7 @@
     2. Asynchronous/Event based (Application -> Queue -> Application)
 
 ## AWS SQS
-- SQS = Simple Queue Service
+- **SQS = Simple Queue Service**
 - Producers send messages to Queue and once it is stored in queue, consumer can poll these messages and complete the work
 - Once completed, the message will be deleted in the queue
 - **SERVERLESS**
@@ -145,7 +145,7 @@
 - It is used to **collect and analyze live streaming data**
 
 ## AWS SNS
-- SNS = Simple notification service
+- **SNS = Simple notification service**
 - Sending a single message to thousands of users
 - **PUB/SUB INTEGRATION**
 - Publishers will send messages to **SINGLE SNS TOPIC** and **SUBSCRIBERS TO THAT SNS TOPIC** will get message from that 
@@ -198,7 +198,7 @@
 
 ## X-RAY OVERVIEW
 - Debugging in production inlcudes reading logs and making fix and re-deploying 
-- AWS **X-ray can do tracing and give visual representation of each services and see where it is failing **
+- AWS **X-ray can do tracing and give visual representation of each services and see where it is failing**
 - We can:
     - Troubleshooting 
     - Pinpoint service
@@ -206,7 +206,7 @@
     - Identify users who are going to be impacted 
 
 ## AWS HEALTH DASHBOARD - SERVICE HISTORY
-- Gives a health check on **AWS services across all regions **
+- Gives a health check on **AWS services across all regions**
 
 ## AWS HEALTH DASHBOARD - YOUR ACCOUNT 
 - It provides alerts and remediation whe AWS is performing certain actions that will be affecting services in our account 
@@ -283,7 +283,7 @@
 
 ## DIRECT CONNECT
 - Establish a physical connection between On-Prem and AWS
-- But more **private and secure and expensive **
+- But more **private and secure and expensive**
 
 ## AWS CLIENT VPN
 - connect your computer using **OpenVPN** to your VPC
@@ -316,10 +316,10 @@
     - AWS WAF - Filter certain type of requests
 
 ## AWS SHIELD
-- Generally on Layer 3 and Layer 4
+- Generally on **Layer 3 and Layer 4**
 - We have:
     - **Shield standard** - free
-    - **Shield advanced **- 3000$ per month
+    - **Shield advanced=** - 3000$ per month
 
 ## AWS WAF
 - Protects web application from web exploits on **layer 7**
@@ -328,12 +328,12 @@
 
 ## AWS NETWORK FIREWALL
 
-- Give protection from Layer 3 to layer 7
+- Give protection from **Layer 3 to layer 7**
 - It takes complete control of:
-    - VPC to VPC traffic
-    - Outbound to inbound 
-    - inbound to outbound 
-    - Direct connect & site to site VPN
+    - **VPC to VPC traffic**
+    - **Outbound to inbound** 
+    - **inbound to outbound**
+    - **Direct connect & site to site VPN**
     
 ## AWS FIREWALL MANAGER
 - **Centralized place for managing all security groups in our infrastructure**
@@ -372,7 +372,7 @@
 - collection of CMK's that is managed by AWS to use in multiple accounts
 
 4. ### CLOUDHSM KEYS
-- Keys that are created from our own CLOUDHSM hardware
+- Keys that are created from our own **CLOUDHSM hardware**
 
 ## AWS CERTIFICATE MANAGER
 - Manage and deploy **SSL and TLS certifcates**
@@ -408,13 +408,13 @@
 
 ## AWS CONFIG
 - Helps in **auditing and recording compliance of AWS resources**
-- We can see **if our changes are complient or no over time **
+- We can see **if our changes are complient or no over time**
 - It can be stored to S3 
 - We can aggregate over all the resources and accounts 
 
 ## AMAZON MACIE
-- **Discover and protect sensitive data using ML **
-- PII - Personally identifiable information (PII)
+- **Discover and protect sensitive data using ML**
+- **PII** - Personally identifiable information (PII)
 
 ## AWS SECURITY HUB 
 - It is a** central security tool** to **manage and automate security checks around AWS infrastructure** 
@@ -430,7 +430,7 @@
 - And we can see them in our dashboard 
 
 ## AMAZON DETECTIVE
-- It is used to analyze the** Root cause of security findings **
+- It is used to analyze the **Root cause of security findings**
 - It makes use of **graph and ML**
 
 ## ROOT USER PRIVILEGES
@@ -528,7 +528,7 @@
 - Example: WE can share VPC between 2 accounts
 
 ## AWS SERVICE CATALOG
-- Self service portal to launch a set of resources that are pre-approved by admins 
+- **Self service portal to launch a set of resources that are pre-approved by admins** 
 - Users gets a **product list** of resources they can create from this 
 
 ## PRICING MODELS IN AWS
@@ -718,7 +718,7 @@
 - Sends reports, log and bugs
 
 ## AWS BACKUP
-- Fully managed service to manage and automate backups across AWS
+- Fully **managed service to manage and automate backups across AWS**
 - We can define schedules to do so 
 - Retention policy, frequency etc. can be designed for the backup to happen 
 
@@ -899,10 +899,10 @@
 ## CAF TRANSFORMATION DOMAINS 
 
 1. ### TECHNOLOGY
-- Leverage cloud for moving from legacy way
+- **Leverage cloud for moving from legacy way**
 
 2. ### PROCESS
-- leveraging ML and data analytics
+- **leveraging ML and data analytics**
 
 3. ### ORANIZATION 
 - Reimagining your opertional model in your company 
@@ -947,7 +947,7 @@
 - Less than 15 mins
 
 ## APN TECHNOLOGY PARTNERS
-- Provide hardware and software
+- **Provide hardware and software**
 
 ## APN CONSULTION PARTNERS
 - **Professional services firm to help us build**
@@ -957,3 +957,11 @@
 
 ## AWS COMPETENCY PROGRAM
 - Gives to APN partners who helped customer success
+
+## AWS KNOWLEDGE CENTRE
+- Frequent questions and featured questions 
+
+## AWS MANAGED SERVICES
+- **A team of people who give Infrastructure supports**
+- **Manage and operate our infrastructure**
+
