@@ -250,7 +250,7 @@ We are responsible for:
     - Cache for in-memory databases
 
 ## INTRODUCTION TO SECURITY GROUPS
-- They will control how traffic will move IN & OUT of the Ec2 instances
+- They will **control how traffic will move IN & OUT** of the Ec2 instances
 - They have rules that refer by IP address of by Security group 
 - They regulate to:
     - Access to ports
@@ -269,13 +269,13 @@ We are responsible for:
 3. SFTP - Port 22
 4. HTTPS - Port 443
 5. RDP - 3389
-6. 80 - HTTP
+6. HTTP - 80
 
 ### SSH SUMMARY TABLE 
 - For linux servers we can use this
 - We connect **insiders of our servers** to perform maintaience
 - SSH can be used for Mac, Linux and then windows >=10
-- We can use Putty for Windows < 10
+- We can use **Putty for Windows < 10**
 - EC2 instance connect - Available for all( Mac, windows and linux)
 
 ### RULE OF THUMB - NEVER ENTER ACCESS KEY AND ACCESS SECRET IN EC2 INSTANCE
@@ -284,7 +284,7 @@ We are responsible for:
 ## EC2 INSTANCES PURCHASING OPTIONS 
 
 ## EC2 ON DEMAND
-- Linux or windows - Billing per second 
+- **Linux or windows - Billing per second** 
 - For all billing per hour
 - Has the highest cost but no upfront payment 
 - No commitments
@@ -293,13 +293,13 @@ We are responsible for:
 - **72% discount** compared to On-Demand 
 - We reserve a specific type of instances (Regions, Os )
 - Payment - No upfront, partial upfront and All upfront 
-- Scope: Region or Zone
+- **Scope: Region or Zone**
 - Can BUY AND SELL in market place
 
 ## EC2 SAVINGS
-- same 72% savings compared to On-demand 
+- same 7**2% savings** compared to On-demand 
 - Commit to a certain type of usage
-- Example: I want to use 10$ per hour for next 3 years
+- Example: **I want to use 10$ per hour for next 3 years**
 - Anything above savings plan is **On-demand**
 
 ## EC2 SPOT INSTANCES
@@ -308,14 +308,14 @@ We are responsible for:
 - Not suited for critical workloads
 
 ## EC2 DEDICATED HOSTS
-- dedicated physical server 
+- **dedicated physical server** 
 - Used for compliance requirements
 - We can use On-demand or Reserved
 - Useful for **BYOL - BRING YOUR OWN LICENESE**
 - Instance placement in hand 
 
 ## EC2 DEDICATED INSANCES
-- Instance hardware is dedicated to you
+- **Instance hardware is dedicated to you**
 - No control over placement
 
 ## EC2 CAPACITY RESERVATIONS 
@@ -353,7 +353,7 @@ We are responsible for:
 - Takes 24 to 72 hours for a restore
 
 ## AMI OVERVIEW
-- AMI = AMAZON MACHINE IMAGE 
+- AMI = **AMAZON MACHINE IMAGE**
 - We can customize an EC2 using AMI
 - We can install softwares, configs and OS.
 - AMI are built for a **specific region** and can be copied
@@ -379,7 +379,7 @@ We are responsible for:
 1. EBS one instance and one AZ, EFS can be done in other way. But we can move EBS to different AZ using Snapcshot
 
 ## EFS-IA
-- Cost optimized, 92% discount 
+- Cost optimized, **92% discount** 
 - Files that are not accessed frequently 
 - We can create policy, Like *If a file not accessed for 60 days, move to EFS-IA*
 
@@ -402,7 +402,7 @@ We are responsible for:
 - It is has **SMB and Windows NTFS**
 
 ### AMAZON FSX LUSTRE
-- For High Performance Computer (HPC)
+- For **High Performance Computer (HPC)**
 - Used for ML, video processing etc
 - Can be connected to comput instances or server. 
 - It can make use of S3 for storing data
@@ -438,9 +438,9 @@ We are responsible for:
 - We can use **across multiple AZs**
 - AWS takes care of ALB and we are responsible for configuring.
 - 4 Kind of load balancers
-    - ALB - Application Load balancers - HTTP and HTTPS - Layer 7
-    - NLB - Network Load balacners - Layer 4
-    - GATEWAY LOAD BALANCER - Layer 3- **GENEVE protocol**
+    - ALB - Application Load balancers - HTTP and HTTPS - **Layer 7**
+    - NLB - Network Load balacners - **Layer 4**
+    - GATEWAY LOAD BALANCER - **Layer 3** **GENEVE protocol**
 
 ![Load balancers](image-2.png)
 
