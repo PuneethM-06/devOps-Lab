@@ -82,3 +82,32 @@ Workflow finishes
 | `schedule`          | Cron schedule              | Nightly jobs                |
 | `release`           | GitHub Release created     | Publish artifacts           |
 | `workflow_call`     | Called by another workflow | Reusable workflows (Day 50) |
+
+## PRODUCTION READY WORKFLOW 
+
+```
+Feature Branch
+       │
+       ▼
+Push
+       │
+       ▼
+CI Runs ✅
+
+──────────────
+
+Open PR
+       │
+       ▼
+CI Runs Again ✅
+
+──────────────
+
+Merge
+       │
+       ▼
+Main Branch
+       │
+       ▼
+CD Starts 🚀
+```
