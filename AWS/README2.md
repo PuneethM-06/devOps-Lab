@@ -413,8 +413,8 @@
 - We can aggregate over all the resources and accounts 
 
 ## AMAZON MACIE
-- **Discover and protect sensitive data using ML **
-- PII - Personally identifiable information (PII)
+- **Discover and protect sensitive data using ML**
+- **PII** - Personally identifiable information (PII)
 
 ## AWS SECURITY HUB 
 - It is a** central security tool** to **manage and automate security checks around AWS infrastructure** 
@@ -430,7 +430,7 @@
 - And we can see them in our dashboard 
 
 ## AMAZON DETECTIVE
-- It is used to analyze the** Root cause of security findings **
+- It is used to analyze the **Root cause of security findings**
 - It makes use of **graph and ML**
 
 ## ROOT USER PRIVILEGES
@@ -528,7 +528,7 @@
 - Example: WE can share VPC between 2 accounts
 
 ## AWS SERVICE CATALOG
-- Self service portal to launch a set of resources that are pre-approved by admins 
+- **Self service portal to launch a set of resources that are pre-approved by admins** 
 - Users gets a **product list** of resources they can create from this 
 
 ## PRICING MODELS IN AWS
@@ -718,7 +718,7 @@
 - Sends reports, log and bugs
 
 ## AWS BACKUP
-- Fully managed service to manage and automate backups across AWS
+- Fully **managed service to manage and automate backups across AWS**
 - We can define schedules to do so 
 - Retention policy, frequency etc. can be designed for the backup to happen 
 
@@ -899,10 +899,10 @@
 ## CAF TRANSFORMATION DOMAINS 
 
 1. ### TECHNOLOGY
-- Leverage cloud for moving from legacy way
+- **Leverage cloud for moving from legacy way**
 
 2. ### PROCESS
-- leveraging ML and data analytics
+- **leveraging ML and data analytics**
 
 3. ### ORANIZATION 
 - Reimagining your opertional model in your company 
@@ -947,7 +947,7 @@
 - Less than 15 mins
 
 ## APN TECHNOLOGY PARTNERS
-- Provide hardware and software
+- **Provide hardware and software**
 
 ## APN CONSULTION PARTNERS
 - **Professional services firm to help us build**
