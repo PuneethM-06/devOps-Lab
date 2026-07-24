@@ -30,3 +30,8 @@
     3. runner.os - If the runner is ubuntu then os becomes linux 
     4. `{{ hashFiles('**/package-lock.json;)}}`- Github reads this and computes a hash 
 - So the final hashkey looks like `node-linux-abs123`
+
+## CACHE HIT and CACHE MISS
+- **Cache hit** is a scenario where we the cache key wouldnt have changed and remain the same for the next workflow 
+
+- **Cache Miss** is a scenario where the cache key would have changed and we will have to perform the actions again from first 
