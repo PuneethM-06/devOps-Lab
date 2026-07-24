@@ -20,5 +20,5 @@ jobs:
       - name: List Repository Files
         run: ls -la
 
-      - name: Find docker File
+      - name: Find docker 
         run: find . -name docker

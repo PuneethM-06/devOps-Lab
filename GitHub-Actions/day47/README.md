@@ -50,3 +50,9 @@ Deletes the machine
 - similarly we can do `ls` or `ls -la` to inspect the repo
 
 - **find** - It performs recursive search through directories
+
+## NOTE:
+1. Steps share files in a job 
+2. Jobs never share files between them 
+- Meaning, once a job is runner is destroyed after the job execution, file changes made in that runner or files from that runner cannot be accessed but the second job 
+
