@@ -35,3 +35,8 @@
 - **Cache hit** is a scenario where we the cache key wouldnt have changed and remain the same for the next workflow 
 
 - **Cache Miss** is a scenario where the cache key would have changed and we will have to perform the actions again from first 
+
+## CACHE INVALIDATION 
+- Cache invalidation happens when the cache key changes, usually because a dependency file such as package-lock.json changes. GitHub treats it as a new cache and creates a new cache entry. The old cache is not immediately overwritten; it may still be reused by workflows or branches that use the old cache key.
+
+
