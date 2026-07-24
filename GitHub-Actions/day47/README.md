@@ -98,3 +98,12 @@ Continue  Fail Step
   with:
     node-version: 22
 ```
+| Purpose             | Action                    |
+| ------------------- | ------------------------- |
+| Checkout repository | `actions/checkout@v4`     |
+| Setup Node.js       | `actions/setup-node@v4`   |
+| Setup Python        | `actions/setup-python@v5` |
+| Setup Java          | `actions/setup-java@v4`   |
+| Setup .NET          | `actions/setup-dotnet@v4` |
+| Setup Go            | `actions/setup-go@v5`     |
+
