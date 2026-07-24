@@ -122,3 +122,10 @@ Continue  Fail Step
 
 - And also this will help us **link back to the commit that built this image**
 - This way if something break, we know where and we can fallback. Fix it
+
+## AUTHENTICATION
+- Authentication is used for performing push 
+- Lets suppose we want to push our image to a docker repo, we need to authenticate ourselves and it is not a good idea to hardcode our username and pwd and that is where we can injection 
+
+- `password: ${{ secrets.GHCR_PAT }}`
+- We can store them in repository secrets in github and can be used to inject 
