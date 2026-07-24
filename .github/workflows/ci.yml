@@ -22,6 +22,3 @@ jobs:
 
       - name: Find docker 
         run: find . -name docker
-
-      - name: Break the pipeline 
-        run: exit 1
