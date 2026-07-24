@@ -9,3 +9,11 @@
 - To avoid downloading the same dependencies repeatedly, GitHub stores cache data in its managed cache storage outside the runner.
 
 - During a future workflow run, a new runner is created. Before downloading dependencies, GitHub checks whether a matching cache exists. If it does, the cache is restored onto the new runner, avoiding unnecessary downloads and making the workflow faster.
+
+## CACHE KEYS
+- cache keys are used to validate if the cache stored is valid or no 
+- Suppose today i am using react 18 and tomorrow if I am using 19, It cannot restore yesterday cache and here is where we make use of cache keys 
+
+- The **cache keys should change whenever the dependencies changes**
+- The cache should be implemented by the developer. 
+- Implement cache on these folders and use these hash keys 
