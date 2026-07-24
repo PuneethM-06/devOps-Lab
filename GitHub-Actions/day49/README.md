@@ -49,5 +49,12 @@
     name: test-report
     path: test-report.html
 ```
-- Here we are basically packaging the test-report.html to a artifact named test-report and we can see that in the build for exception 
+- Here we are basically packaging the test-report.html to a artifact named test-report and we can see that in the workflow run for inspection
+
+## BEST PRACTICES
+1. Cache dependencies only
+2. Never cache source code
+3. Build cache keys from dependency files
+4. upload only useful artifacts like test logs, build logs etc.
+5. 
 
