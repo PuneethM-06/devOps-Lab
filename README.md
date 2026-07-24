@@ -72,16 +72,16 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [ ] Day 35 — CLI tools with click or typer
 
 #### AWS Deep Dive
-- [ ] Day 36 — EC2 — launch, SSH, security groups, user data
-- [ ] Day 37 — S3 — buckets, policies, versioning, presigned URLs
-- [ ] Day 38 — IAM — users, roles, policies, least privilege
-- [ ] Day 39 — VPC — subnets, route tables, IGW, NAT gateway
-- [ ] Day 40 — RDS — managed Postgres, Multi-AZ, backups
-- [ ] Day 41 — ECS / Fargate — deploy Docker container on AWS
-- [ ] Day 42 — ALB — load balancer, target groups, health checks
-- [ ] Day 43 — CloudWatch — metrics, logs, alarms, dashboards
-- [ ] Day 44 — Route53 — DNS, hosted zones, routing policies
-- [ ] Day 45 — SAA exam prep — practice tests, weak areas
+- [x] Day 36 — EC2 — launch, SSH, security groups, user data
+- [x] Day 37 — S3 — buckets, policies, versioning, presigned URLs
+- [x] Day 38 — IAM — users, roles, policies, least privilege
+- [x] Day 39 — VPC — subnets, route tables, IGW, NAT gateway
+- [x] Day 40 — RDS — managed Postgres, Multi-AZ, backups
+- [x] Day 41 — ECS / Fargate — deploy Docker container on AWS
+- [x] Day 42 — ALB — load balancer, target groups, health checks
+- [x] Day 43 — CloudWatch — metrics, logs, alarms, dashboards
+- [x] Day 44 — Route53 — DNS, hosted zones, routing policies
+- [x] Day 45 — SAA exam prep — practice tests, weak areas
 
 **Phase 1 milestone:** Dockerised Python app running on AWS EC2, pushed via GitHub, CI pipeline green
 
@@ -90,10 +90,10 @@ No copy-pasted theory. Everything here was typed and run by me.
 ### Phase 2 — Core DevOps + GitOps (Months 4–6)
 
 #### GitHub Actions (CI/CD)
-- [ ] Day 46 — First workflow — checkout, test, build on push
-- [ ] Day 47 — Docker build and push to GHCR in pipeline
-- [ ] Day 48 — Caching pip deps, measuring speed improvement
-- [ ] Day 49 — Manual approval gates for production deploys
+- [x] Day 46 — First workflow — checkout, test, build on push
+- [x] Day 47 — Docker build and push to GHCR in pipeline
+- [x] Day 48 — Caching pip deps, measuring speed improvement
+- [x] Day 49 — Manual approval gates for production deploys
 - [ ] Day 50 — Matrix builds, reusable workflows, artifacts
 - [ ] Day 51 — Secrets and environment variables in pipelines
 
