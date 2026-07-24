@@ -48,3 +48,5 @@ Deletes the machine
 - when a workflow starts it will be not having access to our repo and that is why the first step is to have `- uses: actions/checkout@v4`
 
 - similarly we can do `ls` or `ls -la` to inspect the repo
+
+- **find** - It performs recursive search through directories
