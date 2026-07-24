@@ -56,3 +56,16 @@ Deletes the machine
 2. Jobs never share files between them 
 - Meaning, once a job is runner is destroyed after the job execution, file changes made in that runner or files from that runner cannot be accessed but the second job 
 
+## STEP LOGS vs WORKFLOW LOGS 
+
+1. ### WORKFLOW LOGS
+- A workflow log is a complete log of what happened in the entire workflow 
+- It includes;
+    - Job creation 
+    - Runner setup
+    - Every step
+    - Every command etc.
+
+2. ### STEP LOGS
+- A step log is the output of one step 
+ 
