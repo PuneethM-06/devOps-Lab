@@ -87,3 +87,14 @@ Exit Code?
  ▼         ▼
 Continue  Fail Step
 ```
+
+## OTHER USES
+- sometimes the runner image that we use might not have all the dependencies we need and that is where we get other uses.
+- Suppose I want to install node version 
+
+```
+- name: Install node version
+  uses: actions/setup-node@v4
+  with:
+    node-version: 22
+```
