@@ -39,4 +39,15 @@
 ## CACHE INVALIDATION 
 - Cache invalidation happens when the cache key changes, usually because a dependency file such as package-lock.json changes. GitHub treats it as a new cache and creates a new cache entry. The old cache is not immediately overwritten; it may still be reused by workflows or branches that use the old cache key.
 
+## ARTIFACTS
+- Preserves files for humans or later jobs to inspect
+- **ARTIFACTS ARE NOT MEANT TO SPEED UP FUTURE WORKFLOWS. THEY ARE MEANT TO PRESERVE FILES AFTER THE WORKFLOW FINISHES**
+```
+- name: upload artifacts
+  uses: actions/upload-artifact@v4
+  with:
+    name: test-report
+    path: test-report.html
+```
+- Here we are basically packaging the test-report.html to a artifact named test-report and we can see that in the build for exception 
 
