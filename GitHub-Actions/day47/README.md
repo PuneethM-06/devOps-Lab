@@ -68,4 +68,22 @@ Deletes the machine
 
 2. ### STEP LOGS
 - A step log is the output of one step 
- 
+
+## EXIT CODES
+- After executing every linux command, it returns a number which decides if the step is green or errored
+- `EXIT CODE 0 `-  Sucess
+- `ANY NON ZERO VALUE` - FAILURE
+
+```
+Run command
+      │
+      ▼
+Exit Code?
+      │
+ ┌────┴────┐
+ │         │
+0       Non-zero
+ │         │
+ ▼         ▼
+Continue  Fail Step
+```
