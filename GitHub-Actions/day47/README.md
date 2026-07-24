@@ -29,3 +29,19 @@ Deletes the machine
 - `/home/runner` - creates a user named runner
 - `/home/runner/work` - github workspace where repo is checked out 
 - `/home/runner/work/devOps-Lab/devOps-Lab` - a folder created where our repo has been cloned 
+
+### WHY IS DEVOPS-LAB TWICE
+```
+/home/runner/work/
+│
+└── devOps-Lab/          ← Workspace for your repository
+      │
+      └── devOps-Lab/    ← Actual cloned repository
+            │
+            ├── README.md
+            ├── .github
+            ├── docker
+            ├── linux
+            └── ...
+```
+
