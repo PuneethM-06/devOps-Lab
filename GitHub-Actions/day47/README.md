@@ -149,9 +149,9 @@ Continue  Fail Step
 
 | Metadata                   | Who provides it?                 |
 | -------------------------- | -------------------------------- |
-| **Commit SHA (`9f2a7b1`)** | ✅ GitHub (automatically)         |
-| **Branch (`main`)**        | ✅ GitHub (automatically)         |
-| **Git Tag (`v1.2.0`)**     | 👤 You (when creating a release) |
+| **Commit SHA (`9f2a7b1`)** |  GitHub (automatically)         |
+| **Branch (`main`)**        |  GitHub (automatically)         |
+| **Git Tag (`v1.2.0`)**     |  You (when creating a release) |
 
 ```
 git add .
