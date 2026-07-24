@@ -1,4 +1,4 @@
-# DAY 47 OF GITHUB ACTIONS
+# DAY 47 and 48 OF GITHUB ACTIONS
 
 ## RUNNER FILESYSTEM 
 - The flow is like this 
@@ -107,3 +107,18 @@ Continue  Fail Step
 | Setup .NET          | `actions/setup-dotnet@v4` |
 | Setup Go            | `actions/setup-go@v5`     |
 
+### WHY ARE DOCKER IMAGES BUILT IN CI INSTEAD LOCALLY
+- Automation - Nodbody forgets, nobody has to rememeber
+- Consistency and every image built is validated.
+
+### WHY DO WE NEED IMAGE TAGS
+- We give docker images names or certain versions like `linux-sysmonitor:v1.2.0`
+- This is called as SemVer where 
+- vX.Y.Z
+
+- X → Major changes (breaking changes)
+- Y → Minor features (backward compatible)
+- Z → Patch / bug fixes
+
+- And also this will help us **link back to the commit that built this image**
+- This way if something break, we know where and we can fallback. Fix it
