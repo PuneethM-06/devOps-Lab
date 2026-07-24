@@ -21,4 +21,4 @@ jobs:
         run: ls -la
 
       - name: Find docker File
-        run: find . -name dockerfile
+        run: find . -name docker
