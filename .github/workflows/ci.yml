@@ -16,3 +16,9 @@ jobs:
 
       - name: Print current work directory
         run: pwd
+
+      - name: List Repository Files
+        run: ls -la
+
+      - name: Find docker 
+        run: find . -name docker
