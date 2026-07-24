@@ -17,3 +17,16 @@
 - The **cache keys should change whenever the dependencies changes**
 - The cache should be implemented by the developer. 
 - Implement cache on these folders and use these hash keys 
+
+- Example:
+```
+- name: Cache npm dependencies
+  path: ~/.npm
+  key: node-${{ runner.os }}-${{ hashFiles('**/package-lock.json;)}}
+```
+- Here:
+    1. path is where cache should be stored
+    2. node is just a prefix and it can be anything 
+    3. runner.os - If the runner is ubuntu then os becomes linux 
+    4. `{{ hashFiles('**/package-lock.json;)}}`- Github reads this and computes a hash 
+- So the final hashkey looks like `node-linux-abs123`
