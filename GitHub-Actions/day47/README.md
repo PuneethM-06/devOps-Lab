@@ -136,3 +136,44 @@ Continue  Fail Step
     - **Uniformity** - Everything stays within Github
     - **Permissions** - Easy to handle for private repos
     - **GitHub action and GHCR are designed to work together**
+
+## DOCKER METADATA
+- Docker metadata solves the problem of manual versioning with images 
+- github has a official docker action called as **docker/metadata-action**
+
+### WHAT DOES DOCKER/METADATA-ACTION DO?
+- It decides:
+    1. Image namae 
+    2. tags
+    3. labels 
+
+| Metadata                   | Who provides it?                 |
+| -------------------------- | -------------------------------- |
+| **Commit SHA (`9f2a7b1`)** | ✅ GitHub (automatically)         |
+| **Branch (`main`)**        | ✅ GitHub (automatically)         |
+| **Git Tag (`v1.2.0`)**     | 👤 You (when creating a release) |
+
+```
+git add .
+git commit -m "Add health check"
+git push origin main
+```
+- github automatically knows :
+```
+Commit SHA: 9f2a7b1
+Branch: main
+```
+and picks this and tags an image like linux-sysmonitor:9f2a7b1
+
+- During an release 
+```
+git tag v1.0.0
+git push origin v1.0.0
+```
+- Metadata action generates:
+```
+latest
+9f2a7b1
+v1.0.0
+```
+- So it can be linux-sysmonitor:v1.0.0
