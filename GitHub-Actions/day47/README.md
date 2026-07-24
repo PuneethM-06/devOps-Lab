@@ -129,3 +129,10 @@ Continue  Fail Step
 
 - `password: ${{ secrets.GHCR_PAT }}`
 - We can store them in repository secrets in github and can be used to inject 
+
+## GITHUB CONTAINER REGISTRY
+- It is a registry like dockerhub to store images 
+- **Why do we prefer GHCR instead of docker:**
+    - **Uniformity** - Everything stays within Github
+    - **Permissions** - Easy to handle for private repos
+    - **GitHub action and GHCR are designed to work together**
