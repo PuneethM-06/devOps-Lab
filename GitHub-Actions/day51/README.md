@@ -58,3 +58,13 @@ APP_NAME=App3
 - Repository-wide configurations managed in GitHub settings
 - `secrets` are encrypted while `variables` aren't
 - This is the only difference, Vars arent encrypted while secrets are. The way of accessing `vars.APP_NAME` and all remains the same 
+
+## PERMISSIONS IN GITHUB ACTIONS
+- **Permissions are given to the entire workflow and can also be done to the jobs level**
+```
+name: CI
+on:
+    push
+permissions:
+    contents:read
+```
