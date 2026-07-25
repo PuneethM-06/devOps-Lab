@@ -262,5 +262,36 @@ jobs:
          secrets:
             aws-key: ${{secrets.AWS_ACCESS_KEY}}
 ```
+## Job Outputs
 
-    
+- Every job runs on its own isolated runner.
+- Because of this, jobs cannot directly share variables or data with each other.
+- To pass small pieces of data (such as a version, Docker image tag, commit SHA, or URL) from one job to another, GitHub Actions provides **Job Outputs**.
+
+Example:
+
+Job A
+   ↓
+Version = v1.2.3
+   ↓
+Job Output
+   ↓
+Job B
+
+---
+
+## Step Outputs
+
+- A job can contain multiple steps.
+- Before a value can become a Job Output, it is first created as a **Step Output**.
+- The job then exposes that Step Output as a Job Output so that other jobs can access it.
+
+Flow:
+
+Step
+   ↓
+Step Output
+   ↓
+Job Output
+   ↓
+Another Job
