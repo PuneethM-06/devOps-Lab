@@ -222,43 +222,45 @@ jobs:
 ### HOW IT CAN BE DONE USING CODING 
 - In `resuable-build.yml`
 ```
-name: Reusable workflow
+name: reusable build 
 
 on:
-    workflow_call
-    inputs:
-        enviornment:
-            required: true
-            type: string 
-        secrets:
-            aws-key:
-                required: true
- jobs:
+    workflow_call:
+        inputs:
+            environment:
+                required: true 
+                type: string 
+            
+            secrets:
+                aws-key:
+                    required: true
+jobs:
     build:
-        runs_on: ubuntu-latest
+        runs-on: ubunutu-latest
+    
     steps:
-        - name: Running envirorment
-            run: echo "Deploying ${{inputs.enviornment}}
-        - name: Running S3
-            run: aws s3
-
+        - name: Deploying
+            run: echo" Deploying ${{ inputs.environment }}
         
+        - name: AWS S3
+            env:
+                AWS_ACCESS_KEY: ${{ secrets.aws-key }}
 ```
 - Inside the `ci.yml`
-name: Inside ci yml
 
+```
+name: Inside ci.yml
 on:
     push
 
 jobs:
-    build:
-        uses: ./.github/workflows/reusable-build.yml
-
-        with:
-            enviornment: production 
+    deploy:
+        uses: ./.github/workflow/resuable-build.yml
         
-        secrets:
-            aws-key: ${{ secrets.AWS_ACCESS_KEY }}
+        with:
+            environment: production
+         secrets:
+            aws-key: ${{secrets.AWS_ACCESS_KEY}}
 ```
 
     
