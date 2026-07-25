@@ -53,3 +53,8 @@ APP_NAME=App3
 ```
 > Which value does the step actually use?
 - Answer: App3
+
+## REPOSITORY VARS
+- Repository-wide configurations managed in GitHub settings
+- `secrets` are encrypted while `variables` aren't
+- This is the only difference, Vars arent encrypted while secrets are. The way of accessing `vars.APP_NAME` and all remains the same 
