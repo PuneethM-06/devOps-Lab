@@ -180,3 +180,37 @@ jobs:
 - Must be called from another workflow
 - Used to reuse complete workflow logic (jobs)
 - Reduces duplication and improves maintainability
+
+### PASSING VARIABLES TO REUSABLE WORKFLOWS
+- Here instead of hardcoding the value of the reusable workflow we can pass variables to it 
+
+- Inside `resuable-build.yml`
+```
+name: Reusable workflow
+on:
+    workflow_call
+        inputs:
+            enviornment:
+                required: true
+                type: string 
+
+jobs:
+    build:
+        runs_on: ubuntu-latest
+        
+        steps:
+            - name: echo" Building {{ inputs.enviornement }}"
+```
+
+- Inside `ci.yml`
+```
+name: Reuising the resuable build
+on:
+    push
+
+jobs:
+    build:
+        uses: ./.github/workflow/reusable-build.yml
+    with:
+        enviornment: dev
+```
