@@ -71,3 +71,6 @@ permissions:
 
 > Why should you explicitly define workflow permissions?
 - Answer: To ensure the workflow receives only the **permissions it actually needs**. This reduces the impact of compromised workflows or third-party actions and follows the **Principle of Least Privilege.**
+
+> Should permissions be defined at the workflow level or the job level?
+- Answer: Use workflow-level permissions when the same permissions apply to all jobs. Use job-level permissions when specific jobs require additional or different access. This follows the Principle of Least Privilege by granting elevated permissions only to the jobs that need them.
