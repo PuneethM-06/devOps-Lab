@@ -319,3 +319,13 @@ jobs:
             version: ${{ steps.version.outputs.version}}
 ```
 ### TO BE CONTINUES NOT DOING IT NOW 
+
+## CONDITIONAL EXECUTION (if)
+- We can use it on `jobs` and we can use it on `steps`
+### JOB LEVEL
+```
+jobs:
+    deploy:
+        if: github.ref == 'refs/heads/main'
+```
+- This tells do the deployment if it is `main` branch 
