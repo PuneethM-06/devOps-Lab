@@ -20,6 +20,7 @@
 - A j**ob can wait for more than 1 jobs**
 
 ## MATRIX STRATERGY
+- **A matrix stratergy lets you run your job against multiple combinations**
 - Lets say we have a customer who makes use of windows, ubuntu and also macos. And then they also want to run tests on Python 3.10, Python 3.11 and Python 3.12
 - So here we need to create a seperate job and seperate python version for each and that would make a mess of jobs and that is where we can use **matrix**
 - **We write one job making use of matrix startergy and it creates all possible combinations**
@@ -42,3 +43,13 @@ stratergy:
             - "3.10"
             - 3.12"
 ```
+- Each combination gets its own runner 
+
+#### exclude
+- Remove specific combinations from the automatically generated matrix
+
+#### include
+- Add special combinations that arent a part of the normal cartesian product 
+
+#### fail-fast
+- decides whether github should cancel the remaining matrix jobs if one fails 
