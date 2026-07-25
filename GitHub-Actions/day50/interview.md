@@ -64,9 +64,22 @@ stratergy:
     1. Generate ALL combinations
     2. Apply exclude
     3. Give back the final results
-∆
+
 #### include
-- Add special combinations that arent a part of the normal cartesian product 
+- **Add special combinations that arent a part of the normal cartesian product** 
+- This solves the opposite problem of exclude
+```
+stratergy:
+    matrix:
+        - windows-latest
+        - ubuntu-latest
+    node-version:
+        - 18
+        - 20 
+    include:
+        - os: windows-latest
+        - node-version: 22
+```
 
 #### fail-fast
 - decides whether github should cancel the remaining matrix jobs if one fails 
