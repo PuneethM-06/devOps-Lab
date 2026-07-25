@@ -155,4 +155,14 @@ jobs:
     ├── ci.yml
     └── reusable-build.yml
 ```
+- **INSIDE REUSABLE BUILD**
+```
+name: with reusable
 
+on:
+    workflow_call
+jobs:
+    build:
+        runs_on: ubuntu-latest
+```
+- Basically, when the initial steps are the same we can make use of reusable workflow instead of writing the same code in the main `.yml`/ workflow
