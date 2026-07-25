@@ -74,3 +74,8 @@ permissions:
 
 > Should permissions be defined at the workflow level or the job level?
 - Answer: Use workflow-level permissions when the same permissions apply to all jobs. Use job-level permissions when specific jobs require additional or different access. This follows the Principle of Least Privilege by granting elevated permissions only to the jobs that need them.
+
+> Use workflow-level permissions when the same permissions apply to all jobs. Use job-level permissions when specific jobs require additional or different access. This follows the Principle of Least Privilege by granting elevated permissions only to the jobs that need them./
+- Answer: 
+- Branch Protection Rules protect the **source code** by requiring reviews, status checks, and other conditions before code can be merged into a protected branch like main.
+- Environment Protection Rules protect **deployments** by requiring approvals, branch restrictions, wait timers, or other checks before code is deployed to environments like Staging or Production.
