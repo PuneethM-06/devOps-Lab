@@ -79,3 +79,35 @@ permissions:
 - Answer: 
 - Branch Protection Rules protect the **source code** by requiring reviews, status checks, and other conditions before code can be merged into a protected branch like main.
 - Environment Protection Rules protect **deployments** by requiring approvals, branch restrictions, wait timers, or other checks before code is deployed to environments like Staging or Production.
+
+## PRODUCTION LEVEL 
+```
+                     Push
+                       │
+                       ▼
+                 Checkout Code
+                       │
+                       ▼
+                    Build
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+        Lint      Unit Tests   Security Scan
+          │            │            │
+          └────────────┼────────────┘
+                       ▼
+              Build Docker Image
+                       ▼
+                  Push to GHCR
+                       ▼
+              Deploy to Staging
+                       ▼
+                 Smoke Tests
+                       ▼
+              🛑 Manual Approval
+                       ▼
+            Deploy to Producti            ▼on
+           
+          Notify Slack / Email
+```
+
