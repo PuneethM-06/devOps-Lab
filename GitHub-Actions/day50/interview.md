@@ -309,3 +309,13 @@ steps:
         run: |
             echo "docker-tag=v1.2.3" >> $GITHUB_OUTPUT
 ```
+- This is the step outpout and can another job access it yet. NO
+
+- And we can do it by using:
+```
+jobs:
+    builds:
+        outputs:
+            version: ${{ steps.version.outputs.version}}
+```
+### TO BE CONTINUES NOT DOING IT NOW 
