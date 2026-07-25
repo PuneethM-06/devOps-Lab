@@ -68,3 +68,6 @@ on:
 permissions:
     contents:read
 ```
+
+> Why should you explicitly define workflow permissions?
+- Answer: To ensure the workflow receives only the **permissions it actually needs**. This reduces the impact of compromised workflows or third-party actions and follows the **Principle of Least Privilege.**
