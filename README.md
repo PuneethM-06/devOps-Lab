@@ -94,8 +94,8 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 47 — Docker build and push to GHCR in pipeline
 - [x] Day 48 — Caching pip deps, measuring speed improvement
 - [x] Day 49 — Manual approval gates for production deploys
-- [ ] Day 50 — Matrix builds, reusable workflows, artifacts
-- [ ] Day 51 — Secrets and environment variables in pipelines
+- [x] Day 50 — Matrix builds, reusable workflows, artifacts
+- [x] Day 51 — Secrets and environment variables in pipelines
 
 #### Terraform (Infrastructure as Code)
 - [ ] Day 52 — First .tf file — provider, resource, plan, apply
