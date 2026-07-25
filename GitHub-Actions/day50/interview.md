@@ -295,3 +295,17 @@ Step Output
 Job Output
    ↓
 Another Job
+
+### HOW DO WE DO IT CODE
+- Here:
+    1. We have to mark a particular step with `id`
+    2. We have to push that to the next step using `$GITHUB_OUTPUT`
+- Example:
+```
+steps:
+    - name: Generate version
+        id: build-info
+
+        run: |
+            echo "docker-tag=v1.2.3" >> $GITHUB_OUTPUT
+```
