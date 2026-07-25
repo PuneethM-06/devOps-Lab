@@ -38,3 +38,18 @@ jobs:
                 env: 
                     APP_NAME = linux
                 run: echo $APP_NAME
+```
+
+> What happens if the same environment variable is defined at all three levels?
+```
+Workflow:
+APP_NAME=App1
+
+Job:
+APP_NAME=App2
+
+Step:
+APP_NAME=App3
+```
+> Which value does the step actually use?
+- Answer: App3
