@@ -103,3 +103,10 @@ stratgery:
         - 20
         - 18
 ```
+### SUMMARY 
+| Feature        | Purpose                                                                |
+| -------------- | ---------------------------------------------------------------------- |
+| `exclude`      | Remove specific combinations from the generated matrix.                |
+| `include`      | Add extra or custom combinations (and optional extra variables).       |
+| `fail-fast`    | Stop remaining matrix jobs after the first failure (default behavior). |
+| `max-parallel` | Limit how many matrix jobs execute concurrently.                       |
