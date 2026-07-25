@@ -83,3 +83,9 @@ stratergy:
 
 #### fail-fast
 - decides whether github should cancel the remaining matrix jobs if one fails 
+- By default:
+```
+fail-fast: true
+```
+- By this, **GitHub cancels the remaining matrix jobs once a failure occurs, provided they are still running or waiting**
+- with `fail-fast: false`, it ensures that once a job fails, the other jobs continue to execute and the results are given out 
