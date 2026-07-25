@@ -89,3 +89,17 @@ fail-fast: true
 ```
 - By this, **GitHub cancels the remaining matrix jobs once a failure occurs, provided they are still running or waiting**
 - with `fail-fast: false`, it ensures that once a job fails, the other jobs continue to execute and the results are given out 
+
+#### max-parallel
+- we can restrict the number of jobs running maximum.
+```
+stratgery:
+    matrix:
+        - windows-latest
+        - ubuntu-latest
+    max-parallel: 2
+
+    node-version:
+        - 20
+        - 18
+```
