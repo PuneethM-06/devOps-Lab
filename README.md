@@ -64,13 +64,6 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 29 — Pre-commit hooks — lint before every commit
 - [x] Day 30 — git bisect, git blame, git stash
 
-#### Python & Bash (automation focus)
-- [ ] Day 31 — Variables, loops, functions, error handling
-- [ ] Day 32 — File handling, reading/writing, argparse
-- [ ] Day 33 — HTTP requests with httpx, parse JSON responses
-- [ ] Day 34 — boto3 — interact with AWS from Python
-- [ ] Day 35 — CLI tools with click or typer
-
 #### AWS Deep Dive
 - [x] Day 36 — EC2 — launch, SSH, security groups, user data
 - [x] Day 37 — S3 — buckets, policies, versioning, presigned URLs
@@ -94,8 +87,8 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 47 — Docker build and push to GHCR in pipeline
 - [x] Day 48 — Caching pip deps, measuring speed improvement
 - [x] Day 49 — Manual approval gates for production deploys
-- [ ] Day 50 — Matrix builds, reusable workflows, artifacts
-- [ ] Day 51 — Secrets and environment variables in pipelines
+- [x] Day 50 — Matrix builds, reusable workflows, artifacts
+- [x] Day 51 — Secrets and environment variables in pipelines
 
 #### Terraform (Infrastructure as Code)
 - [ ] Day 52 — First .tf file — provider, resource, plan, apply
@@ -137,6 +130,13 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [ ] Day 80 — OpenTelemetry — trace a request across services
 - [ ] Day 81 — Grafana Loki — structured logs, LogQL queries
 - [ ] Day 82 — Alertmanager — fire Slack alert on error spike
+
+#### GoLang (Cloud Platform Kit Focus)
+- [ ] Day 31 — Variables, data types, loops, functions, structs, interfaces, error handling
+- [ ] Day 32 — File handling, JSON, environment variables, packages, modules (`go mod`)
+- [ ] Day 33 — HTTP client/server (`net/http`), REST APIs, routing, middleware
+- [ ] Day 34 — AWS SDK for Go (v2), IAM authentication, S3, STS, CloudWatch basics
+- [ ] Day 35 — CLI tools (Cobra), logging, configuration management, project structure
 
 **Phase 2 milestone:** Green CI pipeline on every push, ArgoCD deploying from Git, Grafana dashboard live
 
