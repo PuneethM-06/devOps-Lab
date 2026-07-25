@@ -15,3 +15,5 @@
 ## needs
 - As we know, without needs GitHub actions starts all the jobs almost at the same time since each job is isolated and each job get their own runner.
 - But in some sitations it is needed that a particular job should start after one job is done executing and hence we need needs here 
+- needs controls the order only and not share files between jobs 
+- A j**ob can wait for more than 1 jobs**
