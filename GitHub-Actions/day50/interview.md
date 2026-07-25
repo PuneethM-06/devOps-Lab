@@ -23,3 +23,22 @@
 - Lets say we have a customer who makes use of windows, ubuntu and also macos. And then they also want to run tests on Python 3.10, Python 3.11 and Python 3.12
 - So here we need to create a seperate job and seperate python version for each and that would make a mess of jobs and that is where we can use **matrix**
 - **We write one job making use of matrix startergy and it creates all possible combinations**
+- Example:
+```
+stratergy:
+    matrix:
+        python-version:
+            - "3.10"
+            - "3.12"
+```
+- Adding multiple OS:
+```
+stratergy:
+    matrix:
+        os:
+            - ubuntu-latest
+            - windows-latest
+        python-version:
+            - "3.10"
+            - 3.12"
+```
