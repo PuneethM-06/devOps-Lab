@@ -329,3 +329,10 @@ jobs:
         if: github.ref == 'refs/heads/main'
 ```
 - This tells do the deployment if it is `main` branch 
+
+### STEP LEVEL
+```
+-name: Notify slack
+    if: failure()
+    run: ,,,
+```
