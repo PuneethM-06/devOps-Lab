@@ -47,7 +47,24 @@ stratergy:
 
 #### exclude
 - Remove specific combinations from the automatically generated matrix
-
+```
+stratergy:
+    matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        node-version:
+            - 18
+            - 20
+        exclude:
+            - os: windows-latest
+            - node-version: 20
+```
+- The flow is:
+    1. Generate ALL combinations
+    2. Apply exclude
+    3. Give back the final results
+∆
 #### include
 - Add special combinations that arent a part of the normal cartesian product 
 
