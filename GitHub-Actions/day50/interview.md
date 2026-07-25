@@ -214,3 +214,51 @@ jobs:
     with:
         enviornment: dev
 ```
+
+## SECRETS IN RESUABLE WORKFLOW
+- The worst part is **hardcoding** the secrets instead.\
+- We can store it in *SECRETS* and what we can do is, `secrets.AWS_ACCESS_ID`
+
+### HOW IT CAN BE DONE USING CODING 
+- In `resuable-build.yml`
+```
+name: Reusable workflow
+
+on:
+    workflow_call
+    inputs:
+        enviornment:
+            required: true
+            type: string 
+        secrets:
+            aws-key:
+                required: true
+ jobs:
+    build:
+        runs_on: ubuntu-latest
+    steps:
+        - name: Running envirorment
+            run: echo "Deploying ${{inputs.enviornment}}
+        - name: Running S3
+            run: aws s3
+
+        
+```
+- Inside the `ci.yml`
+name: Inside ci yml
+
+on:
+    push
+
+jobs:
+    build:
+        uses: ./.github/workflows/reusable-build.yml
+
+        with:
+            enviornment: production 
+        
+        secrets:
+            aws-key: ${{ secrets.AWS_ACCESS_KEY }}
+```
+
+    
