@@ -18,3 +18,8 @@
 - But in some sitations it is needed that a particular job should start after one job is done executing and hence we need needs here 
 - needs controls the order only and not share files between jobs 
 - A j**ob can wait for more than 1 jobs**
+
+## MATRIX STRATERGY
+- Lets say we have a customer who makes use of windows, ubuntu and also macos. And then they also want to run tests on Python 3.10, Python 3.11 and Python 3.12
+- So here we need to create a seperate job and seperate python version for each and that would make a mess of jobs and that is where we can use **matrix**
+- **We write one job making use of matrix startergy and it creates all possible combinations**
