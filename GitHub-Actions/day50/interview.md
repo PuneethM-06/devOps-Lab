@@ -336,3 +336,29 @@ jobs:
     if: failure()
     run: ,,,
 ```
+
+## continue-on-error
+- Here it is similar to what we learnt on `fail-fast`.
+-  But the catch is, `fail-fast` is for matrix while `continue-on-error` is for both steps and jobs 
+
+```
+name: Continue On Error Demo
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build
+        run: echo "Building..."
+
+      - name: Experimental Test
+        continue-on-error: true
+        run: exit 1
+
+      - name: Deploy
+        run: echo "Deploying..."
+```
