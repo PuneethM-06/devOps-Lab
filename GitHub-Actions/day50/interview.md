@@ -127,42 +127,56 @@ Repo C──┘
 ```
 > A reusable workflow is a GitHub Actions workflow that can be called by other workflows using workflow_call. It allows multiple repositories or workflows to share a common CI/CD pipeline, reducing duplication and making maintenance easier. Instead of updating the same workflow in many repositories, you update the reusable workflow once, and every workflow that calls it automatically benefits. This follows the DRY (Don't Repeat Yourself) principle.
 
-### RESUABLE WORKFLOW IN CODING 
-- **WITHOUT RESUABLE WORKFLOW**
-```
-name: without resusable workflow
+## Reusable Workflows
+
+### Why?
+
+Used when multiple repositories or workflows share the same CI/CD pipeline.
+
+Instead of copying the same workflow YAML everywhere, create one reusable workflow and let other workflows call it.
+
+This follows the DRY (Don't Repeat Yourself) principle.
+
+---
+
+### Reusable Workflow
+
+```yaml
+name: Reusable Build
 
 on:
-    push:
+  workflow_call
 
 jobs:
-    - name: Job 1
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Building..."
 ```
 
-- **WITH REUSABLE WORKFLOW**
-```
-name: with workflow
+---
+
+### Calling Workflow
+
+```yaml
+name: CI
 
 on:
-    -workflow_call
-jobs:
-    - name: Job 2
-```
-- ***INSIDE THE FOLDER**
-```
-.github/
-└── workflows/
-    ├── ci.yml
-    └── reusable-build.yml
-```
-- **INSIDE REUSABLE BUILD**
-```
-name: with reusable
+  push
 
-on:
-    workflow_call
 jobs:
-    build:
-        runs_on: ubuntu-latest
+  build:
+    uses: ./.github/workflows/reusable-build.yml
 ```
-- Basically, when the initial steps are the same we can make use of reusable workflow instead of writing the same code in the main `.yml`/ workflow
+
+---
+
+### Key Points
+
+- Triggered by `workflow_call`
+- Cannot start on its own
+- Must be called from another workflow
+- Used to reuse complete workflow logic (jobs)
+- Reduces duplication and improves maintainability
