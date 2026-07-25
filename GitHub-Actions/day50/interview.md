@@ -127,3 +127,32 @@ Repo C──┘
 ```
 > A reusable workflow is a GitHub Actions workflow that can be called by other workflows using workflow_call. It allows multiple repositories or workflows to share a common CI/CD pipeline, reducing duplication and making maintenance easier. Instead of updating the same workflow in many repositories, you update the reusable workflow once, and every workflow that calls it automatically benefits. This follows the DRY (Don't Repeat Yourself) principle.
 
+### RESUABLE WORKFLOW IN CODING 
+- **WITHOUT RESUABLE WORKFLOW**
+```
+name: without resusable workflow
+
+on:
+    push:
+
+jobs:
+    - name: Job 1
+```
+
+- **WITH REUSABLE WORKFLOW**
+```
+name: with workflow
+
+on:
+    -workflow_call
+jobs:
+    - name: Job 2
+```
+- ***INSIDE THE FOLDER**
+```
+.github/
+└── workflows/
+    ├── ci.yml
+    └── reusable-build.yml
+```
+
