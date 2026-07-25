@@ -110,3 +110,18 @@ stratgery:
 | `include`      | Add extra or custom combinations (and optional extra variables).       |
 | `fail-fast`    | Stop remaining matrix jobs after the first failure (default behavior). |
 | `max-parallel` | Limit how many matrix jobs execute concurrently.                       |
+
+## RESUSABLE WORKFLOWS
+- Lets say we have a common task for all the workflows we are doing and it might be cloning a repo.
+- This looks okay for few repositories but what we are working in a an organization, a small change will lead to a change in all the exisiting repo adn hence it is not feasible and that is where we get the concept of Resuable workflow 
+```
+Reusable Workflow
+
+        ▲
+        │
+Repo A──┤
+
+Repo B──┤
+
+Repo C──┘
+```
