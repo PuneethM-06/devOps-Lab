@@ -74,3 +74,8 @@ resource "aws_s3_bucket" "logs" {
 
 ## STATE FILE
 - State files are used by terraform to **remember what was created by them**
+
+## DESIRED STATE
+- Terraform doesn't execute instructions one by one instead it tries to make the actual infrastructure match for the configuration we have written 
+- Example: We write we need 2 Ec2 instances, and we have 1 EC2 already so when we do `terraform apply` it will create 1 more matching the desired state 
+
