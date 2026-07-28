@@ -71,4 +71,6 @@ resource "aws_s3_bucket" "logs" {
 - Here:
     - aws_s3_bucket is resource type
     - logs is the logical/resource name given 
-```
+
+## STATE FILE
+- State files are used by terraform to **remember what was created by them**
