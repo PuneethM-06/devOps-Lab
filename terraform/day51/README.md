@@ -60,3 +60,15 @@ provider "aws" {
     region = "us-east-1"
 }
 
+## RESOURCE
+- Everything Terraform creates is a resource
+- Example:
+```
+resource "aws_s3_bucket" "logs" {
+
+}
+```
+- Here:
+    - aws_s3_bucket is resource type
+    - logs is the logical/resource name given 
+```
