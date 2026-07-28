@@ -50,3 +50,10 @@ Creates Infrastructure
 
 Updates terraform.tfstate
 ```
+- By default, tf doesnt know about the provider and it needs to be defined explicitly as a plugin 
+- Exaple:
+```
+provider "aws" {
+    region = "us-east-1
+}
+```
