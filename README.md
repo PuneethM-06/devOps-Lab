@@ -91,13 +91,14 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 51 — Secrets and environment variables in pipelines
 
 #### Terraform (Infrastructure as Code)
-- [ ] Day 52 — First .tf file — provider, resource, plan, apply
-- [ ] Day 53 — Variables, outputs, terraform.tfvars
-- [ ] Day 54 — S3 backend + DynamoDB state locking
-- [ ] Day 55 — Modules — networking and compute modules
-- [ ] Day 56 — Terraform in CI — plan on PR, apply on merge
-- [ ] Day 57 — Workspaces — dev and staging environments
-- [ ] Day 58 — Import existing resources, lifecycle rules
+- [ ] Day 52 — Terraform Fundamentals — provider, resource, init, plan, apply, destroy
+- [ ] Day 53 — Variables, locals, outputs, expressions, terraform.tfvars
+- [ ] Day 54 — Terraform State — state file, remote backend (S3), DynamoDB locking
+- [ ] Day 55 — Data Sources & Modules — reusable networking, compute and storage modules
+- [ ] Day 56 — Advanced Terraform — count, for_each, dynamic blocks, lifecycle, depends_on
+- [ ] Day 57 — Multi-Environment Infrastructure — workspaces, dev/staging, backend configuration
+- [ ] Day 58 — Terraform in CI/CD — fmt, validate, plan on PR, apply on merge, GitHub Actions
+- [ ] Day 59 — Import & Production Practices — import existing resources, drift detection, lifecycle rules, state commands
 
 #### Kubernetes
 - [ ] Day 59 — Pods, Deployments, ReplicaSets — the why
