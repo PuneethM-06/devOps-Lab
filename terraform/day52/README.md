@@ -82,3 +82,8 @@ resource "aws_s3_bucket" "logs" {
 ## TERRAFORM FMT
 - It automatically formats our terraform configuration file according to official terraform style guide
 
+## TERRAFORM VALIDATE
+- validates if the terraform configuration i syntactically and structurally correct
+
+## TERRAFORM INIT
+- it initializes the current working directory as a terraform project
