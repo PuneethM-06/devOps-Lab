@@ -12,3 +12,41 @@
 - Here we tell **WHAT WE WANT** and we do not worry about how it is created
 - Example: I want a VPC, 2 Ec2 instances etc.
 
+- **IaC is declarative in nature**
+
+## HOW TERRAFORM WORK:
+```
+main.tf
+
+↓
+
+terraform init
+
+↓
+
+Downloads Provider
+
+↓
+
+terraform plan
+
+↓
+
+Compares Desired State
+
+↓
+
+Shows Changes
+
+↓
+
+terraform apply
+
+↓
+
+Creates Infrastructure
+
+↓
+
+Updates terraform.tfstate
+```
