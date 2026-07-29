@@ -39,4 +39,36 @@ availability_zones = [
   "us-east-1b",
   "us-east-1c"
 ]
+Here it is Map<String, String>
 ```
+4. **Map** - stores key-value
+- Example:
+```
+variable "tags" {
+  type = map(string)
+}
+
+tags = {
+  Environment = "Dev"
+  Owner       = "Puneeth"
+  Team        = "Platform"
+}
+```
+5. **Object**: - stores attributes with different datatype
+- Example:
+```
+variable "server" {
+  type = object({
+    name   = string
+    cpu    = number
+    public = bool
+  })
+}
+
+server = {
+  name   = "web-server"
+  cpu    = 2
+  public = true
+}
+```
+
