@@ -94,3 +94,16 @@ variable "bucket_name" {
     type = string 
 }
 ```
+## SENSITIVE VARIABLE
+- A sensitive variable stores confidential information that terraform hides from its output
+- Example:
+```
+variable "db_password" {
+    description = db pwd
+    type = string 
+    sensitive = true
+}
+```
+#### NOTE:
+- `sensitive = true` does not encrypt the pwd instead it hides from CLI output 
+
