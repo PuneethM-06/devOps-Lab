@@ -107,3 +107,13 @@ variable "db_password" {
 #### NOTE:
 - `sensitive = true` does not encrypt the pwd instead it hides from CLI output 
 
+## TERRAFORM.TFVARS
+
+- `terraform.tfvars` is a file that provides value for terraform input variables
+- Meaning, in the below code block example. we gave it only the variable name and we never declared it 
+```
+variable "bucket_name" {
+    description = "bucket_name"
+    type = string
+}
+```
