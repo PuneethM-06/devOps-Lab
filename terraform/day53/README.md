@@ -197,3 +197,18 @@ output "bucket_name" {
 ```
 - Here, `output bucket_name` creates an output called `bucket_name`
 - here `value = aws_s3_bucket.demo.bucket` will print what ever the expression evaluates to 
+
+- Complete example:
+
+resource "aws_s3_bucket" "logs" {
+    bucket = var.bucket_name
+}
+
+output "bucket_name" {
+    value = aws_s3_bucket.logs.bucket
+}
+
+output "bucket_arn" {
+    value = aws_s3_bucket.logs.arn
+}
+```
