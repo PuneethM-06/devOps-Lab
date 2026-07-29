@@ -95,4 +95,6 @@ Environment = dev
 - But this can be an issue when we are working in a team. Since each indiviual have their own .tfstate files 
 
 ### SOLUTION 
-
+- To overcome this situation we can store the state in a **REMOTE BACKEND AND NOT LOCAL BACKEND**
+- We can store it in a **AWS S3**
+- By this way, everyone reads and writes to the same file 
