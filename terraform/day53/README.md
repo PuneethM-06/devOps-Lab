@@ -117,3 +117,20 @@ variable "bucket_name" {
     type = string
 }
 ```
+- In terraform.tfvars:
+```
+bucket_name = "kryptxx-demo-bucket-3627"
+```
+and **we can have mulitple `.tfvars` file ** and we can choose one while planning
+- Example:
+```
+dev.tfvars
+
+test.tfvars
+
+prod.tfvars
+```
+terraform plan -var-file="dev.tfvars"
+or 
+terraform applu -var-file="dev.tfvars"
+```
