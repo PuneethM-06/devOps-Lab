@@ -39,3 +39,54 @@
     - ID
     - ARN
     - Metadata
+
+### WHAT IS INFRASTRUCTURE DRIFT
+- IT is a situation where he cloud infrastructure differs from the desired state defined in terraform, usually due to manual changes or changes made outside of terraform 
+
+## Terraform Drift Detection
+
+Terraform detects **Infrastructure Drift** when the actual infrastructure differs from the Terraform configuration.
+
+### Example
+
+Terraform configuration:
+
+```hcl
+tags = {
+  Environment = "dev"
+}
+```
+
+Someone manually changes the tag in the AWS Console:
+
+```
+Environment = production
+```
+
+Run:
+
+```bash
+terraform plan
+```
+
+Terraform detects the difference:
+
+```
+Desired : dev
+Actual  : production
+```
+
+Run:
+
+```bash
+terraform apply
+```
+
+Terraform changes AWS back to:
+
+```
+Environment = dev
+```
+
+> **Infrastructure Drift** is the difference between the desired state (Terraform configuration) and the actual state (cloud infrastructure). Terraform detects drift with `terraform plan` and fixes it with `terraform apply`.
+
