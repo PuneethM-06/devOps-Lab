@@ -27,3 +27,7 @@
 ```
 
 1. **version** - This is the version of the state file format
+2. **terraform_version** - which terraform version last updated this state 
+3. **serial** - Everytime terraform changes infrastructure, serial increments by 1
+4. **lineage** - This is the unique id of our terraform project
+5. **outputs** - it stores the output generated after infratructure change
