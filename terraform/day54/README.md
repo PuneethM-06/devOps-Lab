@@ -137,3 +137,24 @@ Update State
 
 Release Lock
 ```
+### WHERE IS THE LOCK STORED?
+- For AWS, terraform commonly uses DynamoDB
+```
+Terraform Apply
+
+↓
+
+Create Lock in DynamoDB
+
+↓
+
+Nobody else can modify the state
+
+↓
+
+Apply completes
+
+↓
+
+Delete Lock
+```
