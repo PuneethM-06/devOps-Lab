@@ -11,3 +11,15 @@ reource "aws_instance" "server" {
     instance_type ="t2.micro" 
 }
 ```
+2. ## COUNT INDEX
+- Useful insisde a counted instance
+- Example:
+```
+resource "aws_instance" "server" {
+    count = 3
+
+    tags = {
+        Name  = "server-${count.index}"
+    }
+}
+```
