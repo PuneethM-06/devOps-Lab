@@ -11,3 +11,19 @@
 > what happens to the state when we do `terraform destroy`
 - Answer: Terraform removes the destroyed resources from the state. The state is always kept in sync with the infrastructure it manages
 
+### TERRAFORM.TFSTATE
+- `terraform.tfstate` are not configuration file that we write
+- It's actually a JSON file 
+- Example:
+```
+{
+  "version": 4,
+  "terraform_version": "1.13.0",
+  "serial": 8,
+  "lineage": "xxxx",
+  "outputs": {},
+  "resources": []
+}
+```
+
+1. **version** - This is the version of the state file format
