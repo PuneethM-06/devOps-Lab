@@ -1,6 +1,8 @@
 ## DAY 55 - TERRAFORM
 
 ## DATA SOURCES IN TERRAFORM
+- A data source in terraform allows terraform to read already exisiting resources in cloud and not create from first
+
 1. **resource** - resource is used when we want to create a new resource in AWS. Not make use of exisiting one 
 - Example:
 ```
