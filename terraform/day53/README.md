@@ -226,6 +226,20 @@ variable "bucket_name" {
 
 resource "aws_s3_bucket" "logs" {
     bucket = var.bucket_name
+    or
+    bucker = "${var.bucker_name}-dev"
 }
 Here; var.bucket_name is evaluating to something and hence it is a expression 
 ```
+
+## conditional expression
+- A conditional expression chppses one value of a condition is true
+` instance_type = var.environment == "prod" ? "t2.micro" : "t2.large"`
+
+## BUILT IN FUNCTIONS 
+1. **upper()** - convert to upper case
+2. **lower()** - converts to lower case
+3. **length()** - read number of items 
+4. **join()** - joins list of elements `join("-", ["dev","app"])`
+5. **split()** - splits strings into a list `split(",", ["dev,app"])`
+6. 
