@@ -57,3 +57,56 @@ module "web_server" {
 - Here `module` tells terraform I'm resusing another terraform configurations
 - `source` tells terraform where to find the module.
 
+## Root Module vs Child Module
+
+### Project Structure
+
+```text
+terraform/
+│
+├── modules/
+│   ├── networking/
+│   ├── compute/
+│   ├── database/
+│   └── storage/
+│
+├── dev/
+├── stage/
+└── prod/
+```
+
+### Child Modules
+- Live inside `modules/`
+- Reusable building blocks
+- One responsibility (Networking, Compute, Storage, etc.)
+- Know **how** to create infrastructure
+
+### Root Modules
+- Usually environment folders (`dev/`, `stage/`, `prod/`)
+- Entry point of the deployment
+- Call child modules using `module` blocks
+- Decide **what** infrastructure to deploy
+
+### Flow
+
+```text
+terraform apply (inside prod/)
+        │
+        ▼
+    Root Module
+        │
+        ├──► Networking Module → Creates VPC
+        ├──► Compute Module    → Creates EC2
+        ├──► Database Module   → Creates RDS
+        └──► Storage Module    → Creates S3
+```
+
+### Easy Way to Remember
+
+> **Root Module = Manager (orchestrates the deployment)**
+>
+> **Child Module = Worker (implements one reusable piece of infrastructure)**
+
+### Interview Definition
+
+> **The Root Module is the entry point where Terraform commands are executed. It orchestrates the deployment by calling Child Modules. Child Modules are reusable Terraform configurations that implement a specific infrastructure component.**
