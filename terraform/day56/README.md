@@ -30,3 +30,24 @@ resource "aws_instance" "server" {
 - Suppose if we redice `count = 2` then terraform destroys server[2], but if we had server like "dev, stage and prod" then it would be difficult
 
 4. ## FOR EACH
+- This solves the above issue and here **we create resources using key and not indexed**
+- Example:
+```
+variable "instances" {
+    default = [
+        "dev",
+        "stage",
+        "prod"
+    ]
+}
+resource "aws_instance" "server" {
+    for_each = toset(var.instances)
+    ami = var.ami
+    instance_type ="t2.micro"
+
+    tags = {
+        Name = each.key
+    } 
+}
+```
+- This way terraform assigns as server["dev"], server["stage"], server["prod"] and not server[0], server[1], server[2]
