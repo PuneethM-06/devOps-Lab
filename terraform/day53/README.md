@@ -179,3 +179,21 @@ resource "aws_s3_bucket" "logs" {
 | Can change between environments | Usually constant within a configuration |
 | Declared using `variable`       | Declared using `locals`                 |
 | Accessed with `var.`            | Accessed with `local.`                  |
+
+## OUTPUTS
+- An output is a value that terraform displays after creating or updating infrastructure 
+
+- Example: Lets say we created an S3 bucked using terraform, but we also need to know certain information after the bucker creation and that is where we use
+- It provides information like:
+    - bucket name 
+    - ARN
+    - ID 
+
+- Example:
+```
+output "bucket_name" {
+    value = aws_s3_bucket.demo.bucket
+}
+```
+- Here, `output bucket_name` creates an output called `bucket_name`
+- here `value = aws_s3_bucket.demo.bucket` will print what ever the expression evaluates to 
