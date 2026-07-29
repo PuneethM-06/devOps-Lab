@@ -133,35 +133,26 @@ Networking Module
  ```
 ## Module Communication (Inputs & Outputs)
 
-Child Modules communicate through the Root Module.
+Child Modules do **not** communicate directly. The **Root Module** acts as the bridge by passing outputs from one module as inputs to another.
 
 ### Step 1 - Networking Module
 
-The Networking module creates a VPC.
+Creates a VPC and exposes its ID.
 
 ```hcl
 resource "aws_vpc" "main" {
   cidr_block = var.cidr_block
 }
-```
 
-After creating the VPC, it exposes the VPC ID.
-
-```hcl
 output "vpc_id" {
   value = aws_vpc.main.id
 }
 ```
 
-Think of it as:
+After creation:
 
-```
-Networking Module
-
-Creates VPC
-      │
-      ▼
-Returns:
+```text
+Output:
 vpc_id = vpc-12345
 ```
 
@@ -169,7 +160,7 @@ vpc_id = vpc-12345
 
 ### Step 2 - Root Module
 
-The Root Module calls the Networking module.
+The Root Module calls the Networking Module and uses its output as the input for the Compute Module.
 
 ```hcl
 module "networking" {
@@ -177,21 +168,7 @@ module "networking" {
 
   cidr_block = "10.0.0.0/16"
 }
-```
 
-Terraform now knows:
-
-```
-module.networking.vpc_id
-
-↓
-
-vpc-12345
-```
-
-The Root Module then passes this value to another module.
-
-```hcl
 module "compute" {
   source = "../modules/compute"
 
@@ -199,27 +176,25 @@ module "compute" {
 }
 ```
 
-Read this line as:
+Here,
 
-> Take the `vpc_id` output from the Networking Module and pass it as the `vpc_id` input to the Compute Module.
+```hcl
+module.networking.vpc_id
+```
+
+means:
+
+> Get the `vpc_id` output from the Networking Module and pass it to the Compute Module.
 
 ---
 
 ### Step 3 - Compute Module
 
-The Compute module doesn't create or know anything about the VPC.
-
-It simply accepts a VPC ID as an input.
+The Compute Module simply accepts the VPC ID and uses it.
 
 ```hcl
-variable "vpc_id" {
-  type = string
-}
-```
+variable "vpc_id" {}
 
-It uses that value while creating resources.
-
-```hcl
 resource "aws_security_group" "web" {
   name   = "web-sg"
   vpc_id = var.vpc_id
@@ -227,30 +202,24 @@ resource "aws_security_group" "web" {
 ```
 
 ---
+
 ### Communication Flow
 
-```
-             Root Module
-
-        module "networking"
-                │
-                ▼
-      Creates VPC
-                │
-                ▼
-        Output: vpc_id
-                │
-                │ module.networking.vpc_id
-                ▼
-        module "compute"
-                │
-                ▼
-       Input: var.vpc_id
-                │
-                ▼
- Creates Security Group inside the VPC
+```text
+Networking Module
+        │
+        │ Output: vpc_id
+        ▼
+     Root Module
+        │
+        │ Input: module.networking.vpc_id
+        ▼
+   Compute Module
+        │
+        ▼
+Creates Security Group inside the VPC
 ```
 
-```
+### Key Takeaway
 
-> Child Modules never communicate directly. The Root Module passes outputs from one module as inputs to another.
+> Child Modules expose values using **outputs**. The Root Module receives those outputs and passes them as **inputs** to other Child Modules.
