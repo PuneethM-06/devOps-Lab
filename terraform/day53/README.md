@@ -82,4 +82,15 @@ variable "region" {
     type = string 
     default = "us-east-1"
 }
+```
+## REQURIED VARIABLES
+- A required variable is a variable that must be provided by the user becaue it has no default value 
+- We basically **do not include default**
 
+- Example:
+```
+variable "bucket_name" {
+    description =  "s3"
+    type = string 
+}
+```
