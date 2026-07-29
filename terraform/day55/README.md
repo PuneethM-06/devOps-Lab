@@ -46,3 +46,13 @@ environments/
 ├── test/
 └── prod/
 ```
+## ROOT MODULE vs CHILD MODULE
+- Here **keyword is module**
+- Example:
+```
+module "web_server" {
+
+}
+```
+- Here `module` tells terraform I'm resusing another terraform configurations
+
