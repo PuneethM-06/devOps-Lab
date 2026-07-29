@@ -98,3 +98,15 @@ Environment = dev
 - To overcome this situation we can store the state in a **REMOTE BACKEND AND NOT LOCAL BACKEND**
 - We can store it in a **AWS S3**
 - By this way, everyone reads and writes to the same file 
+### HOW DO WE SAY IT TO TF?
+- By code:
+```
+terraform {
+  backend "s3" {
+    bucket = "my-terraform-state"
+    key    = "terraform-lab/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+```
+- And the next time we run terraform init, terraform now knows where to point to 
