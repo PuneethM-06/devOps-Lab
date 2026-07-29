@@ -14,3 +14,9 @@ resource "aws_s3_bucket" "logs" {
     bucket = var.bucket_name
 }
 ```
+- Variables are declared inside the variables block and is defined as:
+```
+variable "bucket_name" {
+    description =  "Name of the s3 bucket"
+    type = string 
+}
