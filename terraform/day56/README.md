@@ -30,6 +30,7 @@ resource "aws_instance" "server" {
 - Suppose if we redice `count = 2` then terraform destroys server[2], but if we had server like "dev, stage and prod" then it would be difficult
 
 4. ## FOR EACH
+- **It is beteter for named resources**
 - This solves the above issue and here **we create resources using key and not indexed**
 - Example:
 ```
@@ -51,3 +52,14 @@ resource "aws_instance" "server" {
 }
 ```
 - This way terraform assigns as server["dev"], server["stage"], server["prod"] and not server[0], server[1], server[2]
+
+| count                                | for_each                       |
+| ------------------------------------ | ------------------------------ |
+| Uses index                           | Uses key                       |
+| Better for identical resources       | Better for named resources     |
+| Index changes can recreate resources | Stable resource identity       |
+| Uses `count.index`                   | Uses `each.key` / `each.value` |
+
+- **RULE OF THUMB**
+- Use count when you're creating N identical resources.
+-Use for_each when each resource has its own identity (names, configurations, environments).
