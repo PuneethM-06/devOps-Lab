@@ -170,3 +170,6 @@ terraform {
 }
 ```
 - Here the catch is, **dynamodb_table = "terraform-locks"**
+
+> why do we need lock state?
+- f multiple users run terraform apply simultaneously without state locking, it can lead to a race condition. Both users may read the same state, make different changes, and then overwrite each other's updates when writing the state back. This can result in an inconsistent or corrupted Terraform state.
