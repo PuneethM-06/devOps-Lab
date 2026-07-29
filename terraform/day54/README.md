@@ -31,3 +31,11 @@
 3. **serial** - Everytime terraform changes infrastructure, serial increments by 1
 4. **lineage** - This is the unique id of our terraform project
 5. **outputs** - it stores the output generated after infratructure change
+6. **resources**:
+- This is the **heart of the tf state**
+- It stores:
+    - reource type
+    - resource name 
+    - ID
+    - ARN
+    - Metadata
