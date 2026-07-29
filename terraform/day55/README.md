@@ -51,8 +51,9 @@ environments/
 - Example:
 ```
 module "web_server" {
-
+    source = "./modules/ec2"
 }
 ```
 - Here `module` tells terraform I'm resusing another terraform configurations
+- `source` tells terraform where to find the module.
 
