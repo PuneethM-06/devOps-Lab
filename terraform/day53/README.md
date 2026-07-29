@@ -130,7 +130,25 @@ test.tfvars
 
 prod.tfvars
 ```
+```
 terraform plan -var-file="dev.tfvars"
 or 
 terraform applu -var-file="dev.tfvars"
+```
+
+| `variables.tf`               | `terraform.tfvars`            |
+| ---------------------------- | ----------------------------- |
+| Declares variables           | Assigns values                |
+| Defines type and description | Stores actual values          |
+| Used by developers           | Often changed per environment |
+| Usually stays the same       | Changes for Dev/Test/Prod     |
+
+## Precedence (Highest → Lowest):
+```
+-var
+-var-file
+*.auto.tfvars
+terraform.tfvars
+TF_VAR_* environment variables
+default values
 ```
