@@ -135,17 +135,63 @@ Networking Module
 
 Child Modules communicate through the Root Module.
 
-### Example
+### Step 1 - Networking Module
+
+The Networking module creates a VPC.
 
 ```hcl
-# Networking Module
+resource "aws_vpc" "main" {
+  cidr_block = var.cidr_block
+}
+```
+
+After creating the VPC, it exposes the VPC ID.
+
+```hcl
 output "vpc_id" {
   value = aws_vpc.main.id
 }
 ```
 
+Think of it as:
+
+```
+Networking Module
+
+Creates VPC
+      │
+      ▼
+Returns:
+vpc_id = vpc-12345
+```
+
+---
+
+### Step 2 - Root Module
+
+The Root Module calls the Networking module.
+
 ```hcl
-# Root Module
+module "networking" {
+  source = "../modules/networking"
+
+  cidr_block = "10.0.0.0/16"
+}
+```
+
+Terraform now knows:
+
+```
+module.networking.vpc_id
+
+↓
+
+vpc-12345
+```
+
+The Root Module then passes this value to another module.
+
+```hcl
 module "compute" {
   source = "../modules/compute"
 
@@ -153,31 +199,58 @@ module "compute" {
 }
 ```
 
-```hcl
-# Compute Module
-variable "vpc_id" {}
+Read this line as:
 
+> Take the `vpc_id` output from the Networking Module and pass it as the `vpc_id` input to the Compute Module.
+
+---
+
+### Step 3 - Compute Module
+
+The Compute module doesn't create or know anything about the VPC.
+
+It simply accepts a VPC ID as an input.
+
+```hcl
+variable "vpc_id" {
+  type = string
+}
+```
+
+It uses that value while creating resources.
+
+```hcl
 resource "aws_security_group" "web" {
+  name   = "web-sg"
   vpc_id = var.vpc_id
 }
 ```
 
-### Flow
+---
+### Communication Flow
 
 ```
-Networking Module
-      │
-Output: vpc_id
-      │
-      ▼
-Root Module
-      │
-Passes vpc_id
-      │
-      ▼
-Compute Module
-      │
-Uses var.vpc_id
+             Root Module
+
+        module "networking"
+                │
+                ▼
+      Creates VPC
+                │
+                ▼
+        Output: vpc_id
+                │
+                │ module.networking.vpc_id
+                ▼
+        module "compute"
+                │
+                ▼
+       Input: var.vpc_id
+                │
+                ▼
+ Creates Security Group inside the VPC
+```
+
 ```
 
 > Child Modules never communicate directly. The Root Module passes outputs from one module as inputs to another.
