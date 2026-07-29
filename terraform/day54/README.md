@@ -158,3 +158,15 @@ Apply completes
 
 Delete Lock
 ```
+### BACKEND WITH LOCKING 
+```
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state"
+    key            = "terraform-lab/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
+  }
+}
+```
+- Here the catch is, **dynamodb_table = "terraform-locks"**
