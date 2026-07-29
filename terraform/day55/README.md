@@ -116,3 +116,19 @@ terraform apply (inside prod/)
 
 > What are module inputs?
 - Module inputs are variable that are defined in the child module 
+
+```
+Networking Module
+        │
+        │ Output
+        ▼
+     vpc_id
+        │
+        ▼
+   Root Module
+        │
+        │ Input
+        ▼
+ Compute Module
+ ```
+ 
