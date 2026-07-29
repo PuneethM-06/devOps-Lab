@@ -110,3 +110,9 @@ terraform apply (inside prod/)
 ### Interview Definition
 
 > **The Root Module is the entry point where Terraform commands are executed. It orchestrates the deployment by calling Child Modules. Child Modules are reusable Terraform configurations that implement a specific infrastructure component.**
+
+> How do modules communicate?
+- Modules communicate through the root module. One module exposes outputs, and the root module passes those outputs as inputs to another module.
+
+> What are module inputs?
+- Module inputs are variable that are defined in the child module 
