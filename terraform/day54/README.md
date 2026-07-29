@@ -90,3 +90,9 @@ Environment = dev
 
 > **Infrastructure Drift** is the difference between the desired state (Terraform configuration) and the actual state (cloud infrastructure). Terraform detects drift with `terraform plan` and fixes it with `terraform apply`.
 
+## REMOTE STATE BACKEND S3
+- We know that currently `terraform.tfstate` is stored locally in our project folder called as **local backend**
+- But this can be an issue when we are working in a team. Since each indiviual have their own .tfstate files 
+
+### SOLUTION 
+
