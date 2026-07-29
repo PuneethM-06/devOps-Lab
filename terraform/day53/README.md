@@ -199,7 +199,7 @@ output "bucket_name" {
 - here `value = aws_s3_bucket.demo.bucket` will print what ever the expression evaluates to 
 
 - Complete example:
-
+```
 resource "aws_s3_bucket" "logs" {
     bucket = var.bucket_name
 }
@@ -211,4 +211,21 @@ output "bucket_name" {
 output "bucket_arn" {
     value = aws_s3_bucket.logs.arn
 }
+```
+- Outputs can be displayed using `terraform output` or `terraform output <output_name>`
+
+## EXPRESSIONS 
+- Expression is a piece of terraform code that evaluates to something
+- It is something that we have learnt from first
+- Example:
+```
+variable "bucket_name" {
+    description = 
+    type = 
+}
+
+resource "aws_s3_bucket" "logs" {
+    bucket = var.bucket_name
+}
+Here; var.bucket_name is evaluating to something and hence it is a expression 
 ```
