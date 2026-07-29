@@ -20,3 +20,12 @@ data "aws_s3_bucker" "demo" {
 ```
 - The above code snippet says, go to AWS and fetch information about this bucket 
 
+## MODULES
+- Modules are terraform configurations that are written oce and is reused anywhere needed 
+- A Terraform module is simply a collective of terraform files that work together to perform a specific task 
+```
+EC2 Module
+├── main.tf
+├── variables.tf
+└── outputs.tf
+```
