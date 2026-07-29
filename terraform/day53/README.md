@@ -1,7 +1,7 @@
 ## TERRAFORM - DAY53
 
 ## TERRAFORM VARIABLES
-- Terraform variables is a nmaed input that allow you to pass values into our terraform configuration files instead of hardcoding them
+- Terraform variables is a **nmaed input that allow you to pass values into our terraform configuration files** instead of hardcoding them
 - Instead of :
 ```
 resource "aws_s3_bucket" "logs" {
@@ -20,3 +20,23 @@ variable "bucket_name" {
     description =  "Name of the s3 bucket"
     type = string 
 }
+```
+## VARIABLE TYPES
+1. **string** - stores text
+- Example: "us-east-1"
+
+2. **Number** - stores numeric values
+- Example: instance_count
+
+3. **Boolean** - stores eithet true or false
+- Example: enable_versioning = true
+
+4. **List** - A list is a ordered collection of values of the same type
+- Example: 
+``` 
+availability_zones = [
+  "us-east-1a",
+  "us-east-1b",
+  "us-east-1c"
+]
+```
