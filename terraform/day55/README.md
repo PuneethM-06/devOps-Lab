@@ -29,3 +29,20 @@ EC2 Module
 ├── variables.tf
 └── outputs.tf
 ```
+- The above modules task is to create EC2 instances only 
+
+- A company might organize terraform files like 
+```
+terraform/
+
+modules/
+│
+├── networking/
+├── compute/
+└── storage/
+
+environments/
+├── dev/
+├── test/
+└── prod/
+```
