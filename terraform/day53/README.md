@@ -72,3 +72,14 @@ server = {
 }
 ```
 
+## DEFAULT VALUES
+- A default value is a value that terraform automatically uses if the user does not provide one 
+
+- Example:
+```
+variable "region" {
+    description = "aws_region"
+    type = string 
+    default = "us-east-1"
+}
+
