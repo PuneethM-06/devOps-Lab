@@ -152,3 +152,21 @@ terraform.tfvars
 TF_VAR_* environment variables
 default values
 ```
+## LOCALS
+- Locals are named values defined inside of the Terraform configuration, which can be used throughout 
+- Example:
+```
+locals {
+    common_tags = {
+        Environment = "dev"
+        Owner = "Puneeth"
+        Project = "Terraform lab
+    }
+}
+
+resource "aws_s3_bucket" "logs" {
+    bucket = var.bucket_name
+
+    tags = local.common_tags
+}
+```
