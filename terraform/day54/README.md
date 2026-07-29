@@ -109,4 +109,4 @@ terraform {
   }
 }
 ```
-- And the next time we run terraform init, terraform now knows where to point to 
+- And the next time we run terraform init, terraorm initializes the backend and knows where to read and write the files 
