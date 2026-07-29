@@ -131,4 +131,53 @@ Networking Module
         ▼
  Compute Module
  ```
- 
+## Module Communication (Inputs & Outputs)
+
+Child Modules communicate through the Root Module.
+
+### Example
+
+```hcl
+# Networking Module
+output "vpc_id" {
+  value = aws_vpc.main.id
+}
+```
+
+```hcl
+# Root Module
+module "compute" {
+  source = "../modules/compute"
+
+  vpc_id = module.networking.vpc_id
+}
+```
+
+```hcl
+# Compute Module
+variable "vpc_id" {}
+
+resource "aws_security_group" "web" {
+  vpc_id = var.vpc_id
+}
+```
+
+### Flow
+
+```
+Networking Module
+      │
+Output: vpc_id
+      │
+      ▼
+Root Module
+      │
+Passes vpc_id
+      │
+      ▼
+Compute Module
+      │
+Uses var.vpc_id
+```
+
+> Child Modules never communicate directly. The Root Module passes outputs from one module as inputs to another.
