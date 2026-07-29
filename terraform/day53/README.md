@@ -154,6 +154,9 @@ default values
 ```
 ## LOCALS
 - Locals are named values defined inside of the Terraform configuration, which can be used throughout 
+- or
+- **LOCALS ARE RESUABLE VALUES THAT ARE DEFINED INSIDE TERRAFORM FILES**
+
 - Example:
 ```
 locals {
@@ -170,3 +173,9 @@ resource "aws_s3_bucket" "logs" {
     tags = local.common_tags
 }
 ```
+| Variables                       | Locals                                  |
+| ------------------------------- | --------------------------------------- |
+| Input from the user             | Defined inside Terraform                |
+| Can change between environments | Usually constant within a configuration |
+| Declared using `variable`       | Declared using `locals`                 |
+| Accessed with `var.`            | Accessed with `local.`                  |
