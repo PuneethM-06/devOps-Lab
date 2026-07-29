@@ -110,3 +110,30 @@ terraform {
 }
 ```
 - And the next time we run terraform init, terraorm initializes the backend and knows where to read and write the files 
+
+## STATE LOCKING (DYNAMODB)
+- When 2 terraform apply happens at the same time, it can lead to **Race condition**
+
+
+### SOLUTION STATE LOCKING 
+- Before terraform starts an operation, it first checks **if someone else already modifying the state**
+- If the answer is No:
+```
+Terraform
+
+↓
+
+Acquire Lock
+
+↓
+
+Apply Changes
+
+↓
+
+Update State
+
+↓
+
+Release Lock
+```
