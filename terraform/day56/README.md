@@ -116,3 +116,15 @@ resources "aws_s3_bucket" "logs" {
     }
 }
 ```
+
+1. ### prevent_destroy
+- This ensures that `terraform destroy` isn't applied
+- Example:
+```
+resources "aws_s3_bucket" "logs" {
+    bucket = var.bucket_name
+
+    lifecycle {
+        prevent_destroy = true
+    }
+}
