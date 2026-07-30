@@ -54,3 +54,27 @@ resource "aws_instance" "web" {
 > Can two workspaces manage the same resources?
 - They shouldn't. Each workspace is intended to manage its own independent infrastructure.
 
+## ENVIRONMENT SPECIFIC CONFIGURATION
+- Suppose
+| Environment | Instance Type |
+| ----------- | ------------- |
+| Dev         | `t2.micro`    |
+| Staging     | `t3.small`    |
+| Prod        | `t3.medium`   |
+
+and we have 
+```
+resource "aws_instance" "web" {
+  ami           = var.ami
+  instance_type = var.instance_type
+}
+``` 
+- In variables.tf
+```
+variable "instance_type" {
+  type = string
+}
+```
+
+- So what we do here is we create different .tfvars file like `dev.tfvars`, `stage.tfvars` and `prod.tfvars`
+- And when we do terraform apply we should do `terraform apply -var-file="dev.tfvars"`
