@@ -96,6 +96,7 @@ resource "aws_security_group" "web" {
         }
     }
 }
+```
 - In a dynamic block, Terraform iterates over the collection and gives you an iterator named after the block (ingress in this case).
 | Iteration | `ingress.key` | `ingress.value` |
 | --------- | ------------- | --------------- |
@@ -103,3 +104,15 @@ resource "aws_security_group" "web" {
 | 2         | `1`           | `443`           |
 | 3         | `2`           | `8000`          |
 - hence ingress.value gives the port numbers
+
+## LIFECYCLE
+- Lifecycle tells how to manage resources and not what resources to create 
+```
+resources "aws_s3_bucket" "logs" {
+    bucket = var.bucket_name
+
+    lifecycle {
+
+    }
+}
+```
