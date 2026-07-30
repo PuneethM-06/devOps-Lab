@@ -165,3 +165,29 @@ Wait until ready
 
 Delete old server
 ``` 
+
+3. ### ignore_changes
+- this means ignore changes of future modification to a specified attribute
+```
+lifecycle {
+
+    ignore_changes = [
+        desired_capacity
+    ]
+
+}
+```
+
+4. ### depends_on
+- terraform builds a dependency graph 
+```
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+resource "aws_subnet" "public" {
+  vpc_id = aws_vpc.main.id
+}
+```
+- Terraform knows `subnet` uses `vpc` and hence it waits until VPC is created
+- This is called **implicit dependency**
