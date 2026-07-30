@@ -128,3 +128,23 @@ resources "aws_s3_bucket" "logs" {
         prevent_destroy = true
     }
 }
+```
+
+2. ### create_before_detroy
+- This is **Extremely Useful**
+- Lets say we make a change that cannot make updates in an running Ec2 instances. Instead it needs to create a new EC2 instance
+- Normally what Terraform does
+```
+Can't modify AMI
+
+↓
+
+Must replace instance
+
+Destroy old EC2
+
+↓
+
+Create new EC2
+```
+- this means, downtime and server lost
