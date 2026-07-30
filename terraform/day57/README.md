@@ -37,3 +37,14 @@ EC2 A  ← tracked by dev state
 
 EC2 B  ← tracked by prod state
 ```
+
+### ACCESSING CURRENT WORKSPACE
+- `terraform.workspace`
+```
+resource "aws_instance" "web" {
+    ami = var.ami
+
+    instance_type = terraform.workspace == "prod" ? "t2.medium" : "t2.small"
+    
+}
+```
