@@ -25,3 +25,15 @@
 
 3. ### DELETE A WORKSPACE
 - `terraform workspace delete prod`
+
+## WHAT ACTUALLY HAPPENS 
+- Suppose we create a instance in dev having workspace to dev
+- `terraform workspace select prod`
+- And do a `terraform appply` and create a new EC2 instance 
+```
+AWS
+
+EC2 A  ← tracked by dev state
+
+EC2 B  ← tracked by prod state
+```
