@@ -12,3 +12,16 @@
 
 ## WHAT IS A WORKSPACE
 - A workspace lets you use the same **terraform configuration file while maintaining seperaye state files**
+
+## CREATING AND MANAGING TERRAFORM WORKSPACE
+- `terraform workspace list` indicates the currently active workspace
+
+1. ### CREATE A NEW WORSPACE
+- `terraform workspace new dev`
+- It creates a new workspace called as dev and is switched to it as well 
+
+2. ### SWITCH WORKSPACES
+- `terraform workspace select prod`
+
+3. ### DELETE A WORKSPACE
+- `terraform workspace delete prod`
