@@ -118,3 +118,31 @@ terraform {
 2. **CHANGE BUCKET-KEY**
 3. **HAVE DIFFERENT AWS ACCOUNTS FOR EACH ENV**
 
+## FOLDER STRUCTURE 
+```
+terraform/
+│
+├── modules/
+│   ├── vpc/
+│   ├── ec2/
+│   └── security-group/
+│
+├── environments/
+│   ├── dev/
+│   │   ├── backend.hcl
+│   │   └── dev.tfvars
+│   │
+│   ├── staging/
+│   │   ├── backend.hcl
+│   │   └── staging.tfvars
+│   │
+│   └── prod/
+│       ├── backend.hcl
+│       └── prod.tfvars
+│
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── providers.tf
+└── versions.tf
+```
