@@ -148,3 +148,20 @@ Destroy old EC2
 Create new EC2
 ```
 - this means, downtime and server lost
+- Instead
+```
+lifecycle {
+    create_before_destroy = true
+}
+```
+```
+Create new server
+
+↓
+
+Wait until ready
+
+↓
+
+Delete old server
+``` 
