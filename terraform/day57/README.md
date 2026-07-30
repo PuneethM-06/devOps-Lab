@@ -146,3 +146,5 @@ terraform/
 ├── providers.tf
 └── versions.tf
 ```
+> "How many instances are in the shared state file?"
+- Whatever the last successful apply recorded. Terraform doesn't store separate Dev and Prod resources in one state as different environments. It only stores the resources it currently manages as a single infrastructure.
