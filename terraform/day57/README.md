@@ -103,3 +103,18 @@ variable "instance_type" {
     1. Where should I store the state
     2. How should I lock the state 
     3. Who can access it
+```
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-bucket"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
+  }
+}
+```
+- When we use this backend configuration for all the environments, it can becomes a disaster and hence:
+1. **WE CREATE DIFFERENT S3 BUCKETS**
+2. **CHANGE BUCKET-KEY**
+3. **HAVE DIFFERENT AWS ACCOUNTS FOR EACH ENV**
+
