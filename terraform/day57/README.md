@@ -78,3 +78,7 @@ variable "instance_type" {
 
 - So what we do here is we create different .tfvars file like `dev.tfvars`, `stage.tfvars` and `prod.tfvars`
 - And when we do terraform apply we should do `terraform apply -var-file="dev.tfvars"`
+
+- But the best way to manage is:
+1. Have workspaces for each env
+2. have each `.tfvars`for each env 
