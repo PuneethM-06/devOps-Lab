@@ -98,3 +98,8 @@ variable "instance_type" {
              Actual AWS Resources
 ```
 
+## BACKEND CONFIGURATION FOR MULTIPLE STATES
+- A backend configuration says:
+    1. Where should I store the state
+    2. How should I lock the state 
+    3. Who can access it
