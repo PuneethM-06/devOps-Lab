@@ -48,3 +48,9 @@ resource "aws_instance" "web" {
     
 }
 ```
+> Does creating a new workspace duplicate your Terraform code?
+- No. It creates a new state file, not a copy of the configuration.
+
+> Can two workspaces manage the same resources?
+- They shouldn't. Each workspace is intended to manage its own independent infrastructure.
+
