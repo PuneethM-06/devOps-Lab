@@ -148,3 +148,6 @@ terraform/
 ```
 > "How many instances are in the shared state file?"
 - Whatever the last successful apply recorded. Terraform doesn't store separate Dev and Prod resources in one state as different environments. It only stores the resources it currently manages as a single infrastructure.
+
+> Why do we even need Terraform state? Why can't Terraform just query AWS every time and figure out what's deployed?
+- Although Terraform can query AWS APIs to discover existing resources, AWS does not know which resources belong to a particular Terraform project. It simply returns all matching resources. The state file tells Terraform exactly which resources it created and should manage.
