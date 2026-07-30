@@ -82,3 +82,19 @@ variable "instance_type" {
 - But the best way to manage is:
 1. Have workspaces for each env
 2. have each `.tfvars`for each env 
+```
+                Terraform Code
+          (main.tf, variables.tf, ...)
+                     │
+                     ▼
+          Variable Values (.tfvars)
+      (dev.tfvars, prod.tfvars, ...)
+                     │
+                     ▼
+           Terraform State (Workspace)
+         (dev, staging, prod state)
+                     │
+                     ▼
+             Actual AWS Resources
+```
+
