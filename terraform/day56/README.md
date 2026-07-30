@@ -191,3 +191,21 @@ resource "aws_subnet" "public" {
 ```
 - Terraform knows `subnet` uses `vpc` and hence it waits until VPC is created
 - This is called **implicit dependency**
+
+- But we can also explicitly define it as well
+```
+resource "aws_iam_role_policy_attachment" "attach" {
+  role       = aws_iam_role.role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+}
+
+resource "aws_instance" "web" {
+  ami           = var.ami
+  instance_type = "t2.micro"
+
+  depends_on = [
+    aws_iam_role_policy_attachment.attach
+  ]
+}
+```
+- Here we are telling, do not create EC2 instances unless the policy is created 
