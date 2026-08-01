@@ -53,3 +53,12 @@ kubectl
 - ## COMPONENT 2 - ETCD
 - **etcd is a distributed key-value database that stores the entire state and configuration of the k8s cluster**
 - It's not SQL, its not PostgreSQL, its k8s own internal db 
+- etcd is responsibel for storing:
+    1. pods
+    2. nodes
+    3. deployments
+    4. services
+    5. secrets
+    6. configmaps
+    7. namespaces
+    8. RBAC 
