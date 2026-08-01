@@ -50,7 +50,7 @@ kubectl
 
 - **API Server is a central management component and is the front door of the k8s control plane. It exposes the k8s API, recieves request, authentication, authorization, validation and also update the cluster state in etcd and coordinate communication between clusters**
 
-- ## COMPONENT 2 - ETCD
+2. ## COMPONENT 2 - ETCD
 - **etcd is a distributed key-value database that stores the entire state and configuration of the k8s cluster**
 - It's not SQL, its not PostgreSQL, its k8s own internal db 
 - etcd is responsibel for storing:
@@ -62,3 +62,12 @@ kubectl
     6. configmaps
     7. namespaces
     8. RBAC 
+- if etcd goes down k8s cannot create pods, scale and do any operation without knowing the current state of the k8s 
+
+3. ## COMPONENT 3 - SCHEDULER
+- It answers one best question - A new pod needs to be created and which worker or node is in the best place to accomodate it
+- This is decided considering variouds factors like:
+    1. Available CPU
+    2. Available memory
+    3. Node Health
+    4. Scheduling rules 
