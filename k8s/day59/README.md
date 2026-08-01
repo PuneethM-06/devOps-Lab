@@ -24,7 +24,7 @@
 - Control plane is the brain of the cluster.
 - Control plane is responsible for making decisions which will then be passed on to the worker nodes 
 
-4. ### API SERVER
+1. ## COMPONENT 1 - API SERVER
 - It is the most important component of the entire k8s architecture
 - **Every single communication inside the k8s goes through API server"**
 ```
@@ -47,3 +47,9 @@ kubectl
     3. Authorization - Are you allowed to do this 
     4. Validation - not accept `replicas: -5`
     5. Store cluster state in etcd
+
+- **API Server is a central management component and is the front door of the k8s control plane. It exposes the k8s API, recieves request, authentication, authorization, validation and also update the cluster state in etcd and coordinate communication between clusters**
+
+- ## COMPONENT 2 - ETCD
+- **etcd is a distributed key-value database that stores the entire state and configuration of the k8s cluster**
+- It's not SQL, its not PostgreSQL, its k8s own internal db 
