@@ -91,14 +91,14 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 51 — Secrets and environment variables in pipelines
 
 #### Terraform (Infrastructure as Code)
-- [ ] Day 52 — Terraform Fundamentals — provider, resource, init, plan, apply, destroy
-- [ ] Day 53 — Variables, locals, outputs, expressions, terraform.tfvars
-- [ ] Day 54 — Terraform State — state file, remote backend (S3), DynamoDB locking
-- [ ] Day 55 — Data Sources & Modules — reusable networking, compute and storage modules
-- [ ] Day 56 — Advanced Terraform — count, for_each, dynamic blocks, lifecycle, depends_on
-- [ ] Day 57 — Multi-Environment Infrastructure — workspaces, dev/staging, backend configuration
-- [ ] Day 58 — Terraform in CI/CD — fmt, validate, plan on PR, apply on merge, GitHub Actions
-- [ ] Day 59 — Import & Production Practices — import existing resources, drift detection, lifecycle rules, state commands
+- [x] Day 52 — Terraform Fundamentals — provider, resource, init, plan, apply, destroy
+- [x] Day 53 — Variables, locals, outputs, expressions, terraform.tfvars
+- [x] Day 54 — Terraform State — state file, remote backend (S3), DynamoDB locking
+- [x] Day 55 — Data Sources & Modules — reusable networking, compute and storage modules
+- [x] Day 56 — Advanced Terraform — count, for_each, dynamic blocks, lifecycle, depends_on
+- [x] Day 57 — Multi-Environment Infrastructure — workspaces, dev/staging, backend configuration
+- [x] Day 58 — Terraform in CI/CD — fmt, validate, plan on PR, apply on merge, GitHub Actions
+- [x] Day 59 — Import & Production Practices — import existing resources, drift detection, lifecycle rules, state commands
 
 #### Kubernetes
 - [ ] Day 59 — Pods, Deployments, ReplicaSets — the why
