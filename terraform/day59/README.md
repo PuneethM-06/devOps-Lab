@@ -12,3 +12,7 @@ terraform import aws_s3_bucket.main my-existing-bucket
 2. **STEP 2 - WRITE THE TERRAFORM CODE**
 3. **STEP 3 - IMPORT THE RESOURCE** 
 - After this terraform starts tracking that resource
+
+1. ### terraform state list
+- List all resources that are tracked in the terraform state
+- It does not query AWS, it reads from the state list 
