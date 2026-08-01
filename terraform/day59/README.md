@@ -16,3 +16,9 @@ terraform import aws_s3_bucket.main my-existing-bucket
 1. ### terraform state list
 - List all resources that are tracked in the terraform state
 - It does not query AWS, it reads from the state list 
+
+2. ### terraform state show 
+- Displays all the attributes of one resources stored in terraform state 
+- Unlike, `terraform state list` it displays all the needed information about a specific resource
+
+3. 
