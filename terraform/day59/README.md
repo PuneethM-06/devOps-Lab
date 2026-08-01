@@ -50,3 +50,11 @@ terraform state mv aws_s3_bucket.bucket aws_s3_bucket.logs
     1. When another team will take the responsbility of managing  a resource
     2. Imported wron resource
     3. Migrating resources
+
+5. ### terraform state pull
+- Downloads the current terraform state 
+- unline `terraform state show`, it just does not give the human readable format but gives the raw JSON state.
+- When do we use:
+    1. Inspect remote state 
+    2. Debugging
+    3. Backup
