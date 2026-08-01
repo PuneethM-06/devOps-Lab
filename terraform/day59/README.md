@@ -21,4 +21,24 @@ terraform import aws_s3_bucket.main my-existing-bucket
 - Displays all the attributes of one resources stored in terraform state 
 - Unlike, `terraform state list` it displays all the needed information about a specific resource
 
-3. 
+3. ### terraform state mv
+- It moves the resources within the terraform state without making changes in the infrastructure 
+- It does not:
+    1. Create resources
+    2. Delete resources
+    3. Modify AWS
+- Example:
+```
+Suppose I initially wrote 
+resource "aws_s3_bucket" "bucket" {
+  bucket = "company-logs"
+}
+
+Later, I want to rename it to
+resource "aws_s3_bucket" "logs" {
+  bucket = "company-logs"
+}
+
+Instead of deleting and creating the same bucket again, I can simply do:
+terraform state mv aws_s3_bucket.bucket aws_s3_bucket.logs
+```
