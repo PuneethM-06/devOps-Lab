@@ -11,3 +11,8 @@
     6. scheduling 
     7. high availability
     8. configuration and secret management 
+
+## K8S ARCHITECTURE
+![k8s architecture](image.png)
+1. ### KUBERNETES CLUSTER
+- A Kubernetes cluster is a group of machines (servers) that work together as a single platform to run containerized applications
