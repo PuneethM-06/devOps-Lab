@@ -77,3 +77,11 @@ kubectl
 - It's job is to continously compare the desired state and the current state stored in the etcd
 - **It creates a new Pod object** -  if the current state pods do not match the desired state pods
 - The above process is called **Reconciliation Loop**
+
+5. ## COMPONENT 5 - KUBELET
+- This is the agent that is running on every worker node and communicates with the control plane and ensures the pod assigned to the node are runnning 
+- Responsibilites of kubelet:
+    1. Watch the pods runnning on each node
+    2. Talks to container runtime 
+    3. Reports node health
+    4. 
