@@ -23,3 +23,27 @@
 3. ### CONTROL PLANE:
 - Control plane is the brain of the cluster.
 - Control plane is responsible for making decisions which will then be passed on to the worker nodes 
+
+4. ### API SERVER
+- It is the most important component of the entire k8s architecture
+- **Every single communication inside the k8s goes through API server"**
+```
+kubectl
+      │
+      ▼
++----------------+
+|   API Server   |
++----------------+
+      │
+      ├──────── Scheduler
+      ├──────── etcd
+      ├──────── kubelet
+      └──────── Controller Manager
+```
+- **Every request goes through API server**
+- Responsibilites of API Server are:
+    1. Recieve requests
+    2. Authentication - token, OIDC etc.
+    3. Authorization - Are you allowed to do this 
+    4. Validation - not accept `replicas: -5`
+    5. Store cluster state in etcd
