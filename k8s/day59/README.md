@@ -71,3 +71,9 @@ kubectl
     2. Available memory
     3. Node Health
     4. Scheduling rules 
+- **Scheduler will never MOVE PODS, its only job is to ASSIGN PODS
+
+4. ## COMPONNENT 4 - CONTROL MANAGER 
+- It's job is to continously compare the desired state and the current state stored in the etcd
+- **It creates a new Pod object** -  if the current state pods do not match the desired state pods
+- The above process is called **Reconciliation Loop**
