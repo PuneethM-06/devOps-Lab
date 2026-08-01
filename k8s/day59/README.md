@@ -84,4 +84,13 @@ kubectl
     1. Watch the pods runnning on each node
     2. Talks to container runtime 
     3. Reports node health
-    4. 
+
+6. ## COMPONENT 6 - CONTAINER RUNTIME 
+- It is responsible for managing the containers inside pods 
+- its responsbility is to:
+    1. Pull images
+    2. Create containers
+    3. start containers
+    4. stop containers
+    5. Remove containers
+
