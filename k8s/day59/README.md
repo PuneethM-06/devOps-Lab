@@ -16,3 +16,10 @@
 ![k8s architecture](image.png)
 1. ### KUBERNETES CLUSTER
 - A Kubernetes cluster is a group of machines (servers) that work together as a single platform to run containerized applications
+
+2. ### NODES: 
+- Nodes can be anything they can be a physical server, a VM or even a clous instance like a EC2 instance etc.
+
+3. ### CONTROL PLANE:
+- Control plane is the brain of the cluster.
+- Control plane is responsible for making decisions which will then be passed on to the worker nodes 
