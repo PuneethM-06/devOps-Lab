@@ -42,3 +42,11 @@ resource "aws_s3_bucket" "logs" {
 Instead of deleting and creating the same bucket again, I can simply do:
 terraform state mv aws_s3_bucket.bucket aws_s3_bucket.logs
 ```
+- Another use case would be to move a resource into a module 
+
+4. ### terraform state rm 
+- Removes a resource from terraform state without actually deleting the actual infrastructure 
+- When do we use this:
+    1. When another team will take the responsbility of managing  a resource
+    2. Imported wron resource
+    3. Migrating resources
