@@ -94,3 +94,10 @@ kubectl
     4. stop containers
     5. Remove containers
 
+7. ## COMPONENT 7 - KUBE-PROXY 
+- Kube proxy is the networking component that enables k8s services by routing and load balancing traffic to the correct pods 
+- Responsibilities:
+    1. Service networking 
+    2. Load balancing 
+    3. Maintains network rules
+    4. provide stable access to pods - pods are ephemeral meaning their IP keeps changing and services doesn't know where to communicate and this solves it
