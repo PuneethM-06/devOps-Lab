@@ -116,3 +116,43 @@ volumes:
 - **mountPath** - creates a directory inside the container 
 - Then we create volume at the container level (look at the indentation), once that is done. the `name` of `volumeMounts` and `volumes` must match. **Because this connects the container to the volume**
 - Now the volume gets the data from the configMap
+
+## CREATING A SECRET 
+```
+apiVersion: v1
+kind: Secret
+
+metadata:
+  name: backend-secret
+
+type: Opaque
+
+stringData:
+  DATABASE_PASSWORD: MyPassword123
+  API_KEY: sk_live_xxxxx
+```
+
+- `kind: secret` - says we are storing secrets 
+- `type opaque` - default secret type and it means it stores key-value pair
+- `stringData` - we defined our secrets as key-value pairs
+
+- ### IN DEPLOYMENT
+```
+apiVersion: apps/v1
+kind: Deployment
+
+...
+spec:
+  template:
+    spec:
+      containers:
+      - name: backend
+        image: backend:v1
+
+        env:
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: DATABASE_PASSWORD
+```
