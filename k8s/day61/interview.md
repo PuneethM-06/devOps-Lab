@@ -156,3 +156,29 @@ spec:
               name: backend-secret
               key: DATABASE_PASSWORD
 ```
+### ORGANIZATION FLOW 
+```
+Developer
+     │
+     ▼
+deployment.yaml
+     │
+     ▼
+Captain reads the deployment configuration
+     │
+     ├── Identifies the required secrets
+     ├── Fetches them from Vault
+     ├── Creates/updates Kubernetes Secrets
+     └── Deploys the application to Kubernetes
+             │
+             ▼
+     Kubernetes starts the Pod
+             │
+             ▼
+Kubelet injects the Secrets
+(as environment variables or mounted files)
+             │
+             ▼
+Application reads the secrets
+(e.g., System.getenv("DATABASE_PASSWORD"))
+```
