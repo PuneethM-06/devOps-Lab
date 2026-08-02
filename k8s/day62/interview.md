@@ -52,3 +52,11 @@ Yes       No
 Add Pod   Remove Pod
 to Service from Service
 ```
+- Failure - Remove the pod from the container 
+
+| Liveness Probe                            | Readiness Probe                                     |
+| ----------------------------------------- | --------------------------------------------------- |
+| Checks if the application is alive        | Checks if the application is ready to serve traffic |
+| Failure → Restart the container           | Failure → Remove Pod from Service                   |
+| Used for deadlocks, hangs, infinite loops | Used for startup delays or dependency issues        |
+| Goal: Recover the application             | Goal: Protect users from failed requests            |
