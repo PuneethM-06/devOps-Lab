@@ -34,3 +34,23 @@ Application
 - A configvolume/Secret volume is a way to provide file inside a container 
 - In this case instead of injecting the configMap/secrets k8s creates the config file in the container which will be made use at the runtime 
 - K8s converts/creates the configMaps/secrets into files and provides during the runtime right?
+
+## CREATING A CONFIGMAP
+- Suppose our application needs:
+```
+LOG_LEVEL=DEBUG
+DATABASE_HOST=postgres.default.svc.cluster.local
+```
+
+We create a ConfigMap:
+```
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: backend-config
+
+data:
+  LOG_LEVEL: "DEBUG"
+  DATABASE_HOST: "postgres.default.svc.cluster.local"\
+```
