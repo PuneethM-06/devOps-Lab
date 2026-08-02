@@ -16,4 +16,18 @@ Now if front end needs to communicate or send request to backend it needs to kno
     2. which node its running on 
     3. how many pods exist
 - **Application always calls services**
-- A Kubernetes Service is an abstraction that provides a stable network endpoint for a group of Pods.
+- A Kubernetes Service is an abstraction that provides a stable network endpoint for a group of Pods for communicating .
+
+```
+Frontend Pod
+      │
+      ▼
+Backend Service
+      │
+      ▼
+kube-proxy
+      │
+      ▼
+Backend Pod
+```
+- **Kube-proxy** here is responsible for service networking by routing traffic from a service to a appropriate pod and also doing load balancing 
