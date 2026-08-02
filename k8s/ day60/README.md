@@ -65,3 +65,54 @@ Labels → Selectors → Service → kube-proxy
 > If a Pod's label changes from backend to frontend will Pod be able t receieve request from backend service?
 - Nope, because when selector queries to match the pod with label backend; it wont be listed and hence backend service will not say kube-proxy to route traffic there 
 - `Labels → Selectors → Service → kube-proxy`
+
+## CLUSTERIP (default service type)
+- **Cluster IP is a default kubernetes service that exposes an application only within the kubernetes cluster by assigning it a stable internal IP and DNS name**
+
+```
+Frontend Pod
+      │
+      ▼
+backend-service
+(ClusterIP)
+10.96.20.15
+      │
+      ▼
+kube-proxy
+      │
+      ▼
+Backend Pod 1
+
+Backend Pod 2
+
+Backend Pod 3
+```
+### A REAL PRODUCTION ARCHITECTURE
+```
+                    Internet
+                        │
+                        ▼
+                Load Balancer
+                        │
+                        ▼
+                 Frontend Service
+                  (LoadBalancer)
+                        │
+                        ▼
+                  Frontend Pods
+                        │
+                        ▼
+                  Backend Service
+                   (ClusterIP)
+                        │
+                        ▼
+                  Backend Pods
+                        │
+                        ▼
+                  Database Service
+                   (ClusterIP)
+                        │
+                        ▼
+                   Database Pod
+```
+
