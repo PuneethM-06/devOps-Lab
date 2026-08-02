@@ -40,3 +40,12 @@ Backend Pod
     2. Replicasets 
     3. services
     4. network policies 
+- **Labels acts as identity card for k8s pods, a single pod can have multiple labels**
+- Example:
+```
+labels:
+  app: backend
+  env: production
+  version: v1
+```
+
