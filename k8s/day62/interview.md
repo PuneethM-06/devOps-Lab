@@ -14,3 +14,20 @@
 ## LIVENESS PROBE
 - A liveness probe is a health check that is done by kubelet to check if the pods are alive, if not kubernetes will deploy or restart the container automatically 
 
+```
+Application Running
+        │
+        ▼
+Kubelet performs Liveness Probe
+        │
+        ▼
+Healthy?
+     │
+ ┌───┴────┐
+ │        │
+Yes       No
+ │        │
+ ▼        ▼
+Do      Restart
+Nothing Container
+```
