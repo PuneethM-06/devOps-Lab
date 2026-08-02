@@ -86,3 +86,13 @@ livenessProbe:
   timeoutSeconds: 5
   failureThreshold: 3
 ```
+`httpGet` - use HTTP probe 
+`path: /actuator/health` - where to check 
+`initialDelaySeconds: 30` - start after 30 seconds of pod deployment 
+`periodSeconds: 10` - check every 10 second 
+`timeoutSeconds: 5` - wait at most 5 seconds for a response 
+`failureThreshold: 3` - restart container after 3 consecutive request failure 
+
+### NOTE:
+1. **Liveness probe - Restart container**
+2. **Readiness probe - remove pod and replace with new one** 
