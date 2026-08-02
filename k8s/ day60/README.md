@@ -8,3 +8,12 @@ Now if front end needs to communicate or send request to backend it needs to kno
     1. Poda are ephemeral
     2. Scaling 
     3. Node failures 
+
+## SOLUTION
+- The solution for above problems were service
+- no matter:
+    1. Which pod is running 
+    2. which node its running on 
+    3. how many pods exist
+- **Application always calls services**
+- A Kubernetes Service is an abstraction that provides a stable network endpoint for a group of Pods.
