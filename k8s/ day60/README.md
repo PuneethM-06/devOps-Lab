@@ -56,3 +56,12 @@ labels:
       1. **DEPLOYMENT**: Uses selectors to identify the pods
       2. **SERVICE**: Uses selectors to identify which pods receieve traffic
 
+**LABEL**: A label is a key-value pair attache to a k8s object that is used to identify and organize resources
+**SELECTOR**:  A selector is a query that identifies k8s object based on matching labels 
+
+```
+Labels → Selectors → Service → kube-proxy
+```
+> If a Pod's label changes from backend to frontend will Pod be able t receieve request from backend service?
+- Nope, because when selector queries to match the pod with label backend; it wont be listed and hence backend service will not say kube-proxy to route traffic there 
+- `Labels → Selectors → Service → kube-proxy`
