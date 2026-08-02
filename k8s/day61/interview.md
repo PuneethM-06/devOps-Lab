@@ -54,3 +54,27 @@ data:
   LOG_LEVEL: "DEBUG"
   DATABASE_HOST: "postgres.default.svc.cluster.local"\
 ```
+- Once the configMap is created the next thing we'd like to do is, **Create a deployment pod** and inside the **pod spec** we say to use the configmap 
+
+- The next part is to make use of `env`
+```
+containers:
+- name: backend
+  image: backend:v1
+
+  env:
+```
+- we use `env` because we want k8s to create environment variables 
+```
+containers:
+- name: backend
+  image: backend:v1
+
+  env:
+  - name: LOG_LEVEL
+    valueFrom:
+      configMapKeyRef:
+        name: backend-config
+        key: LOG_LEVEL
+```
+- Here we are giving the name to our environemnt variable and we are saing refer the value from `ConfigMapKeyRef`because we created `kind configMap` and we are using` name: backend-config` because we gave the `configmap meta data name` called as backend-config and then the key it needs it refer tere is `LOG_LEVEL`
