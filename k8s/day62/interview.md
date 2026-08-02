@@ -1,98 +1,123 @@
-# KUBERNETES - DAY 62
+# Day 62 – Kubernetes Liveness & Readiness Probes
 
-## WHY DO WE NEED PROBES
-- Lets image we made an deployment and after 30 mins due to some reason the application stops responding but when we do `kubectl` to understand the application - Pods return `running`.
-- Note:  Kubelet checks if the pods are running healthy and checks if application is healthy and running. 
-- Hence `Kubelet` checks the application every now and then using something like `GET /login`
+## Topics Covered
+- Why Kubernetes Probes are required
+- Pod Health vs Application Health
+- Kubelet and Health Checks
+- Liveness Probe
+- Readiness Probe
+- Liveness vs Readiness
+- HTTP, TCP and Exec Probes
+- Probe Configuration
+- Production Scenarios
+- Best Practices
 
-### LIVENESS PROBE
-- Kubelet checking if **Are you alive?** - Meaning are you up and running is called liveness probe
+---
 
-### READINESS PROBE
-- Kubelet checking if ""Are you ready to serve the users* is called readiness probe 
+## Interview Questions
 
-## LIVENESS PROBE
-- A liveness probe is a health check that is done by kubelet to check if the pods are alive, if not kubernetes will deploy or restart the container automatically 
+### 1. Why do we need Kubernetes Probes?
 
-```
-Application Running
-        │
-        ▼
-Kubelet performs Liveness Probe
-        │
-        ▼
-Healthy?
-     │
- ┌───┴────┐
- │        │
-Yes       No
- │        │
- ▼        ▼
-Do      Restart
-Nothing Container
-```
+A Pod being in the `Running` state only means the container process is running. It does not guarantee that the application inside the container is healthy or capable of serving requests. Kubernetes uses probes to monitor the application's health and readiness.
 
-## READINESS PROBE 
-- A readiness probe is an health check performed by the kubelet to determine if the application is ready to serve the users 
-- R
-eadiness probe checks for the health of the application 
-```
-Application Starting
-        │
-        ▼
-Kubelet performs Readiness Probe
-        │
-        ▼
-Ready?
-     │
- ┌───┴────┐
- │        │
-Yes       No
- │        │
- ▼        ▼
-Add Pod   Remove Pod
-to Service from Service
-```
-- Failure - Remove the pod from the container 
+---
 
-| Liveness Probe                            | Readiness Probe                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| Checks if the application is alive        | Checks if the application is ready to serve traffic |
-| Failure → Restart the container           | Failure → Remove Pod from Service                   |
-| Used for deadlocks, hangs, infinite loops | Used for startup delays or dependency issues        |
-| Goal: Recover the application             | Goal: Protect users from failed requests            |
+### 2. Which Kubernetes component performs health checks?
 
-1. ### HTTP PROBE
-- Kubelet sends an HTTP request to application 
--  if 200 ok, healthy; unhealthy -> remove the pod from the container 
+The **Kubelet** running on each worker node performs health checks by periodically executing the configured probes.
 
-2. ### TCP PROBE
-- checks for establishing an TCP connection to a port
-- connection succeeds, good; fails 
+---
 
-3. ### Exec Probe
-- Instead of HTTP or TCP, kubelet runs a command inside the container 
-- if exit code - 0, good else not 
+### 3. What is a Liveness Probe?
 
-- ## PROBE YAML 
-```
-livenessProbe:
-  httpGet:
-    path: /actuator/health
-    port: 8080
+A Liveness Probe is a health check performed by the Kubelet to determine whether an application is still alive. If the probe fails repeatedly, Kubernetes restarts the container automatically.
 
-  initialDelaySeconds: 30
-  periodSeconds: 10
-  timeoutSeconds: 5
-  failureThreshold: 3
-```
-`httpGet` - use HTTP probe 
-`path: /actuator/health` - where to check 
-`initialDelaySeconds: 30` - start after 30 seconds of pod deployment 
-`periodSeconds: 10` - check every 10 second 
-`timeoutSeconds: 5` - wait at most 5 seconds for a response 
-`failureThreshold: 3` - restart container after 3 consecutive request failure 
+---
 
-### NOTE:
-1. **Liveness probe - Restart container**
-2. **Readiness probe - remove pod and replace with new one** 
+### 4. When should a Liveness Probe be used?
+
+Liveness Probes should detect application failures that can be resolved by restarting the container, such as:
+- Deadlocks
+- Infinite loops
+- Hung or unresponsive applications
+- Memory-related issues causing the application to stop responding
+
+---
+
+### 5. What is a Readiness Probe?
+
+A Readiness Probe checks whether an application is ready to accept user traffic. If the probe fails, Kubernetes removes the Pod from the Service endpoints but does not restart the container.
+
+---
+
+### 6. When should a Readiness Probe fail?
+
+Examples include:
+- Application startup is still in progress
+- Database is unavailable
+- Redis or external dependency is unavailable
+- Cache initialization is still running
+
+---
+
+### 7. Difference between Liveness and Readiness Probes
+
+| Liveness Probe | Readiness Probe |
+|----------------|-----------------|
+| Checks if the application is alive | Checks if the application is ready to serve traffic |
+| Failure restarts the container | Failure removes the Pod from Service endpoints |
+| Used for hung or crashed applications | Used for startup delays or temporary dependency failures |
+
+---
+
+### 8. Can both Liveness and Readiness fail at the same time?
+
+Yes. If an application becomes completely unresponsive, the Readiness Probe removes the Pod from the Service while the Liveness Probe eventually restarts the container.
+
+---
+
+### 9. What are the different types of probes?
+
+- HTTP Probe – Checks an HTTP endpoint (most common for web applications).
+- TCP Probe – Verifies whether a TCP port accepts connections.
+- Exec Probe – Executes a command inside the container.
+
+---
+
+### 10. Which probe would you use for a Spring Boot application?
+
+HTTP Probe using an endpoint such as:
+
+`/actuator/health`
+
+---
+
+### 11. Which probe would you use for PostgreSQL?
+
+TCP Probe because PostgreSQL exposes a TCP port but not an HTTP health endpoint.
+
+---
+
+### 12. Which probe would you use for a legacy application that creates a health file?
+
+Exec Probe, since Kubernetes can execute a command to verify the existence or contents of the file.
+
+---
+
+### 13. What is the purpose of initialDelaySeconds?
+
+It delays the first health check after the container starts, giving the application enough time to initialize. This prevents slow-starting applications from failing health checks prematurely.
+
+---
+
+### 14. What happens if initialDelaySeconds is configured incorrectly?
+
+If the application requires more startup time than configured, Kubernetes may repeatedly fail the health checks and continuously restart the container, potentially causing a CrashLoopBackOff.
+
+---
+
+### 15. Why shouldn't Liveness and Readiness always perform the same function?
+
+Because they answer different questions:
+- Liveness determines whether the application should be restarted.
+- Readiness determines whether the application should receive user traffic.
