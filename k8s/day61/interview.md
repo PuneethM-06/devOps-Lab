@@ -27,3 +27,10 @@ Container
      ▼
 Application
 ```
+### Definition:
+- Environment variables allow k8s to inject configmaps or secret values into a container, which the application can make use at the runtime
+
+### METHOD 2 - MOUNTED VOLUMES - ConfigMaps/secret volumes
+- A configvolume/Secret volume is a way to provide file inside a container 
+- In this case instead of injecting the configMap/secrets k8s places the config file in the container which will be made use at the runtime 
+- K8s converts the configMaps/secrets into files and provides during the runtime right?
