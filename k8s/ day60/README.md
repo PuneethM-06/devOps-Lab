@@ -115,4 +115,31 @@ Backend Pod 3
                         ▼
                    Database Pod
 ```
-
+## NODEPORT
+- Nodeport is a k8s service type that exposes an application externally by opening a fixed port on every worker node and forwards the traffic to the corresponding clusterIP services, which then reaches the pods 
+```
+                Outside the Cluster
+                     (Your Laptop)
+                           │
+                           ▼
+               http://NodeIP:30080
+                           │
+                           ▼
+                    Worker Node
+                    Port 30080
+                           │
+                           ▼
+                    NodePort Service
+                           │
+                           ▼
+                     ClusterIP Service
+                           │
+                           ▼
+                      kube-proxy
+                           │
+                    Load Balances
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+      Backend Pod 1   Backend Pod 2   Backend Pod 3
+```
