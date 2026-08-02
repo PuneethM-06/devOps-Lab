@@ -95,7 +95,7 @@ data:
 ```
 - Here notice carefully, **WE ARE NOT STORING INDIVIUAL VALUES INSTEAD WE ARE STORING IT IN A FILE CALLED `application.properties`**
 
-- Now the deployment
+- #### Now the deployment
 ```
 containers:
 - name: backend
@@ -113,3 +113,6 @@ volumes:
 - **volumemounts** - define where it should be mounted
 - **volumes** - defines what storage exisits for the pod 
 
+- **mountPath** - creates a directory inside the container 
+- Then we create volume at the container level (look at the indentation), once that is done. the `name` of `volumeMounts` and `volumes` must match. **Because this connects the container to the volume**
+- Now the volume gets the data from the configMap
