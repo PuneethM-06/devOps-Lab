@@ -32,5 +32,5 @@ Application
 
 ### METHOD 2 - MOUNTED VOLUMES - ConfigMaps/secret volumes
 - A configvolume/Secret volume is a way to provide file inside a container 
-- In this case instead of injecting the configMap/secrets k8s places the config file in the container which will be made use at the runtime 
-- K8s converts the configMaps/secrets into files and provides during the runtime right?
+- In this case instead of injecting the configMap/secrets k8s creates the config file in the container which will be made use at the runtime 
+- K8s converts/creates the configMaps/secrets into files and provides during the runtime right?
