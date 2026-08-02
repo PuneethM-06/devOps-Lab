@@ -48,4 +48,11 @@ labels:
   env: production
   version: v1
 ```
+### SELECTORS
+- Labels store information, while selectors search for information 
+- Similar to google, selectors are responsible for searching pods with the right labels and give information around it 
+
+- Selectors are used by:
+      1. **DEPLOYMENT**: Uses selectors to identify the pods
+      2. **SERVICE**: Uses selectors to identify which pods receieve traffic
 
