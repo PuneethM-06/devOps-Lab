@@ -14,3 +14,16 @@
 ### METHOD 1 - ENVIRONMENT VARIABLES 
 - Example: ` syste,.getenv("DATABASE_HOST")
 - Here, k8s is responsible for injecting the environment variables 
+- K8s provides the environment variables to the container from the config maps before the application starts and the application reads from the containers
+```
+ConfigMap
+     │
+     ▼
+Environment Variable
+     │
+     ▼
+Container
+     │
+     ▼
+Application
+```
