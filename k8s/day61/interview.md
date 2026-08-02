@@ -94,3 +94,22 @@ data:
     DATABASE_HOST=postgres.default.svc.cluster.local
 ```
 - Here notice carefully, **WE ARE NOT STORING INDIVIUAL VALUES INSTEAD WE ARE STORING IT IN A FILE CALLED `application.properties`**
+
+- Now the deployment
+```
+containers:
+- name: backend
+  image: backend:v1
+
+  volumeMounts:
+  - name: config-volume
+    mountPath: /etc/config
+
+volumes:
+- name: config-volume
+  configMap:
+    name: backend-config
+```
+- **volumemounts** - define where it should be mounted
+- **volumes** - defines what storage exisits for the pod 
+
