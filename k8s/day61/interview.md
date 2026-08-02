@@ -35,7 +35,7 @@ Application
 - In this case instead of injecting the configMap/secrets k8s creates the config file in the container which will be made use at the runtime 
 - K8s converts/creates the configMaps/secrets into files and provides during the runtime right?
 
-## CREATING A CONFIGMAP
+## CREATING A CONFIGMAP USING ENV
 - Suppose our application needs:
 ```
 LOG_LEVEL=DEBUG
@@ -78,3 +78,19 @@ containers:
         key: LOG_LEVEL
 ```
 - Here we are giving the name to our environemnt variable and we are saing refer the value from `ConfigMapKeyRef`because we created `kind configMap` and we are using` name: backend-config` because we gave the `configmap meta data name` called as backend-config and then the key it needs it refer tere is `LOG_LEVEL`
+
+## CREATING A CONFIGMAP USING A MOUNTED VALUE
+- Here the congif map we are gonna use is:
+```
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: backend-config
+
+data:
+  application.properties: |
+    LOG_LEVEL=DEBUG
+    DATABASE_HOST=postgres.default.svc.cluster.local
+```
+- Here notice carefully, **WE ARE NOT STORING INDIVIUAL VALUES INSTEAD WE ARE STORING IT IN A FILE CALLED `application.properties`**
