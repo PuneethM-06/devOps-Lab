@@ -31,3 +31,12 @@ kube-proxy
 Backend Pod
 ```
 - **Kube-proxy** here is responsible for service networking by routing traffic from a service to a appropriate pod and also doing load balancing 
+- **K8s service provides information about what each pods has running on it making kube-proxy routing easy**
+
+## CHAPTER 2 - LABELS AND SELECTORS
+- Without labels and selector, k8s would not work they work now
+- It is used in:
+    1. Deployments
+    2. Replicasets 
+    3. services
+    4. network policies 
