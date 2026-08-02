@@ -68,3 +68,8 @@ to Service from Service
 2. ### TCP PROBE
 - checks for establishing an TCP connection to a port
 - connection succeeds, good; fails 
+
+3. ### Exec Probe
+- Instead of HTTP or TCP, kubelet runs a command inside the container 
+- if exit code - 0, good else not 
+
