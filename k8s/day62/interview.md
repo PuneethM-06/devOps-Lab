@@ -34,7 +34,8 @@ Nothing Container
 
 ## READINESS PROBE 
 - A readiness probe is an health check performed by the kubelet to determine if the application is ready to serve the users 
-- Readiness probe checks for the health of the application 
+- R
+eadiness probe checks for the health of the application 
 ```
 Application Starting
         │
@@ -73,3 +74,15 @@ to Service from Service
 - Instead of HTTP or TCP, kubelet runs a command inside the container 
 - if exit code - 0, good else not 
 
+- ## PROBE YAML 
+```
+livenessProbe:
+  httpGet:
+    path: /actuator/health
+    port: 8080
+
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 3
+```
