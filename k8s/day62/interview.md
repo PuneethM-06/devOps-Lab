@@ -31,3 +31,24 @@ Yes       No
 Do      Restart
 Nothing Container
 ```
+
+## READINESS PROBE 
+- A readiness probe is an health check performed by the kubelet to determine if the application is ready to serve the users 
+- Readiness probe checks for the health of the application 
+```
+Application Starting
+        │
+        ▼
+Kubelet performs Readiness Probe
+        │
+        ▼
+Ready?
+     │
+ ┌───┴────┐
+ │        │
+Yes       No
+ │        │
+ ▼        ▼
+Add Pod   Remove Pod
+to Service from Service
+```
