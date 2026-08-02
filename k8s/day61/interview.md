@@ -1,184 +1,87 @@
-# DAY 61 - KUBERNETES
+# Day 61 – Kubernetes ConfigMaps & Secrets
 
-## WHY DO WE NEED CONFIGMAPS AND SECRETS?
-- As we know the principle `BUILD ONCE, DEPLOY ANYWHERE`, so if we have secrets for each env and we are deploying to each env. we should build the image again and deploy which is bad engineering and hence we make use of `configMap` and `secrets`
-- **configMap - Non-sensitive informations like API UR?L etc,**
-- **Secrets -  Are for sensitive information like API KEYS, pwd etc.**
-- In short, ConfigMaps and secrets are used for **ONE IMAGE, MULTIPLE CONFIGURATIONS**
+## Topics Covered
+- Why ConfigMaps and Secrets are required
+- Build Once, Deploy Anywhere
+- ConfigMap vs Secret
+- Environment Variables
+- Mounted Volumes
+- Creating and consuming ConfigMaps
+- Creating and consuming Secrets
+- Enterprise secret management using Vault
+- Captain deployment flow
+- ConfigMap/Secret update behavior
+- Best practices
 
-### WHERE DOES THE CONFIGURATION COME FROM?
-- K8s has 2 way of doing this 
-1. **Environment variables**
-2. ** Mounted volumes**
+## Interview Questions
 
-### METHOD 1 - ENVIRONMENT VARIABLES 
-- Example: ` syste,.getenv("DATABASE_HOST")
-- Here, k8s is responsible for injecting the environment variables 
-- K8s provides the environment variables to the container from the config maps before the application starts and the application reads from the containers
-```
-ConfigMap
-     │
-     ▼
-Environment Variable
-     │
-     ▼
-Container
-     │
-     ▼
-Application
-```
-### Definition:
-- Environment variables allow k8s to inject configmaps or secret values into a container, which the application can make use at the runtime
+### 1. Why do we need ConfigMaps?
 
-### METHOD 2 - MOUNTED VOLUMES - ConfigMaps/secret volumes
-- A configvolume/Secret volume is a way to provide file inside a container 
-- In this case instead of injecting the configMap/secrets k8s creates the config file in the container which will be made use at the runtime 
-- K8s converts/creates the configMaps/secrets into files and provides during the runtime right?
+ConfigMaps store non-sensitive configuration separately from the application, allowing the same Docker image to be deployed across multiple environments without rebuilding it.
 
-## CREATING A CONFIGMAP USING ENV
-- Suppose our application needs:
-```
-LOG_LEVEL=DEBUG
-DATABASE_HOST=postgres.default.svc.cluster.local
-```
+---
 
-We create a ConfigMap:
-```
-apiVersion: v1
-kind: ConfigMap
+### 2. Why do we need Secrets?
 
-metadata:
-  name: backend-config
+Secrets securely store sensitive information such as passwords, API keys, and certificates instead of embedding them inside Docker images or application code.
 
-data:
-  LOG_LEVEL: "DEBUG"
-  DATABASE_HOST: "postgres.default.svc.cluster.local"\
-```
-- Once the configMap is created the next thing we'd like to do is, **Create a deployment pod** and inside the **pod spec** we say to use the configmap 
+---
 
-- The next part is to make use of `env`
-```
-containers:
-- name: backend
-  image: backend:v1
+### 3. Difference between ConfigMap and Secret?
 
-  env:
-```
-- we use `env` because we want k8s to create environment variables 
-```
-containers:
-- name: backend
-  image: backend:v1
+ConfigMaps store non-sensitive configuration, whereas Secrets store sensitive data.
 
-  env:
-  - name: LOG_LEVEL
-    valueFrom:
-      configMapKeyRef:
-        name: backend-config
-        key: LOG_LEVEL
-```
-- Here we are giving the name to our environemnt variable and we are saing refer the value from `ConfigMapKeyRef`because we created `kind configMap` and we are using` name: backend-config` because we gave the `configmap meta data name` called as backend-config and then the key it needs it refer tere is `LOG_LEVEL`
+---
 
-## CREATING A CONFIGMAP USING A MOUNTED VALUE
-- Here the congif map we are gonna use is:
-```
-apiVersion: v1
-kind: ConfigMap
+### 4. What are the two ways to consume ConfigMaps or Secrets?
 
-metadata:
-  name: backend-config
+- Environment Variables
+- Mounted Volumes
 
-data:
-  application.properties: |
-    LOG_LEVEL=DEBUG
-    DATABASE_HOST=postgres.default.svc.cluster.local
-```
-- Here notice carefully, **WE ARE NOT STORING INDIVIUAL VALUES INSTEAD WE ARE STORING IT IN A FILE CALLED `application.properties`**
+---
 
-- #### Now the deployment
-```
-containers:
-- name: backend
-  image: backend:v1
+### 5. When should you use Environment Variables?
 
-  volumeMounts:
-  - name: config-volume
-    mountPath: /etc/config
+For simple key-value configurations such as database host, usernames, passwords, API URLs, and feature flags.
 
-volumes:
-- name: config-volume
-  configMap:
-    name: backend-config
-```
-- **volumemounts** - define where it should be mounted
-- **volumes** - defines what storage exisits for the pod 
+---
 
-- **mountPath** - creates a directory inside the container 
-- Then we create volume at the container level (look at the indentation), once that is done. the `name` of `volumeMounts` and `volumes` must match. **Because this connects the container to the volume**
-- Now the volume gets the data from the configMap
+### 6. When should you use Mounted Volumes?
 
-## CREATING A SECRET 
-```
-apiVersion: v1
-kind: Secret
+When applications expect configuration as files, such as application.properties, nginx.conf, TLS certificates, or SSH keys.
 
-metadata:
-  name: backend-secret
+---
 
-type: Opaque
+### 7. Explain how a ConfigMap is injected as an environment variable.
 
-stringData:
-  DATABASE_PASSWORD: MyPassword123
-  API_KEY: sk_live_xxxxx
-```
+The Deployment references a ConfigMap using `configMapKeyRef`. During Pod startup, Kubernetes reads the specified key from the ConfigMap and injects it as an environment variable into the container.
 
-- `kind: secret` - says we are storing secrets 
-- `type opaque` - default secret type and it means it stores key-value pair
-- `stringData` - we defined our secrets as key-value pairs
+---
 
-- ### IN DEPLOYMENT
-```
-apiVersion: apps/v1
-kind: Deployment
+### 8. Explain how a Secret is injected into a Pod.
 
-...
-spec:
-  template:
-    spec:
-      containers:
-      - name: backend
-        image: backend:v1
+The Deployment references a Secret using `secretKeyRef`. Kubernetes injects the Secret as environment variables or mounted files when the Pod starts.
 
-        env:
-        - name: DATABASE_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: backend-secret
-              key: DATABASE_PASSWORD
-```
-### ORGANIZATION FLOW 
-```
-Developer
-     │
-     ▼
-deployment.yaml
-     │
-     ▼
-Captain reads the deployment configuration
-     │
-     ├── Identifies the required secrets
-     ├── Fetches them from Vault
-     ├── Creates/updates Kubernetes Secrets
-     └── Deploys the application to Kubernetes
-             │
-             ▼
-     Kubernetes starts the Pod
-             │
-             ▼
-Kubelet injects the Secrets
-(as environment variables or mounted files)
-             │
-             ▼
-Application reads the secrets
-(e.g., System.getenv("DATABASE_PASSWORD"))
-```
+---
+
+### 9. What happens if a ConfigMap is updated?
+
+If consumed as environment variables, running Pods do not receive the updated values. A restart or rollout is required. If consumed as mounted volumes, Kubernetes updates the files, but whether the application picks up the changes depends on the application.
+
+---
+
+### 10. How are secrets managed in enterprise environments?
+
+Secrets are typically stored in Vault or another secret manager. Deployment platforms such as Captain retrieve secrets from Vault, create Kubernetes Secrets, and the Deployment consumes those Kubernetes Secrets.
+
+---
+
+### 11. Does Kubernetes communicate directly with Vault?
+
+No. Kubernetes only consumes Kubernetes Secrets. A deployment platform or secret management integration (such as Captain, Vault Agent, or External Secrets Operator) retrieves secrets from Vault and creates or updates Kubernetes Secrets.
+
+---
+
+### 12. Why shouldn't Secrets be committed to Git?
+
+Committing secrets exposes sensitive information. Instead, secrets should be stored in a secure secret management system and injected during deployment.
