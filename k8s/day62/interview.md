@@ -60,3 +60,11 @@ to Service from Service
 | Failure → Restart the container           | Failure → Remove Pod from Service                   |
 | Used for deadlocks, hangs, infinite loops | Used for startup delays or dependency issues        |
 | Goal: Recover the application             | Goal: Protect users from failed requests            |
+
+1. ### HTTP PROBE
+- Kubelet sends an HTTP request to application 
+-  if 200 ok, healthy; unhealthy -> remove the pod from the container 
+
+2. ### TCP PROBE
+- checks for establishing an TCP connection to a port
+- connection succeeds, good; fails 
