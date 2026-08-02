@@ -143,3 +143,23 @@ Backend Pod 3
           ▼                ▼                ▼
       Backend Pod 1   Backend Pod 2   Backend Pod 3
 ```
+## LOAD BALANCER
+- A Loadbalancer service exposes an application externally by provisioning a cloud providers load balancer, which forwards incoming traffic to the k8s service
+```
+Internet User
+      │
+      ▼
+AWS Load Balancer
+      │
+      ▼
+NodePort
+      │
+      ▼
+ClusterIP
+      │
+      ▼
+kube-proxy
+      │
+      ▼
+Backend Pod
+```
