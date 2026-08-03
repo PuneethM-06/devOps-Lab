@@ -69,3 +69,43 @@ ReplicaSet Creates New Pods
 
 ## WHY HPA NEEDS CPU REQUESTS 
 - CPU UTILIZATION = CURRENT CPU USAGE / CPU REQUEST
+- Example:
+```
+Request = 500m
+
+Current = 750m
+
+750 / 500 = 150%
+targetCPUtilization = 70%
+
+HPA says pods are overloaded scale immediately 
+```
+```
+Application Running
+
+↓
+
+Current CPU = 750m
+
+↓
+
+CPU Request = 500m
+
+↓
+
+Metrics Server
+
+↓
+
+HPA calculates
+
+750 / 500 = 150%
+
+↓
+
+Target = 70%
+
+↓
+
+Scale Up
+```
