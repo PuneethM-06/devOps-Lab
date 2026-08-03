@@ -46,3 +46,30 @@ Worker Node
 
 - `memory: 512Mi = 512MB of RAM`
 - `memory: 2Gi = 2GM of RAM`
+
+## RESOURCE REQUEST 
+- **This means that, before scheduling this pod, make sure the assigning node has atleast this much free CPU and memory**
+```
+Developer
+      │
+      ▼
+Defines Requests
+      │
+      ▼
+Scheduler
+      │
+      ▼
+Checks every Worker Node
+      │
+      ▼
+Can the node satisfy the request?
+      │
+   ┌──┴──┐
+   │     │
+ Yes     No
+ │       │
+ ▼       ▼
+Schedule Try another
+Pod      Node
+```
+
