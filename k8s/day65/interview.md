@@ -9,5 +9,8 @@
 - An engineer notices that there is high CPU and hence manually autoscales the replica count for backend service
 - the cons of this we need someone to always monitor the CPU usage intead we can make use of **Autoscaler** 
 
-## HORIZONTAL SCALING
+###  HORIZONTAL SCALING
 - Increase the number of pods
+
+###  VERTICAL SCALING
+- Increase the capacity of existing pods
