@@ -13,3 +13,10 @@ Worker Node
 - Every pod says:
     - This is the **minimum amount of CPU** and memory I need
     - This is the **maximum amount** I am **allowed to use**
+
+### RESOURCE REQUEST
+- Please allocate at least this much CPU and memory for me 
+
+### RESOURCE LIMIT
+- Do not let me use more than this 
+
