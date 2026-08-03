@@ -152,3 +152,6 @@ Pods become Ready
      ▼
 Service begins sending traffic
 ```
+## SCALE DOWN 
+- Once the current gets down to the target scaling down will happen
+- HPA would not react immediately after the CPU is down because CPU may vary instead it lets CPU average to be down under the target for some time called as **stabilization window**
