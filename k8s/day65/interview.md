@@ -33,3 +33,36 @@ Metrics Server
 
 Horizontal Pod Autoscaler
 ```
+- **Metric server periodically collects metrics from kubelet**
+```
+Application Running
+
+↓
+
+CPU Usage Increases
+
+↓
+
+Linux Kernel
+
+↓
+
+Kubelet Reads Metrics
+
+↓
+
+Metrics Server Collects Metrics
+
+↓
+
+HPA Reads Metrics
+
+↓
+
+Deployment Replica Count Increased
+
+↓
+
+ReplicaSet Creates New Pods
+```
+**METRIC SERVER** - Metrics Server is a Kubernetes component that collects CPU and memory usage metrics from the Kubelet running on each Worker Node. Horizontal Pod Autoscaler uses these metrics to determine whether Pods should be scaled up or down.
