@@ -87,8 +87,8 @@ Pod      Node
 - If the memory exceedes the limit, **mem cant be compressed and hence it will be killed** 
 | Resource   | Exceeds Limit | Result                   |
 | ---------- | ------------- | ------------------------ |
-| **CPU**    | 1500m > 1000m | ✅ Throttled (slower)     |
-| **Memory** | 2Gi > 1Gi     | ❌ Killed (**OOMKilled**) |
+| **CPU**    | 1500m > 1000m |  Throttled (slower)     |
+| **Memory** | 2Gi > 1Gi     |  Killed (**OOMKilled**) |
 
 ## OOMKILLER - OUT OF MEMORY KILLER
 - when a pod starts using memory more than allocated then, kerner calls OOMKiller and kills the process
@@ -112,3 +112,5 @@ OOM Killer
 Kills the container
 ```
 - **IMPORTANT: K8S DOES NOT KILL THE CONTAINER, LINUX KERNEL DOES**
+- **ONCE THE POD IS KILLED BECAUSE OF OOMKILLER, KUBELET GETS THE NEW CONTAINER IN**
+- **OOMKILLER DOES NOT KILL THE POD, IT REMOVES THE CONTAINER INSIDE THE POD AND GETS THE NEW ONE IN**
