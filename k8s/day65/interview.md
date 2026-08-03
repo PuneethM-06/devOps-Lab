@@ -109,3 +109,45 @@ Target = 70%
 
 Scale Up
 ```
+
+## HOW HPA ACTUALLY SCALES
+- HPA compares the metric server repor to what is the target 
+- It says `depoyment` increase your `replica count`
+- Then creates new pods 
+
+## END TO END FLOW - IMPORTANT 
+```
+HPA
+
+↓
+
+Updates Deployment replicas
+
+↓
+
+Deployment Controller notices
+
+↓
+
+Updates ReplicaSet
+
+↓
+
+ReplicaSet Controller creates new Pods
+
+↓
+
+New Pods are Pending
+
+↓
+
+Scheduler sees Pending Pods
+
+↓
+
+Chooses Worker Nodes
+
+↓
+
+Kubelet starts the Pods
+```
