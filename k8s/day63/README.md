@@ -30,3 +30,10 @@ maxSurge: 1
 ```
 - This says I can remove maximum of one pod at a time; and create one pod at a time in the new replicaset
 - Creates a new pod at the new replicaset; waits or readiness probe to pass -> Removes one pod from the prev replicaset 
+
+- **maxSurge**: defines the **maximum number of new pods K8s can temporarily create above the desired replica count during an update rollout**
+- **maxUnavilable** - defines the maximum number of pods thaty can be unavailabe during a rolling update while maintaing application availability
+
+- If `REPLICAS  = R`;
+- Maximum pods during an update = `R + maxSurge`
+- Minimum available pods = `R - maxunavailable`
