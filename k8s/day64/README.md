@@ -72,4 +72,4 @@ Can the node satisfy the request?
 Schedule Try another
 Pod      Node
 ```
-
+- A Resource Request specifies the minimum CPU and memory a Pod requires. The **Kubernetes Scheduler** uses these values to **determine whether a Worker Node has sufficient available resources** before scheduling the Pod. Requests reserve resources but do not limit the application's maximum resource usage.
