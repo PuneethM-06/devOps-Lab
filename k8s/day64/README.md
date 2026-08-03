@@ -89,3 +89,26 @@ Pod      Node
 | ---------- | ------------- | ------------------------ |
 | **CPU**    | 1500m > 1000m | ✅ Throttled (slower)     |
 | **Memory** | 2Gi > 1Gi     | ❌ Killed (**OOMKilled**) |
+
+## OOMKILLER - OUT OF MEMORY KILLER
+- when a pod starts using memory more than allocated then, kerner calls OOMKiller and kills the process
+```
+Application
+
+↓
+
+Requests more than 1Gi
+
+↓
+
+Linux Kernel
+
+↓
+
+OOM Killer
+
+↓
+
+Kills the container
+```
+- **IMPORTANT: K8S DOES NOT KILL THE CONTAINER, LINUX KERNEL DOES**
