@@ -37,3 +37,39 @@ maxSurge: 1
 - If `REPLICAS  = R`;
 - Maximum pods during an update = `R + maxSurge`
 - Minimum available pods = `R - maxunavailable`
+
+## ROLLBACK
+- If there is a issue with the new deployment, K8s can immediately do a rollback to the older replicaset because it would have not deleted it in the first place
+```
+v1 Deployment
+        │
+        ▼
+ReplicaSet-v1
+      (3 Pods)
+
+        │
+Rolling Update
+        ▼
+
+ReplicaSet-v1
+      (0 Pods)
+
+ReplicaSet-v2
+      (3 Pods)
+
+        │
+Bug Found
+        ▼
+
+Rollback
+
+        │
+        ▼
+
+ReplicaSet-v1
+      (3 Pods)
+
+ReplicaSet-v2
+      (0 Pods)
+```
+
