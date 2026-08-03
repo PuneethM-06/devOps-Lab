@@ -36,3 +36,13 @@ Worker Node
 
 2000m = 2 CPUs
 ```
+
+### MEMORY
+- Memory is measured differently
+- It is mostly
+    1. Mi = Mebibyte
+    2. Gi = Gibibyte
+
+
+- `memory: 512Mi = 512MB of RAM`
+- `memory: 2Gi = 2GM of RAM`
