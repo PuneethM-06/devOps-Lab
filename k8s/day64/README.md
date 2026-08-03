@@ -81,3 +81,11 @@ Pod      Node
 | Used by Scheduler                   | Enforced while Pod is running                     |
 | Minimum guaranteed resources        | Maximum allowed resources                         |
 | Helps decide where to place the Pod | Prevents a Pod from consuming excessive resources |
+
+### WHAT HAPPENS IF THE CPU UTILIZATION BECOMES MORE?
+- **CPU throttling happens**, K8s compresses the CPU and in turn the application gets slow. 
+- If the memory exceedes the limit, **mem cant be compressed and hence it will be killed** 
+| Resource   | Exceeds Limit | Result                   |
+| ---------- | ------------- | ------------------------ |
+| **CPU**    | 1500m > 1000m | ✅ Throttled (slower)     |
+| **Memory** | 2Gi > 1Gi     | ❌ Killed (**OOMKilled**) |
