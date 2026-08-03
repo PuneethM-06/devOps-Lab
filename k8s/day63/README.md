@@ -22,3 +22,11 @@
 
 > How many extra pods can I temporarily create?
 - maxSurge 
+
+- Example:
+```
+maxUnavailable: 1
+maxSurge: 1
+```
+- This says I can remove maximum of one pod at a time; and create one pod at a time in the new replicaset
+- Creates a new pod at the new replicaset; waits or readiness probe to pass -> Removes one pod from the prev replicaset 
