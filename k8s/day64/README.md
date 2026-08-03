@@ -20,3 +20,19 @@ Worker Node
 ### RESOURCE LIMIT
 - Do not let me use more than this 
 
+## CPU and MEMORY UNITS
+- In K8s, CPU is measured in:
+    1. Cores
+    2. Milli cores
+- 1 CPU = 1000 millicores
+```
+100m  = 0.1 CPU
+
+250m  = 0.25 CPU
+
+500m  = 0.5 CPU
+
+1000m = 1 CPU
+
+2000m = 2 CPUs
+```
