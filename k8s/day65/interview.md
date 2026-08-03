@@ -65,4 +65,7 @@ Deployment Replica Count Increased
 
 ReplicaSet Creates New Pods
 ```
-**METRIC SERVER** - Metrics Server is a Kubernetes component that collects CPU and memory usage metrics from the Kubelet running on each Worker Node. Horizontal Pod Autoscaler uses these metrics to determine whether Pods should be scaled up or down.
+**METRIC SERVER** - Metrics Server is a Kubernetes component that collects CPU and memory usage metrics from the Kubelet running on each Worker Node. Horizontal Pod Autoscaler uses these metrics to determine whether Pods should be scaled up or down.\
+
+## WHY HPA NEEDS CPU REQUESTS 
+- CPU UTILIZATION = CURRENT CPU USAGE / CPU REQUEST
