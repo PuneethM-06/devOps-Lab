@@ -14,3 +14,22 @@
 
 ###  VERTICAL SCALING
 - Increase the capacity of existing pods
+
+## METRICS SERVER
+- Metric server gives the intimation to the HPA saying, pods CPU is more and now we need to do scaling 
+- The overall flow is:
+```
+Pod
+
+↓
+
+Kubelet
+
+↓
+
+Metrics Server
+
+↓
+
+Horizontal Pod Autoscaler
+```
