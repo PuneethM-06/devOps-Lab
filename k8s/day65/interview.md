@@ -117,37 +117,38 @@ Scale Up
 
 ## END TO END FLOW - IMPORTANT 
 ```
-HPA
-
-↓
-
-Updates Deployment replicas
-
-↓
-
-Deployment Controller notices
-
-↓
-
-Updates ReplicaSet
-
-↓
-
-ReplicaSet Controller creates new Pods
-
-↓
-
-New Pods are Pending
-
-↓
-
-Scheduler sees Pending Pods
-
-↓
-
-Chooses Worker Nodes
-
-↓
-
-Kubelet starts the Pods
+High CPU
+     │
+     ▼
+Linux Kernel
+     │
+     ▼
+Kubelet reads CPU usage
+     │
+     ▼
+Metrics Server collects metrics
+     │
+     ▼
+HPA compares CPU utilization with target
+     │
+     ▼
+HPA updates Deployment replicas
+     │
+     ▼
+Deployment Controller updates ReplicaSet
+     │
+     ▼
+ReplicaSet creates new Pending Pods
+     │
+     ▼
+Scheduler assigns Worker Nodes
+     │
+     ▼
+Kubelet starts containers
+     │
+     ▼
+Pods become Ready
+     │
+     ▼
+Service begins sending traffic
 ```
