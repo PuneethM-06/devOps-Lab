@@ -9,3 +9,16 @@
 - Every deployment gets its own replicaset.
 - Lets say we had a `replicaset v1` serving the users, so once a new deployment is rolled out. K8s does not immeditaley delete the older replicaset instead it creates a new replicaset called `v2`.Gets the number of pods needed rolling in and once that is done it checks for `readiness` of the pods in the new replicaset.
 - Please note that the **previous replicaset is not deleted**, because tomorrow if you want to go back to the previous replicaset because the current has a bug then it might be handy 
+
+## maxSurge and maxUnavailable 
+
+### PROBLEM
+- when we create a new deployment, K8s has to keep two important goals in mind:
+    1. DONT CREATE TOO MANY PODS, BECAUSE PODS CONSUME MEMORY
+    2. DONT REMOVE TOO MANY OLD PODS BECAUSE USER NEEDS APPLICATION 
+
+> How many max pods can I remove?
+- maxUnavailable 
+
+> How many extra pods can I temporarily create?
+- maxSurge 
