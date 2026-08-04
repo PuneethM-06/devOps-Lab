@@ -219,7 +219,7 @@
 - Ipv6 - almost unlimited (3.4 * 10^38)
 - EC2 instances get new IP everytime we start and stop - **PUBLIC IP ADDRESS**
 
-**Private IPv4 **- It is not public and will be the same even if we stop and restart and cannot be accessed by internet
+**Private IPv4**- It is not public and will be the same even if we stop and restart and cannot be accessed by internet
 - ### ELASTIC IP - Gets a fixed public IPv4 address to a Ec2 instance
 
 
@@ -403,7 +403,7 @@
     - Amazon ECR
     - Lambda functions 
 - It will check for **vulnerabilities**
-- It can generate** reports or report in AWS security Hub**
+- It can generate **reports or report in AWS security Hub**
 - Generates a **Risk score for prioritization**
 
 ## AWS CONFIG
@@ -417,7 +417,7 @@
 - **PII** - Personally identifiable information (PII)
 
 ## AWS SECURITY HUB 
-- It is a** central security tool** to **manage and automate security checks around AWS infrastructure** 
+- It is a **central security tool** to **manage and automate security checks around AWS infrastructure** 
 - Partners with tools:
     - AWS firewall
     - AWS system manager
@@ -464,7 +464,7 @@
 - Automatically converts **text to speech**
 
 ## AMAZON TRANSLATE
-- **Language translation **
+- **Language translation**
 
 ## AMAZON LEX & CONNECT
 - Amazon lex powers **ALEXA**
@@ -475,7 +475,7 @@
 
 ## AWS COMPHREHEND
 - It is for NLP -**Natural Language Processing**
-- Use ML to find **insights and relationships in text **
+- Use ML to find **insights and relationships in text**
 - Use case: Understand customer emails etc.
 
 ## AWS SAGEMAKER
@@ -964,4 +964,8 @@
 ## AWS MANAGED SERVICES
 - **A team of people who give Infrastructure supports**
 - **Manage and operate our infrastructure**
+
+### SCALABLITY - HOW SYSTEM CAN HANDLE INCREASE IN WORKLOAD
+### ELASTICITY - HOW SYSTEM CAN SCALE UP AND DOWN 
+### AGILITY - HOW QUICKLY WE CAN DEVLOP AND DEPLOY
 
