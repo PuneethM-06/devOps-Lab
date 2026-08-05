@@ -37,3 +37,9 @@ Cluster
 
 4. **DEPLOYMENT INTO DEV NAMESPACE**
 - `kubectl apply -f deployment.yaml -n dev`
+
+> CAN TWO DEPLOYMENTS HAVE THE SAME NAMESPACES?
+- Yes, provided they are in different namesapces. Resource names must be unique within a namespace but the same name can exist in multiple namespaces
+
+> CAN KUBERNETES NAMESPACE BE NESTED?
+- No, Kubernetes namespaces are flat and cannot be nested. 
