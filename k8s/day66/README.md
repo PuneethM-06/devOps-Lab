@@ -58,3 +58,11 @@ Cluster
 2. ### kube-system 
 - This is one of the most important built-in namespace
 - This can be thought as the **operating system folder of the kubernetes cluster**
+- such as:
+    1. coreDNS
+    2. kube-proxy
+    3. metric server
+    4. CNI plugins 
+
+3. ### Kube-public
+- 
