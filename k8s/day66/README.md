@@ -199,3 +199,34 @@ User
 - For Applications to talk to pod we need **Service accounts**
 - Once an service account is created we are gonna do role binding for service accounts as well do have access to applications to roles rolebinding 
 - **DEFINITION** - A Service account is a k8s identity used by poids to authenticate with k8s API. It allows application inside a pod to access k8s resources according to permissions granted through BAC
+- Each Pod inside a worker node gets a service account; meaning it doesnt mean each pod gets a unique account
+- Example:
+```
+suppose we have 
+Deployment
+
+Replicas: 3
+
+ServiceAccount: backend-sa
+
+k8s creates
+Pod 1
+
+↓
+
+backend-sa
+
+Pod 2
+
+↓
+
+backend-sa
+
+Pod 3
+
+↓
+
+backend-sa
+```
+- All pods use the same service account 
+
