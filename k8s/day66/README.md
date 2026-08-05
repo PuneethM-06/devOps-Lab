@@ -49,7 +49,7 @@ Cluster
     1. default 
     2. Kube-system 
     3. kube-public
-    4. kube-node-less
+    4. kube-node-lease
 
 1. ### default
 - This is the easiest one
@@ -65,4 +65,9 @@ Cluster
     4. CNI plugins 
 
 3. ### Kube-public
-- 
+- This namespace is intendede for resources that are publicly readable across the cluster
+- It is rarely used by application developers
+
+4. ### kube-node-lease
+- Every worker node periodically says control plane that it is alive and it called as **heartbeat**
+- Kubernetes stores these hearbeat **lease object in kube-node-lease**
