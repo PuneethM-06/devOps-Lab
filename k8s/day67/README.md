@@ -92,3 +92,12 @@ Exits
 5. ### UNKNOWN
 - This is a rare case scenario.
 - This means the control plane has lost communication with the worker node 
+
+
+| Status                | Meaning                                      |
+| --------------------- | -------------------------------------------- |
+| Running               | Pod is running successfully.                 |
+| Pending               | Waiting to be scheduled or started.          |
+| Completed (Succeeded) | Finished successfully (common for Jobs).     |
+| Failed                | Pod terminated due to an error.              |
+| Unknown               | Kubernetes cannot determine the Pod's state. |
