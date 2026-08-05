@@ -144,3 +144,26 @@ Permissions:
 ✓ List Pods
 ✓ Create Deployments
 ```
+2. ### CLUSTERROLE
+- A cluster role unlike is not restricted to a particular namespace but is given permission across the cluster 
+```
+ClusterRole
+
+↓
+
+Entire Cluster
+
+↓
+
+Permissions
+```
+- Example:
+```
+ClusterRole
+
+Permissions
+
+✓ View Nodes
+✓ View Namespaces
+✓ View Pods everywhere
+```
