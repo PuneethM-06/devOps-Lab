@@ -170,4 +170,13 @@ CrashLoopBackOff
 - common reason for this to occue is:
     1. Wrong image name 
     2. Wrong image tag
-    3. 
+    3. Registry unavailable 
+    4. authenticaton failed 
+
+| CrashLoopBackOff                | ImagePullBackOff                            |
+| ------------------------------- | ------------------------------------------- |
+| Image downloaded successfully   | Image could not be downloaded               |
+| Container starts                | Container never starts                      |
+| Application crashes             | Image pull fails                            |
+| `kubectl logs` is useful        | `kubectl logs` is usually not useful        |
+| Root cause often in application | Root cause often in image name/tag/registry |
