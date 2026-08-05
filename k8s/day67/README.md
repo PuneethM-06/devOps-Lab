@@ -180,3 +180,35 @@ CrashLoopBackOff
 | Application crashes             | Image pull fails                            |
 | `kubectl logs` is useful        | `kubectl logs` is usually not useful        |
 | Root cause often in application | Root cause often in image name/tag/registry |
+
+```
+kubectl get pods
+
+↓
+
+Is the container running?
+
+├── YES
+│      │
+│      ├── Application crashing?
+│      │        ↓
+│      │   kubectl logs
+│      │
+│      └── Running but unhealthy?
+│               ↓
+│         kubectl exec
+│
+└── NO
+       │
+       ├── Pending
+       │      ↓
+       │ kubectl describe
+       │
+       ├── ImagePullBackOff
+       │      ↓
+       │ kubectl describe
+       │
+       └── FailedScheduling
+              ↓
+         kubectl describe
+```
