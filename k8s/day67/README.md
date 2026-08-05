@@ -53,3 +53,11 @@
     1. The pod has been scheduled to a worker node 
     2. Container is running inside the pod 
     3. Application is running successfully inside the container 
+
+2. ### PENDING 
+- This means that Pod has been accepted by kubernetes but hasnt started running yet 
+- common reason for this is:
+    1. No worker node has enough CPU
+    2. No worker node has enough memory
+    3. Node selectors dont match 
+    4. Taints prevent scheduling 
