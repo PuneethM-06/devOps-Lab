@@ -25,3 +25,15 @@ Cluster
 ```
 - A namespace is a logicial partition within a k8s cluster that organizes and isolates resources. It allows multiple teams, applications or environments to share the same cluster without resource naming conflicts
 
+## WHAT EXACTLY IS A NAMESPACE?
+1. **HOW DO WE CREATE NAMESPACES**
+- `kubectl create namespace dev`
+
+2. **TO VIEW ALL NAMESPACES**
+- `kubectl get namespaces`
+
+3. **DEPLOYMENT INTO DEFAULT NAMESPACE**
+- `kubectl apply -f deployment.yaml`
+
+4. **DEPLOYMENT INTO DEV NAMESPACE**
+- `kubectl apply -f deployment.yaml -n dev`
