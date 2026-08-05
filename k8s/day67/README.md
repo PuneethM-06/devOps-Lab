@@ -28,3 +28,9 @@
 
 7. Verify the application is healthy.
 ```
+
+### THREE IMPORTANT COMMANDS
+1. **kubectl get pods** - shows the current status of the pods 
+2. **kubectl describe pod <pod name>** - Describe the events in the pod in a detailed way 
+3. **kubectl logs <pod name>** - Gets the logs of a pod 
+
