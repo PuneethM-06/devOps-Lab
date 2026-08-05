@@ -102,3 +102,18 @@ YES → Allow
 
 NO → Deny
 ```
+1. ### PERMISSION
+- What actions are allowed
+- Example:
+    1. Get pods
+    2. List pods
+    3. Create deployments
+    4. Delete services
+
+2. ### ASSIGNMENT
+- Who gets these permissions
+- Example:
+    1. Puneeth
+    2. DevOps team 
+    3. Service account 
+
