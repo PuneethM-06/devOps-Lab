@@ -975,3 +975,7 @@
 - Cost Explorer → Analyze costs, forecast spending, and get RI/Savings Plans recommendations.
 - AWS Budgets → Set budgets and receive alerts.
 - CUR → Detailed raw billing and usage report for custom analysis
+
+AWS MGN - **MIGRATE SERVER AND APPLICATIONS AND ALSO DATA - KEYWORD IS SERVER**
+AWS DMS - MIGRATE DATABASE ALONE 
+
