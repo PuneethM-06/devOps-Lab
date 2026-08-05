@@ -228,3 +228,43 @@ Is the container running?
 - `kubectl exec -it <pod-name> -- /bin/bash`
 - we can then run commands like `ping redis` etc. 
 - To find missing files, env variables etc and know the exact issue 
+- check for configuration files 
+- DNS resolution 
+- Wrong port etc.
+
+```
+Application Down
+
+        │
+        ▼
+kubectl get pods
+
+        │
+        ├───────────────┐
+        ▼               ▼
+Running          Not Running
+
+        │               │
+        ▼               ▼
+kubectl logs     kubectl describe
+
+        │               │
+        ▼               ▼
+Need deeper?     Find Kubernetes Events
+
+        │
+        ▼
+kubectl exec
+
+        │
+        ▼
+Find Root Cause
+
+        │
+        ▼
+Fix
+
+        │
+        ▼
+Verify
+```
