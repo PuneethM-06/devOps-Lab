@@ -147,3 +147,18 @@ CrashLoopBackOff
 4. Database not reachable 
 5. Port already in use
 6. OOMKILLED
+
+## PENDING PODS 
+- This is a scenario where kubernetes is not possible to assign a pod to a worker node 
+- The possible reasons are:
+    1. CPU and memory inside the worker nodes does not have the minimum space that the pod is asking 
+    2. Node selector does not match 
+   ```
+   nodeSelector:
+  region: us-east-1
+  But every node is on region = us-west-1
+  ```
+### NOTE:
+> Here the question that will arise is cant k8s make use of HPA and scale? 
+- HPA cannot create worker nodes it can **only scale the pods**
+- **Cluster Auto scaler** is responsible for creating new worker nodes
