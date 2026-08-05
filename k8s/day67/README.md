@@ -223,3 +223,8 @@ Is the container running?
 | `kubectl logs --previous <pod>`     | View logs from the previously crashed container              |
 | `kubectl logs <pod> -c <container>` | View logs from a specific container in a multi-container Pod |
 
+### KUBECTL EXEC
+- This command is used to get into a pod and execute commads to see what exactly is happening 
+- `kubectl exec -it <pod-name> -- /bin/bash`
+- we can then run commands like `ping redis` etc. 
+- To find missing files, env variables etc and know the exact issue 
