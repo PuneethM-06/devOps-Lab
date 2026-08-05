@@ -101,3 +101,41 @@ Exits
 | Completed (Succeeded) | Finished successfully (common for Jobs).     |
 | Failed                | Pod terminated due to an error.              |
 | Unknown               | Kubernetes cannot determine the Pod's state. |
+
+## CRASHLOOPBACKOFF
+```
+Container Starts
+
+↓
+
+Application Crashes
+
+↓
+
+Kubelet Restarts Container
+
+↓
+
+Application Crashes Again
+
+↓
+
+Kubelet Restarts Again
+
+↓
+
+Keeps Crashing
+
+↓
+
+Wait Longer
+
+↓
+
+Restart Again
+
+↓
+
+CrashLoopBackOff
+```
+- crashLoopBackOff means the contaiuner starts, crashes repeatedly, and kubernetes delays each restart using an increasing backoff to avoid continuous restart loops
