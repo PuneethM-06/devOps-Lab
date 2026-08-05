@@ -80,3 +80,25 @@ Cluster
 | QA Engineer     | View Pods in `qa`             |
 | DevOps Engineer | Deploy applications to `prod` |
 | Cluster Admin   | Full access to the cluster    |
+
+- **HIGH LEVEL FLOW**
+```
+User
+   │
+   ▼
+Requests an action
+
+↓
+
+RBAC checks
+
+↓
+
+Does this user have permission?
+
+↓
+
+YES → Allow
+
+NO → Deny
+```
