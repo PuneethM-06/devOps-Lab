@@ -50,3 +50,11 @@ Cluster
     2. Kube-system 
     3. kube-public
     4. kube-node-less
+
+1. ### default
+- This is the easiest one
+- when a deployment is done without explicitly defining a namespace then it is created under `default`
+
+2. ### kube-system 
+- This is one of the most important built-in namespace
+- This can be thought as the **operating system folder of the kubernetes cluster**
