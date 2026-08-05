@@ -969,3 +969,9 @@
 ### ELASTICITY - HOW SYSTEM CAN SCALE UP AND DOWN 
 ### AGILITY - HOW QUICKLY WE CAN DEVLOP AND DEPLOY
 
+- Follow a structured debugging workflow instead of guessing.
+- DataSync → Move data to AWS over the network.
+- Storage Gateway → Hybrid storage connecting on-premises and AWS.
+- Cost Explorer → Analyze costs, forecast spending, and get RI/Savings Plans recommendations.
+- AWS Budgets → Set budgets and receive alerts.
+- CUR → Detailed raw billing and usage report for custom analysis
