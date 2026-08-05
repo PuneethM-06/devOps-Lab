@@ -167,3 +167,8 @@ Permissions
 ✓ View Namespaces
 ✓ View Pods everywhere
 ```
+| Role                               | ClusterRole                                               |
+| ---------------------------------- | --------------------------------------------------------- |
+| Namespace scoped                   | Cluster scoped                                            |
+| Permissions apply to one Namespace | Permissions apply across the entire cluster               |
+| Used for application teams         | Used for cluster administrators or cluster-wide resources |
