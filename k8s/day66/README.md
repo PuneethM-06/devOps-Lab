@@ -194,3 +194,8 @@ ClusterRoleBinding
       ▼
 User
 ```
+## SERVICE ACCOUNTS
+- For a human to talk to pods, authorize and authenticate himself we are gonna make use of `Roles and clusterRoles`
+- For Applications to talk to pod we need **Service accounts**
+- Once an service account is created we are gonna do role binding for service accounts as well do have access to applications to roles rolebinding 
+- **DEFINITION** - A Service account is a k8s identity used by poids to authenticate with k8s API. It allows application inside a pod to access k8s resources according to permissions granted through BAC
