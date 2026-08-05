@@ -46,3 +46,10 @@
     3. CrashLoopBackOff
     4. ImagePullBackoff
     5. Completed
+
+1. ### RUNNING
+- This is the easiest one 
+- It means:
+    1. The pod has been scheduled to a worker node 
+    2. Container is running inside the pod 
+    3. Application is running successfully inside the container 
