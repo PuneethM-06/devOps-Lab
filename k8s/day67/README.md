@@ -61,3 +61,23 @@
     2. No worker node has enough memory
     3. Node selectors dont match 
     4. Taints prevent scheduling 
+
+3. ### COMPLETED
+- This is not an error 
+- Think of this as an k8s job
+- Example:
+```
+Database Backup
+
+↓
+
+Runs Once
+
+↓
+
+Finishes
+
+↓
+
+Exits
+```
