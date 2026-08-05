@@ -71,3 +71,12 @@ Cluster
 4. ### kube-node-lease
 - Every worker node periodically says control plane that it is alive and it called as **heartbeat**
 - Kubernetes stores these hearbeat **lease object in kube-node-lease**
+
+## RBAC - ROLE BASED ACCESS CONTROL 
+- Example:
+| User            | Permission                    |
+| --------------- | ----------------------------- |
+| Developer       | Create Pods in `dev`          |
+| QA Engineer     | View Pods in `qa`             |
+| DevOps Engineer | Deploy applications to `prod` |
+| Cluster Admin   | Full access to the cluster    |
