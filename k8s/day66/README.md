@@ -43,3 +43,10 @@ Cluster
 
 > CAN KUBERNETES NAMESPACE BE NESTED?
 - No, Kubernetes namespaces are flat and cannot be nested. 
+
+##  BUILT IN NAMESPACES
+- When a brand new cluster is creayed we can see:
+    1. default 
+    2. Kube-system 
+    3. kube-public
+    4. kube-node-less
