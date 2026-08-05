@@ -139,3 +139,11 @@ Restart Again
 CrashLoopBackOff
 ```
 - crashLoopBackOff means the contaiuner starts, crashes repeatedly, and kubernetes delays each restart using an increasing backoff to avoid continuous restart loops
+
+### COMMON CAUSES
+1. Application Bug
+2. Wrong environment variables
+3. Secrets missing 
+4. Database not reachable 
+5. Port already in use
+6. OOMKILLED
