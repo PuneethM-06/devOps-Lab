@@ -162,3 +162,12 @@ CrashLoopBackOff
 > Here the question that will arise is cant k8s make use of HPA and scale? 
 - HPA cannot create worker nodes it can **only scale the pods**
 - **Cluster Auto scaler** is responsible for creating new worker nodes
+
+## IMAGEPULLBACKOFF AND ERRIMAGE PULL
+- This error is seen when the container **FAILS TO START BECAUSE IT CANNOT PULL THE IMAGE**
+- The different between `ERRIMAGE PULL` and `IMAGEPULLBACKOFF` is that, `ERRIMAGE PULL` occurs when the image is failed fetch for the first time, while `IMAGEPULLBACKOFF` kubelet keeps trying and it doesnt happen 
+- The reason is, container tries to pull the image from the docker hub or ghcr where we have mentioned but the image wouldnt be there at all 
+- common reason for this to occue is:
+    1. Wrong image name 
+    2. Wrong image tag
+    3. 
