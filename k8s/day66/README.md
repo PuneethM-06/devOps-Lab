@@ -172,3 +172,25 @@ Permissions
 | Namespace scoped                   | Cluster scoped                                            |
 | Permissions apply to one Namespace | Permissions apply across the entire cluster               |
 | Used for application teams         | Used for cluster administrators or cluster-wide resources |
+
+## ROLE HIGHLEVEL 
+```
+Role
+   │
+   ▼
+RoleBinding
+   │
+   ▼
+User - Developer
+```
+
+## CLUSTERROLE HIGH LEVEL 
+```
+ClusterRole
+      │
+      ▼
+ClusterRoleBinding
+      │
+      ▼
+User
+```
