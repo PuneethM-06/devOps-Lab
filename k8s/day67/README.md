@@ -81,3 +81,10 @@ Finishes
 
 Exits
 ```
+4. ### FAILED
+- This is a error, unlike completed 
+- This means the pod has stopped 
+- Possible reasons could be:
+    1. Application exited with an error code 
+    2. Container crashed
+    3. Fatal startup time 
