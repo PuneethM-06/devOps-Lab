@@ -117,3 +117,30 @@ NO → Deny
     2. DevOps team 
     3. Service account 
 
+## ROLE vs CLUSTER ROLE 
+
+1. ### ROLE
+- A role is namespace-scoped
+```
+Role
+
+↓
+
+One Namespace
+
+↓
+
+Specific Permissions
+```
+- Example:
+```
+Role
+
+Namespace = dev
+
+Permissions:
+
+✓ Get Pods
+✓ List Pods
+✓ Create Deployments
+```
