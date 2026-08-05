@@ -39,3 +39,10 @@
 - I check the status of the pod to see what condition is the pod in using `kubectl get pods`
 - I check the application logs inside the failing pod using `kubectl logs <pod name>`
 
+## UNDERSTANDING THE POD STATES
+- There can be different states of pods such as:
+    1. Running 
+    2. Pending 
+    3. CrashLoopBackOff
+    4. ImagePullBackoff
+    5. Completed
