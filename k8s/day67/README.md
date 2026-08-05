@@ -34,3 +34,8 @@
 2. **kubectl describe pod <pod name>** - Describe the events in the pod in a detailed way 
 3. **kubectl logs <pod name>** - Gets the logs of a pod 
 
+> A production pod is failing. What is the first thing you do?
+- I first observe the current state instead of restrating the pod 
+- I check the status of the pod to see what condition is the pod in using `kubectl get pods`
+- I check the application logs inside the failing pod using `kubectl logs <pod name>`
+
