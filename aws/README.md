@@ -314,7 +314,7 @@ We are responsible for:
 - Useful for **BYOL - BRING YOUR OWN LICENESE**
 - Instance placement in hand 
 
-## EC2 DEDICATED INSANCES
+## EC2 DEDICATED INSTANCES
 - **Instance hardware is dedicated to you**
 - No control over placement
 
@@ -549,7 +549,7 @@ Use case
 - Minimum storage is **90 days**
 
 6. ### S3 GLACIER FLEXIBLE RETRIEVAL
-- Expedited (1 to 5 days), Standard(3 to 5 hours), Bulk(5 to 12 hours)
+- Expedited (1 to 5 hours), Standard(3 to 5 hours), Bulk(5 to 12 hours)
 - Minimum storage is 90 days 
 
 7. ### S3 GLACIER DEEP ARCHIVE
@@ -608,7 +608,7 @@ Use case
 
 # DATABASE SECTION
 
-- 1. ## RELATIONAL DATABASES
+1. ## RELATIONAL DATABASES
 - Each column is linked to each other 
 - can use SQL for querying 
 - Good for **OLTP**
