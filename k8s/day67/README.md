@@ -212,3 +212,6 @@ Is the container running?
               ↓
          kubectl describe
 ```
+
+## OOMKILLED - OUT OF MEMORY KILLED
+- OOMKilled stands for Out Of Memory Killed. It occurs when a container tries to use more memory than its configured memory limit. To protect the stability of the system and other running containers, the Linux Kernel's OOM Killer terminates that container. Kubernetes (specifically the Kubelet) then notices that the container has exited and restarts it according to the Pod's restart policy.
