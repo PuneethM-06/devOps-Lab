@@ -268,3 +268,6 @@ Fix
         ▼
 Verify
 ```
+
+## PRODUCTION FLOW DEBUGGING
+- When an application is reported as down, I don't immediately restart anything. I first run kubectl get pods to identify the Pod status. If the Pod is Running, I check the application logs using kubectl logs. If the logs are not sufficient, I use kubectl exec to inspect the runtime environment, configuration, environment variables, mounted files, DNS, and network connectivity. If the Pod is Pending, I use kubectl describe pod to inspect scheduling events such as insufficient CPU, memory, node selectors, or taints. If the Pod is in CrashLoopBackOff, I inspect the Events using kubectl describe and then use kubectl logs --previous to identify why the application crashed. If the Pod is in ImagePullBackOff, I again use kubectl describe to determine whether the issue is an incorrect image, invalid tag, registry authentication failure, or registry connectivity issue. After identifying the root cause, I fix the issue, redeploy if necessary, and verify that the application is healthy.
