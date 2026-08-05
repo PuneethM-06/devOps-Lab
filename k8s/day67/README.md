@@ -88,3 +88,7 @@ Exits
     1. Application exited with an error code 
     2. Container crashed
     3. Fatal startup time 
+
+5. ### UNKNOWN
+- This is a rare case scenario.
+- This means the control plane has lost communication with the worker node 
