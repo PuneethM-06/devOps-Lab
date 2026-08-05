@@ -230,3 +230,6 @@ backend-sa
 ```
 - All pods use the same service account 
 
+> Does every pod have its own service account?
+- Every pod runs as a serviceAccount. If no serviceAccount is specified then it makes use of the default service account in its namespace.
+Multiple pods from the same deployemnt make use of the same serviceAccount because they represent the same application and there require the same permission 
