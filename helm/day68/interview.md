@@ -1,7 +1,7 @@
 # DAY 68 - HELM FUNDAMENTALS AND CHART STRUCTURE 
 
 ### WHAT IS HELM?
-- Helm is a package manager for Kubernetes
+- Helm is a **package manager for Kubernetes**
 - Helm helps you package, configure, install, upgrade and manage kuberenetes application
 
 - Example:
@@ -24,3 +24,9 @@
                 ▼
            Kubernetes
 ```
+
+### WHAT IS A HELM CHART?
+- A helm chart is a collection of files that describe set of kuberenetes resources 
+
+### WHAT IS A HELM RELEASE
+- It is a running instance of helm in kuberenetes 
