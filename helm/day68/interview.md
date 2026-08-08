@@ -57,3 +57,6 @@ image:
   tag: "1.27"
 ```
 - Instead of harcoding: `replicas: 2` we can do `replicas: {{ values.replicaCount }}`
+
+### templates/
+- It contains k8s manifest templates which will be used by Helm to process and generate final k8s manifest templates
