@@ -45,3 +45,15 @@ type: application
 version: 0.1.0
 appVersion: "1.0.0"
 ```
+### VALUES.YML
+- One of the most important files in yml
+- It contains the default configuration values used by the Helm templates
+- Example:
+```
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.27"
+```
+- Instead of harcoding: `replicas: 2` we can do `replicas: {{ values.replicaCount }}`
