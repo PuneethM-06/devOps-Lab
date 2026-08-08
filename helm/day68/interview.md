@@ -30,3 +30,18 @@
 
 ### WHAT IS A HELM RELEASE
 - It is a running instance of helm in kuberenetes 
+
+### WHAT IS A HELM REPOSITORY?
+- A helm repository is a location where helm charts are stored 
+
+### Chart.yml
+- A `chart.yml` contains the metadata about the helm chart
+- Example
+```
+apiVersion: v2
+name: myapp
+description: A Helm chart for my application
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+```
