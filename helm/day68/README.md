@@ -92,3 +92,39 @@ myapp/
         ↓
     Files to exclude
 ```
+
+### WHAT HAPPENS WHEN HELM INSTALLS A CHART
+- suppose we have 
+```
+myapp/
+├── Chart.yaml
+├── values.yaml
+└── templates/
+    ├── deployment.yaml
+    └── service.yaml
+```
+- And values.yml contains `replicaCount: 3`
+- And a template uses something like: `replicas: {{ .Values.replicaCount }}`
+- And when we run `helm install myapp ./myapp`
+- conceptually this happens
+```
+                  Helm Chart
+                      │
+          ┌───────────┴───────────┐
+          ↓                       ↓
+     values.yaml             templates/
+          │                       │
+          └───────────┬───────────┘
+                      ↓
+                Helm renders
+                      ↓
+          Kubernetes manifests
+                      ↓
+             Kubernetes API
+                      ↓
+             Resources created
+                      ↓
+                Helm Release
+```
+- Helm takes the `values` and the `templates` together and uses them to produces `Kubernetes manifests`.
+- These manifests are sent to k8s 
