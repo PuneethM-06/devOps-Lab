@@ -65,3 +65,12 @@ helm install myapp-prod ./myapp -f values-prod.yaml
 -  --set
 -  -f values-file.yaml
 -  values.yaml (default)
+
+5. ### MULTIPLE VALUES FILES
+- `-f` lets you use multiple values 
+- Example:
+```
+helm install myapp ./myapp \
+  -f values-prod.yaml \
+  -f values-hotfix.yaml
+```
