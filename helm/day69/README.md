@@ -23,3 +23,15 @@ image:
   replicaCount: 2
 ```
 - `replicas: {{ .Values.image.replicaCount}}`
+
+## ENVIRONMENT SPECIFIC VALUES
+- suppose we have a file structure:
+```
+myapp/
+├── Chart.yaml
+├── values.yaml
+├── values-dev.yaml
+├── values-prod.yaml
+└── templates/
+    └── deployment.yaml
+```
