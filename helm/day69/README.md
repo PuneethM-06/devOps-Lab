@@ -60,3 +60,8 @@ helm install myapp-prod ./myapp -f values-prod.yaml
 - This is used to override a value. 
 - Example: Everything is the same and i just want to change the replicaCount to 5 instead of 2
 - So i use: `helm install myapp ./myapp --set replicaCount=5`
+
+4. ### VALUE PRECEDENCE
+-  --set
+-  -f values-file.yaml
+-  values.yaml (default)
