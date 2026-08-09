@@ -127,4 +127,5 @@ myapp/
                 Helm Release
 ```
 - Helm takes the `values` and the `templates` together and uses them to produces `Kubernetes manifests`.
-- These manifests are sent to k8s 
+- These manifests are sent to k8s to produce the actual resources.
+- Helm keeps track of these deployments using Release 
