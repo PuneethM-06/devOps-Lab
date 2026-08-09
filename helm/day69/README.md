@@ -45,7 +45,11 @@ myapp/
 - Similarly we do for prod values as well 
 
 - **Template remains unchanged** - `replicas: {{ .Values.replicaCount }}`
-- But when deploying to dev we do 
+- **But when deploying to dev we do**
 ```
 helm install myapp-dev ./myapp -f values-dev.yaml
+```
+- **when deploying to prod we do** 
+```
+helm install myapp-prod ./myapp -f values-prod.yaml
 ```
