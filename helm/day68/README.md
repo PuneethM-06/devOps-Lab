@@ -129,3 +129,23 @@ myapp/
 - Helm takes the `values` and the `templates` together and uses them to produces `Kubernetes manifests`.
 - These manifests are sent to k8s to produce the actual resources.
 - Helm keeps track of these deployments using Release 
+
+## Overall flow
+```
+Create a Helm Chart
+        ↓
+Modify values / templates
+        ↓
+helm install
+        ↓
+Helm combines:
+  Templates + Values
+        ↓
+Renders Kubernetes manifests
+        ↓
+Sends them to Kubernetes API
+        ↓
+Kubernetes creates the actual resources
+        ↓
+Helm tracks this installation as a Release
+```
