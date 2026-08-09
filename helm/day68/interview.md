@@ -47,7 +47,7 @@ appVersion: "1.0.0"
 ```
 ### VALUES.YML
 - One of the most important files in yml
-- It contains the default configuration values used by the Helm templates
+- It contains the **default configuration values** used by the Helm templates
 - Example:
 ```
 replicaCount: 2
