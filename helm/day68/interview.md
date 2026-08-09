@@ -26,10 +26,10 @@
 ```
 
 ### WHAT IS A HELM CHART?
-- A helm chart is a collection of files that describe set of kuberenetes resources 
+- A helm chart is a **collection of files that describe set of kuberenetes resources** 
 
 ### WHAT IS A HELM RELEASE
-- It is a running instance of helm in kuberenetes 
+- It is a **running instance of helm in kuberenetes** 
 
 ### WHAT IS A HELM REPOSITORY?
 - A helm repository is a location where helm charts are stored 
