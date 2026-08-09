@@ -13,3 +13,13 @@ image:
 so if the template says:
 `replicas: {{ .Values.replicaCount }}`
 - helm understand the value as `replicas: 2`
+
+### NESTED HELM VALUE
+- Example:
+```
+image:
+  repository: nginx
+  tag: "1.27"
+  replicaCount: 2
+```
+- `replicas: {{ .Values.image.replicaCount}}`
