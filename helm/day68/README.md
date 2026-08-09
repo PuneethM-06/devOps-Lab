@@ -149,3 +149,10 @@ Kubernetes creates the actual resources
         ↓
 Helm tracks this installation as a Release
 ```
+### BASIC CLI COMMANDS
+- `helm create` → creates a new Helm Chart
+- `helm install` → installs a Chart and creates a Release
+- `helm list` → lists Helm Releases
+- `helm status` → shows the status/details of a Release
+- `helm uninstall` → removes a Release
+- `helm version` → shows the installed Helm version
