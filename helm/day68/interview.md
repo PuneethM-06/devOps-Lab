@@ -68,3 +68,28 @@ image:
 ### helmignore
 - It is similar to `.gitignore`
 - It includes files that must not be included at the time of packaging 
+
+### Everything put together 
+```
+myapp/
+│
+├── Chart.yaml
+│       ↓
+│   Chart metadata
+│
+├── values.yaml
+│       ↓
+│   Default configuration
+│
+├── templates/
+│       ↓
+│   Kubernetes templates
+│
+├── charts/
+│       ↓
+│   Dependencies
+│
+└── .helmignore
+        ↓
+    Files to exclude
+```
