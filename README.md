@@ -101,15 +101,15 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 59 — Import & Production Practices — import existing resources, drift detection, lifecycle rules, state commands
 
 #### Kubernetes
-- [ ] Day 59 — Pods, Deployments, ReplicaSets — the why
-- [ ] Day 60 — Services — ClusterIP, NodePort, LoadBalancer
-- [ ] Day 61 — ConfigMap and Secrets — mount as env or volume
-- [ ] Day 62 — Liveness and readiness probes
-- [ ] Day 63 — Rolling updates and rollbacks
-- [ ] Day 64 — Resource requests and limits, OOMKilled
-- [ ] Day 65 — HorizontalPodAutoscaler — scale on CPU
-- [ ] Day 66 — Namespaces, RBAC basics
-- [ ] Day 67 — Debugging — CrashLoopBackOff, Pending, OOMKilled
+- [x] Day 59 — Pods, Deployments, ReplicaSets — the why
+- [x] Day 60 — Services — ClusterIP, NodePort, LoadBalancer
+- [x] Day 61 — ConfigMap and Secrets — mount as env or volume
+- [x] Day 62 — Liveness and readiness probes
+- [x] Day 63 — Rolling updates and rollbacks
+- [x] Day 64 — Resource requests and limits, OOMKilled
+- [x] Day 65 — HorizontalPodAutoscaler — scale on CPU
+- [x] Day 66 — Namespaces, RBAC basics
+- [x] Day 67 — Debugging — CrashLoopBackOff, Pending, OOMKilled
 
 #### Helm
 - [ ] Day 68 — Chart structure — Chart.yaml, values.yaml, templates
