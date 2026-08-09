@@ -59,4 +59,12 @@ image:
 - Instead of harcoding: `replicas: 2` we can do `replicas: {{ values.replicaCount }}`
 
 ### templates/
-- It contains k8s manifest templates which will be used by Helm to process and generate final k8s manifest templates
+- It contains **k8s manifest templates** which will be used by **Helm to process and generate final k8s manifest templates**
+
+### charts/
+- Contains dependencies also called as subcharts 
+- 
+
+### helmignore
+- It is similar to `.gitignore`
+- It includes files that must not be included at the time of packaging 
