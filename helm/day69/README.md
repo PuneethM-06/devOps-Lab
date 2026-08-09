@@ -74,3 +74,21 @@ helm install myapp ./myapp \
   -f values-prod.yaml \
   -f values-hotfix.yaml
 ```
+### CORE MENTAL MODEL 
+```
+                  ONE HELM CHART
+                       │
+                 templates/
+                       │
+          ┌────────────┼────────────┐
+          ↓            ↓            ↓
+     values-dev   values-stage   values-prod
+          │            │            │
+          └────────────┼────────────┘
+                       ↓
+                  Helm renders
+                       ↓
+              Kubernetes manifests
+                       ↓
+                  K8s resources
+```
