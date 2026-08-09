@@ -53,3 +53,6 @@ helm install myapp-dev ./myapp -f values-dev.yaml
 ```
 helm install myapp-prod ./myapp -f values-prod.yaml
 ```
+
+**`-f` and `--values` are the exact same option and says use this file when we are rendering the file for creating k9s manifests**
+
