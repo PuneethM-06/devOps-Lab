@@ -35,3 +35,17 @@ myapp/
 └── templates/
     └── deployment.yaml
 ```
+1. #### Default values.yaml
+- ``replicaCount: 2`
+
+2. #### Dev values
+- we create a file called values-dev.yaml 
+- `replicaCount: 3`
+
+- Similarly we do for prod values as well 
+
+- **Template remains unchanged** - `replicas: {{ .Values.replicaCount }}`
+- But when deploying to dev we do 
+```
+helm install myapp-dev ./myapp -f values-dev.yaml
+```
