@@ -56,3 +56,7 @@ helm install myapp-prod ./myapp -f values-prod.yaml
 
 **`-f` and `--values` are the exact same option and says use this file when we are rendering the file for creating k9s manifests**
 
+3. ### `--set`
+- This is used to override a value. 
+- Example: Everything is the same and i just want to change the replicaCount to 5 instead of 2
+- So i use: `helm install myapp ./myapp --set replicaCount=5`
