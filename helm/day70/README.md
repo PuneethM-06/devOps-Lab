@@ -129,3 +129,19 @@ output:
 env:
   LOG_LEVEL: "info"
 ```
+7. ### _helpers.tpl
+
+- Reusable pieces of template logic called **named templates** are stored in _helpers.tpl
+- Example:
+```
+{{- define "myapp.labels" }}
+app: myapp
+team: platform
+{{- end }}
+```
+- Then another template can use 
+```
+metadata:
+  labels:
+    {{- include "myapp.labels" . | nindent 4 }}
+```
