@@ -65,3 +65,22 @@ pre-upgrade Hook
      ↓
 Upgrade normal resources
 ```
+4. ### Post install and post-upgrade
+- **Post install** runs after installing normal resources
+```
+helm install
+     ↓
+Create normal K8s resources
+     ↓
+post-install Hook
+```
+- **Post upgrade** runs after the helm has upgraded the normal resources
+```
+┌──────────────────────────────────────┐
+│           HELM OPERATION             │
+│                                      │
+│ pre-install  → install → post-install
+│                                      │
+│ pre-upgrade  → upgrade → post-upgrade
+└──────────────────────────────────────┘
+```
