@@ -57,4 +57,11 @@ pre-install Hook
      ↓
 Normal resources created
 ```
-**pre-upgrade** runs when already an installation is happened and not the first time 
+**pre-upgrade** runs when already an installation is happened and not the first time
+```
+helm upgrade
+     ↓
+pre-upgrade Hook
+     ↓
+Upgrade normal resources
+```
