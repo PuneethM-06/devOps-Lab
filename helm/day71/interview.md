@@ -47,3 +47,14 @@ spec:
           command: ["./migrate"]
 ```
 - **The above script has a pre-install, and hence this will be executed before the installation happens**
+
+3. ### Pre-install vs Pre-upgrade
+**pre-install** runs when we are doing initial installation 
+```
+helm install
+     ↓
+pre-install Hook
+     ↓
+Normal resources created
+```
+**pre-upgrade** runs when already an installation is happened and not the first time 
