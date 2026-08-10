@@ -89,3 +89,11 @@ image:
 .Values.image.name
 .Values.image.registry
 ```
+**with** says, I will be referring to this for the next working block 
+```
+{{ with .Values.image }}
+
+repository: {{.repository}}
+tag: {{ .tag }}
+{{ end }}
+```
