@@ -105,3 +105,12 @@ Update normal Kubernetes resources
      ↓
 post-upgrade Hook
 ```
+5. ### HOOK DELETION POLICY 
+- Example:
+```
+annotations:
+  "helm.sh/hook": pre-install
+  "helm.sh/hook-delete-policy": hook-succeeded
+```
+- Helm gives us this feature, to ensure that the previous hoook resources dont exist around in the cluster 
+- **hook-succeed** means delete this hook resource after the hook completes successfully 
