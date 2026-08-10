@@ -62,3 +62,10 @@ Condition false → execute this
     ↓
 {{ end }}
 ```
+- Example:
+```
+{{- if eq .Values.app_env "dev" }}
+docker_image: abc
+{{- else }}
+docker_image: xyz
+```
