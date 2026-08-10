@@ -69,3 +69,23 @@ docker_image: abc
 {{- else }}
 docker_image: xyz
 ```
+
+3. ### with 
+- It is used to manage and organize the working of a file 
+- Suppose we have a `values.yaml` file:
+```
+image:
+  repository: nginx
+  tag: "1.27"
+  pullPolicy: IfNotPresent
+  name: myapp
+  registry: docker.io
+```
+- with this we have to repeatedly do 
+```
+.Values.image.repository
+.Values.image.tag
+.Values.image.pullPolicy
+.Values.image.name
+.Values.image.registry
+```
