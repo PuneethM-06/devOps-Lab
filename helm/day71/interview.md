@@ -25,3 +25,25 @@ metadata:
     "helm.sh/hook": pre-install
 ```
 - When a job is ran, helm recognizes that job asa pre-install hook and hence we should complete this before going with the helm operation 
+- syntax is `helm.sh/hook`
+- Example:
+```
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: db-migration
+  annotations:
+    "helm.sh/hook": pre-install
+
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+
+      containers:
+        - name: migration
+          image: myapp:migrate
+          command: ["./migrate"]
+```
+- **The above script has a pre-install, and hence this will be executed before the installation happens**
