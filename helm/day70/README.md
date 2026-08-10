@@ -112,3 +112,9 @@ ports:
 - port: {{ . }}
 {{ end }}
 ```
+5. ### default 
+- it lets you fallback to the default value when a value hasnt been supplied
+- Example:
+```
+replicas: {{ default 3 .Values.replicaCount }}
+```
