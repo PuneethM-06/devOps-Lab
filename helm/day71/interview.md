@@ -114,3 +114,20 @@ annotations:
 ```
 - Helm gives us this feature, to ensure that the previous hoook resources dont exist around in the cluster 
 - **hook-succeed** means delete this hook resource after the hook completes successfully 
+
+- **ANOTHER USEFUL POLICY**
+```
+helm.sh/hook-delete-policy": before-hook-creation
+```
+- This means, delete the previous hook resource before creating a new one 
+
+```
+hook-succeeded
+    → Delete after successful execution
+
+hook-failed
+    → Delete after failed execution
+
+before-hook-creation
+    → Delete the previous Hook before creating a new one
+```
