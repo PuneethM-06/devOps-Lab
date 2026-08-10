@@ -125,6 +125,7 @@ replicas: {{ default 3 .Values.replicaCount }}
 env:
   LOG_LEVEL: {{ .Values.logLevel | quote }}
 ```
+```
 output:
 env:
   LOG_LEVEL: "info"
@@ -144,4 +145,19 @@ team: platform
 metadata:
   labels:
     {{- include "myapp.labels" . | nindent 4 }}
+```
+
+8. ### define and include 
+- `define` is used to create a reusable named template 
+- `include` is used to render that named template
+- Example:
+```
+{{- define "myapp.labels" }}
+app: myapp
+team: platform 
+{{ end }}
+```
+- Later it can be reused to using include
+```
+{{ include "myapps.labels }} 
 ```
