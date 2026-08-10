@@ -161,3 +161,6 @@ team: platform
 ```
 {{ include "myapps.labels }} 
 ```
+9. ### indent vs nindent
+- indent 4 - means add 3 whitespaces for the current line for indentation 
+- nindent 4 - create a new line and add 4 whitespaces 
