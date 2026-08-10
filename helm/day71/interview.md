@@ -131,3 +131,5 @@ hook-failed
 before-hook-creation
     → Delete the previous Hook before creating a new one
 ```
+6. ### HOOK FAILURE
+- If a hook fails, then the resource upgrade or the installation also fails and helm simply does not ignore it 
