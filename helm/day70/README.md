@@ -97,3 +97,18 @@ repository: {{.repository}}
 tag: {{ .tag }}
 {{ end }}
 ```
+4. ### range 
+- This is used for looping through a list of values
+- suppose values.yaml
+```
+ports:
+    - 8080
+    - 9090
+    - 3000
+```
+- We can do it as:
+```
+{{ range .Values.ports }}
+- port: {{ . }}
+{{ end }}
+```
