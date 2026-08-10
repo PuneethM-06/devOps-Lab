@@ -118,3 +118,14 @@ ports:
 ```
 replicas: {{ default 3 .Values.replicaCount }}
 ```
+6. ### quote
+- This is simple, it is used to quote the output value that is coming 
+- Example:
+```
+env:
+  LOG_LEVEL: {{ .Values.logLevel | quote }}
+```
+output:
+env:
+  LOG_LEVEL: "info"
+```
