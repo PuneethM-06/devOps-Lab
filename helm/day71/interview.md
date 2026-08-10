@@ -14,3 +14,14 @@ Migration completes
      ↓
 Deploy application resources
 ```
+- Helm hook is executed before or during or after an helm operation 
+
+2. ### HOOK ANNOTATION 
+- Hook annotation lets helm know that a particular k8s resource is a hook 
+- Example:
+```
+metadata:
+  annotations:
+    "helm.sh/hook": pre-install
+```
+- When a job is ran, helm recognizes that job asa pre-install hook and hence we should complete this before going with the helm operation 
