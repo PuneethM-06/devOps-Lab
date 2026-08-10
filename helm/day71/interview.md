@@ -84,3 +84,24 @@ post-install Hook
 │ pre-upgrade  → upgrade → post-upgrade
 └──────────────────────────────────────┘
 ```
+### Execution flow 
+- **For an install**
+```
+helm install
+     ↓
+pre-install Hook
+     ↓
+Create normal Kubernetes resources
+     ↓
+post-install Hook
+```
+- **For an upgrade**
+```
+helm upgrade
+     ↓
+pre-upgrade Hook
+     ↓
+Update normal Kubernetes resources
+     ↓
+post-upgrade Hook
+```
