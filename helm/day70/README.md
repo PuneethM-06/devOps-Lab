@@ -36,3 +36,17 @@ containers:
     - name: myApp
       image: "{{.Values.image.repository}}:{{ .Values.image.tag }}
 ```
+2. ### if/else
+- This is used to make the Helm more dyanmic
+- Example:
+- Suppose we only want to create something when a vale is enabled 
+- In `values.yaml`:
+```
+ingress:
+    enabled: true 
+```
+- In the template:
+```
+{{ if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+```
