@@ -50,3 +50,15 @@ ingress:
 {{ if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 ```
+- We can also do\
+```
+{{ if CONDITION }}
+    ↓
+Condition true → execute this
+    ↓
+{{ else }}
+    ↓
+Condition false → execute this
+    ↓
+{{ end }}
+```
