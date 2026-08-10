@@ -15,3 +15,5 @@ Final Kubernetes YAML\
 - without helm we do something like `replicas: 3` which is fixed and does not change 
 - With helm we can do; `replicas: {{ .Values.replicaCount }}`
 - The above way is dynamic and Helm will read through those logic or templates and create the final k8s manifest 
+- `{{ }}` is template syntax expression 
+- Helm process these expressions before the k8s sees the final manifests 
