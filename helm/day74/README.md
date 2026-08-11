@@ -106,3 +106,32 @@ helm test
     ↓
 Verify application
 ```
+
+### PRODUCTION DEPLOYMENT MENTAL MODEL 
+```
+             CHART CHANGE
+                  ↓
+             helm lint
+                  ↓
+          Is Chart valid?
+                  ↓
+            helm template
+                  ↓
+       What YAML will be generated?
+                  ↓
+             helm diff
+                  ↓
+         What will change?
+                  ↓
+       helm upgrade --atomic
+                  ↓
+       Deploy + automatic rollback
+                  ↓
+             helm test
+                  ↓
+          Does app work?
+                  ↓
+            helm status
+                  ↓
+         Final verification
+```
