@@ -14,3 +14,13 @@ Your application + dependencies
     ↓
 Installed together
 ```
+- `chart.yaml` can declare other helm charts that your chart depends on
+
+2. ### CONCEPT 2 - DEPENDENCY FIELD 
+- It tells which chart is the dependency 
+- Example:
+```
+dependencies:
+    - name: redis
+```
+- **name tells which chart is the depedency**
