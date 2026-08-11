@@ -50,3 +50,12 @@ apply it as a new revision
 4. ### HELM DIFF
 - It is responsible for showing what will change -> What exactly is helm gonna change 
 - This is not default and comes through **helm plugin** 
+
+5. ### DEBUGGING AND INSPECTING A HELM RELEASE
+This is useful for understand debugging when a release doesnt work as expected 
+- ### STEPS TO FOLLOW       
+1. **Helm status** - `helm status myapp` 
+- This helps you understand the current status of the release
+
+2. **HELM GET** - `helm get values myapp`
+- Helm also lets you inspect the information stored for the release
