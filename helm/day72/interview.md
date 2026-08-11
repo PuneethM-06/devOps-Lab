@@ -44,3 +44,5 @@ take an older revision's configuration
 apply it as a new revision
 ```
 - Syntax: `helm rollback myapp 2`
+- Making a Helm rollback reconciles the resources in k8s meaning the pods also reconcile to start running their previous version of pods 
+> Helm rollback → restores the previous release configuration → Kubernetes reconciles the resources → Pods end up running the previous version if the workload configuration changed.
