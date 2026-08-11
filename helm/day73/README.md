@@ -95,3 +95,10 @@ Helm refreshes its local repository metadata
       ↓
 Helm can discover the latest available Charts
 ```
+9. ### HELM PACKAGING
+- This is used to package the entire helm chart into a single reusable `.tgz` file
+- **Command** - `helm package myapp/`
+
+0. ### INSTALLING FROM A HELM REPOSITORY 
+- `helm install myapp myrepo/myapp` - This is to install charts from helm repo 
+- `helm pull myrepo/myapp` - This is to download without installing it 
