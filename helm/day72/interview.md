@@ -13,7 +13,9 @@ helm upgrade
 Modify an existing release
 ```
 2. ### HELM REVISION 
-- This is the most important because **rollback only makes sense because Helm keeps revisions of a release**
+- This is the most important because **rollback only makes sense because Helm keeps revisions of a 
+release**
+- **Definition** - A Helm revision is a version of Helm release created when the release is installed or upgraded
 - Example:
 ```
 helm install myapp ./myapp
