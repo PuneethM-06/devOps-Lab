@@ -55,4 +55,16 @@ post-upgrade
     3. pre-rollback
     4. post-rollback 
     5. post-upgrade 
-    
+
+1. ### hook weight
+- This is used to control the execution of hooks in an order when we have multiple hooks at the same lifecycle event 
+- **lower weight runs first**
+```
+Hook A → weight -5
+Hook B → weight 0
+Hook C → weight 5
+
+Execution:
+
+A → B → C
+```
