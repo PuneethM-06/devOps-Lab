@@ -77,3 +77,8 @@ Put it in a Helm repository
    ↓
 Other users/Charts can download it
 ```
+
+7. ### ADDING A HELM REPOSITORY 
+- `helm repo add <name> <repo url>`
+
+- We can **search the repo using**: **helm search repo myrepo**
