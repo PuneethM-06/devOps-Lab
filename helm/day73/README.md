@@ -19,8 +19,28 @@ Installed together
 2. ### CONCEPT 2 - DEPENDENCY FIELD 
 - It tells which chart is the dependency 
 - Example:
+1. **name** - says which dependency chart to use 
 ```
 dependencies:
     - name: redis
 ```
 - **name tells which chart is the depedency**
+
+2. **version** - Which version of the dependency chart should I use 
+- Exmaple:
+`version: "20.0.0"`
+
+3. **repository** - where can I find the chart specified by `name` and `version`.
+```
+name
+ ↓
+Which Chart?
+
+version
+ ↓
+Which version?
+
+repository
+ ↓
+Where can Helm download/find it?
+```
