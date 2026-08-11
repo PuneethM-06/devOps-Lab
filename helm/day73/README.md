@@ -135,3 +135,5 @@ Helm can discover the latest available Charts
        ↓
    Kubernetes resources created
 ```
+#### NOTE:
+1. `helm dependency update` resolves the dependencies, updates `Chart.lock`, and downloads the dependencies. `helm dependency build` uses the existing Chart.lock to fetch/rebuild the dependency set at the locked versions.
