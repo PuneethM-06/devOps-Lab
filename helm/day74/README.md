@@ -30,3 +30,6 @@ Pods become Ready
     ↓
 Helm considers operation successful
 ```
+- `--timeout` 
+- Imagine pods never become ready and be in pending state and we do not want helm to wait forever and hence we make use of --timeout 
+- `helm upgrade myapp ./myapp --wait --timeout 5m`
