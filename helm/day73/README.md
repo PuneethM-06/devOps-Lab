@@ -60,3 +60,6 @@ Downloads dependency
     ↓
 Stores it under charts/
 ```
+5. ### CHART LOCK
+- When we run `helm dependency update` Helm resolves the dependency versions and can create a `chart.lock`
+- Chart.lock records the **exact dependency versions** **that were resolved when you run helm dependency update, so the same dependency versions can be reproduced later.**
