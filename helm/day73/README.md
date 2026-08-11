@@ -99,6 +99,39 @@ Helm can discover the latest available Charts
 - This is used to package the entire helm chart into a single reusable `.tgz` file
 - **Command** - `helm package myapp/`
 
-0. ### INSTALLING FROM A HELM REPOSITORY 
+10. ### INSTALLING FROM A HELM REPOSITORY 
 - `helm install myapp myrepo/myapp` - This is to install charts from helm repo 
 - `helm pull myrepo/myapp` - This is to download without installing it 
+
+### OVERALL FLOW
+```
+1. Chart.yaml
+       ↓
+   Declare dependency
+
+2. helm dependency update
+       ↓
+   Resolve + download dependency
+       ↓
+   charts/
+       ↓
+   Chart.lock
+
+3. helm package myapp/
+       ↓
+   myapp-1.0.0.tgz
+
+4. Publish package
+       ↓
+   Helm Repository / OCI Registry
+
+5. Another user
+       ↓
+   helm install
+       ↓
+   Gets the packaged Chart
+       ↓
+   Helm renders templates
+       ↓
+   Kubernetes resources created
+```
