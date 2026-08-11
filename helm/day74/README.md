@@ -84,3 +84,25 @@ myapp/
 ├── values-prod.yaml     # prod overrides
 └── templates/
 ```
+### PRODUCTION MENTAL MODEL
+```
+Write Chart
+    ↓
+helm lint
+    ↓
+Check Chart
+    ↓
+helm template
+    ↓
+Check rendered manifests
+    ↓
+helm diff
+    ↓
+Review changes
+    ↓
+helm upgrade --install --atomic
+    ↓
+helm test
+    ↓
+Verify application
+```
