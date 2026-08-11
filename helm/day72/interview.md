@@ -30,3 +30,17 @@ helm upgrade myapp ./myapp
         ↓
 Revision 3
 ```
+3. ### HELM ROLLBACK
+- It is the process to rollback the release of a version for a certain reason 
+```
+helm upgrade
+     ↓
+new revision
+
+helm rollback
+     ↓
+take an older revision's configuration
+     ↓
+apply it as a new revision
+```
+- Syntax: `helm rollback myapp 2`
