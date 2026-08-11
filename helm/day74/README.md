@@ -135,3 +135,4 @@ Verify application
                   ↓
          Final verification
 ```
+> helm test runs tests against the deployed Helm release/application, while helm lint checks the Chart for structural and template-related issues before deployment.
