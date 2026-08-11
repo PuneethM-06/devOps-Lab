@@ -82,3 +82,16 @@ Other users/Charts can download it
 - `helm repo add <name> <repo url>`
 
 - We can **search the repo using**: **helm search repo myrepo**
+8. ### HELM REPO UPDATE 
+- This to update the chart information for an exisiting repository 
+```
+Helm repository
+      ↓
+New Chart versions available
+      ↓
+helm repo update
+      ↓
+Helm refreshes its local repository metadata
+      ↓
+Helm can discover the latest available Charts
+```
