@@ -63,3 +63,17 @@ Stores it under charts/
 5. ### CHART LOCK
 - When we run `helm dependency update` Helm resolves the dependency versions and can create a `chart.lock`
 - Chart.lock records the **exact dependency versions** **that were resolved when you run helm dependency update, so the same dependency versions can be reproduced later.**
+
+6. ### HELM REPOSITORY
+ - It is a repository where it stores packaged helm charts 
+ ```
+ Chart
+   ↓
+Package it
+   ↓
+myapp-1.0.0.tgz
+   ↓
+Put it in a Helm repository
+   ↓
+Other users/Charts can download it
+```
