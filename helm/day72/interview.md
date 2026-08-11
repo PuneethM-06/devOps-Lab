@@ -12,3 +12,19 @@ helm upgrade
     ↓
 Modify an existing release
 ```
+2. ### HELM REVISION 
+- This is the most important because **rollback only makes sense because Helm keeps revisions of a release**
+- Example:
+```
+helm install myapp ./myapp
+        ↓
+Revision 1
+
+helm upgrade myapp ./myapp
+        ↓
+Revision 2
+
+helm upgrade myapp ./myapp
+        ↓
+Revision 3
+```
