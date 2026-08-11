@@ -17,3 +17,16 @@ Automatic rollback
        ↓
 Revision 2 restored
 ```
+2. ### `--wait` and `--timeout`
+- `--wait` Helm waits for the resources to become ready before considering the operation successful
+```
+helm upgrade
+    ↓
+Create/update Deployment
+    ↓
+Kubernetes starts Pods
+    ↓
+Pods become Ready
+    ↓
+Helm considers operation successful
+```
