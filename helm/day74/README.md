@@ -72,3 +72,15 @@ A → B → C
 - Helm lets you **define test for a deployed release**
 - It tests the **deployed application/release**
 - They are typically implemented as Kubernetes resources marked with the **helm.sh/hook: test** annotation and are executed using **helm test.**
+
+4. ### PRODUCTION VALUE STRATERGY
+- **Use one reusable Chart with environment-specific values files to avoid duplicating Charts. Keep common defaults in values.yaml and override only what differs for each environmen**
+```
+myapp/
+├── Chart.yaml
+├── values.yaml          # common/default values
+├── values-dev.yaml      # dev overrides
+├── values-stage.yaml    # stage overrides
+├── values-prod.yaml     # prod overrides
+└── templates/
+```
