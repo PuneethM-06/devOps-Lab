@@ -68,3 +68,7 @@ Execution:
 
 A → B → C
 ```
+4. ### HELM TESTS
+- Helm lets you **define test for a deployed release**
+- It tests the **deployed application/release**
+- They are typically implemented as Kubernetes resources marked with the **helm.sh/hook: test** annotation and are executed using **helm test.**
