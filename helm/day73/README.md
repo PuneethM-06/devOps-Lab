@@ -44,3 +44,19 @@ repository
  ↓
 Where can Helm download/find it?
 ```
+4. **helm dependency update**
+- Once we declare the depedency in the chart, helm still needs to fetch that dependency and hence do to that we use this command 
+- `helm dependency update`
+```
+Chart.yaml
+    ↓
+Reads dependencies
+    ↓
+Finds Redis repository
+    ↓
+Gets requested Redis Chart version
+    ↓
+Downloads dependency
+    ↓
+Stores it under charts/
+```
