@@ -137,3 +137,7 @@ Helm can discover the latest available Charts
 ```
 #### NOTE:
 1. `helm dependency update` resolves the dependencies, updates `Chart.lock`, and downloads the dependencies. `helm dependency build` uses the existing Chart.lock to fetch/rebuild the dependency set at the locked versions.
+
+### DIFFERENCE BETWEEN TRADITIONAL HELM REPO AND OCI 
+- **Traditional = Helm-specific repository format.**
+- **OCI = Helm Chart stored as an OCI artifact.**
