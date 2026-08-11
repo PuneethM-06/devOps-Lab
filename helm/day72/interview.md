@@ -66,3 +66,30 @@ This is useful for understand debugging when a release doesnt work as expected
 
 4. **DRY RUN** - `helm upgrade myapp ./myapp --dry-run`
 - Simulate an install or upgrade without actually installing it 
+
+### OVERALL MENTAL MODEL 
+```
+helm status
+    ↓
+What's the current release status?
+
+helm get values
+    ↓
+What values are associated with the release?
+
+helm get manifest
+    ↓
+What manifests are deployed?
+
+helm template
+    ↓
+What manifests will my Chart render?
+
+helm diff
+    ↓
+What will change compared with the current release?
+
+helm upgrade
+    ↓
+Actually apply the upgrade
+```
