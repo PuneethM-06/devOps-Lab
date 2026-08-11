@@ -33,3 +33,26 @@ Helm considers operation successful
 - `--timeout` 
 - Imagine pods never become ready and be in pending state and we do not want helm to wait forever and hence we make use of --timeout 
 - `helm upgrade myapp ./myapp --wait --timeout 5m`
+
+3. ### HELM HOOKS IN PROD
+- We know that helm hooks are kuberenetes resources that are executed at a particular point in the release cycle
+```
+pre-install
+    ↓
+Install resources
+    ↓
+post-install
+
+pre-upgrade
+    ↓
+Upgrade resources
+    ↓
+post-upgrade
+```
+- There are also other hooks such as:
+    1. pre-delete
+    2. post-delete
+    3. pre-rollback
+    4. post-rollback 
+    5. post-upgrade 
+    
