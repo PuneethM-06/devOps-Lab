@@ -59,3 +59,10 @@ This is useful for understand debugging when a release doesnt work as expected
 
 2. **HELM GET** - `helm get values myapp`
 - Helm also lets you inspect the information stored for the release
+
+3. **HELM TEMPLATE** - `helm template myapp ./myapp`
+- It renders the helm template locally and thus printing the kubernetes yaml 
+- It is like `terraform plan` and it does not do install any resources in k8s 
+
+4. **DRY RUN** - `helm upgrade myapp ./myapp --dry-run`
+- Simulate an install or upgrade without actually installing it 
