@@ -147,3 +147,15 @@ Argo CD Application
 Kubernetes Cluster
 ```
 - **Argo CD application** is the bridge between Git repo(source of truth) and K8s cluster(actual state )
+
+> If Argo CD has a Git repository containing 10 different applications, how do you think we tell Argo CD exactly which application/path it should deploy and to which Kubernetes namespace?
+- Answer: We create an Argo CD Application resource and define the source repository/path and destination cluster/namespace.
+```
+source:
+  repoURL: https://github.com/example/my-repo.git
+  path: apps/frontend
+
+destination:
+  server: https://kubernetes.default.svc
+  namespace: frontend
+```
