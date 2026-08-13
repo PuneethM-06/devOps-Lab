@@ -178,4 +178,22 @@ spec:
     server: https://kubernetes.default.svc
     namespace: frontend
 ```
-1. `kind: application:` - Specifies the kind of the yaml 
+1. `kind: application:` - Specifies the kind of the yaml
+2. `metadata` - specifies application and namespace name 
+3. `source` - tells argo `repoURL`, which branch, tag or `revision` argo should use, and `path` of the repo 
+4. `destination` - Where should argo deploy it like server, namespace
+- **FULL MENTAL MODEL**
+```
+Argo CD Application
+│
+├── SOURCE
+│     │
+│     ├── Repository → gitops-repo
+│     ├── Branch     → main
+│     └── Path       → apps/frontend
+│
+└── DESTINATION
+      │
+      ├── Cluster   → Kubernetes
+      └── Namespace → frontend
+```
