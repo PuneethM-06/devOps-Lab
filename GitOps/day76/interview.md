@@ -31,3 +31,14 @@ Kubernetes Cluster
     ├── argocd-application-controller
     └── other supporting components
 ```
+- **argocd-server**
+- This provides:
+    1. Web UI
+    2. API
+    3. CLI access
+
+- **argocd-repo-server**
+- This is responsible for interacting with git repositories for rendering and preparing the application manifests
+
+- **argocd-application-controller**
+- This is responsible for checking if the actual and the desired state are in sync and initiating the reconcilation steps
