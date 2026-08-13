@@ -42,3 +42,8 @@ Kubernetes Cluster
 
 - **argocd-application-controller**
 - This is responsible for checking if the actual and the desired state are in sync and initiating the reconcilation steps
+
+3. ### BEFORE INSTALLING ARGOCD WHAT DO WE NEED 
+1. K8s cluster
+2. kubectl
+3. Git repo 
