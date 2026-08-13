@@ -258,3 +258,41 @@ gitops-repo/
 ```
 > You want Argo CD to deploy only the backend to the backend namespace What would you configure in the Argo CD Application's source and destination?
 - Answer: The source contains the repository URL and the path apps/backend, telling Argo CD where the backend configuration is. The destination contains the target cluster and the backend namespace, telling Argo CD where to deploy it.
+
+> First, Argo CD is installed into the Kubernetes cluster by applying the Argo CD installation manifests, usually in a dedicated argocd namespace. This creates components such as argocd-server, argocd-repo-server, and argocd-application-controller.
+
+> The argocd-server provides access through the UI, API, and CLI. We can access it locally using port-forwarding, and authenticate using the initial admin credentials.
+
+> Next, we create an Argo CD Application resource. The Application defines the source, which includes the Git repository, revision, and path containing the desired configuration, and the destination, which specifies the Kubernetes cluster and namespace where the application should be deployed.
+
+> The argocd-repo-server accesses the Git repository. If it contains a Helm chart, it renders the chart into Kubernetes manifests, which represent the desired state.
+
+> The argocd-application-controller then compares that desired state with the actual state in the Kubernetes cluster. If they are different, the application becomes OutOfSync. Depending on the sync policy, a human can manually trigger synchronization or Argo CD can synchronize automatically.
+```
+Install Argo CD
+       ↓
+Argo CD components run in Kubernetes
+       ↓
+Access argocd-server
+       ↓
+Create Application resource
+       ↓
+Source → Git repo + path
+Destination → Cluster + namespace
+       ↓
+repo-server reads Git
+       ↓
+Helm renders manifests (if using Helm)
+       ↓
+Desired State
+       ↓
+application-controller compares
+       ↓
+Actual State in Kubernetes
+       ↓
+OutOfSync?
+       ↓
+Manual or Automated Sync
+       ↓
+Application deployed / reconciled
+```
