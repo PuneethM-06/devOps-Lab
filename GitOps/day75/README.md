@@ -41,3 +41,7 @@ GitOps tool detects the change
         ↓
 Kubernetes is updated
 ```
+3. ### DESIRED STATE vs ACTUAL STATE
+- **Desired state** - Git based config is the desired state 
+- **Actual state** - The resources that are currently in the k8s are actual state 
+- ArgoCD always ensure that Desired and actual state are the same 
