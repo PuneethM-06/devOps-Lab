@@ -197,3 +197,22 @@ Argo CD Application
       ├── Cluster   → Kubernetes
       └── Namespace → frontend
 ```
+9. ### HOW DOES ARGO CD KNOW WHAT TYPE OF CONFIGURATION IS IN GIT?
+- Suppose argo goes to `apps/backend/` it could find anything like Helm or even yaml files
+- If Argo sees a helm chart, it can use those helm chart into the k8s manifests 
+```
+Git Repository
+      ↓
+apps/backend/
+      ↓
+Helm Chart
+      ↓
+Argo CD / repo-server
+      ↓
+Rendered Kubernetes manifests
+      ↓
+Desired State
+      ↓
+Compare with actual state
+```
+- **Argo CD uses the Helm chart—Chart.yaml, values.yaml, and the templates—to render the Kubernetes manifests that represent the desired state.**
