@@ -96,3 +96,16 @@ Pipeline deploys to Kubernetes
 kubectl apply / helm upgrade
 ```
 - CI/CD directly pushes the code to k8s
+- **GitOps**
+```
+Developer changes configuration
+          ↓
+        Git
+          ↓
+Argo CD detects desired state
+          ↓
+Argo CD compares with Kubernetes
+          ↓
+Synchronizes the cluster
+```
+- **The only difference here is that CI/CD continously doesnt match/check for actual state and desired state are in sync, while ArgoCD does**
