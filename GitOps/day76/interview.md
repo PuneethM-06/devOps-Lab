@@ -159,3 +159,23 @@ destination:
   server: https://kubernetes.default.svc
   namespace: frontend
 ```
+8. ### UNDERSTANDING ARGO CD APPLICATION 
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: my-app
+  namespace: argocd
+
+spec:
+  source:
+    repoURL: https://github.com/example/gitops-repo.git
+    targetRevision: main
+    path: apps/frontend
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: frontend
+```
+1. `kind: application:` - Specifies the kind of the yaml 
