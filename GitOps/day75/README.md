@@ -25,3 +25,19 @@ Everything is in sync
     2. Traceability
     3. Code review
     4. Rollback 
+- Here is how it needs to be done using GitOps/git based changes:
+```
+Change Git configuration
+        ↓
+Commit the change
+        ↓
+Push / create a PR
+        ↓
+PR gets reviewed and merged
+        ↓
+Git now contains the new desired state
+        ↓
+GitOps tool detects the change
+        ↓
+Kubernetes is updated
+```
