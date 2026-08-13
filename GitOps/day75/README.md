@@ -55,7 +55,7 @@ Kubernetes is updated
 
 5. ### RECONCILIATION 
 - The process that occurs after finding a congif drift is called reconciliation
-- **Taking action to make desired state to actual state and eliminate the config drift is called reconciliation**
+- **Taking action to match the  actual state to desired state and eliminate the config drift is called reconciliation**
 ```
 Git
  │
