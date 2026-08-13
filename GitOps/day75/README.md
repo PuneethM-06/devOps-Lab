@@ -52,3 +52,33 @@ Kubernetes is updated
     1. Manual changes through commands - `kubectl scale deployment my-app --replicas=5`
     2. Editing resources directly - `kubectl edit deployment my-app`
     3. Emergency fixes - Issue to fix in prod
+
+5. ### RECONCILIATION 
+- The process that occurs after finding a congif drift is called reconciliation
+- **Taking action to make desired state to actual state and eliminate the config drift is called reconciliation**
+```
+Git
+ │
+ │ Desired State
+ ▼
+Argo CD
+ │
+ │ Compare
+ ▼
+Kubernetes
+ │
+ │ Actual State
+ ▼
+
+Match?
+ │
+ ├── Yes → Synced
+ │
+ └── No  → OutOfSync
+              │
+              ▼
+        Reconciliation / Sync
+              │
+              ▼
+       Actual matches Desired
+```
