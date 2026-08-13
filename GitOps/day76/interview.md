@@ -108,3 +108,5 @@ Initial admin password is stored in a Secret
 kubectl -n argocd get secret argocd-initial-admin-secret \
   -o jsonpath="{.data.password}" | base64 -d
 ```
+- Then login 
+> The initial password is stored in a Kubernetes Secret so that access can be controlled through Kubernetes authentication and authorization, such as RBAC. Only users or service accounts with the required permissions should be able to read that Secret.
