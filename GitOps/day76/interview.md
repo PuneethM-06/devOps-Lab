@@ -110,3 +110,27 @@ kubectl -n argocd get secret argocd-initial-admin-secret \
 ```
 - Then login 
 > The initial password is stored in a Kubernetes Secret so that access can be controlled through Kubernetes authentication and authorization, such as RBAC. Only users or service accounts with the required permissions should be able to read that Secret.
+
+6. ### THE ARGO CD CLI 
+ - argoCD CLI - communicate with Argo CD
+ - We login to it using `argocd login localhost:8080` amd then we can interact with it 
+ ```
+ Your Local Machine
+        │
+        │ argocd CLI
+        ▼
+localhost:8080
+        │
+        │ port-forward
+        ▼
+argocd-server:443
+        │
+        ▼
+Argo CD
+```
+Here we have two clients:
+```
+kubectl CLI → Kubernetes API
+
+argocd CLI  → Argo CD API/server
+```
