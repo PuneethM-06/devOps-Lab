@@ -109,3 +109,14 @@ Argo CD compares with Kubernetes
 Synchronizes the cluster
 ```
 - **The only difference here is that CI/CD continously doesnt match/check for actual state and desired state are in sync, while ArgoCD does**
+
+7. ### PUSH vs PULL BASED DEPLOYMENT 
+- **TRADITIONAL APPROACH - PUSH**
+- In this the CI/CD might literally run commands like `kubectl apply -f deployment.yaml` and it might need access to k8s cluster and hence needs creds 
+```
+GitHub Actions / Jenkins
+          │
+          │ PUSH deployment
+          ▼
+     Kubernetes
+```
