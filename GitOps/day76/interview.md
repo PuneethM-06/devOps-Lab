@@ -18,3 +18,16 @@ Your Machine
 - The reason why ArgoCD runs inside the k8s clustyer:
     1. To read the current state of the k8s cluster 
     2. To perform reconcile 
+
+2. ### WHAT ARE WE ACTUALLY INSTALLING 
+- When we install Argo CD, k8s creates multiple Argo CD components, usually inside an `argocd` namespace
+```
+Kubernetes Cluster
+│
+└── argocd namespace
+    │
+    ├── argocd-server
+    ├── argocd-repo-server
+    ├── argocd-application-controller
+    └── other supporting components
+```
