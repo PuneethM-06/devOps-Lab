@@ -17,3 +17,11 @@ Does actual state match desired state?
    │
 Everything is in sync
 ```
+
+2. ### WHAT IS GITOPS?
+- **GitOps is an operational model where git is used as the source of truth for the desired state of appplications and infratsructure**
+- By this it enables:
+    1. Version history
+    2. Traceability
+    3. Code review
+    4. Rollback 
