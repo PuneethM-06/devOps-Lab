@@ -242,10 +242,19 @@ OutOfSync
 Automatic Sync
     ↓
 Kubernetes updated
-``
+```  
 - Example:
 ```
 spec:
   syncPolicy:
     automated: {}
 ```
+> Suppose you have this repository:
+```
+gitops-repo/
+└── apps/
+    ├── frontend/
+    └── backend/
+```
+> You want Argo CD to deploy only the backend to the backend namespace What would you configure in the Argo CD Application's source and destination?
+- Answer: The source contains the repository URL and the path apps/backend, telling Argo CD where the backend configuration is. The destination contains the target cluster and the backend namespace, telling Argo CD where to deploy it.
