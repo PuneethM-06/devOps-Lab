@@ -73,3 +73,22 @@ Pods start running
 - since ArgoCD is running in k8s cluster it is not directly accesssible as a web ui and hence we need to make use of port forwarding 
 - `kubectl port-forward svc/argocd-server -n argocd 8080:443` this enables web ui access locally 
 - `8080:443` - **This means traffic sent to port 8080 in your local machine is forwarded to port 443 of the `argocd-server` inside the k8s cluster
+```
+Your Browser / Local Machine
+        │
+        │ Request to localhost:8080
+        ▼
+kubectl port-forward
+        │
+        │ forwards traffic
+        ▼
+argocd-server:443
+        │
+        ▼
+Argo CD processes the request
+        │
+        ▼
+Response comes back through the same connection
+        ▼
+Your Browser
+```
