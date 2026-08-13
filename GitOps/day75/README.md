@@ -45,3 +45,10 @@ Kubernetes is updated
 - **Desired state** - Git based config is the desired state 
 - **Actual state** - The resources that are currently in the k8s are actual state 
 - ArgoCD always ensure that Desired and actual state are the same 
+
+4. ### CONFIGURATION DRIFT 
+- **Configuration drift occurs when the actual state of the k8s resources becomes different from the desried state in git**
+- How can drift happen:
+    1. Manual changes through commands - `kubectl scale deployment my-app --replicas=5`
+    2. Editing resources directly - `kubectl edit deployment my-app`
+    3. Emergency fixes - Issue to fix in prod
