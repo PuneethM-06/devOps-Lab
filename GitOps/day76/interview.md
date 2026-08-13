@@ -15,3 +15,6 @@ Your Machine
                               ├── Argo CD components
                               └── Argo CD manages applications
 ```
+- The reason why ArgoCD runs inside the k8s clustyer:
+    1. To read the current state of the k8s cluster 
+    2. To perform reconcile 
