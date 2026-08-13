@@ -134,3 +134,16 @@ kubectl CLI → Kubernetes API
 
 argocd CLI  → Argo CD API/server
 ```
+7. ### WHAT IS AN ARGOCD APPLICATION 
+- An **ArgoCD application is a k8s custom resource** that tells:
+    1. Where is my desired state 
+    2. What should I deploy 
+    3. Where should I deploy it 
+```
+Git Repository
+      ↓
+Argo CD Application
+      ↓
+Kubernetes Cluster
+```
+- **Argo CD application** is the bridge between Git repo(source of truth) and K8s cluster(actual state )
