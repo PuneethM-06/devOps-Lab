@@ -112,32 +112,28 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 67 — Debugging — CrashLoopBackOff, Pending, OOMKilled
 
 #### Helm
-- [ ] Day 68 — Chart structure — Chart.yaml, values.yaml, templates
-- [ ] Day 69 — values-dev.yaml vs values-prod.yaml
-- [ ] Day 70 — Hooks — run DB migration before app deploys
-- [ ] Day 71 — Upgrade, rollback, diff
+ [x] Day 68 → Chart Structure
+ [x] Day 69 → Values & Environment Configuration
+ [x] Day 70 → Hooks
+ [x] Day 71 → Release Lifecycle & Core Commands
+ [x] Day 72 → Upgrade, Revisions, Rollback & Diff
+ [x] Day 73 → Dependencies, Repositories & Packaging
+ [x] Day 74 → Advanced Helm & Production Patterns
 
 #### ArgoCD / GitOps
-- [ ] Day 72 — What GitOps is and why it's different from CI/CD
-- [ ] Day 73 — Install ArgoCD, connect to Git repo
-- [ ] Day 74 — Auto-sync — push to Git, watch it deploy
-- [ ] Day 75 — Self-heal — manual change gets reverted
-- [ ] Day 76 — App of Apps pattern for multiple services
+- [ ] Day 75 — What GitOps is and why it's different from CI/CD
+- [ ] Day 76 — Install ArgoCD, connect to Git repo
+- [ ] Day 77 — Auto-sync — push to Git, watch it deploy
+- [ ] Day 78 — Self-heal — manual change gets reverted
+- [ ] Day 79 — App of Apps pattern for multiple services
 
 #### Observability
-- [ ] Day 77 — Prometheus — instrument Flask app with metrics
-- [ ] Day 78 — PromQL — rate, histogram_quantile, alerts
-- [ ] Day 79 — Grafana — dashboards from Prometheus data
-- [ ] Day 80 — OpenTelemetry — trace a request across services
-- [ ] Day 81 — Grafana Loki — structured logs, LogQL queries
-- [ ] Day 82 — Alertmanager — fire Slack alert on error spike
-
-#### GoLang (Cloud Platform Kit Focus)
-- [ ] Day 31 — Variables, data types, loops, functions, structs, interfaces, error handling
-- [ ] Day 32 — File handling, JSON, environment variables, packages, modules (`go mod`)
-- [ ] Day 33 — HTTP client/server (`net/http`), REST APIs, routing, middleware
-- [ ] Day 34 — AWS SDK for Go (v2), IAM authentication, S3, STS, CloudWatch basics
-- [ ] Day 35 — CLI tools (Cobra), logging, configuration management, project structure
+- [ ] Day 80 — Prometheus — instrument Flask app with metrics
+- [ ] Day 81 — PromQL — rate, histogram_quantile, alerts
+- [ ] Day 82 — Grafana — dashboards from Prometheus data
+- [ ] Day 83 — OpenTelemetry — trace a request across services
+- [ ] Day 84 — Grafana Loki — structured logs, LogQL queries
+- [ ] Day 85 — Alertmanager — fire Slack alert on error spike
 
 **Phase 2 milestone:** Green CI pipeline on every push, ArgoCD deploying from Git, Grafana dashboard live
 
@@ -146,22 +142,29 @@ No copy-pasted theory. Everything here was typed and run by me.
 ### Phase 3 — DevSecOps + Projects (Months 7–9)
 
 #### Container & Supply Chain Security
-- [ ] Day 83 — Trivy in GitHub Actions — block CVEs from merging
-- [ ] Day 84 — Snyk — scan Python deps, auto-fix PRs
-- [ ] Day 85 — SBOM — generate with Trivy, understand why it matters
-- [ ] Day 86 — gitleaks — pre-commit hook catching leaked secrets
-- [ ] Day 87 — Distroless images — no shell, smaller attack surface
-- [ ] Day 88 — Image signing with cosign
+- [ ] Day 86 — Trivy in GitHub Actions — block CVEs from merging
+- [ ] Day 87 — Snyk — scan Python deps, auto-fix PRs
+- [ ] Day 88 — SBOM — generate with Trivy, understand why it matters
+- [ ] Day 89 — gitleaks — pre-commit hook catching leaked secrets
+- [ ] Day 90 — Distroless images — no shell, smaller attack surface
+- [ ] Day 91 — Image signing with cosign
 
 #### Secrets Management
-- [ ] Day 89 — AWS Secrets Manager — store, fetch at runtime
-- [ ] Day 90 — IAM roles everywhere — no static credentials
-- [ ] Day 91 — External Secrets Operator — sync AWS secrets to K8s
-- [ ] Day 92 — HashiCorp Vault — dynamic secrets demo
+- [ ] Day 92 — AWS Secrets Manager — store, fetch at runtime
+- [ ] Day 93 — IAM roles everywhere — no static credentials
+- [ ] Day 94 — External Secrets Operator — sync AWS secrets to K8s
+- [ ] Day 95 — HashiCorp Vault — dynamic secrets demo
 
 #### Policy as Code
-- [ ] Day 93 — OPA / Conftest — write Terraform policies
-- [ ] Day 94 — Enforce in pipeline — block non-compliant infra
+- [ ] Day 96 — OPA / Conftest — write Terraform policies
+- [ ] Day 97 — Enforce in pipeline — block non-compliant infra
+
+#### GoLang (Cloud Platform Kit Focus)
+- [ ] Day 98 — Variables, data types, loops, functions, structs, interfaces, error handling
+- [ ] Day 99 — File handling, JSON, environment variables, packages, modules (`go mod`)
+- [ ] Day 100 — HTTP client/server (`net/http`), REST APIs, routing, middleware
+- [ ] Day 101 — AWS SDK for Go (v2), IAM authentication, S3, STS, CloudWatch basics
+- [ ] Day 102 — CLI tools (Cobra), logging, configuration management, project structure
 
 #### Project 1 — cloud-platform-kit
 - [ ] Week 1 — Scaffold 3 microservices, Dockerfile each
