@@ -92,3 +92,4 @@ Response comes back through the same connection
         ▼
 Your Browser
 ```
+> A request sent to port 8080 on your local machine is forwarded to port 443 on the argocd-server inside the Kubernetes cluster. Argo CD processes the request, and the response is sent back to your local machine through that port-forward connection.
