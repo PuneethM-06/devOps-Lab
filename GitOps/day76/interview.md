@@ -231,3 +231,21 @@ Human clicks/runs Sync
     ↓
 Kubernetes updated
 ```
+2. **AUTOMATED SYNC**
+- ArgoCD can automatically sync the cluster 
+```Git changes
+    ↓
+Argo CD detects new desired state
+    ↓
+OutOfSync
+    ↓
+Automatic Sync
+    ↓
+Kubernetes updated
+``
+- Example:
+```
+spec:
+  syncPolicy:
+    automated: {}
+```
