@@ -54,3 +54,23 @@ Argo CD reconciles Kubernetes
             ↓
 Kubernetes returns to Git's desired state
 ```
+3. ### PRUNING
+- suppose we have `prune:true`, and git has something like 
+```
+k8s/
+├── deployment.yaml
+├── service.yaml
+└── configmap.yaml
+```
+- Later we decide to delete `configmap.yaml` in git.
+- The situation becomes
+```
+Git Desired State             Kubernetes Actual State
+
+Deployment                    Deployment
+Service                       Service
+                              ConfigMap  ← still exists
+```
+And this is where pruning kicks in.
+- **If pruning is enabled Argo CD removes that corresponding managed resource from Kubernetes as well.**
+>prune: true only applies to resources managed/tracked by that Argo CD application. Argo CD does not simply delete every random resource it finds in the namespac
