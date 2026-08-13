@@ -62,3 +62,9 @@ Pods start running
 **COMMANDS**
 1. `kubectl create namespace argocd`
 2. `kubectl apply -n argocd -f <argocd-install-manifest>`
+
+4. ### HOW DO WE ACCESS ARGO CD?
+- There are 3 ways in which we can access Argo CD
+    1. Argo CD web UI
+    2. Argo CD CLI
+    3. Argo CD API
