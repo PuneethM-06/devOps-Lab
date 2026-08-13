@@ -120,3 +120,15 @@ GitHub Actions / Jenkins
           ▼
      Kubernetes
 ```
+- **GitOps approach - Pull**
+```
+Git Repository
+      ▲
+      │ Argo CD reads/pulls desired state
+      │
+   Argo CD
+      │
+      ▼
+ Kubernetes
+```
+- Unlike, CI/CD here ArgoCD reads the actual and desired state and reconciles when they are not in sync, with this CI can manage on `Build → Test → Push Image → Update Git configuration` and ArgoCD can manage `Git configuration → Kubernetes deployment`
