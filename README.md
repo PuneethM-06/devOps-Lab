@@ -112,10 +112,13 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 67 — Debugging — CrashLoopBackOff, Pending, OOMKilled
 
 #### Helm
-- [ ] Day 68 — Chart structure — Chart.yaml, values.yaml, templates
-- [ ] Day 69 — values-dev.yaml vs values-prod.yaml
-- [ ] Day 70 — Hooks — run DB migration before app deploys
-- [ ] Day 71 — Upgrade, rollback, diff
+ [x] Day 68 → Chart Structure
+ [x] Day 69 → Values & Environment Configuration
+ [x] Day 70 → Hooks
+ [x] Day 71 → Release Lifecycle & Core Commands
+ [x] Day 72 → Upgrade, Revisions, Rollback & Diff
+ [x] Day 73 → Dependencies, Repositories & Packaging
+ [x] Day 74 → Advanced Helm & Production Patterns
 
 #### ArgoCD / GitOps
 - [ ] Day 72 — What GitOps is and why it's different from CI/CD
