@@ -74,3 +74,21 @@ Service                       Service
 And this is where pruning kicks in.
 - **If pruning is enabled Argo CD removes that corresponding managed resource from Kubernetes as well.**
 >prune: true only applies to resources managed/tracked by that Argo CD application. Argo CD does not simply delete every random resource it finds in the namespac
+
+### WHAT HAPPENS IN A SYNC
+- Argo CD does not tear everything down and recreate the whole application instead if creates or replaces only the missing pods or resources
+```
+Argo CD
+   ↓
+Update Deployment specification
+   ↓
+Kubernetes Deployment controller notices
+   ↓
+New ReplicaSet created
+   ↓
+New Pods with myapp:v2 created
+   ↓
+Old Pods gradually terminated
+   ↓
+New version becomes available
+```
