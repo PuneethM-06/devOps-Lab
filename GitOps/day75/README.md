@@ -132,3 +132,33 @@ Git Repository
  Kubernetes
 ```
 - Unlike, CI/CD here ArgoCD reads the actual and desired state and reconciles when they are not in sync, with this CI can manage on `Build → Test → Push Image → Update Git configuration` and ArgoCD can manage `Git configuration → Kubernetes deployment`
+8. ### OVERALL WHERE GITOPS FIT 
+```
+Developer
+    │
+    ▼
+Application Code Repository
+    │
+    ▼
+CI Pipeline
+ ┌───────────────┐
+ │ Test          │
+ │ Build Image   │
+ │ Push Image    │
+ └───────────────┘
+    │
+    ▼
+Container Registry
+    │
+    │
+    └──── Image reference updated in GitOps configuration
+                              │
+                              ▼
+                        GitOps Repository
+                              │
+                              ▼
+                            Argo CD
+                              │
+                              ▼
+                         Kubernetes
+```
