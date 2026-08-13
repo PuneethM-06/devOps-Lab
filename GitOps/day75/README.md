@@ -162,3 +162,6 @@ Container Registry
                               ▼
                          Kubernetes
 ```
+9. ### WHERE DOES HELM FIT INTO GITOPS
+- This step occurs at the **Reconciliation**
+- During a config drift, ArgoCD reads from the helm chart stored in git repo and then creates k9s manifest and ensures that the actaul state matches the desired state through deploying the generated k8s manifest to the k8s cluster 
