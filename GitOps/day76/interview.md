@@ -47,3 +47,18 @@ Kubernetes Cluster
 1. K8s cluster
 2. kubectl
 3. Git repo 
+
+3. ### HOW DO WE INSTALL ARGOCD
+- ArgoCD is deployed in the k8s resources/cluster
+```
+Create namespace
+       ↓
+Apply Argo CD installation manifests
+       ↓
+Kubernetes creates Argo CD resources
+       ↓
+Pods start running
+```
+**COMMANDS**
+1. `kubectl create namespace argocd`
+2. `kubectl apply -n argocd -f <argocd-install-manifest>`
