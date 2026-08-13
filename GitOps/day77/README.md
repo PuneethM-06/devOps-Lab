@@ -92,3 +92,39 @@ Old Pods gradually terminated
    ↓
 New version becomes available
 ```
+### OVERALL PRODUCTION FLOW 
+```
+Developer changes application code
+        ↓
+git push
+        ↓
+CI Pipeline starts
+        ↓
+Run tests
+        ↓
+Build Docker image
+        ↓
+Push Docker image to registry
+        ↓
+Update the GitOps configuration
+with the new image tag
+        ↓
+git push
+        ↓
+Argo CD detects Git change
+        ↓
+repo-server generates desired manifests
+        ↓
+application-controller compares
+Desired vs Actual
+        ↓
+OutOfSync
+        ↓
+Auto-Sync
+        ↓
+Kubernetes Deployment updated
+        ↓
+Kubernetes performs rollout
+        ↓
+New version running
+```
