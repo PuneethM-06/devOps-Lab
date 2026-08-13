@@ -82,3 +82,17 @@ Match?
               ▼
        Actual matches Desired
 ```
+6. ### TRADITIONAL CI/CD vs GitOps
+- **TRADITIONAL CI/CD**
+```
+Developer
+    ↓
+Pushes code/config to Git
+    ↓
+CI/CD Pipeline starts
+    ↓
+Pipeline deploys to Kubernetes
+    ↓
+kubectl apply / helm upgrade
+```
+- CI/CD directly pushes the code to k8s
