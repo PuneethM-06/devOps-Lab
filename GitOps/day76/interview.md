@@ -93,3 +93,18 @@ Response comes back through the same connection
 Your Browser
 ```
 > A request sent to port 8080 on your local machine is forwarded to port 443 on the argocd-server inside the Kubernetes cluster. Argo CD processes the request, and the response is sent back to your local machine through that port-forward connection.
+
+5. ### INITIAL ARGO CD LOGIN 
+- **The initial password is automatically created and stored in k8s as a secret**
+```
+Argo CD installation
+        ↓
+Kubernetes creates resources
+        ↓
+Initial admin password is stored in a Secret
+```
+- The password can be retrieved as 
+```
+kubectl -n argocd get secret argocd-initial-admin-secret \
+  -o jsonpath="{.data.password}" | base64 -d
+```
