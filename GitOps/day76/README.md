@@ -1,0 +1,298 @@
+# DAY 76 - ARGOCD 
+
+1. ### WHERE DOES ARGOCD RUN?
+-  ArgoCD system runs inside your k8s cluster
+```
+Your Machine
+│
+├── kubectl
+├── argocd CLI
+│
+└──────────────► Kubernetes Cluster
+                       │
+                       └── argocd namespace
+                              │
+                              ├── Argo CD components
+                              └── Argo CD manages applications
+```
+- The reason why ArgoCD runs inside the k8s clustyer:
+    1. To read the current state of the k8s cluster 
+    2. To perform reconcile 
+
+2. ### WHAT ARE WE ACTUALLY INSTALLING 
+- When we install Argo CD, k8s creates multiple Argo CD components, usually inside an `argocd` namespace
+```
+Kubernetes Cluster
+│
+└── argocd namespace
+    │
+    ├── argocd-server
+    ├── argocd-repo-server
+    ├── argocd-application-controller
+    └── other supporting components
+```
+- **argocd-server**
+- This provides:
+    1. Web UI
+    2. API
+    3. CLI access
+
+- **argocd-repo-server**
+- This is responsible for interacting with git repositories for rendering and preparing the application manifests
+
+- **argocd-application-controller**
+- This is responsible for checking if the actual and the desired state are in sync and initiating the reconcilation steps
+
+3. ### BEFORE INSTALLING ARGOCD WHAT DO WE NEED 
+1. K8s cluster
+2. kubectl
+3. Git repo 
+
+3. ### HOW DO WE INSTALL ARGOCD
+- ArgoCD is deployed in the k8s resources/cluster
+```
+Create namespace
+       ↓
+Apply Argo CD installation manifests
+       ↓
+Kubernetes creates Argo CD resources
+       ↓
+Pods start running
+```
+**COMMANDS**
+1. `kubectl create namespace argocd`
+2. `kubectl apply -n argocd -f <argocd-install-manifest>`
+
+4. ### HOW DO WE ACCESS ARGO CD?
+- There are 3 ways in which we can access Argo CD
+    1. Argo CD web UI
+    2. Argo CD CLI
+    3. Argo CD API
+
+- **PORT FORWARDING**
+- since ArgoCD is running in k8s cluster it is not directly accesssible as a web ui and hence we need to make use of port forwarding 
+- `kubectl port-forward svc/argocd-server -n argocd 8080:443` this enables web ui access locally 
+- `8080:443` - **This means traffic sent to port 8080 in your local machine is forwarded to port 443 of the `argocd-server` inside the k8s cluster
+```
+Your Browser / Local Machine
+        │
+        │ Request to localhost:8080
+        ▼
+kubectl port-forward
+        │
+        │ forwards traffic
+        ▼
+argocd-server:443
+        │
+        ▼
+Argo CD processes the request
+        │
+        ▼
+Response comes back through the same connection
+        ▼
+Your Browser
+```
+> A request sent to port 8080 on your local machine is forwarded to port 443 on the argocd-server inside the Kubernetes cluster. Argo CD processes the request, and the response is sent back to your local machine through that port-forward connection.
+
+5. ### INITIAL ARGO CD LOGIN 
+- **The initial password is automatically created and stored in k8s as a secret**
+```
+Argo CD installation
+        ↓
+Kubernetes creates resources
+        ↓
+Initial admin password is stored in a Secret
+```
+- The password can be retrieved as 
+```
+kubectl -n argocd get secret argocd-initial-admin-secret \
+  -o jsonpath="{.data.password}" | base64 -d
+```
+- Then login 
+> The initial password is stored in a Kubernetes Secret so that access can be controlled through Kubernetes authentication and authorization, such as RBAC. Only users or service accounts with the required permissions should be able to read that Secret.
+
+6. ### THE ARGO CD CLI 
+ - argoCD CLI - communicate with Argo CD
+ - We login to it using `argocd login localhost:8080` amd then we can interact with it 
+ ```
+ Your Local Machine
+        │
+        │ argocd CLI
+        ▼
+localhost:8080
+        │
+        │ port-forward
+        ▼
+argocd-server:443
+        │
+        ▼
+Argo CD
+```
+Here we have two clients:
+```
+kubectl CLI → Kubernetes API
+
+argocd CLI  → Argo CD API/server
+```
+7. ### WHAT IS AN ARGOCD APPLICATION 
+- An **ArgoCD application is a k8s custom resource** that tells:
+    1. Where is my desired state 
+    2. What should I deploy 
+    3. Where should I deploy it 
+```
+Git Repository
+      ↓
+Argo CD Application
+      ↓
+Kubernetes Cluster
+```
+- **Argo CD application** is the bridge between Git repo(source of truth) and K8s cluster(actual state )
+
+> If Argo CD has a Git repository containing 10 different applications, how do you think we tell Argo CD exactly which application/path it should deploy and to which Kubernetes namespace?
+- Answer: We create an Argo CD Application resource and define the source repository/path and destination cluster/namespace.
+```
+source:
+  repoURL: https://github.com/example/my-repo.git
+  path: apps/frontend
+
+destination:
+  server: https://kubernetes.default.svc
+  namespace: frontend
+```
+8. ### UNDERSTANDING ARGO CD APPLICATION 
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: my-app
+  namespace: argocd
+
+spec:
+  source:
+    repoURL: https://github.com/example/gitops-repo.git
+    targetRevision: main
+    path: apps/frontend
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: frontend
+```
+1. `kind: application:` - Specifies the kind of the yaml
+2. `metadata` - specifies application and namespace name 
+3. `source` - tells argo `repoURL`, which branch, tag or `revision` argo should use, and `path` of the repo 
+4. `destination` - Where should argo deploy it like server, namespace
+- **FULL MENTAL MODEL**
+```
+Argo CD Application
+│
+├── SOURCE
+│     │
+│     ├── Repository → gitops-repo
+│     ├── Branch     → main
+│     └── Path       → apps/frontend
+│
+└── DESTINATION
+      │
+      ├── Cluster   → Kubernetes
+      └── Namespace → frontend
+```
+9. ### HOW DOES ARGO CD KNOW WHAT TYPE OF CONFIGURATION IS IN GIT?
+- Suppose argo goes to `apps/backend/` it could find anything like Helm or even yaml files
+- If Argo sees a helm chart, it can use those helm chart into the k8s manifests 
+```
+Git Repository
+      ↓
+apps/backend/
+      ↓
+Helm Chart
+      ↓
+Argo CD / repo-server
+      ↓
+Rendered Kubernetes manifests
+      ↓
+Desired State
+      ↓
+Compare with actual state
+```
+- **Argo CD uses the Helm chart—Chart.yaml, values.yaml, and the templates—to render the Kubernetes manifests that represent the desired state.**
+
+10. ### SYNC POLICY
+- This comes into picture when Argo CD detects that there is a difference in actual and desired state 
+1. **MANUAL SYNCING**
+```
+Git change
+    ↓
+Argo CD detects it
+    ↓
+Application = OutOfSync
+    ↓
+Human clicks/runs Sync
+    ↓
+Kubernetes updated
+```
+2. **AUTOMATED SYNC**
+- ArgoCD can automatically sync the cluster 
+```Git changes
+    ↓
+Argo CD detects new desired state
+    ↓
+OutOfSync
+    ↓
+Automatic Sync
+    ↓
+Kubernetes updated
+```  
+- Example:
+```
+spec:
+  syncPolicy:
+    automated: {}
+```
+> Suppose you have this repository:
+```
+gitops-repo/
+└── apps/
+    ├── frontend/
+    └── backend/
+```
+> You want Argo CD to deploy only the backend to the backend namespace What would you configure in the Argo CD Application's source and destination?
+- Answer: The source contains the repository URL and the path apps/backend, telling Argo CD where the backend configuration is. The destination contains the target cluster and the backend namespace, telling Argo CD where to deploy it.
+
+> First, Argo CD is installed into the Kubernetes cluster by applying the Argo CD installation manifests, usually in a dedicated argocd namespace. This creates components such as argocd-server, argocd-repo-server, and argocd-application-controller.
+
+> The argocd-server provides access through the UI, API, and CLI. We can access it locally using port-forwarding, and authenticate using the initial admin credentials.
+
+> Next, we create an Argo CD Application resource. The Application defines the source, which includes the Git repository, revision, and path containing the desired configuration, and the destination, which specifies the Kubernetes cluster and namespace where the application should be deployed.
+
+> The argocd-repo-server accesses the Git repository. If it contains a Helm chart, it renders the chart into Kubernetes manifests, which represent the desired state.
+
+> The argocd-application-controller then compares that desired state with the actual state in the Kubernetes cluster. If they are different, the application becomes OutOfSync. Depending on the sync policy, a human can manually trigger synchronization or Argo CD can synchronize automatically.
+```
+Install Argo CD
+       ↓
+Argo CD components run in Kubernetes
+       ↓
+Access argocd-server
+       ↓
+Create Application resource
+       ↓
+Source → Git repo + path
+Destination → Cluster + namespace
+       ↓
+repo-server reads Git
+       ↓
+Helm renders manifests (if using Helm)
+       ↓
+Desired State
+       ↓
+application-controller compares
+       ↓
+Actual State in Kubernetes
+       ↓
+OutOfSync?
+       ↓
+Manual or Automated Sync
+       ↓
+Application deployed / reconciled
+```
