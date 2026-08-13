@@ -39,3 +39,18 @@ Compares with Kubernetes
 - **AUTO-SYNC IS TRIGGED WHEN DESIRED STATE CHANGES**
 - **SELF HEALING IS TRIGGERED WHEN THE ACTUAL STATE CHANGES AUTOMATICALLY**
 - Example: Someone manually changed the actual state using command `kubectl scale deployment my-app --replicas=1`, now self healing kicks in and then fixes it.
+```
+Someone manually changes Kubernetes
+            ↓
+Actual state changes
+            ↓
+Argo CD detects drift
+            ↓
+Actual ≠ Desired
+            ↓
+Self-Healing kicks in
+            ↓
+Argo CD reconciles Kubernetes
+            ↓
+Kubernetes returns to Git's desired state
+```
