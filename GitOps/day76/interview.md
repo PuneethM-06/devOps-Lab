@@ -216,3 +216,18 @@ Desired State
 Compare with actual state
 ```
 - **Argo CD uses the Helm chart—Chart.yaml, values.yaml, and the templates—to render the Kubernetes manifests that represent the desired state.**
+
+10. ### SYNC POLICY
+- This comes into picture when Argo CD detects that there is a difference in actual and desired state 
+1. **MANUAL SYNCING**
+```
+Git change
+    ↓
+Argo CD detects it
+    ↓
+Application = OutOfSync
+    ↓
+Human clicks/runs Sync
+    ↓
+Kubernetes updated
+```
