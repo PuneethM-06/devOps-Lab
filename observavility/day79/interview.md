@@ -270,3 +270,13 @@ Creates metrics
        │
 Prometheus
 ```
+### TWO TYPES OF METRICS
+1. **DEFAULT METRICS**
+- Prometheus client already exposes some process or runtime metrics before creating anything 
+
+2. **CUSTOM METRICS**
+- These are metric we explicitly define 
+```
+prometheus_client → creates/records/exposes metrics
+Prometheus        → scrapes and stores metrics in TSDB
+```
