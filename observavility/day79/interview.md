@@ -283,3 +283,38 @@ Prometheus        → scrapes and stores metrics in TSDB
 
 ### EXPORTERS
 - **Collect or translates metrics from another system and exposes them in a format prometheus an scrape**
+
+### PROMETHEUS CONFIG
+```
+                prometheus.yml
+                       │
+                       ▼
+            scrape_configs
+                       │
+                       ▼
+              job: go-app
+                       │
+                       ▼
+             target: go-app:8080
+                       │
+                       │ every 15 seconds
+                       ▼
+         GET /metrics
+                       │
+                       ▼
+                 Go Application
+                       │
+                       ▼
+                    Metrics
+                       │
+                       ▼
+                 Prometheus TSDB
+```
+- We make use of yaml file to say prometheus to get the metric from where 
+```
+Target
+→ The actual thing being scraped
+
+Job
+→ Logical group/configuration for one or more targets
+````
