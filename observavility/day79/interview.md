@@ -144,3 +144,36 @@ Prometheus
     │
     └── Alert rules
 ```
+- **Time Series Database** - **Prometheus has its own built-in time-series database for storing metric samples.**
+
+### PROMETHEUS ARCHITECTURE AND MAIN COMPONENTS
+```                 ┌──────────────────┐
+                 │    Flask App     │
+                 │                  │
+                 │    /metrics      │
+                 └────────▲─────────┘
+                          │
+                          │ 1. Scrape
+                          │
+                 ┌────────┴─────────┐
+                 │   Prometheus     │
+                 │                  │
+                 │  ┌────────────┐  │
+                 │  │ Scraper    │  │
+                 │  ├────────────┤  │
+                 │  │ TSDB       │  │
+                 │  ├────────────┤  │
+                 │  │ PromQL     │  │
+                 │  ├────────────┤  │
+                 │  │ Alert Rules│  │
+                 │  └────────────┘  │
+                 └────────┬─────────┘
+                          │
+                 ┌────────┴─────────┐
+                 │                  │
+                 ▼                  ▼
+              PromQL             Alertmanager
+              Queries                 │
+                                      ▼
+                                  Slack / Email
+```
