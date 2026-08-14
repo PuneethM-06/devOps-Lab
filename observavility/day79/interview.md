@@ -335,3 +335,13 @@ static_configs:
 ```
 - pods maybe created and deleted and resulting in change of IP addressed too and this is solved by service discovery 
 - **Prometheus can dynamically discover targets.**
+```
+Kubernetes
+     │
+     │ "Here are the current Pods/Services"
+     ▼
+Prometheus
+     │
+     ▼
+Discovers targets automatically
+```
