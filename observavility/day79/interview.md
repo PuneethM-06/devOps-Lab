@@ -1,347 +1,759 @@
-# DAY 79 - PROMETHEUS
+# Interview.md — Day 79
 
-1. ### WHAT IS MONITORING 
-- It is continously watching a system and checking its know health indicators 
-- Example:
+# Prometheus Fundamentals
+
+## 1. What is Prometheus, and how does it collect metrics?
+
+Prometheus is an open-source monitoring and observability tool used to collect and store metrics.
+
+It mainly uses a **pull model**. Prometheus periodically sends a request to configured targets, usually to the `/metrics` endpoint, scrapes the exposed metrics, and stores them as time-series data in its TSDB.
+
+```text
+Application
+     │
+     │ exposes metrics
+     ▼
+ /metrics
+     ▲
+     │ Prometheus scrapes
+     │
+Prometheus
+     │
+     ▼
+   TSDB
 ```
-CPU > 80%
-        ↓
-Something might be wrong
-        ↓
-Trigger an alert
+
+---
+
+## 2. Explain the basic Prometheus architecture.
+
+```text
+Application / Exporter
+        │
+        │ exposes metrics
+        ▼
+     /metrics
+        ▲
+        │
+        │ Scrape / Pull
+        │
+   Prometheus
+        │
+        ├── Stores metrics in TSDB
+        │
+        ├── PromQL
+        │
+        └── Alert Rules
 ```
 
-2. ### MONITORING LIMITATION 
-- Monitoring may say something is failing, or something is not right but it does not tell which application, which request etc and that is done by observability
+The application or exporter exposes metrics through `/metrics`.
 
-3. ### OBSERVABILITY
-- Monitoring might tell you something is wrong, observability will tell you why it is wrong 
-- There are 3 pillars in observability
+Prometheus periodically scrapes those metrics and stores the collected samples as time-series data in its TSDB.
+
+The stored data can then be:
+
+- Queried using PromQL
+- Visualized using Grafana
+- Evaluated using alert rules
+
+---
+
+## 3. What is the difference between monitoring and observability?
+
+### Monitoring
+
+Monitoring is the process of continuously watching applications and systems to understand their current state and detect problems.
+
+Examples:
+
+- CPU usage
+- Memory usage
+- Request count
+- Error rate
+- Response time
+
+Monitoring helps answer:
+
+```text
+Is the system healthy?
+Is CPU usage high?
+Are errors increasing?
+Is the application slow?
 ```
-                 OBSERVABILITY
-                        │
-          ┌─────────────┼─────────────┐
-          │             │             │
-          ▼             ▼             ▼
-       Metrics         Logs         Traces
+
+### Observability
+
+Observability is the ability to understand what is happening inside a system based on the signals it produces.
+
+It helps answer:
+
+```text
+What went wrong?
+Where did it go wrong?
+Why did it happen?
 ```
-- **METRICS** - WHAT IS HAPPENING *EXAMPLE: CPU USAGE % IS ABOVE 90%*
-- **LOGS** - WHAT HAPPENED - *Example: ERROR - Database connection timedout*
-- **TRACES** - WHERE AND WHY DID IT HAPPEN
-| Monitoring            | Observability                                 |
-| --------------------- | --------------------------------------------- |
-| Watches known signals | Helps investigate system behavior             |
-| Detects problems      | Helps understand problems                     |
-| "Something is wrong"  | "Why is it wrong?"                            |
-| Metrics and alerts    | Metrics + logs + traces and their correlation |
 
-4. ### METRICS vs LOGS vs TRACES
-1. **METRICS**
-- **Are numerical measurements collected overtime**
-- Example: How many errors are failing : 250
+The main observability signals are:
 
-2. **LOGS**
-- **Logs gives detailed information about a certain event**
+```text
+Metrics
+Logs
+Traces
 ```
-INFO  User requested /payment
 
-INFO  Connecting to database
+---
 
-ERROR Database connection timeout
+## 4. What is the difference between metrics, logs, and traces?
+
+### Metrics
+
+Metrics are numerical measurements collected over time.
+
+Examples:
+
+- Total requests
+- CPU usage
+- Memory usage
+- Error rate
+- Request duration
+
+Metrics help understand:
+
+> What is happening?
+
+### Logs
+
+Logs are detailed records of events.
+
+Example:
+
+```text
+Payment request failed because database connection timed out.
 ```
-3. **TRACES**
-- Tracing becomes useful when a request travels through multiple microservices
-```
-Request ID: abc123
 
-API Service
-    │ 50ms
-    ▼
+Logs help understand:
+
+> Why something happened?
+
+### Traces
+
+Traces show how a request travels through different services or components.
+
+Example:
+
+```text
+User
+  ↓
+API
+  ↓
+Authentication Service
+  ↓
 Payment Service
-    │ 200ms
-    ▼
+  ↓
 Database
-    │ 5 seconds ❌
-    ▼
-Timeout
-```
-5. ### WHAT EXACTLY IS A METRIC
-- **A metric is a numerical measurement of something in a system, recorded over time.**
-- A metric has 4 important values
-    1. Metric name 
-    2. Labels 
-    3. Value
-    4. Timestamp
-1. **METRIC NAME**
-- This tells what are we measuring 
-- Example: https_requests_total 
-
-2. **LABELS**
-- Labels add dimension to the metric
-- Example: `method="GET", endpoint="/"`
-`http_requests_total{method="POST", endpoint="/login"} = 50`
-
-3. **VALUES**
-- This the metric value given by the tool 
-
-4. **Timestamp**
-- **Prometheus also records when that value was recorded**
-```
-10:00 → 100
-10:15 → 120
-10:30 → 150
 ```
 
-6. ### LABELES AND TIME SERIES 
-- Labels give extra context to the metric 
-- Example:
-```
-http_requests_total{
-    method="GET",
-    endpoint="/",
-    status="200"
-} 450
-```
-- Now we know there were 450 successful GET requests
-- **A unique combination of metric name and labels identifies a unique time series.**
-- Example:
-```
-Time Series 1
+Tracing helps understand:
 
+> Where a request became slow or failed.
+
+---
+
+## 5. What is a metric?
+
+A metric is a numerical measurement representing some behavior or state of an application or system.
+
+Examples:
+
+```text
 http_requests_total
+active_requests
+cpu_usage
+memory_usage
+```
+
+Metrics are collected over time so that we can observe changes and trends.
+
+---
+
+## 6. What are metric names, labels, and values?
+
+Example:
+
+```text
+http_requests_total{method="GET",status="200"} 450
+```
+
+### Metric Name
+
+```text
+http_requests_total
+```
+
+It tells us what we are measuring.
+
+### Labels
+
+```text
 method="GET"
 status="200"
-
-Time Series 2
-
-http_requests_total
-method="GET"
-status="500"
 ```
-- **The metric name is the same, but each unique combination of labels creates a separate time series.**
 
-### WHAT IS PROMETHEUS AND WHAT DOES IT SOLVE 
-- Prometheus is a** monitoring and observability system** that:
-    1. **Collect  metric** from application and system 
-    2. Stores those metrics as time-series data 
-    3. Query metrics using **PromQL**
-    4. Create **Alert rules** 
+Labels add dimensions to the metric.
+
+### Value
+
+```text
+450
 ```
-Application
-    │
-    │ exposes metrics
-    ▼
- /metrics
-    ▲
-    │
-    │ Prometheus collects them
-    │
+
+The numerical value currently recorded for that metric.
+
+---
+
+## 7. What is a time series?
+
+A time series is created by:
+
+> Metric name + unique label combination.
+
+Example:
+
+```text
+http_requests_total{method="GET",status="200"}
+```
+
+This is one time series.
+
+Another combination:
+
+```text
+http_requests_total{method="GET",status="500"}
+```
+
+creates a different time series.
+
+Prometheus stores values for these time series over time.
+
+Example:
+
+```text
+10:00 → 450
+10:15 → 500
+10:30 → 540
+```
+
+---
+
+## 8. What is the Prometheus pull model?
+
+Prometheus uses a pull-based approach.
+
+Prometheus periodically contacts configured targets and requests their metrics.
+
+Example:
+
+```text
 Prometheus
     │
-    ├── Stores metrics
+    │ GET /metrics
+    ▼
+Application
     │
-    ├── PromQL queries
+    │ Returns metrics
+    ▼
+Prometheus
+```
+
+This process is called **scraping**.
+
+---
+
+## 9. What is a scrape?
+
+A scrape is when Prometheus requests and collects metrics from a configured target.
+
+Example:
+
+```text
+Prometheus
     │
-    └── Alert rules
-```
-- **Time Series Database** - **Prometheus has its own built-in time-series database for storing metric samples.**
-
-### PROMETHEUS ARCHITECTURE AND MAIN COMPONENTS
-```                 ┌──────────────────┐
-                 │    Flask App     │
-                 │                  │
-                 │    /metrics      │
-                 └────────▲─────────┘
-                          │
-                          │ 1. Scrape
-                          │
-                 ┌────────┴─────────┐
-                 │   Prometheus     │
-                 │                  │
-                 │  ┌────────────┐  │
-                 │  │ Scraper    │  │
-                 │  ├────────────┤  │
-                 │  │ TSDB       │  │
-                 │  ├────────────┤  │
-                 │  │ PromQL     │  │
-                 │  ├────────────┤  │
-                 │  │ Alert Rules│  │
-                 │  └────────────┘  │
-                 └────────┬─────────┘
-                          │
-                 ┌────────┴─────────┐
-                 │                  │
-                 ▼                  ▼
-              PromQL             Alertmanager
-              Queries                 │
-                                      ▼
-                                  Slack / Email
-```
-1. **TARGET**
-- A target is simply something Prometheus monitor
-
-2. **SCRAPING**
-- Prometheus periodically sends a request to the target 
-
-3. **TSDB - Time series Database**
-- The scraped metric values from the target is stored in TSDB
-
-4. **PromQL**
-- Prometheus query language 
-- It is to query and fetch the details 
-
-5. **ALERT RULES**
-- Prometheus can continuously evaluate rules 
-```
-IF error rate > 5%
-FOR 5 minutes
+    │ GET /metrics
+    ▼
+Target
 ```
 
-### PULL MODEL AND SCRAPPING 
-1. **PULL MODEL**
-- It is done by Prometheus, It pulls the metrics from the application 
-- It sends a `GET /metrics`, collects the value and stores it in TSDB
+The returned metrics are stored as time-series samples in Prometheus.
 
-2. **SCRAPE INTERVAL**
-- It defines how often prometheus collects metrics
+---
+
+## 10. What is `scrape_interval`?
+
+The `scrape_interval` defines how frequently Prometheus scrapes configured targets.
+
+Example:
+
+```yaml
+global:
+  scrape_interval: 15s
 ```
+
+This means Prometheus attempts to scrape the target every 15 seconds.
+
+```text
 10:00:00 → Scrape
 10:00:15 → Scrape
 10:00:30 → Scrape
 10:00:45 → Scrape
 ```
 
-- **WHY IS PULL MODEL USEFUL??**
-1. Prometheus controls collections 
-2. Prometheus can detect unhealthy targets
-3. Targets dont need to know prometheus internals 
+---
 
-## PROMETHEUS METRIC TYPES
-1. **COUNTER**
-- A counter only increases
-- Example:
-```
-Requests received:
+## 11. What is a target?
 
-0 → 1 → 2 → 3 → 4 → 5
-```
-- It represents something that keeps accumulating 
-- Counters can reset; when the application restarts the counters can reset 
+A target is an application, system, or endpoint from which Prometheus scrapes metrics.
 
-2. **GAUGE**
-- A gauage can go up and down
-```
-Active users:
+Example:
 
-10 → 15 → 8 → 20 → 5
-```
-3. **HISTOGRAM**
-- A histogram is used when we want distributed values 
-- Example: How long are HTTP requests taking?
-- Prometheu drops these values to buckets, and then they are populated in histogram 
-
-4. **SUMMARY**
-- Summary can observe values such as:
-```
-Request duration
-Response size
-Count
-Sum
-Quantiles
-```
-### INSTRUMENTATION
-- It answers; How does our flask application actually create these metrics and expose them to prometheus
-- **It is the process of adding a code or library to an application so it can create metric about its behaviour is called as instrumentation**
-```
-Flask Application
-       │
-       │ uses
-       ▼
-prometheus_client
-       │
-       ▼
-Creates metrics
-       │
-       ▼
-/metrics endpoint
-       ▲
-       │
-       │ Prometheus scrapes
-       │
-Prometheus
-```
-### TWO TYPES OF METRICS
-1. **DEFAULT METRICS**
-- Prometheus client already exposes some process or runtime metrics before creating anything 
-
-2. **CUSTOM METRICS**
-- These are metric we explicitly define 
-```
-prometheus_client → creates/records/exposes metrics
-Prometheus        → scrapes and stores metrics in TSDB
+```text
+go-app:8080
 ```
 
-### EXPORTERS
-- **Collect or translates metrics from another system and exposes them in a format prometheus an scrape**
+Prometheus typically accesses:
 
-### PROMETHEUS CONFIG
+```text
+http://go-app:8080/metrics
 ```
-                prometheus.yml
-                       │
-                       ▼
-            scrape_configs
-                       │
-                       ▼
-              job: go-app
-                       │
-                       ▼
-             target: go-app:8080
-                       │
-                       │ every 15 seconds
-                       ▼
-         GET /metrics
-                       │
-                       ▼
-                 Go Application
-                       │
-                       ▼
-                    Metrics
-                       │
-                       ▼
-                 Prometheus TSDB
-```
-- We make use of yaml file to say prometheus to get the metric from where 
-```
-Target
-→ The actual thing being scraped
 
-Job
-→ Logical group/configuration for one or more targets
-```
-### PROMETHEUS UP AND DOWN 
-- **UP** - If prometheus can scrape the target successfully
-- **down** - If prometheu fails to connect to target for various reasons like wrong config then it is called as DOWN
-```
-JOB        TARGET           STATE
+---
 
-go-app     go-app:8080      UP
+## 12. What is a job in Prometheus?
+
+A job is a logical group of targets that Prometheus scrapes using the same configuration.
+
+Example:
+
+```yaml
+- job_name: "go-app"
 ```
-### SERVICE DISCOVERY 
-- **static configuration**
+
+A job can contain multiple targets:
+
+```text
+Job: go-app
+
+Targets:
+- go-app-1:8080
+- go-app-2:8080
+- go-app-3:8080
 ```
+
+---
+
+## 13. What is `prometheus.yml`?
+
+`prometheus.yml` is the main Prometheus configuration file.
+
+It can define:
+
+- Global configuration
+- Scrape intervals
+- Jobs
+- Targets
+- Alert configuration
+
+Example:
+
+```yaml
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "go-app"
+    static_configs:
+      - targets:
+          - "go-app:8080"
+```
+
+---
+
+## 14. What does `static_configs` mean?
+
+Static configuration means targets are manually specified in the Prometheus configuration.
+
+Example:
+
+```yaml
 static_configs:
   - targets:
       - "go-app:8080"
 ```
-- pods maybe created and deleted and resulting in change of IP addressed too and this is solved by service discovery 
-- **Prometheus can dynamically discover targets.**
+
+Prometheus is explicitly told where the target is located.
+
+---
+
+## 15. What is service discovery?
+
+Service discovery allows Prometheus to dynamically discover targets instead of manually defining every target.
+
+This is useful in environments such as Kubernetes where:
+
+- Pods are created
+- Pods are deleted
+- IP addresses change
+- New replicas are added
+
+Simple distinction:
+
+```text
+Static Configuration
+→ We manually define the targets
+
+Service Discovery
+→ Prometheus automatically discovers the targets
 ```
-Kubernetes
+
+---
+
+## 16. What are the main Prometheus metric types?
+
+Prometheus has four main metric types:
+
+```text
+Counter
+Gauge
+Histogram
+Summary
+```
+
+---
+
+## 17. What is a Counter?
+
+A Counter is a cumulative metric that generally only increases.
+
+It can reset when the application restarts.
+
+Examples:
+
+- Total requests
+- Total errors
+- Total failed logins
+
+Example:
+
+```text
+http_requests_total
+```
+
+Conceptually:
+
+```text
+0 → 1 → 2 → 3 → 4
+```
+
+---
+
+## 18. What is a Gauge?
+
+A Gauge represents a value that can increase or decrease.
+
+Examples:
+
+- Active requests
+- Memory usage
+- Number of connected users
+- CPU temperature
+
+Example:
+
+```text
+10 → 15 → 8 → 20
+```
+
+---
+
+## 19. What is a Histogram?
+
+A Histogram records observations and groups them into configurable buckets.
+
+It is useful for measuring distributions.
+
+A common example is:
+
+```text
+HTTP request duration
+```
+
+For example:
+
+```text
+Less than 0.1 seconds
+Less than 0.5 seconds
+Less than 1 second
+Less than 5 seconds
+```
+
+Histograms are especially useful for latency analysis.
+
+---
+
+## 20. What is a Summary?
+
+A Summary also records observations such as request duration.
+
+It can provide quantile information calculated on the client side.
+
+Examples:
+
+```text
+50th percentile
+90th percentile
+99th percentile
+```
+
+The key difference is:
+
+```text
+Histogram
+→ Observations are grouped into buckets
+
+Summary
+→ Quantiles are calculated by the application/client
+```
+
+---
+
+## 21. What is instrumentation?
+
+Instrumentation means adding code or a client library to an application so that it can measure and expose information about its behavior.
+
+For example:
+
+```text
+Total requests
+Errors
+Active requests
+Request duration
+```
+
+Conceptually:
+
+```text
+Application
+      │
+      ▼
+Prometheus Client Library
+      │
+      ▼
+Creates and updates metrics
+      │
+      ▼
+/metrics
+```
+
+---
+
+## 22. What is an exporter?
+
+An exporter is a component that collects or exposes metrics from a system or service in a format that Prometheus can scrape.
+
+Example:
+
+```text
+Linux Server
      │
-     │ "Here are the current Pods/Services"
      ▼
+Node Exporter
+     │
+     ▼
+/metrics
+     ▲
+     │
+Prometheus
+```
+
+Exporters are useful when we don't directly instrument the system ourselves.
+
+---
+
+## 23. What is the difference between instrumentation and an exporter?
+
+### Instrumentation
+
+Instrumentation is used when we can add metrics directly into the application code.
+
+Example:
+
+```text
+Go Application
+      │
+      ▼
+Prometheus Client Library
+```
+
+### Exporter
+
+An exporter is used to expose metrics from external systems.
+
+Examples:
+
+```text
+Linux Server → Node Exporter
+Database → Database Exporter
+```
+
+Simple distinction:
+
+> Instrumentation adds metrics directly to the application. An exporter exposes metrics from external systems so Prometheus can scrape them.
+
+---
+
+## 24. What does `UP` mean in Prometheus?
+
+`UP` means Prometheus successfully scraped the configured target.
+
+Prometheus exposes the `up` metric:
+
+```text
+up = 1
+→ Target was successfully scraped
+
+up = 0
+→ Scrape failed
+```
+
+---
+
+## 25. Does `UP` mean the entire application is healthy?
+
+No.
+
+`UP` only means Prometheus was able to successfully scrape the target's metrics endpoint.
+
+Example:
+
+```text
+Prometheus
+    │
+    ▼
+/metrics → Working ✅
+
+User
+    │
+    ▼
+/api/payment → 500 Error ❌
+```
+
+The application can be broken while Prometheus still shows the target as `UP`.
+
+---
+
+# Key Interview Questions
+
+## 1. What is Prometheus, and how does it collect metrics?
+
+Prometheus is an open-source monitoring and observability tool that uses a pull model to periodically scrape metrics from configured targets and store them as time-series data in its TSDB.
+
+---
+
+## 2. Explain the Prometheus architecture.
+
+Applications or exporters expose metrics through an endpoint such as `/metrics`.
+
+Prometheus periodically scrapes these targets and stores the collected samples in its TSDB.
+
+The data can then be queried using PromQL, visualized using Grafana, or evaluated using alert rules.
+
+---
+
+## 3. What is the difference between Counter, Gauge, Histogram, and Summary?
+
+- **Counter** → Cumulative value that generally increases
+- **Gauge** → Value that can increase or decrease
+- **Histogram** → Records observations in buckets
+- **Summary** → Records observations and calculates quantiles on the client side
+
+---
+
+## 4. What is the difference between instrumentation and an exporter?
+
+Instrumentation adds metrics directly into an application using code or a client library.
+
+An exporter exposes metrics from external systems such as Linux servers or databases.
+
+---
+
+## 5. What does `UP` mean in Prometheus? Does it guarantee application health?
+
+`UP` means Prometheus successfully scraped the target's metrics endpoint.
+
+It does not guarantee that the entire application is healthy. The application can still have broken APIs, database failures, or return errors to users.
+
+---
+
+# Day 79 — Final Architecture
+
+```text
+Application
+     │
+     │ Instrumentation
+     ▼
+Prometheus Metrics
+     │
+     ▼
+ /metrics
+     ▲
+     │
+     │ Scrape / Pull
+     │
 Prometheus
      │
-     ▼
-Discovers targets automatically
+     ├── Stores samples in TSDB
+     │
+     ├── PromQL
+     │      └── Day 80
+     │
+     └── Alert Rules
+            └── Day 84
+```
+
+For external systems:
+
+```text
+External System
+       │
+       ▼
+    Exporter
+       │
+       ▼
+    /metrics
+       ▲
+       │
+   Prometheus
+```
+
+---
+
+# Day 79 — Final Takeaway
+
+```text
+Instrument Application
+        ↓
+Expose Metrics
+        ↓
+      /metrics
+        ↓
+Prometheus Scrapes
+        ↓
+Stores Data in TSDB
+        ↓
+Time Series Created
+        ↓
+PromQL Queries → Day 80
+Grafana Dashboards → Day 81
+OpenTelemetry Tracing → Day 82
+Loki Logs → Day 83
+Alertmanager → Day 84
 ```
