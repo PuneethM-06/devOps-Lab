@@ -177,3 +177,22 @@ Prometheus
                                       ▼
                                   Slack / Email
 ```
+1. **TARGET**
+- A target is simply something Prometheus monitor
+
+2. **SCRAPING**
+- Prometheus periodically sends a request to the target 
+
+3. **TSDB - Time series Database**
+- The scraped metric values from the target is stored in TSDB
+
+4. **PromQL**
+- Prometheus query language 
+- It is to query and fetch the details 
+
+5. **ALERT RULES**
+- Prometheus can continuously evaluate rules 
+```
+IF error rate > 5%
+FOR 5 minutes
+```
