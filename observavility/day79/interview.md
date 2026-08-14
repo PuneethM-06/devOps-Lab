@@ -326,3 +326,12 @@ JOB        TARGET           STATE
 
 go-app     go-app:8080      UP
 ```
+### SERVICE DISCOVERY 
+- **static configuration**
+```
+static_configs:
+  - targets:
+      - "go-app:8080"
+```
+- pods maybe created and deleted and resulting in change of IP addressed too and this is solved by service discovery 
+- **Prometheus can dynamically discover targets.**
