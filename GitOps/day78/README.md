@@ -189,4 +189,5 @@ Git Repository
 - More complex
 - Parent application can have larger blast radius 
 - App of Apps is not always necessary
-- 
+
+> When a new Child Application YAML is added, the Parent Application syncs it and creates/manages it as a new Argo CD Application. That Child Application then deploys and manages the Kubernetes resources defined in its configured source path.
