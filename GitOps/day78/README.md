@@ -15,3 +15,15 @@ prometheus
 grafana
 ```
 - If you have 20 microservices, you might need to create and manage 20 separate Argo CD Application resources.
+- **Instead we can have one ArgoCD that manages other Argo CD applications and it is called App of Apps pattern**
+```
+                    Parent Application
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+     frontend-app      backend-app      database-app
+          │                │                │
+          ▼                ▼                ▼
+      Kubernetes       Kubernetes       Kubernetes
+```
