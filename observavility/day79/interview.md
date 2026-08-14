@@ -215,3 +215,14 @@ FOR 5 minutes
 1. Prometheus controls collections 
 2. Prometheus can detect unhealthy targets
 3. Targets dont need to know prometheus internals 
+
+## PROMETHEUS METRIC TYPES
+1. **COUNTER**
+- A counter only increases
+- Example:
+```
+Requests received:
+
+0 → 1 → 2 → 3 → 4 → 5
+```
+- It represents something that keeps accumulating 
