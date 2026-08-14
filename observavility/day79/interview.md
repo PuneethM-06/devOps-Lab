@@ -317,4 +317,12 @@ Target
 
 Job
 → Logical group/configuration for one or more targets
-````
+```
+### PROMETHEUS UP AND DOWN 
+- **UP** - If prometheus can scrape the target successfully
+- **down** - If prometheu fails to connect to target for various reasons like wrong config then it is called as DOWN
+```
+JOB        TARGET           STATE
+
+go-app     go-app:8080      UP
+```
