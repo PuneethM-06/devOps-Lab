@@ -91,3 +91,31 @@ Timeout
 10:15 → 120
 10:30 → 150
 ```
+
+6. ### LABELES AND TIME SERIES 
+- Labels give extra context to the metric 
+- Example:
+```
+http_requests_total{
+    method="GET",
+    endpoint="/",
+    status="200"
+} 450
+```
+- Now we know there were 450 successful GET requests
+- **A unique combination of metric name and labels identifies a unique time series.**
+- Example:
+```
+Time Series 1
+
+http_requests_total
+method="GET"
+status="200"
+
+Time Series 2
+
+http_requests_total
+method="GET"
+status="500"
+```
+- 
