@@ -100,7 +100,7 @@ Finds monitoring.yaml
 Creates/updates those Child Applications
 ```
 - then the child takes over
-````
+```
 frontend Child Application
         ↓
 Points to frontend manifests
@@ -109,3 +109,50 @@ Deployment
 Service
 ConfigMap
 ```
+
+4. ### REPOSITORY STRUCTURE
+```
+gitops-repo/
+│
+├── root-app.yaml
+│
+├── apps/
+│   ├── frontend-app.yaml
+│   ├── backend-app.yaml
+│   └── monitoring-app.yaml
+│
+├── frontend/
+│   ├── deployment.yaml
+│   └── service.yaml
+│
+├── backend/
+│   ├── deployment.yaml
+│   └── service.yaml
+│
+└── monitoring/
+    └── ...
+```
+- This can be the structure to work on and the flow is like 
+````
+Git Repository
+│
+├── root-app.yaml
+│       │
+│       ▼
+│     apps/
+│       │
+│       ├── frontend-app.yaml
+│       │        │
+│       │        ▼
+│       │     frontend/
+│       │        ├── deployment.yaml
+│       │        └── service.yaml
+│       │
+│       └── backend-app.yaml
+│                │
+│                ▼
+│             backend/
+│                ├── deployment.yaml
+│                └── service.yaml
+````
+- root points to apps(frontend-app.yaml, backend-app.yaml) and this frontend in turn might point to `frontend/`
