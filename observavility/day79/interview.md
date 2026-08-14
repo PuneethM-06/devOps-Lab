@@ -118,4 +118,29 @@ http_requests_total
 method="GET"
 status="500"
 ```
-- 
+- **The metric name is the same, but each unique combination of labels creates a separate time series.**
+
+### WHAT IS PROMETHEUS AND WHAT DOES IT SOLVE 
+- Prometheus is a** monitoring and observability system** that:
+    1. **Collect  metric** from application and system 
+    2. Stores those metrics as time-series data 
+    3. Query metrics using **PromQL**
+    4. Create **Alert rules** 
+```
+Application
+    │
+    │ exposes metrics
+    ▼
+ /metrics
+    ▲
+    │
+    │ Prometheus collects them
+    │
+Prometheus
+    │
+    ├── Stores metrics
+    │
+    ├── PromQL queries
+    │
+    └── Alert rules
+```
