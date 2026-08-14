@@ -182,3 +182,11 @@ Git Repository
 8. Creates/manages Kubernetes resources
    like Deployment, Service, ConfigMap, etc.
 ```
+5. ### WHY USE APP OF APPS IN PRODUCTION 
+- **Scalability and management**
+
+6. ### LIMITATION
+- More complex
+- Parent application can have larger blast radius 
+- App of Apps is not always necessary
+- 
