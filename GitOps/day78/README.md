@@ -156,3 +156,29 @@ Git Repository
 │                └── service.yaml
 ````
 - root points to apps(frontend-app.yaml, backend-app.yaml) and this frontend in turn might point to `frontend/`
+
+## IMPORTANT 
+```
+1. You apply root-app.yaml
+        ↓
+2. Kubernetes creates the Parent Application
+        ↓
+3. Parent App looks at:
+   repoURL + path: apps/
+        ↓
+4. It reads:
+   frontend-app.yaml
+   backend-app.yaml
+   monitoring-app.yaml
+        ↓
+5. These YAMLs are applied to Kubernetes
+   as Child Application resources
+        ↓
+6. Each Child Application has its own:
+   repoURL + path
+        ↓
+7. Each Child App reads its application manifests
+        ↓
+8. Creates/manages Kubernetes resources
+   like Deployment, Service, ConfigMap, etc.
+```
