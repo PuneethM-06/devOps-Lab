@@ -85,3 +85,27 @@ metadata:
   name: frontend
   namespace: argocd
 ```
+### THE OVERALL FLOW IS 
+```
+Parent Application
+        ↓
+Reads Git repository
+        ↓
+Looks inside apps/
+        ↓
+Finds frontend.yaml
+Finds backend.yaml
+Finds monitoring.yaml
+        ↓
+Creates/updates those Child Applications
+```
+- then the child takes over
+````
+frontend Child Application
+        ↓
+Points to frontend manifests
+        ↓
+Deployment
+Service
+ConfigMap
+```
