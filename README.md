@@ -112,13 +112,13 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 67 — Debugging — CrashLoopBackOff, Pending, OOMKilled
 
 #### Helm
- [x] Day 68 → Chart Structure
- [x] Day 69 → Values & Environment Configuration
- [x] Day 70 → Hooks
- [x] Day 71 → Release Lifecycle & Core Commands
- [x] Day 72 → Upgrade, Revisions, Rollback & Diff
- [x] Day 73 → Dependencies, Repositories & Packaging
- [x] Day 74 → Advanced Helm & Production Patterns
+- [x] Day 68 → Chart Structure
+- [x] Day 69 → Values & Environment Configuration
+- [x] Day 70 → Hooks
+- [x] Day 71 → Release Lifecycle & Core Commands
+- [x] Day 72 → Upgrade, Revisions, Rollback & Diff
+- [x] Day 73 → Dependencies, Repositories & Packaging
+- [x] Day 74 → Advanced Helm & Production Patterns
 
 #### ArgoCD / GitOps
 - [x] Day 75 — What GitOps is and why it's different from CI/CD
