@@ -249,3 +249,24 @@ Count
 Sum
 Quantiles
 ```
+### INSTRUMENTATION
+- It answers; How does our flask application actually create these metrics and expose them to prometheus
+- **It is the process of adding a code or library to an application so it can create metric about its behaviour is called as instrumentation**
+```
+Flask Application
+       │
+       │ uses
+       ▼
+prometheus_client
+       │
+       ▼
+Creates metrics
+       │
+       ▼
+/metrics endpoint
+       ▲
+       │
+       │ Prometheus scrapes
+       │
+Prometheus
+```
