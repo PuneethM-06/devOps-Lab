@@ -27,3 +27,13 @@ grafana
           ▼                ▼                ▼
       Kubernetes       Kubernetes       Kubernetes
 ```
+- The parent application doesnt directly deploy all your services.
+- Instead it manages all the child application resources
+- Each child application manages its k8s resources
+```
+Parent App
+    ↓
+Creates / manages Child Apps
+    ↓
+Each Child App deploys its own resources
+```
