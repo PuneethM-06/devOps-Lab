@@ -28,3 +28,39 @@ Trigger an alert
 - **METRICS** - WHAT IS HAPPENING *EXAMPLE: CPU USAGE % IS ABOVE 90%*
 - **LOGS** - WHAT HAPPENED - *Example: ERROR - Database connection timedout*
 - **TRACES** - WHERE AND WHY DID IT HAPPEN
+| Monitoring            | Observability                                 |
+| --------------------- | --------------------------------------------- |
+| Watches known signals | Helps investigate system behavior             |
+| Detects problems      | Helps understand problems                     |
+| "Something is wrong"  | "Why is it wrong?"                            |
+| Metrics and alerts    | Metrics + logs + traces and their correlation |
+
+4. ### METRICS vs LOGS vs TRACES
+1. **METRICS**
+- **Are numerical measurements collected overtime**
+- Example: How many errors are failing : 250
+
+2. **LOGS**
+- **Logs gives detailed information about a certain event**
+```
+INFO  User requested /payment
+
+INFO  Connecting to database
+
+ERROR Database connection timeout
+```
+3. **TRACES**
+- Tracing becomes useful when a request travels through multiple microservices
+````
+Request ID: abc123
+
+API Service
+    │ 50ms
+    ▼
+Payment Service
+    │ 200ms
+    ▼
+Database
+    │ 5 seconds ❌
+    ▼
+Timeout
