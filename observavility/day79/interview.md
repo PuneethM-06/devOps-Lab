@@ -196,3 +196,17 @@ Prometheus
 IF error rate > 5%
 FOR 5 minutes
 ```
+
+### PULL MODEL AND SCRAPPING 
+1. **PULL MODEL**
+- It is done by Prometheus, It pulls the metrics from the application 
+- It sends a `GET /metrics`, collects the value and stores it in TSDB
+
+2. **SCRAPE INTERVAL**
+- It defines how often prometheus collects metrics
+```
+10:00:00 → Scrape
+10:00:15 → Scrape
+10:00:30 → Scrape
+10:00:45 → Scrape
+```
