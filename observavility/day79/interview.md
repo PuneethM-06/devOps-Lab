@@ -210,3 +210,8 @@ FOR 5 minutes
 10:00:30 → Scrape
 10:00:45 → Scrape
 ```
+
+- **WHY IS PULL MODEL USEFUL??**
+1. Prometheus controls collections 
+2. Prometheus can detect unhealthy targets
+3. Targets dont need to know prometheus internals 
