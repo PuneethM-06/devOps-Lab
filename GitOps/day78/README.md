@@ -49,3 +49,14 @@ One Argo CD
 
 ```
 > In production, we can have multiple microservices, and managing many individual Argo CD Application resources can become difficult. The App of Apps pattern uses a parent Application to manage multiple child Applications. Each child Application then manages and deploys its own Kubernetes resources.
+
+2. ### PARENT APPLICATION vs CHILD APPLICATION
+- **Parent application** - It is Argo CD `application resource`
+- Its job is to create and manage child applications 
+```
+Parent Application
+        ↓
+frontend-app.yaml
+backend-app.yaml
+monitoring-app.yaml
+```
