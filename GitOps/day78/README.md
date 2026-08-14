@@ -60,3 +60,10 @@ frontend-app.yaml
 backend-app.yaml
 monitoring-app.yaml
 ```
+- **Child application** - It is also Argo CD `application resource`
+- Each child points to its own manifests
+| Parent Application                       | Child Application                       |
+| ---------------------------------------- | --------------------------------------- |
+| Manages child `Application` resources    | Manages actual Kubernetes resources     |
+| Points to YAML files defining child apps | Points to app manifests/Helm charts     |
+| Used for grouping and bootstrapping      | Used to deploy individual services/apps |
