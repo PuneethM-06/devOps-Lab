@@ -226,3 +226,12 @@ Requests received:
 0 → 1 → 2 → 3 → 4 → 5
 ```
 - It represents something that keeps accumulating 
+- Counters can reset; when the application restarts the counters can reset 
+
+2. **GAUGE**
+- A gauage can go up and down
+```
+Active users:
+
+10 → 15 → 8 → 20 → 5
+```
