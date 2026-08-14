@@ -51,7 +51,7 @@ ERROR Database connection timeout
 ```
 3. **TRACES**
 - Tracing becomes useful when a request travels through multiple microservices
-````
+```
 Request ID: abc123
 
 API Service
@@ -64,3 +64,11 @@ Database
     │ 5 seconds ❌
     ▼
 Timeout
+```
+5. ### WHAT EXACTLY IS A METRIC
+- **A metric is a numerical measurement of something in a system, recorded over time.**
+- A metric has 4 important values
+    1. Metric name 
+    2. Labels 
+    3. Value
+    4. Timestamp
