@@ -235,3 +235,17 @@ Active users:
 
 10 → 15 → 8 → 20 → 5
 ```
+3. **HISTOGRAM**
+- A histogram is used when we want distributed values 
+- Example: How long are HTTP requests taking?
+- Prometheu drops these values to buckets, and then they are populated in histogram 
+
+4. **SUMMARY**
+- Summary can observe values such as:
+```
+Request duration
+Response size
+Count
+Sum
+Quantiles
+```
