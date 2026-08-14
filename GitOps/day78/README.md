@@ -67,3 +67,21 @@ monitoring-app.yaml
 | Manages child `Application` resources    | Manages actual Kubernetes resources     |
 | Points to YAML files defining child apps | Points to app manifests/Helm charts     |
 | Used for grouping and bootstrapping      | Used to deploy individual services/apps |
+
+3. ### HOW DOES THE PARENT APPLICATION ACTUALLY CREATE/MANAGE THOSE CHILD APPLICATION 
+- **The parent application points to the git path containing the yaml files of the child applications**
+- Example
+**Inside parent application**
+```
+source:
+  repoURL: <your-git-repo>
+  path: apps
+```
+- **Inside frontend.yaml (child application)**
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend
+  namespace: argocd
+```
