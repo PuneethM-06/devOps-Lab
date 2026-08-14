@@ -280,3 +280,6 @@ Prometheus
 prometheus_client → creates/records/exposes metrics
 Prometheus        → scrapes and stores metrics in TSDB
 ```
+
+### EXPORTERS
+- **Collect or translates metrics from another system and exposes them in a format prometheus an scrape**
