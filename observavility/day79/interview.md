@@ -72,3 +72,12 @@ Timeout
     2. Labels 
     3. Value
     4. Timestamp
+1. **METRIC NAME**
+- This tells what are we measuring 
+- Example: https_requests_total 
+
+2. **LABELS**
+- Labels add dimension to the metric
+- Example: `method="GET", endpoint="/"`
+`http_requests_total{method="POST", endpoint="/login"} = 50`
+
