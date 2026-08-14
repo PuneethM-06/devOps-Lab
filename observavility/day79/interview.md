@@ -81,3 +81,13 @@ Timeout
 - Example: `method="GET", endpoint="/"`
 `http_requests_total{method="POST", endpoint="/login"} = 50`
 
+3. **VALUES**
+- This the metric value given by the tool 
+
+4. **Timestamp**
+- **Prometheus also records when that value was recorded**
+```
+10:00 → 100
+10:15 → 120
+10:30 → 150
+```
