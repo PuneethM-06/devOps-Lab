@@ -42,3 +42,6 @@ irate(...[5m]); so
 700 - 500 = 200 requests 
 200/60 = 3.33 requests per second 
 ```
+- #### PRACTICAL USAGE
+- `rate()` → dashboards, recording rules, alerts; generally the safer default.
+- `irate()` → when you specifically want to inspect short-term, rapidly changing behavior.
