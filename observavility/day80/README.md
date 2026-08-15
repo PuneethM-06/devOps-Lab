@@ -55,3 +55,19 @@ Instance B → 3 requests/sec
 Instance C → 5 requests/sec
 sum(rate(http_requests_total[5m])) = 2 + 3 + 5 = 10 requests/sec
 ```
+- ### sum by job 
+```
+sum by (job) (
+  rate(http_requests_total[5m])
+)
+```
+- rate() calculates the requests/sec for each individual time series.
+- sum by (job) groups those time series by their job label.
+- It adds the rates within each job.
+- Example:
+```
+job=frontend, instance=1 → 2 req/sec
+job=frontend, instance=2 → 3 req/sec
+job=backend,  instance=1 → 5 req/sec
+job=backend,  instance=2 → 4 req/sec
+```
