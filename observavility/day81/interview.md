@@ -80,3 +80,14 @@ CPU Usage
 0% ───────────●────────── 100%
               72%
 ```
+
+4. ### TABLE
+- Used to display data in rows and columns 
+- Example:
+```
+Instance        CPU Usage
+-------------------------
+server-1        45%
+server-2        78%
+server-3        92%
+```
