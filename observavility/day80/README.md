@@ -327,3 +327,11 @@ Condition: CPU > 90%
 
 Result → Inactive
 ```
+2. **Pending**
+- The condition is true but the `for` hasnt been met yet 
+```
+CPU > 90%
+for: 5m
+
+After 2 minutes → Pending
+```
