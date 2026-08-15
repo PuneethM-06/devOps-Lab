@@ -70,3 +70,13 @@ Request Rate
 Current Error Rate
       2.4%
 ```
+
+3. ### GAUGE
+- Used to show a value in a defined range 
+- Example
+```
+CPU Usage
+
+0% ───────────●────────── 100%
+              72%
+```
