@@ -355,3 +355,5 @@ annotations:
   summary: High CPU usage detected
   description: CPU usage has been above 90% for more than 5 minutes.
 ```
+> Labels = metadata used to classify, route, and manage alerts.
+> Annotations = human-readable information explaining the alert.
