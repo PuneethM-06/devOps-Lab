@@ -357,3 +357,25 @@ annotations:
 ```
 > Labels = metadata used to classify, route, and manage alerts.
 > Annotations = human-readable information explaining the alert.
+
+### PROMETHEUS NOTIFICATION FLOW 
+```
+Application / Exporter
+        ↓
+     Metrics
+        ↓
+   Prometheus
+        ↓
+Evaluates Alert Rules
+        ↓
+Condition true for `for` duration
+        ↓
+     Alert Firing
+        ↓
+   Alertmanager
+        ↓
+Group / Route / Deduplicate
+        ↓
+Notification
+(Slack / Email / PagerDuty, etc.)
+```
