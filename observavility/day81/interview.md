@@ -44,3 +44,22 @@ Application Dashboard
 └── Memory Usage
 ```
 > **DASHBOARD IS A COLLECTION OF PANELS**
+- **PANEL**
+- Panel is a indiviual visualization inside a dashboard 
+
+### PANEL VISUALIZATION TYPES
+1. ### TIME SERIES
+- Used to see how a metric changes over a time 
+- Example: 
+    - Request rate 
+    - CPU usage
+    - Memory usage 
+```
+Request Rate
+
+100 ┤       ╭──╮
+ 80 ┤   ╭───╯  ╰──╮
+ 60 ┤───╯         ╰──
+    └──────────────────
+       Time →
+```
