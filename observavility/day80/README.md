@@ -18,3 +18,10 @@ So rate(http_requests_total[5m]) = 2 requests per second
 - ### FOR GAUGE
 - Gauge can go in both the ways (increasing and decreasing)
 - And hence for gauge - usually query the curent value directly because it can both increase and decrase 
+```
+Counter + rate() → how fast the cumulative value is changing/increasing per second.
+
+Gauge alone → current value.
+
+Gauge + rate() → rate of change, which is technically possible but usually not the metric you want.
+```
