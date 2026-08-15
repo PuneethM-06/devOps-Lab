@@ -109,3 +109,14 @@ pod-3 → 5 req/sec
     - le="1"
     - le="2"
     - le="+Inf"
+- **le means lesser than equal to**
+- Based on the request duration, prometheus populates the vbalues into these buckets
+
+### P50, P95 AND P99
+- P50 - 50th percentile 
+1. `P50 = 0.2 seconds`
+- It means that 50% of the requests completed in 0.2 seconds 
+
+2. `P95 - 95th Percentile`
+- Example: P95 = 1 second 
+- It means that 95% of the requests completed in 1 second or less
