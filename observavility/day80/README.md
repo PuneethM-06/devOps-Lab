@@ -312,3 +312,18 @@ groups:
 
 2. **expr**
 - This is PromQL condition 
+- `expr: cpu_usage_percent > 90`
+
+3. **for**
+- The condition must remain true continuously for 5 minutes before the alert fires.
+
+### ALERT STATES
+1. **Inactive**
+- Alert condition is false 
+- Example:
+```
+CPU = 70%
+Condition: CPU > 90%
+
+Result → Inactive
+```
