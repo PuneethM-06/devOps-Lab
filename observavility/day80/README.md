@@ -45,3 +45,13 @@ irate(...[5m]); so
 - #### PRACTICAL USAGE
 - `rate()` → dashboards, recording rules, alerts; generally the safer default.
 - `irate()` → when you specifically want to inspect short-term, rapidly changing behavior.
+
+3. ### sum
+- `rate()` - calculates the per-second rate for each matching time series and sum adds those together 
+- Example:
+```
+Instance A → 2 requests/sec
+Instance B → 3 requests/sec
+Instance C → 5 requests/sec
+sum(rate(http_requests_total[5m])) = 2 + 3 + 5 = 10 requests/sec
+```
