@@ -82,3 +82,13 @@ sum by (instance) (
 )
 ```
 - Same concept as sum by (job), but now Prometheus groups the time series by the instance label.
+- Example:
+```
+job=frontend, instance=pod-1 → 2 req/sec
+job=frontend, instance=pod-2 → 3 req/sec
+job=backend,  instance=pod-3 → 5 req/sec
+result 
+pod-1 → 2 req/sec
+pod-2 → 3 req/sec
+pod-3 → 5 req/sec
+```
