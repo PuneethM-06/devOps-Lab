@@ -328,3 +328,34 @@ Application Monitoring Dashboard
 └── Service Health
     └── Stat
 ```
+
+### GRAFANA DASHBOARD VARIABLES
+- **Variables make dashboards dynamic and reusable**
+# Grafana Dashboard Variables
+
+## What are Dashboard Variables?
+
+Grafana variables make dashboards dynamic and reusable.
+
+Instead of creating multiple dashboards for different applications or servers, we can create one dashboard and use variables to select what data we want to see.
+
+For example:
+
+Application: [ frontend ▼ ]
+
+The user can select another application:
+
+Application: [ backend ▼ ]
+
+The same dashboard updates automatically.
+
+---
+
+## Example: `$job` Variable
+
+Suppose Prometheus has multiple applications:
+
+```text
+job="frontend"
+job="backend"
+job="payment-service"
