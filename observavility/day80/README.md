@@ -342,3 +342,11 @@ CPU > 90% for 5 minutes
 
 Result → Firing
 ```
+### LABELS AND ANNOTATION 
+1. **LABELS**
+- Labels **add metadata used to classify the alert.**
+- They tell information like:
+    1. How serious is the alert
+    2. Which team is responsible
+2. **ANNOTATIONS**
+- They provide **human-readable information about the alert**
