@@ -70,4 +70,15 @@ job=frontend, instance=1 → 2 req/sec
 job=frontend, instance=2 → 3 req/sec
 job=backend,  instance=1 → 5 req/sec
 job=backend,  instance=2 → 4 req/sec
+
+result 
+frontend → 2 + 3 = 5 req/sec
+backend  → 5 + 4 = 9 req/sec
 ```
+- ### sum by instance
+```
+sum by (instance) (
+  rate(http_requests_total[5m])
+)
+```
+- Same concept as sum by (job), but now Prometheus groups the time series by the instance label.
