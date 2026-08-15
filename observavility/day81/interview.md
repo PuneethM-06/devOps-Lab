@@ -30,3 +30,4 @@ Grafana Panel
         ▼
 Visualizes the result as a graph
 ```
+> The application exposes metrics, Prometheus scrapes and stores them in its TSDB. Grafana uses Prometheus as a data source and sends PromQL queries to Prometheus. Prometheus queries the TSDB, returns the results to Grafana, and Grafana visualizes those results using dashboards and panels.
