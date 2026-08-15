@@ -63,3 +63,10 @@ Request Rate
     └──────────────────
        Time →
 ```
+2. ### STAT
+-  Used to show one important current value
+- Example:
+```
+Current Error Rate
+      2.4%
+```
