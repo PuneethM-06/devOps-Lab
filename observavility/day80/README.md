@@ -92,3 +92,20 @@ pod-1 → 2 req/sec
 pod-2 → 3 req/sec
 pod-3 → 5 req/sec
 ```
+
+3. ### histogram_quantile()
+- Histogram is used to observe the distributed values 
+
+### BUCKETS IN HISTOGRAM
+- Suppose the request durations are like 
+    - 0.1s
+    - 0.2s
+    - 0.4s
+    - 0.8s
+    - 1.5s
+- A histogram might expose buckets like 
+    - le="0.1"
+    - le="0.5"
+    - le="1"
+    - le="2"
+    - le="+Inf"
