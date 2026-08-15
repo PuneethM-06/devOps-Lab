@@ -292,3 +292,23 @@ Estimate the P95 request duration
 > **`sum by (le)` combines the same bucket boundaries across multiple instances while preserving the `le` label.**
 
 > **`histogram_quantile(0.95, ...)` uses those bucket boundaries to estimate the P95 latency — the value below which 95% of requests completed.**
+
+### PROMETHEUS ALERTING 
+- Example:
+```
+groups:
+  - name: application-alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: cpu_usage_percent > 90
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High CPU usage detected
+```
+1. **alert**
+- This is simply the name of the alert
+
+2. **expr**
+- This is PromQL condition 
