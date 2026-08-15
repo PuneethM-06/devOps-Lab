@@ -120,3 +120,7 @@ pod-3 → 5 req/sec
 2. `P95 - 95th Percentile`
 - Example: P95 = 1 second 
 - It means that 95% of the requests completed in 1 second or less
+
+3. `P99 - 99th Percentile`
+- P99 = 2 seconds
+- 99% of the requests completed in 2 seconds or less 
