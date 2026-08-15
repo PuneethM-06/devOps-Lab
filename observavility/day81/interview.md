@@ -359,3 +359,10 @@ Suppose Prometheus has multiple applications:
 job="frontend"
 job="backend"
 job="payment-service"
+```
+### BEST PRACTICES
+1. Dont overload a dashboard
+2. Use meaningful panel titles
+3. Choose the correct visualization 
+4. Use sensible time ranges
+5. Use variables when appropriate 
