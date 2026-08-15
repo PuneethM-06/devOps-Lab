@@ -335,3 +335,10 @@ for: 5m
 
 After 2 minutes → Pending
 ```
+3. **Firing**
+- The condition has remained true for the entire for duration.
+```
+CPU > 90% for 5 minutes
+
+Result → Firing
+```
