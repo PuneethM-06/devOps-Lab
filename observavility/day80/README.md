@@ -350,3 +350,8 @@ Result → Firing
     2. Which team is responsible
 2. **ANNOTATIONS**
 - They provide **human-readable information about the alert**
+```
+annotations:
+  summary: High CPU usage detected
+  description: CPU usage has been above 90% for more than 5 minutes.
+```
