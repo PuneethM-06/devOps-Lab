@@ -25,3 +25,20 @@ Gauge alone → current value.
 
 Gauge + rate() → rate of change, which is technically possible but usually not the metric you want.
 ```
+
+### 2. irate vc rate
+- **rate** - Calulcalates the increase/difference in the requests in that given time range and calculates the requests per second
+- **irate** - Calculates the increase/difference in the requests in the last 2 recent values and calculates the requests per second
+```
+10:00 → 100
+10:01 → 200
+10:02 → 300
+10:03 → 400
+10:04 → 500
+10:05 → 700
+irate(...[5m]); so 
+10:04 → 500
+10:05 → 700
+700 - 500 = 200 requests 
+200/60 = 3.33 requests per second 
+```
