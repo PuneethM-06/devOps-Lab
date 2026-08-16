@@ -16,3 +16,18 @@
 4. ### TRACE ID vs SPAN ID
 - **Trace Id**is a **unique identifier for the entire trace**
 - **Span ID** is **indiviual span having a unique identifier**  
+```
+Trace ID: abc123
+
+Frontend
+Span ID: 111
+    │
+    └── API Service
+        Span ID: 222
+            │
+            └── Payment Service
+                Span ID: 333
+                    │
+                    └── Database
+                        Span ID: 444
+```
