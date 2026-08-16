@@ -63,3 +63,12 @@ environment="production"
 namespace="default"
 pod="payment-abc123"
 ```
+2. **LOG STREAMS**
+- A log stream is a collection of **logs that have the exact same set of labels** 
+```
+{service="payment-service", environment="production", pod="payment-abc123"}
+
+10:00 INFO Payment started
+10:01 INFO Validating card
+10:02 ERROR Payment failed
+```
