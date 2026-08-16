@@ -53,3 +53,24 @@ Trace ID: abc123
 - **Trace context** typically contains:
     1. Trace ID
     2. Current Span ID
+
+6. ### INSTRUMENTATION 
+- Instrumentation is the process by which we **add OTel to an application so it can generate telementry data**, such as traces, metrics and logs
+
+1. **AUTOMATIC INSTRUMENTATION**
+- Sometimes OpenTelementry automatically instruments supported libraries and framework 
+- Example:
+```
+Incoming HTTP Request
+        ↓
+OpenTelemetry automatically creates a span
+        ↓
+Application calls another HTTP service
+        ↓
+OpenTelemetry creates another span
+        ↓
+Database query
+        ↓
+OpenTelemetry creates another span
+```
+- Basically, OTel can automatically and easily follow the request and how an application is working
