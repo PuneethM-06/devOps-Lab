@@ -101,3 +101,7 @@ service  → payment-service
 user_id  → 123
 message  → Payment failed
 ```
+9. ### LOGQL BASICS 
+- It is a language used to query the logs stored in Grafana Loki to extract information 
+- Example: `{service="payment-service", environment="production"}`
+- Show me logs for service payment-service and it should be logs from production environment
