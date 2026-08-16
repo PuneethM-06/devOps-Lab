@@ -9,4 +9,10 @@
 - Trace enables us to:
     - Which service handles the request 
     - How long did each service take 
-    - Where did an error occur
+
+3. ### SPAN 
+- A span is an single operation within the journey of an request
+
+4. ### TRACE ID vs SPAN ID
+- **Trace Id**is a **unique identifier for the entire trace**
+- **Span ID** is **indiviual span having a unique identifier**  
