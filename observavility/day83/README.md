@@ -77,3 +77,9 @@ pod="payment-abc123"
 5. ### HOW LOKI INDEXES LOGS 
 - Loki does not index each word inside the log, **it indexes the label inside the logs**
 >Loki does not index the full log content. It indexes labels such as service, environment, and namespace, which are used to narrow down the relevant logs. We can then filter the actual log content to find what we need.
+
+8. ### STRUCTURED vs UNSTRUCTURED LOGS 
+1. **Unstructured logs**
+- An unstructued logs are generally plain text 
+- Example: `2026-08-16 ERROR Payment failed for user 123`
+- **Humans can read it easily, but extracting information around it can be hard**
