@@ -83,3 +83,21 @@ pod="payment-abc123"
 - An unstructued logs are generally plain text 
 - Example: `2026-08-16 ERROR Payment failed for user 123`
 - **Humans can read it easily, but extracting information around it can be hard**
+
+2. **Structured logs**
+- A structured logs stores information in a consistent format, commonly JSON
+```
+{
+  "level": "ERROR",
+  "service": "payment-service",
+  "user_id": "123",
+  "message": "Payment failed"
+}
+```
+- Now each piece of information has a defined field and it more easier to extract
+```
+level    → ERROR
+service  → payment-service
+user_id  → 123
+message  → Payment failed
+```
