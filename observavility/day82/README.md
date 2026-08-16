@@ -120,3 +120,25 @@ Tracing Backend
     2. Process or transform it
     3. Filter it
     4. Batch it 
+
+8. ### TRACING BACKEND 
+- Tracing backend lets you query and visualize the traces that is collected from instrumentation and processed by SDK
+
+## OVERALL FLOW 
+```
+User Request
+      ↓
+Application
+      ↓
+Instrumentation creates spans
+      ↓
+OpenTelemetry SDK processes telemetry
+      ↓
+OpenTelemetry Collector receives telemetry
+      ↓
+Collector processes / batches / exports it
+      ↓
+Tracing Backend stores traces
+      ↓
+You visualize and analyze the trace
+```
