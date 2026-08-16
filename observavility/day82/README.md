@@ -202,3 +202,5 @@ Fix the issue
         ↓
 Use Metrics + Traces to verify improvement
 ```
+### PROMETHEUS vs GRAFANA vs OPENTELEMENTRY 
+> Prometheus collects and stores metrics for monitoring, while Grafana visualizes those metrics using panels and dashboards. OpenTelemetry provides a standardized way to generate and export telemetry such as traces, metrics, and logs. In our case, tracing helps identify where a request is slow or failing, and then Prometheus metrics and Grafana can help investigate the broader cause.
