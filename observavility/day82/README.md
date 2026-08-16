@@ -101,3 +101,9 @@ Tracing Backend
 ```
 1. **APPLICATION**
 - This is basically the target, application or a service
+
+2. **INSTRUMENTATION**
+- Instrumentation is the process of OTel connecting to an application/service and it is used to **generate telementry data**
+
+3. **OpenTelementry SDK**
+- 
