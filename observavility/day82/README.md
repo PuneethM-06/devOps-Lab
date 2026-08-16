@@ -163,3 +163,5 @@ Span ID: 111
                         Span ID: 444
                         Parent: 333
 ```
+> If the API Service creates a new Span ID, why does it still belong to the same trace as the Frontend span?
+- Answer: **The API span belongs to the same trace because it receives the same Trace ID through context propagation, while the Parent Span ID connects it to the Frontend span.**
