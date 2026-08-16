@@ -44,3 +44,11 @@ Search and Investigate
 
 2. **Log collector/Agent**
 - A collector or agent reads the logs and forwards them to loki 
+
+3. **Storage**
+- Grafana loki stores the logs along with their labels 
+
+4. **Grafana Queries Loki**
+- Grafana loki queries the stored logs according to users desire to get the logs
+
+> The application generates logs, a collector/agent gathers and forwards them, Loki stores them, and Grafana is used to query and investigate them.
