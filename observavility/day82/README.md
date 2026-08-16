@@ -50,3 +50,6 @@ Trace ID: abc123
 Payment
 Trace ID: abc123
 ```
+- **Trace context** typically contains:
+    1. Trace ID
+    2. Current Span ID
