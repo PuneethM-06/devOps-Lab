@@ -52,3 +52,14 @@ Search and Investigate
 - Grafana loki queries the stored logs according to users desire to get the logs
 
 > The application generates logs, a collector/agent gathers and forwards them, Loki stores them, and Grafana is used to query and investigate them.
+
+4. ### LABELS AND LOG STREAMS 
+1. **LABELS**
+- Labels are key-value pairs attached to logs that help to identify where the logs came from
+- Example:
+```
+service="payment-service"
+environment="production"
+namespace="default"
+pod="payment-abc123"
+```
