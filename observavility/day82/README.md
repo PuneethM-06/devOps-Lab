@@ -58,7 +58,7 @@ Trace ID: abc123
 - Instrumentation is the process by which we **add OTel to an application so it can generate telementry data**, such as traces, metrics and logs
 
 1. **AUTOMATIC INSTRUMENTATION**
-- Sometimes OpenTelementry automatically instruments supported libraries and framework 
+- Sometimes OpenTelementry **automatically instruments supported libraries and framework** 
 - Example:
 ```
 Incoming HTTP Request
@@ -74,3 +74,16 @@ Database query
 OpenTelemetry creates another span
 ```
 - Basically, OTel can automatically and easily follow the request and how an application is working
+
+2. **MANUAL INSTRUMENTATION**
+- Sometimes OTel cannotm understand the operation in our app and we might want to manually create a span 
+- for example:
+```
+User Checkout Request
+        ↓
+Validate Cart
+        ↓
+Process Payment
+        ↓
+Send Confirmation
+```
