@@ -143,3 +143,23 @@ Tracing Backend stores traces
       ↓
 You visualize and analyze the trace
 ```
+
+10. ### HOW PROPOGATION HAPPENS
+```
+Trace ID: abc123
+
+Frontend
+Span ID: 111
+    │
+    └── API Service
+        Span ID: 222
+        Parent: 111
+            │
+            └── Payment Service
+                Span ID: 333
+                Parent: 222
+                    │
+                    └── Database
+                        Span ID: 444
+                        Parent: 333
+```
