@@ -25,3 +25,22 @@ Centralized Logs
           ↓
 Search and Investigate
 ```
+3. ### HOW LOGS REACH GRAFANA LOKI
+```
+Application / Pod / Server
+        ↓
+     Generates Logs
+        ↓
+Log Collector / Agent
+        ↓
+    Grafana Loki
+        ↓
+      Grafana
+        ↓
+Search and Investigate
+```
+1. **Application**
+- This is the target and it is responsible for generating logs
+
+2. **Log collector/Agent**
+- A collector or agent reads the logs and forwards them to loki 
