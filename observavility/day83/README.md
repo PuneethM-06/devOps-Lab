@@ -105,3 +105,10 @@ message  → Payment failed
 - It is a language used to query the logs stored in Grafana Loki to extract information 
 - Example: `{service="payment-service", environment="production"}`
 - Show me logs for service payment-service and it should be logs from production environment
+
+10. #### LOGQL FILTERING 
+- We use labes to select relevant log streams `{service="payment-service"}` or `{service="payment-service"} |= "ERROR"`
+- "|" means show me lines that contain this text 
+
+- **Exlcuding logs**
+- We can also exclude log lines like `{service="payment-service"} != "health"`
