@@ -116,3 +116,16 @@ message  → Payment failed
 **Parsing structured logs with LogQL**
 - `{service="payment-service"} | json`
 - **This means Select logs from payment-service, parse them as JSON, and show only logs where the level field is ERROR.**
+
+### COMPLETE LOGQL PIPELINE FLOW
+```
+1. Select Log Streams
+        ↓
+2. Filter Log Content
+        ↓
+3. Parse the Log
+        ↓
+4. Filter Parsed Fields
+        ↓
+5. Get Relevant Logs
+```
