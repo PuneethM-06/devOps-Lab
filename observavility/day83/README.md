@@ -72,3 +72,4 @@ pod="payment-abc123"
 10:01 INFO Validating card
 10:02 ERROR Payment failed
 ```
+> Labels identify and organize logs, while a log stream is the collection of log entries that share the same set of labels.
