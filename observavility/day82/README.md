@@ -165,3 +165,40 @@ Span ID: 111
 ```
 > If the API Service creates a new Span ID, why does it still belong to the same trace as the Frontend span?
 - Answer: **The API span belongs to the same trace because it receives the same Trace ID through context propagation, while the Parent Span ID connects it to the Frontend span.**
+
+### REAL PRODUCTION FLOW 
+```
+Slow Request Reported
+        ↓
+Use Tracing
+        ↓
+Trace the specific request
+        ↓
+Identify which service/span is slow
+        ↓
+Example: Payment Service → 4.5s
+        ↓
+Investigate the trace further
+        ↓
+Check which operation inside Payment Service is slow
+        ↓
+Database?
+External API?
+Application logic?
+        ↓
+Use Metrics
+        ↓
+Check whether this affects many requests
+        ↓
+P50 / P95 / P99 Latency
+Request Rate
+Error Rate
+CPU / Memory
+Pod Replicas / Scaling
+        ↓
+Identify the root cause
+        ↓
+Fix the issue
+        ↓
+Use Metrics + Traces to verify improvement
+```
