@@ -87,3 +87,17 @@ Process Payment
         ↓
 Send Confirmation
 ```
+7. ### OpenTelementry Architecture 
+```
+Application
+    ↓
+Instrumentation
+    ↓
+OpenTelemetry SDK
+    ↓
+OpenTelemetry Collector
+    ↓
+Tracing Backend
+```
+1. **APPLICATION**
+- This is basically the target, application or a service
