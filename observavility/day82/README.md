@@ -31,3 +31,22 @@ Span ID: 111
                     └── Database
                         Span ID: 444
 ```
+5. ### CONTEXT PROPAGATION 
+- Context propogation allows OpenTelementry to know which span belongs to which Trace
+- **How?** By the below example, if you see when Frontend passes request to API it also passes something called as **trace context** and this allows OTel to know it belongs to a certain Trace 
+```
+User Request
+    ↓
+Frontend
+Trace ID: abc123
+    │
+    │ Pass Trace Context
+    ▼
+API
+Trace ID: abc123
+    │
+    │ Pass Trace Context
+    ▼
+Payment
+Trace ID: abc123
+```
