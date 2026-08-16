@@ -106,7 +106,7 @@ Tracing Backend
 - Instrumentation is the process of OTel connecting to an application/service and it is used to **generate telementry data**
 
 3. **OpenTelementry SDK**
-- It is used inside the application to **manage and process the data collected during the process of instrumentation**
+- It is used inside the application to **manage and process the data collected during the process of instrumentation INSIDE THE APPLICATION**
 - The SDK can handle things like:
     1. Creating and managing spans 
     2. Sampling 
@@ -114,7 +114,7 @@ Tracing Backend
     4. Exporting telementry data 
 
 4. **OpenTelementry Collector**
-- It is used to **collect the telementry data from applications and store them**
+- It is used to **collect the telementry data from applications and PROCESS THEM OUTSIDE THE APPLICATION them**
 - The collector can then:
     1. Receive telementry
     2. Process or transform it
