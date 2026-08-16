@@ -123,6 +123,7 @@ Tracing Backend
 
 8. ### TRACING BACKEND 
 - Tracing backend lets you query and visualize the traces that is collected from instrumentation and processed by SDK
+- **Tracing backend stores the traces**
 
 ## OVERALL FLOW 
 ```
