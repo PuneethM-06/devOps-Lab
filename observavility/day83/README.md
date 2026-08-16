@@ -73,3 +73,7 @@ pod="payment-abc123"
 10:02 ERROR Payment failed
 ```
 > Labels identify and organize logs, while a log stream is the collection of log entries that share the same set of labels.
+
+5. ### HOW LOKI INDEXES LOGS 
+- Loki does not index each word inside the log, **it indexes the label inside the logs**
+>Loki does not index the full log content. It indexes labels such as service, environment, and namespace, which are used to narrow down the relevant logs. We can then filter the actual log content to find what we need.
