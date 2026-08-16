@@ -112,3 +112,7 @@ message  → Payment failed
 
 - **Exlcuding logs**
 - We can also exclude log lines like `{service="payment-service"} != "health"`
+
+**Parsing structured logs with LogQL**
+- `{service="payment-service"} | json`
+- **This means Select logs from payment-service, parse them as JSON, and show only logs where the level field is ERROR.**
