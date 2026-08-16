@@ -112,3 +112,11 @@ Tracing Backend
     2. Sampling 
     3. Process telementry data 
     4. Exporting telementry data 
+
+4. **OpenTelementry Collector**
+- It is used to **collect the telementry data from applications and store them**
+- The collector can then:
+    1. Receive telementry
+    2. Process or transform it
+    3. Filter it
+    4. Batch it 
