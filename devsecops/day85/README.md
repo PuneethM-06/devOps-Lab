@@ -131,3 +131,18 @@ HIGH/CRITICAL found?
     ├── Yes → exit code 1 → Job fails
     └── No  → exit code 0 → Job passes
 ```
+### BRANCH PROTECTION AND MERGE BLOCKING 
+- Failing the flow/actions wont stop someone from merging the PR and we wll need **Branch protection rules for main**
+```
+Branch protection for main
+        ↓
+Require status checks to pass
+        ↓
+Trivy Security Scan must pass
+Then 
+Trivy scan fails
+      ↓
+Required GitHub Actions check fails
+      ↓
+❌ Merge blocked
+```
