@@ -8,4 +8,4 @@
 -
 
 3. ### WHAT DOES TRIVY ACTUALLY DO?
-- 
+- When trivy scans for a container image, it automatically/magically does not know about the vulnerabilities inide. It first needs to **read the software inside the image**
