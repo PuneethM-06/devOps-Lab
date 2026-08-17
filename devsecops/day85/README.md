@@ -50,3 +50,15 @@ Vulnerability: CVE-2024-12345
 Severity: HIGH
 Fixed Version: 1.2.4
 ```
+1. **Library/package**
+- Which component has been affected
+
+2. **Installed version**
+- Current version present 
+
+3. **Vulnerability**
+- This is the identifier for identifying the CVE
+
+4. **Severity**
+- This indicates the severity associated with that vulnerability 
+
