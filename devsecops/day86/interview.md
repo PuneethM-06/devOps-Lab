@@ -21,3 +21,13 @@ my-go-app/
 ├── go.mod
 └── go.sum
 ```
+- **go.mod**
+```
+module github.com/puneeth/my-app
+
+go 1.25
+
+require github.com/gin-gonic/gin v1.11.0
+```
+- In the above example, This tells go **My application is directly dependent on this module and version**
+- This is called **direct dependency**
