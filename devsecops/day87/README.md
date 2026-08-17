@@ -157,3 +157,51 @@ Trivy
 ├── Are components in the artifact vulnerable?
 └── What components and versions are inside it? → SBOM
 ```
+
+10. ### FINAL MENTAL MODEL
+```
+Go Application
+      ↓
+go.mod
+      ↓
+Declares dependency requirements
+      ↓
+go.sum
+      ↓
+Records checksums used to verify
+downloaded module content
+      ↓
+Build Docker Image
+      ↓
+Final packaged artifact
+      ↓
+Trivy
+      ├── Vulnerability Scan
+      │        ↓
+      │   Known CVEs / findings
+      │
+      └── Generate SBOM
+               ↓
+        Components + versions
+```
+- **SBOM LIFECYCLE**
+```
+Application / Image
+        ↓
+Generate SBOM
+        ↓
+Store the inventory
+        ↓
+Time passes...
+        ↓
+New CVE is discovered
+        ↓
+Which artifacts contain
+the affected component?
+        ↓
+Check stored SBOMs
+        ↓
+Identify potentially affected apps
+        ↓
+Prioritize remediation
+```
