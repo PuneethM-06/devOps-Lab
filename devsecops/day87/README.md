@@ -134,3 +134,26 @@ Save SBOM as artifact / publish it
 Continue pipeline
 ```
 
+9. ### go.mod vs go.sum vs Snyk vs Trivy
+```
+go.mod
+↓
+What dependencies does my Go application require?
+
+go.sum
+↓
+How can downloaded module content be verified?
+
+Snyk
+↓
+Are dependencies in the dependency graph
+affected by known vulnerabilities?
+
+Docker Image
+↓
+The final packaged artifact
+
+Trivy
+├── Are components in the artifact vulnerable?
+└── What components and versions are inside it? → SBOM
+```
