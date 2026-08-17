@@ -125,3 +125,14 @@ Recognizes existing alert
     ↓
 Avoids unnecessary duplicate notifications
 ```
+### Silencing 
+- Silencing temporarily suppresses notiifcations for specific alerts 
+```
+Planned Maintenance
+        ↓
+Create Silence
+        ↓
+Matching Alerts
+        ↓
+Notifications Suppressed
+```
