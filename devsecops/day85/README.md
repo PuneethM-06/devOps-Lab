@@ -62,3 +62,5 @@ Fixed Version: 1.2.4
 4. **Severity**
 - This indicates the severity associated with that vulnerability 
 
+5. **Fixed Version**
+- This tells which version has a fix for this vulnerability 
