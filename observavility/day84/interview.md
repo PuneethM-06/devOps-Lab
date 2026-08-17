@@ -89,3 +89,15 @@ Condition becomes False
       ↓
 Resolved / Inactive
 ```
+
+### Grouping 
+- It is the process of grouping similar alerts to ensure that there are no similar errors being flooded 
+```
+5 Payment Service Alerts
+        ↓
+   Alertmanager
+        ↓
+One Grouped Notification
+        ↓
+ Payment Service: 5 instances affected
+```
