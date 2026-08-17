@@ -102,4 +102,4 @@ Fix available?
 Upgrade     Investigate
 dependency  manually
 ```
-- If ther is a fix availabe, Snyk can directly hep you with te fixed version. If not we need to investigate manually and explore the workarounds 
+- If ther is a fix availabe, Snyk doesn't necessarily "directly fix everything." It can identify available remediation and propose or automate dependency updates when supported. If not we need to investigate manually and explore the workarounds 
