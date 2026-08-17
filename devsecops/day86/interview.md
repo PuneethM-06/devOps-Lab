@@ -88,3 +88,18 @@ Severity: HIGH
 Fixed Version: v1.6
 ```
 - And it also answers an important question of, **HOW DID IT ENTER OUR APPLICATION(DIRECT DEPENDENCY/INDIRECT DEPENDENCY)**
+
+6. ### SNYK AUTO-FIX
+- Identifying the vulnerability is snyk's half job, andit can also help you fix the vulnerability by checking if there is a fix available to it 
+```
+Vulnerability found
+        ↓
+Fix available?
+   ┌────┴────┐
+   │         │
+ Yes         No
+   │         │
+Upgrade     Investigate
+dependency  manually
+```
+- If ther is a fix availabe, Snyk can directly hep you with te fixed version. If not we need to investigate manually and explore the workarounds 
