@@ -100,3 +100,19 @@ trivy image \
   my-python-app:latest
 ```
 - If you find vulnerabilities with severity matching high, critical then fail the pipeline using exit code 1
+```
+Scan image
+    ↓
+Only consider HIGH and CRITICAL findings
+    ↓
+Any matching vulnerability found?
+      │
+   ┌──┴──┐
+   │     │
+  Yes    No
+   │      │
+exit 1  exit 0
+   │      │
+ Fail    Pass
+ ```
+ 
