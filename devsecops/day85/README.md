@@ -115,4 +115,19 @@ exit 1  exit 0
    │      │
  Fail    Pass
  ```
- 
+ ### TRIVY IN GITHUB ACTIONS 
+ ```
+ PR / Push
+    ↓
+GitHub Actions runner
+    ↓
+Checkout repository
+    ↓
+Build Docker image
+    ↓
+Scan image with Trivy
+    ↓
+HIGH/CRITICAL found?
+    ├── Yes → exit code 1 → Job fails
+    └── No  → exit code 0 → Job passes
+```
