@@ -31,3 +31,15 @@ require github.com/gin-gonic/gin v1.11.0
 ```
 - In the above example, This tells go **My application is directly dependent on this module and version**
 - This is called **direct dependency**
+- Whereas, `gin` might be dependent on another modules and that becomes **indirect dependency** 
+```
+Your Application
+        ↓
+      Gin
+        ↓
+ ┌──────┼──────┐
+ ↓      ↓      ↓
+Dep A  Dep B  Dep C
+```
+- **DIRECT DEPENDENCY** - A dependency our application directly imports
+- **INDIRECT DEPENDENCY** - Required by one of our dependency 
