@@ -55,3 +55,8 @@ go 1.25
 
 require github.com/gin-gonic/gin v1.11.0
 ```
+- **go.sum**
+- It contains checksums for module versions and dependency requirements uses in `go.mod`
+
+### go.mod and go.sum in a nutshell 
+- **go.mod says what dependencies/modules and versions are required for this project. go.sum ensure the downloaded version matches what is expected**
