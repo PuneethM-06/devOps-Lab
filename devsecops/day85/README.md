@@ -72,3 +72,4 @@ MEDIUM    → Moderate severity
 HIGH      → Serious security concern
 CRITICAL  → Very serious security concern
 ```
+> Scanning only requirements.txt mainly checks application dependencies, while scanning the final Docker image can also detect vulnerabilities in the base image and OS-level packages included in the deployable artifact.
