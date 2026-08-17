@@ -106,3 +106,31 @@ Identify potentially affected applications
         ↓
 Prioritize remediation
 ```
+8. ### SBOM IN CI/CD
+```
+Go application
+      ↓
+Build Docker image
+      ↓
+my-go-app:latest
+      ↓
+Trivy generates SBOM
+      ↓
+sbom.json
+```
+- The core reason for doing this is **automation and consistency**
+- **Actual workflow**
+```
+Push / Pull Request
+        ↓
+GitHub Actions
+        ↓
+Build Docker image
+        ↓
+Trivy generates SBOM
+        ↓
+Save SBOM as artifact / publish it
+        ↓
+Continue pipeline
+```
+
