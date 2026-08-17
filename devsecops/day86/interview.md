@@ -138,3 +138,17 @@ Vulnerabilities found?
 Pass / Fail
 ```
 - We can leverage Branch protection based on CI pass/fail.
+```
+Snyk
+  ↓
+Finds vulnerability
+
+CI/CD
+  ↓
+Runs the scan and marks it pass/fail
+
+Branch protection
+  ↓
+Can require the security check to pass
+before merging
+```
