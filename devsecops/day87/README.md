@@ -39,3 +39,16 @@ Supplier / Source
 Dependency relationship
 ```
 - SBOM can also contain **dependency relationship** to see how each package is related to each other 
+
+5. ### GENERATING AN SBOM WITH TRIVY
+- Suppose we have 
+```
+Docker Image
+│
+├── Your Go application
+├── Go dependencies
+├── Base image components
+├── OS packages
+└── Other installed components
+```
+- Trivy scans for these and creates an inventory of list of packages and versions an application is using as an SBOM
