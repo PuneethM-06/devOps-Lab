@@ -122,3 +122,19 @@ Tests run
         ↓
 PR merged
 ```
+
+8. ### SNYK IN CI/CD
+- As discussed till now, this is the manual way of handling snyk 
+- we do not want to manually do this instead we want to integrate this to CI pipeline 
+```
+Developer opens / updates PR
+        ↓
+CI pipeline starts
+        ↓
+Snyk scans Go dependencies
+        ↓
+Vulnerabilities found?
+        ↓
+Pass / Fail
+```
+- We can leverage Branch protection based on CI pass/fail.
