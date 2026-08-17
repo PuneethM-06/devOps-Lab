@@ -65,3 +65,27 @@ Error rate < 5%
         ↓
 Resolved
 ```
+### OVERALLL FLOW/MENTAL MODEL
+```
+Condition False
+      ↓
+   Inactive
+
+Condition becomes True
+      ↓
+   Pending
+      ↓
+True for entire `for` duration?
+      ↓
+     Yes
+      ↓
+   Firing
+      ↓
+Alertmanager
+      ↓
+Slack / Email
+
+Condition becomes False
+      ↓
+Resolved / Inactive
+```
