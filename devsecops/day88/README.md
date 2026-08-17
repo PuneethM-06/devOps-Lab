@@ -43,3 +43,8 @@ token
 api_key
 access_key
 ```
+3. **ENTROPY**
+- some secrets are long strings, which can be indicated as a secret 
+- Example: `skdjf83jdKLSJDF9sdfKJ23klsdf...`
+
+4 
