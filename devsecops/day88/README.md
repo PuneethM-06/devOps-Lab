@@ -47,4 +47,26 @@ access_key
 - some secrets are long strings, which can be indicated as a secret 
 - Example: `skdjf83jdKLSJDF9sdfKJ23klsdf...`
 
-4 
+5. ### PRE-COMMIT HOOKS
+- **A script or a check that automatically runs before Git creates a commit** 
+```
+Developer changes code
+        ↓
+git add
+        ↓
+Changes are staged
+        ↓
+git commit
+        ↓
+Pre-commit hook runs
+        ↓
+Gitleaks scans staged changes
+        ↓
+Secret found?
+   ┌────┴────┐
+   │         │
+  No        Yes
+   │         │
+Commit      Commit blocked
+continues
+```
