@@ -52,3 +52,16 @@ Firing
    ↓
 Sent to Alertmanager
 ```
+4. **RESOLVED**
+- Once the alert is triggered, the following engineer will look into the issue and once fixed it will be marked as resolved 
+```
+Error rate > 5%
+        ↓
+Firing
+        ↓
+Issue is fixed
+        ↓
+Error rate < 5%
+        ↓
+Resolved
+```
