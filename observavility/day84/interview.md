@@ -41,3 +41,14 @@ Condition becomes true
         ↓
 Wait for 5 minutes
 ```
+3. **FIRING**
+- Both, the condition and `for` is true now and hence the alert will be fired/triggered
+```
+Pending
+   ↓
+Condition true for 5 minutes
+   ↓
+Firing
+   ↓
+Sent to Alertmanager
+```
