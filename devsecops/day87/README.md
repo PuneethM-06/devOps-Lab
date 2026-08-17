@@ -21,3 +21,6 @@ Identify affected versions
         ↓
 Prioritize remediation
 ```
+3. ### SBOM vs VULNERABILITY SCANNING 
+- SBOM answers what versions and packages we have in our applications and containers running 
+- Vulnerability scanner helps us understand which package/version has a CVE reported 
