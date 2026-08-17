@@ -43,3 +43,15 @@ Dep A  Dep B  Dep C
 ```
 - **DIRECT DEPENDENCY** - A dependency our application directly imports
 - **INDIRECT DEPENDENCY** - Required by one of our dependency 
+
+3. ### go.mod and go.sum
+- **go.mod**
+- It defines the **Go module and dependency requirements**
+- Example:
+```
+module github.com/puneeth/my-app
+
+go 1.25
+
+require github.com/gin-gonic/gin v1.11.0
+```
