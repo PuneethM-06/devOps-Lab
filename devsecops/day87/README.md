@@ -24,3 +24,18 @@ Prioritize remediation
 3. ### SBOM vs VULNERABILITY SCANNING 
 - SBOM answers what versions and packages we have in our applications and containers running 
 - Vulnerability scanner helps us understand which package/version has a CVE reported 
+
+4. ### WHAT DOES AN SBOM CONTAIN 
+- As we know SBOM is a inventory of components and versions/packages that applications contain
+```
+Component / Package Name
+        ↓
+Version
+        ↓
+Identifier
+        ↓
+Supplier / Source
+        ↓
+Dependency relationship
+```
+- SBOM can also contain **dependency relationship** to see how each package is related to each other 
