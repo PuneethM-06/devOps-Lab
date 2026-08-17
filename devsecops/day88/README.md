@@ -19,3 +19,7 @@ Secrets
 ├── Private keys
 └── Connection strings containing credentials
 ```
+> Config values such as ports etc, are not really secrets 
+
+3. ### WHY .gitignore is not enough
+- .gitignore can help secrets not going to github for untracked files (files inside .gitignore). But secrets can go when they are places inside a tracked file 
