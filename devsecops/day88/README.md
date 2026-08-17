@@ -23,3 +23,23 @@ Secrets
 
 3. ### WHY .gitignore is not enough
 - .gitignore can help secrets not going to github for untracked files (files inside .gitignore). But secrets can go when they are places inside a tracked file 
+
+4. ### HOW GITLEAKS DETECTS SECRETS 
+- It uses **detection rules to identiy a secret** 
+1. **Known patterns**
+- Some credentials follow known patterns 
+- Example: 
+```
+AWS_ACCESS_KEY_ID=AKIA...
+GITHUB_TOKEN=ghp_...
+```
+
+2.**Keywords and context**
+- Variable names can provide context
+```
+password
+secret
+token
+api_key
+access_key
+```
