@@ -73,3 +73,4 @@ HIGH      → Serious security concern
 CRITICAL  → Very serious security concern
 ```
 > Scanning only requirements.txt mainly checks application dependencies, while scanning the final Docker image can also detect vulnerabilities in the base image and OS-level packages included in the deployable artifact.
+> Scanning the final Docker image gives us a more complete view because it includes both application dependencies and the underlying packages shipped in the image.
