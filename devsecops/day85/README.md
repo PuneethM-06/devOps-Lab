@@ -89,3 +89,14 @@ Checks known vulnerability information
         ↓
 Displays the findings
 ```
+
+### EXIT CODES
+- **Exit code 0 -> Success**
+- **Non-Zero exit code -> Failure**
+```
+trivy image \
+  --severity HIGH,CRITICAL \
+  --exit-code 1 \
+  my-python-app:latest
+```
+- If you find vulnerabilities with severity matching high, critical then fail the pipeline using exit code 1
