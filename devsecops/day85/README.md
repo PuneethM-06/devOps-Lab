@@ -28,7 +28,7 @@ Reports the findings
 - It reads the software, and packages inside then checks for CVE's against them 
 
 ### WHERE DOES TRIVY GET THIS VULNERABILITY INFORMATION FROM?
-- Trivy gets vulnerability information from vulnerability databases and security advisories
+- Trivy gets vulnerability information from **vulnerability databases and security advisories**
 ```
 Package + Version
       ↓
@@ -40,4 +40,13 @@ Does a known CVE affect this version?
       ↓
 YES → Report the vulnerability
 NO  → No matching finding
+```
+### UNDERSTANDING TRIVY SCAN RESULT 
+- A trivy scanned result may look like 
+```
+Library: openssl
+Installed Version: 1.2.3
+Vulnerability: CVE-2024-12345
+Severity: HIGH
+Fixed Version: 1.2.4
 ```
