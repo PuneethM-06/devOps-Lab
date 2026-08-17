@@ -169,4 +169,39 @@ Trivy scans final image
         ↓
 Deploy
 ```
- 
+10. ### FINAL MENTAL MODEL 
+```
+Go Application
+      ↓
+go.mod
+      ↓
+Direct dependencies
+      +
+Indirect dependencies
+      ↓
+Complete dependency graph
+      ↓
+Snyk scans the dependency graph
+      ↓
+Known vulnerability found?
+      │
+      ├── No
+      │     ↓
+      │   Pass
+      │
+      └── Yes
+            ↓
+      Is a fix available?
+            │
+       ┌────┴────┐
+       │         │
+      Yes        No
+       │         │
+Upgrade /     Investigate
+Propose fix   manually
+       │
+       ↓
+Review + Test
+       ↓
+Merge
+```
