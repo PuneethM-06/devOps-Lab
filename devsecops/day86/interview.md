@@ -60,3 +60,20 @@ require github.com/gin-gonic/gin v1.11.0
 
 ### go.mod and go.sum in a nutshell 
 - **go.mod says what dependencies/modules and versions are required for this project. go.sum ensure the downloaded version matches what is expected**
+
+4. ### HOW SYNK SCANS FOR GO DEPENDENCIES 
+```
+Go project
+    ↓
+go.mod / dependency information
+    ↓
+Snyk builds or analyzes the dependency graph
+    ↓
+Identifies direct + indirect dependencies
+    ↓
+Checks them against known vulnerability information
+    ↓
+Reports vulnerable dependencies
+```
+- Snyk understands the direct and indirect packages/versions used by our application and scans those exact versions against the CVE information
+- Irrespective of direct, indirect packages. Reports are given for CVE's in both direct and indirect packages 
