@@ -64,3 +64,11 @@ Fixed Version: 1.2.4
 
 5. **Fixed Version**
 - This tells which version has a fix for this vulnerability 
+
+### SEVERITY LEVELS - LOW, MEDIUM, HIGH, CRITICAL
+```
+LOW       → Lower severity
+MEDIUM    → Moderate severity
+HIGH      → Serious security concern
+CRITICAL  → Very serious security concern
+```
