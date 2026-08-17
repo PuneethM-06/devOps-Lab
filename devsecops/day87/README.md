@@ -79,3 +79,16 @@ my-go-app:latest
     ↓
 Target image
 ```
+6. ### SBOM FORMATS:CycloneDX and SPDX
+- SBOM is an inventory and there must be a standard format that the is needed for understanding and exchanging and hence we have:
+    1. CycloneDX
+    2. SPDX
+- CycloneDX is commonly used in software supply-chain and security workflows
+```
+Component
+Version
+Dependencies
+Identifiers
+Metadata
+```
+- SPDX is also widely use for describing components and related information 
