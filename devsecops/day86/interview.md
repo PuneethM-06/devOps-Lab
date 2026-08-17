@@ -75,5 +75,16 @@ Checks them against known vulnerability information
     ↓
 Reports vulnerable dependencies
 ```
-- Snyk understands the direct and indirect packages/versions used by our application and scans those exact versions against the CVE information
+- Snyk understands the direct and indirect packages/versions used by our application using **dependency graph** and scans those exact versions against the CVE information
 - Irrespective of direct, indirect packages. Reports are given for CVE's in both direct and indirect packages 
+
+5. ### WHAT HAPPENS WHEN SNYK FINDS A VULNERABILITY DEPENDENCY 
+- As the above process, snyk scans for dependency graph and gives information like 
+```
+Package: Package B
+Installed Version: v1.5
+Vulnerability: CVE-XXXX-XXXXX
+Severity: HIGH
+Fixed Version: v1.6
+```
+- And it also answers an important question of, **HOW DID IT ENTER OUR APPLICATION(DIRECT DEPENDENCY/INDIRECT DEPENDENCY)**
