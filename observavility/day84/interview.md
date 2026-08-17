@@ -101,3 +101,13 @@ One Grouped Notification
         ↓
  Payment Service: 5 instances affected
 ```
+
+### routing 
+- Routing determines where the alert must be **routed based on the labels** 
+```
+Payment Service Alert
+        ↓
+team="payments"
+        ↓
+Payments Slack Channel
+```
