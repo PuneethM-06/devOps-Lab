@@ -62,3 +62,20 @@ Identifies packages + versions
 Generates SBOM
 ```
  > command is: `trivy image --format cyclonedx --output sbom.json my-go-app:latest`
+```
+trivy image
+    ↓
+Scan/inspect the container image
+
+--format cyclonedx
+    ↓
+Generate the SBOM in CycloneDX format
+
+--output sbom.json
+    ↓
+Save the generated SBOM to a file
+
+my-go-app:latest
+    ↓
+Target image
+```
