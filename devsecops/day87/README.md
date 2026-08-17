@@ -52,3 +52,13 @@ Docker Image
 └── Other installed components
 ```
 - Trivy scans for these and creates an inventory of list of packages and versions an application is using as an SBOM
+```
+Docker Image
+      ↓
+Trivy inspects components
+      ↓
+Identifies packages + versions
+      ↓
+Generates SBOM
+```
+ > command is: `trivy image --format cyclonedx --output sbom.json my-go-app:latest`
