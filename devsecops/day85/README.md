@@ -26,3 +26,18 @@ Checks whether those specific versions have known vulnerabilities
 Reports the findings
 ```
 - It reads the software, and packages inside then checks for CVE's against them 
+
+### WHERE DOES TRIVY GET THIS VULNERABILITY INFORMATION FROM?
+- Trivy gets vulnerability information from vulnerability databases and security advisories
+```
+Package + Version
+      ↓
+openssl 1.2.3
+      ↓
+Trivy checks vulnerability databases
+      ↓
+Does a known CVE affect this version?
+      ↓
+YES → Report the vulnerability
+NO  → No matching finding
+```
