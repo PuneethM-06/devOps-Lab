@@ -111,3 +111,17 @@ team="payments"
         ↓
 Payments Slack Channel
 ```
+
+### Deduplication 
+- Dedupliation prevent alertmanager from repeatedly sending the same alert notification 
+```
+Prometheus
+    ↓
+Same alert updates
+    ↓
+Alertmanager
+    ↓
+Recognizes existing alert
+    ↓
+Avoids unnecessary duplicate notifications
+```
