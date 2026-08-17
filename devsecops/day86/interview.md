@@ -5,9 +5,19 @@
 ```
 Go project
    ↓
-go.mod / dependency graph
+go.mod 
    ↓
 Snyk
    ↓
 Find vulnerable dependencies
+```
+
+2. ### GO DEPENDENCIES: go.mod, direct and indirect dependencies 
+- A Go Project does not download and manage every dependency file-by-file 
+- Instead, Go uses modules such as:
+```
+my-go-app/
+├── main.go
+├── go.mod
+└── go.sum
 ```
