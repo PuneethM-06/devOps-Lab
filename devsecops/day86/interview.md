@@ -152,3 +152,21 @@ Branch protection
 Can require the security check to pass
 before merging
 ```
+9. ### SNYK vs TRIVY
+- Snyk is focused mainly on the **developer and application dependency flow**
+- Trivy is focused on docker images; Scan different layers of image + underlying OS
+**Use both**
+```
+Developer writes Go application
+        ↓
+go.mod dependencies
+        ↓
+Snyk scans dependency graph
+        ↓
+Build Docker image
+        ↓
+Trivy scans final image
+        ↓
+Deploy
+```
+ 
