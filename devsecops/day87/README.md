@@ -92,3 +92,17 @@ Identifiers
 Metadata
 ```
 - SPDX is also widely use for describing components and related information 
+7. ### WHY SBOMs MATTER WHEN NEW CVE IS DISCOVERED?
+```
+New CVE affects Package X
+        ↓
+Check SBOM inventory
+        ↓
+Which applications/artifacts contain Package X?
+        ↓
+Which versions are they using?
+        ↓
+Identify potentially affected applications
+        ↓
+Prioritize remediation
+```
