@@ -144,4 +144,34 @@ DatabaseDown → CRITICAL
 DatabaseConnectionError → WARNING
 ApplicationError → WARNING
 ```
-- If DB is down other alerts maybe the consequences of these alerts and hence it will be automatically silenced
+- If DB is down other alerts maybe the consequences of these alerts and hence it will be automatically 
+
+### Actual Alertmanager + Slack alert flow 
+```
+Application
+    ↓
+Exposes Metrics
+    ↓
+Prometheus Scrapes Metrics
+    ↓
+Prometheus Evaluates Alert Rule
+    ↓
+Condition True
+    ↓
+Pending (`for: 5m`)
+    ↓
+Still True After 5 Minutes
+    ↓
+Firing
+    ↓
+Alertmanager Receives Alert
+    ↓
+Grouping / Deduplication / Inhibition / Silencing
+    ↓
+Routing
+    ↓
+Slack Receiver
+    ↓
+🚨 Notification
+```
+>Prometheus detects the problem and fires the alert. Alertmanager manages that alert and decides how it should be handled and where the notification should be sent.
