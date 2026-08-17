@@ -136,3 +136,12 @@ Matching Alerts
         ↓
 Notifications Suppressed
 ```
+### Inhibition 
+- Inhibition is when one alert ca automatically supress another related alert
+```
+DatabaseDown → CRITICAL
+
+DatabaseConnectionError → WARNING
+ApplicationError → WARNING
+```
+- If DB is down other alerts maybe the consequences of these alerts and hence it will be automatically silenced
