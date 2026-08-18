@@ -119,3 +119,18 @@ Secret leaked
     - Who had access?
     - Secret was pushed to a remote repo
     - Is it copied to logs?
+
+3. **Remove it from current code**
+- remove the token from the code if it is accidentaly pushed 
+
+4. **Clean git history**
+- A better practise would be to clean repo history, but we still need to revoke the old token and create new one 
+5. **Prevent Recurrence**
+- Add layers such as
+```
+Gitleaks pre-commit hook
+        +
+Gitleaks CI scan
+        +
+Better secret management
+```
