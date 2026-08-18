@@ -96,3 +96,19 @@ Secret found?
 Pipeline    Pipeline fails
 continues
 ```
+8. ### WHAT HAPPENS IF A SECRET IS ALREADY LEAKED?
+```
+Secret leaked
+      ↓
+1. Revoke or rotate the secret
+      ↓
+2. Investigate where it was exposed
+      ↓
+3. Remove it from the code/repository
+      ↓
+4. Clean Git history if necessary
+      ↓
+5. Add controls to prevent it again
+```
+1. **Revoke or Rotate the secret**
+- Revoke the old token and create a new one 
