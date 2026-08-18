@@ -70,3 +70,29 @@ Secret found?
 Commit      Commit blocked
 continues
 ```
+6. ### WHY DELETING A SECRET IS NOT ENOUGH 
+- Because once it is committed, anyone access to the repo can see the secret in git history 
+
+7. ### GIT LEAKS IN CI/CD
+- A pre-commit hook is usefl but it cannot be the only defense because **pre-commit hooks can ebe bypassed**
+```
+Developer
+    ↓
+Pre-commit hook
+    ↓
+Gitleaks scans before commit
+    ↓
+Commit / Push
+    ↓
+GitHub Actions / CI
+    ↓
+Gitleaks scans again
+    ↓
+Secret found?
+   ┌────┴────┐
+   │         │
+  No        Yes
+   │         │
+Pipeline    Pipeline fails
+continues
+```
