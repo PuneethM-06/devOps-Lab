@@ -134,3 +134,36 @@ Gitleaks CI scan
         +
 Better secret management
 ```
+9. ### FINAL SECURITY PIPELINE MENTAL MODEL
+```
+Developer writes code
+        ↓
+Gitleaks
+        ↓
+Check for accidentally exposed secrets
+        ↓
+Commit / Push
+        ↓
+Snyk
+        ↓
+Check application dependencies
+for known vulnerabilities
+        ↓
+Build Docker Image
+        ↓
+Trivy
+        ├── Vulnerability Scan
+        │       ↓
+        │   Check application dependencies,
+        │   base image and OS packages
+        │
+        └── SBOM Generation
+                ↓
+            Components + Versions
+```
+| Tool         | Main purpose                                                |
+| ------------ | ----------------------------------------------------------- |
+| **Gitleaks** | Detect accidentally exposed secrets                         |
+| **Snyk**     | Analyze application dependency vulnerabilities              |
+| **Trivy**    | Scan artifacts such as container images for vulnerabilities |
+| **SBOM**     | Inventory of components and versions inside an artifact     |
