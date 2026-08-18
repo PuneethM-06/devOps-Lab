@@ -112,3 +112,10 @@ Secret leaked
 ```
 1. **Revoke or Rotate the secret**
 - Revoke the old token and create a new one 
+
+2. **Investigate where it was exposed**
+- Ask for questions such as:
+    - Public repo?
+    - Who had access?
+    - Secret was pushed to a remote repo
+    - Is it copied to logs?
