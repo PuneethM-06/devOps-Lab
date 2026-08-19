@@ -44,3 +44,6 @@ Valid?
    │         │
 Trust       Reject 
 ```
+**WHAT DOES SIGNING AND VERIFICATION MEAN?**
+- **Signing** - I, the trusted signer, approved/signed this specific artifact
+- **Verification** - Can I cryptographically match what was signed by the trusted signer is the same??
