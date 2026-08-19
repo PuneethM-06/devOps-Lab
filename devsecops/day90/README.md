@@ -59,3 +59,17 @@ Public key
     ↓
 Verifies the signature
 ```
+
+**SIGNING**
+- A trusted entity such as CI/CD pipeline has access to private key 
+```
+CI/CD
+  ↓
+Build image
+  ↓
+my-app@sha256:111
+  ↓
+Private key
+  ↓
+Cosign signs the image
+```
