@@ -47,3 +47,15 @@ Trust       Reject
 **WHAT DOES SIGNING AND VERIFICATION MEAN?**
 - **Signing** - I, the trusted signer, approved/signed this specific artifact
 - **Verification** - Can I cryptographically match what was signed by the trusted signer is the same??
+
+4. ### PUBLIC AND PRIVATE KEY MODEL
+- The traditional image signing is a asymmetric cryptography 
+```
+Private key
+    ↓
+Signs the image
+
+Public key
+    ↓
+Verifies the signature
+```
