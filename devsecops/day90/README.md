@@ -110,3 +110,21 @@ Later verification
       ↓
 Verify artifact + trusted identity
 ```
+6. ### TAMPERING AND TRUST SCENARIOES
+**SCENARIO 1**
+```
+Trusted CI
+    ↓
+Builds image
+    ↓
+sha256:111
+    ↓
+Signs image 
+    ↓
+Deployment verifies signature
+    ↓
+Valid + trusted identity
+    ↓
+Deploy 
+```
+- The image passes verification because the artifact matches what was signed 
