@@ -86,3 +86,16 @@ Minimal runtime image
 Distroless container
 ```
 - **Unlike interpreted languages, the production container does not need the Go compiler or source code to run the compiled application.**
+
+7. ### SCRATCH vs DISTROLESS
+- Scratch is basically an **empty base image** and we build the image with components that our app needs 
+- Where as a Distroless image is not a base image and it comes with a minimum runtime 
+
+| `scratch`                                     | Distroless                           |
+| --------------------------------------------- | ------------------------------------ |
+| Essentially empty                             | Minimal runtime environment          |
+| You provide everything needed                 | Provides selected runtime components |
+| Can be extremely small                        | Usually slightly larger              |
+| Can require more setup                        | Often more convenient                |
+| Good for fully self-contained/static binaries | Good for minimal production runtimes |
+
