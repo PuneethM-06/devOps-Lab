@@ -30,3 +30,7 @@ Distroless image
     1. A vulnerability
     2. Misconfigurations
     3. Unnecessary binary attack 
+**PRINCIPLE**: If a component is not needed then do not include at all 
+
+4. ### NO SHELL: WHAT DOES THAT ACTUALLY MEAN 
+- In traditional images we can do something like ``docker exec -it my-container bash`` where as in a distroless image that cannot e done because distroless image does not include a shell like `sh` or `]`  
