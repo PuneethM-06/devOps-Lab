@@ -180,3 +180,40 @@ Valid trusted signature?
    │         │
 Allow      Deny 
 ```
+
+8. ### FINAL MENTAL MODEL 
+```
+Developer
+    ↓
+Code
+    ↓
+Gitleaks
+    ↓
+Check for leaked secrets
+    ↓
+Build application/image
+    ↓
+Snyk
+    ↓
+Check dependencies for vulnerabilities
+    ↓
+Trivy
+    ↓
+Scan image for vulnerabilities
+    +
+Generate/inspect SBOM
+    ↓
+Cosign
+    ↓
+Sign the specific artifact
+    ↓
+Push to registry
+    ↓
+Deployment
+    ↓
+Verify signature
+    ↓
+Policy enforcement
+    ↓
+Allow / Reject
+```
