@@ -177,3 +177,4 @@ Distroless or scratch
       ↓
 Production image
 ```
+> Distroless images are production-focused container images that remove unnecessary general-purpose tooling such as shells and package managers, leaving a minimal runtime environment for the application. This reduces the attack surface, but makes direct debugging harder. For Go applications, multi-stage builds work particularly well because the application can be compiled in a builder stage and only the binary and required runtime components are copied into a distroless image - or into scratch if the binary is fully self-contained.
