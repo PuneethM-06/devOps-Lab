@@ -141,12 +141,12 @@ No copy-pasted theory. Everything here was typed and run by me.
 ### Phase 3 — DevSecOps + Projects (Months 7–9)
 
 #### Container & Supply Chain Security
-- [ ] Day 85 — Trivy in GitHub Actions — block CVEs from merging
-- [ ] Day 86 — Snyk — scan Python deps, auto-fix PRs
-- [ ] Day 87 — SBOM — generate with Trivy, understand why it matters
-- [ ] Day 88 — gitleaks — pre-commit hook catching leaked secrets
-- [ ] Day 89 — Distroless images — no shell, smaller attack surface
-- [ ] Day 90 — Image signing with cosign
+- [x] Day 85 — Trivy in GitHub Actions — block CVEs from merging
+- [x] Day 86 — Snyk — scan Python deps, auto-fix PRs
+- [x] Day 87 — SBOM — generate with Trivy, understand why it matters
+- [x] Day 88 — gitleaks — pre-commit hook catching leaked secrets
+- [x] Day 89 — Distroless images — no shell, smaller attack surface
+- [x] Day 90 — Image signing with cosign
 
 #### Secrets Management
 - [ ] Day 91 — AWS Secrets Manager — store, fetch at runtime
