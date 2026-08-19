@@ -49,3 +49,23 @@ Tracing
 Kubernetes events/logs
 ```
 - Here we leverage, application logs, k8s logs and metrics from observaility tools 
+
+2. **DEBUG OR EPHEMERAL CONTAINERS**
+- In k8s, we can attach epehemeral debug containers that has tools such as:
+```
+sh
+curl
+ping
+nslookup
+ps
+```
+```
+Pod
+│
+├── Application Container
+│      └── Distroless
+│          └── No shell
+│
+└── Ephemeral Debug Container
+       └── Has debugging tools
+```
