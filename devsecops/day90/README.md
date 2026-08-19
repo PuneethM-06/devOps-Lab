@@ -153,3 +153,16 @@ Verification fails
     ↓
 Reject deployment 
 ```
+7. ### WHERE DOES VERIFICATION HAPPEN
+- It can happen inside a CI/CD before a deployment 
+```
+Build
+  ↓
+Scan
+  ↓
+Sign
+  ↓
+Verify required conditions
+  ↓
+Deploy
+```
