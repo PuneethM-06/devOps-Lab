@@ -106,3 +106,10 @@ Distroless container
     2. vul runtime libraries
     3. Application code vul
     4. miconfig
+
+9. ### WHEN SHOULD WE USE DISTROLESS IMAGE 
+- It can be a good combination when we can use it:
+    1. Prod environmens
+    2. compiled/prepared applications
+    3. minimal runtime
+    4. We have other ways of debugging 
