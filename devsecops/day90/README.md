@@ -92,3 +92,21 @@ Valid?
    │         │
 Trust      Reject
 ```
+-  The public key is safe to distribute unlike private key because it is used for verification 
+
+5. ### KEYLESS SIGNING 
+- We know private key signs the image and it is important to keep it safe.
+- Instead of manually managing a long lived key, 
+```
+CI/CD pipeline
+      ↓
+Proves its identity
+      ↓
+Cosign performs keyless signing
+      ↓
+Signature is associated with that identity
+      ↓
+Later verification
+      ↓
+Verify artifact + trusted identity
+```
