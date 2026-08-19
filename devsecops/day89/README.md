@@ -69,3 +69,20 @@ Pod
 └── Ephemeral Debug Container
        └── Has debugging tools
 ```
+3. **SEPERATE DEBUG IMAGE**
+- Another approach is to build a sepearate debug image with the same application runnning 
+
+6. ### DISTROLESS + GO
+- Go and distroless image go hand in hand because Go application can be often compiled into a **self-contained executable binary**
+```
+Go source code
+      ↓
+go build
+      ↓
+Compiled binary
+      ↓
+Minimal runtime image
+      ↓
+Distroless container
+```
+- **Unlike interpreted languages, the production container does not need the Go compiler or source code to run the compiled application.**
