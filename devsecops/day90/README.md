@@ -166,3 +166,17 @@ Verify required conditions
   ↓
 Deploy
 ```
+2. **Kubernetes policy/admission layer**
+- Only allow container images signed by our trusted CI identity 
+```
+Deployment request
+        ↓
+Admission / policy check
+        ↓
+Valid trusted signature?
+   ┌────┴────┐
+   │         │
+  Yes        No
+   │         │
+Allow      Deny 
+```
