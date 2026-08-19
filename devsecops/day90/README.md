@@ -128,3 +128,18 @@ Valid + trusted identity
 Deploy 
 ```
 - The image passes verification because the artifact matches what was signed 
+**Scenario 2 — Image content changes**
+```
+Original image
+sha256:111
+    ↓
+Signed 
+
+Image changes
+    ↓
+sha256:222
+    ↓
+Old signature does not validate 
+```
+- fails because the image was associate with the original artifact and not this one 
+
