@@ -33,4 +33,19 @@ Distroless image
 **PRINCIPLE**: If a component is not needed then do not include at all 
 
 4. ### NO SHELL: WHAT DOES THAT ACTUALLY MEAN 
-- In traditional images we can do something like ``docker exec -it my-container bash`` where as in a distroless image that cannot e done because distroless image does not include a shell like `sh` or `]`  
+- In traditional images we can do something like ``docker exec -it my-container bash`` where as in a distroless image that cannot e done because distroless image does not include a shell like `sh` or `bash`  
+
+- The logic is, shell is used for debugging, if the goal is to run the application then why do we need a shell 
+
+5. ### HOW DO WE DEBUG A DISTROLESS CONTAINER
+1. **OBSERVABILITY FIRST**
+```
+Application logs
+        ↓
+Metrics
+        ↓
+Tracing
+        ↓
+Kubernetes events/logs
+```
+- Here we leverage, application logs, k8s logs and metrics from observaility tools 
