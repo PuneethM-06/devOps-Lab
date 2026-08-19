@@ -113,3 +113,48 @@ Distroless container
     2. compiled/prepared applications
     3. minimal runtime
     4. We have other ways of debugging 
+
+10. ### FINAL MENTAL MODEL
+```
+Traditional Image
+─────────────────
+Ubuntu / Debian / Alpine
+
+Application
++ Shell
++ Package manager
++ System utilities
++ Libraries
++ Other general-purpose components
+
+More convenience
+Easier debugging
+Larger attack surface
+```
+```
+Distroless Image
+─────────────────
+
+Application
++ Minimal runtime components
++ Required libraries
+
+No general-purpose shell
+No package manager
+
+Less convenience
+Harder to debug directly
+Smaller attack surface
+```
+```
+scratch
+─────────────────
+
+Your application
++ Everything required to run it
+
+Essentially empty base
+
+Extremely minimal
+Requires a self-contained application
+````
