@@ -99,3 +99,10 @@ Distroless container
 | Can require more setup                        | Often more convenient                |
 | Good for fully self-contained/static binaries | Good for minimal production runtimes |
 
+8. ### SECURITY TRADE OFFS
+- **Distroless can reduce the attack surface but that does not mean we can automatically make our application more secure**
+- A distroless image can still contain:
+    1. Vulnerable application dependencies
+    2. vul runtime libraries
+    3. Application code vul
+    4. miconfig
