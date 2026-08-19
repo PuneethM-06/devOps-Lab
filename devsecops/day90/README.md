@@ -19,3 +19,6 @@ Valid and from trusted identity?
    │                 │
 Trust              Reject
 ```
+2. ### IMAGE TAGS vs IMAGAE DIGESTS
+- **Image Tags** are human readble name/version and they can be over written 
+- **Image Digests** - They are cryptographic values that can be attached to an image, but they change if the image change too 
