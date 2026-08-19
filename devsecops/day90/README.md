@@ -143,3 +143,13 @@ Old signature does not validate
 ```
 - fails because the image was associate with the original artifact and not this one 
 
+**Scenario 3 — Unsigned image**
+```
+Unknown image
+    ↓
+No valid trusted signature
+    ↓
+Verification fails
+    ↓
+Reject deployment 
+```
