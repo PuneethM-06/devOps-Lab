@@ -14,3 +14,19 @@ Distroless image
 
 2. ### TRADITIONAL BASE IMAGES vs DISTROLESS IMAGES
 -  A traditional image such as ubunut, alpine and debian contain general purpose tooling by default.
+
+| Traditional Image        | Distroless Image         |
+| ------------------------ | ------------------------ |
+| Usually has a shell      | Usually no shell         |
+| May have package manager | No package manager       |
+| More utilities           | Minimal utilities        |
+| Easier to debug inside   | Harder to debug directly |
+| Larger attack surface    | Smaller attack surface   |
+
+### 3. WHY DOES A SMALLER ATTACK SURAFACE MATTER 
+- An attack surface is basically the collection of possible entry points for the attackers to enter and breach the application
+
+- More additional component can result in:
+    1. A vulnerability
+    2. Misconfigurations
+    3. Unnecessary binary attack 
