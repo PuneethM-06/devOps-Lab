@@ -158,3 +158,22 @@ Essentially empty base
 Extremely minimal
 Requires a self-contained application
 ````
+**PRODUCTION FLOW**
+```Go Source Code
+      ↓
+Multi-stage build
+      ↓
+Builder Stage
+├── Go compiler
+├── Source code
+├── Dependencies
+└── Build tools
+      ↓
+Compiled binary
+      ↓
+Final Stage
+      ↓
+Distroless or scratch
+      ↓
+Production image
+```
