@@ -73,3 +73,22 @@ Private key
   ↓
 Cosign signs the image
 ```
+
+**VERIFICATION**
+- The verifier uses the corresponding public key 
+```
+Image
+   +
+Signature
+   +
+Public key
+        ↓
+Cosign verify
+        ↓
+Valid?
+   ┌────┴────┐
+   │         │
+ Yes         No
+   │         │
+Trust      Reject
+```
