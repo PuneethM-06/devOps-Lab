@@ -196,3 +196,20 @@ Pod / Application
               namespace    namespace  namespace
 ```
 - It can be referenced by ExternalSecret resources across multiple namespaces
+
+13. ### EXTERNALSECRETS
+- Now we know about secretStore and cluterSecretStore and where ESO should fetch secrets from 
+- The next question is **what secret should ESO fetch and what what k8s secret should it create**
+```
+SecretStore
+    │
+    │ Where do I connect?
+    ▼
+AWS Secrets Manager
+
+ExternalSecret
+    │
+    ├── What secret should I fetch?
+    │
+    └── What Kubernetes Secret should I create?
+```
