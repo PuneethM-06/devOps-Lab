@@ -97,3 +97,63 @@ Temporary AWS Credentials
       ▼
 AWS Secrets Manager
 ```
+9. ### WHY K8S SECRETS ALONE ARENT ENOUGH ### WHY K8S SECRETS ALONE AREN'T ENOUGH
+
+Kubernetes provides a `Secret` resource for storing sensitive information such as:
+
+- Database passwords
+- API keys
+- Tokens
+
+However, Kubernetes Secrets alone are not a complete secrets management solution.
+
+The main problem is the lack of a centralized external source of truth.
+
+Without an external secrets management system, secrets may need to be manually copied from a central secret store into Kubernetes:
+
+AWS Secrets Manager
+        │
+        │ Manual copy
+        ▼
+Kubernetes Secret
+        │
+        ├── Cluster A
+        ├── Cluster B
+        └── Cluster C
+
+This creates multiple copies of the same secret.
+
+If the secret is later rotated in AWS Secrets Manager, the Kubernetes Secret may still contain the old value:
+
+AWS Secret updated
+        │
+        ▼
+Kubernetes Secret still has old value
+
+Someone or something must update the Kubernetes Secret.
+
+Another important point is that Base64 encoding is not encryption. Kubernetes Secrets are encoded using Base64, which means they should not be treated as secure merely because their values are encoded.
+
+Kubernetes Secrets are useful for delivering secret data to applications inside the cluster, but they do not automatically provide:
+
+- A centralized external source of truth
+- Automatic synchronization with external secret stores
+- Secret lifecycle management
+- Automatic updates when an external secret is rotated
+
+This is where External Secrets Operator helps:
+
+AWS Secrets Manager
+        │
+        │ Source of truth
+        ▼
+External Secrets Operator
+        │
+        │ Synchronizes
+        ▼
+Kubernetes Secret
+        │
+        ▼
+Application / Pod
+```
+ 
