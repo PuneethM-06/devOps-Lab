@@ -33,3 +33,6 @@ AWS Secrets Manager
        │
        └── Stores and manages versions
 ```
+1. **Secrets manager** - Stores and manages the secrets 
+2. **AWS KMS** - handles the encryption at rest 
+3. **IAM** - decides who or what is allowed to retrieve it
