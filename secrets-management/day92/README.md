@@ -270,3 +270,14 @@ Kubernetes Secret
         ▼
 Application Pod
 ```
+| Component                            | Responsibility                                              |
+| ------------------------------------ | ----------------------------------------------------------- |
+| **AWS Secrets Manager**              | Stores the actual secret and acts as the source of truth    |
+| **IAM Role**                         | Defines what AWS actions are allowed                        |
+| **IRSA**                             | Connects the Kubernetes ServiceAccount to the IAM Role      |
+| **ServiceAccount**                   | Provides workload identity inside Kubernetes                |
+| **SecretStore / ClusterSecretStore** | Defines where ESO connects to fetch secrets                 |
+| **ExternalSecret**                   | Defines what to fetch and which Kubernetes Secret to create |
+| **External Secrets Operator**        | Fetches and synchronizes the secret                         |
+| **Kubernetes Secret**                | Stores the synchronized secret for Kubernetes workloads     |
+| **Pod/Application**                  | Consumes the Kubernetes Secret                              |
