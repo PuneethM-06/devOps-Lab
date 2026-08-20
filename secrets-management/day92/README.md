@@ -38,3 +38,12 @@ Valid for a limited time
         ▼
 Expire automatically 
 ```
+5. ### HOW WORKLOADS GET CREDETIALS WITHOUT HARDCODING THEM 
+- This is exactly where IAM roles come into picture 
+- Different AWS workloads can receive an IAM role
+```
+EC2 Instance ──────► IAM Role
+Lambda Function ───► Execution Role
+ECS Task ──────────► Task Role
+EKS Pod ───────────► IAM Role through IRSA
+```
