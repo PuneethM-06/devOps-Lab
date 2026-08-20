@@ -89,3 +89,22 @@ Vault checks policy
 Allowed? ── Yes → Access secret
          └─ No  → Access denied
 ```
+6. ### LEASES and TTL
+**TTL - Time to Live**
+```
+Vault generates database credentials
+
+Username: v-user-123
+Password: random-password
+
+TTL: 1 hour
+```
+- Those creds are invalid after 1 hour 
+
+**Lease**
+- When Vault generates a dynamic secret, it associates that secret with a lease.
+- Think of the lease as Vault's way of tracking:
+    - Which secret was generated
+    - How long it is valid
+    - When it should expire
+    - Whether it can be renewed or revoked
