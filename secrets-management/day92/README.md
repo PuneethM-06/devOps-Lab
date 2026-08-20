@@ -74,3 +74,7 @@ Permissions:
 s3:GetObject
 ```
 - So AssumeRole is essentially the process where a trusted entity takes on an IAM role and receives temporary credentials with that role's permissions.
+
+7. ### LEAST PRIVILGE AND BLAST RADIUS
+- If the application using BadRole gets compromised, the attacker inherits a massive set of permissions.**This is blast radius**
+- The more permissions an identity has, the more damage can potentially be done if that identity is compromised.
