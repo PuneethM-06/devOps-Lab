@@ -213,3 +213,26 @@ ExternalSecret
     │
     └── What Kubernetes Secret should I create?
 ```
+**SecretStore = where**
+**ExternalSecret = what to fetch + what to create**
+
+14. ### HOW EXTERNAL SECRETS OPERATOR AUTHENTICATES TO AWS
+```
+External Secrets Operator Pod
+        │
+        ▼
+Kubernetes ServiceAccount
+        │
+        ▼
+IAM Role via IRSA
+        │
+        ▼
+Temporary AWS Credentials
+        │
+        ▼
+AWS Secrets Manager
+```
+- We already learned the important pieces:
+        - ESO needs to access AWS Secrets Manager
+        - We don't want static AWS access keys inside Kubernetes
+        - IRSA lets a Kubernetes ServiceAccount use an IAM role
