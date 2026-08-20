@@ -236,3 +236,37 @@ AWS Secrets Manager
         - ESO needs to access AWS Secrets Manager
         - We don't want static AWS access keys inside Kubernetes
         - IRSA lets a Kubernetes ServiceAccount use an IAM role
+
+15. ### End to End flow 
+```
+AWS Secrets Manager
+        │
+        │ Secret is stored here
+        ▼
+External Secrets Operator
+        │
+        │ Needs AWS authentication
+        ▼
+Kubernetes ServiceAccount
+        │
+        │ Uses IRSA
+        ▼
+IAM Role
+        │
+        │ Provides temporary credentials
+        │
+        │ Allows secretsmanager:GetSecretValue
+        ▼
+External Secrets Operator fetches secret
+        │
+        ▼
+ExternalSecret
+        │
+        │ Defines which external secret to fetch
+        │ and which Kubernetes Secret to create
+        ▼
+Kubernetes Secret
+        │
+        ▼
+Application Pod
+```
