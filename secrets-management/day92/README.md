@@ -142,7 +142,7 @@ Kubernetes Secrets are useful for delivering secret data to applications inside 
 - Automatic updates when an external secret is rotated
 
 This is where External Secrets Operator helps:
-
+```
 AWS Secrets Manager
         │
         │ Source of truth
@@ -156,4 +156,7 @@ Kubernetes Secret
         ▼
 Application / Pod
 ```
- 
+10. ### WHAT IS EXTERAL SECRETS OPERATOR
+- **External Secrets Operator (ESO)** is a Kubernetes operator that connects Kubernetes to an **external secret management system.**
+
+11. ### HOW EXTERNAL SECRETS OPERATOR WORK 
