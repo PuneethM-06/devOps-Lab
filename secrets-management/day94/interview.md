@@ -46,3 +46,9 @@ Vault Policy
       ├── Can read database credentials ✅
       └── Cannot read production API keys ❌
 ```
+3. **Secret engines**
+- A secret engine is the vault component responsible for managing the secrets 
+- Examples:
+    - **KV secrets engine** → Stores static key-value secrets
+    - **Database secrets engine** → Generates dynamic database credentials
+    - **PKI secrets engine** → Generates certificates
