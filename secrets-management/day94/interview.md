@@ -63,3 +63,29 @@ Vault Policy
 
 3. **PKI Secrets Engine**
 - Used to generate and manage certificates.
+
+5. ### VAULT AUTHENTICATION AND AUTHORIZATION
+- It answers the question:
+    1. WHO are you
+    2. WHAT are you allowed to do 
+- Authentication Example
+```
+Application
+      ↓
+Authenticate with Vault
+      ↓
+Vault verifies identity
+      ↓
+Vault Token
+```
+- Authorization 
+```
+Application
+      ↓
+Authenticated successfully
+      ↓
+Vault checks policy
+      ↓
+Allowed? ── Yes → Access secret
+         └─ No  → Access denied
+```
