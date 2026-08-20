@@ -97,3 +97,14 @@ AWS Secrets Manager
         ▼
 Application retrieves secret at runtime
 ```
+9. ### SECRET ROTATION 
+- If that password is used for years, the risk increases. If it gets leaked and nobody knows, an attacker could potentially keep using it indefinitely.
+```
+Old password
+    │
+    ▼
+Rotation
+    │
+    ▼
+New password
+```
