@@ -47,3 +47,13 @@ Lambda Function ───► Execution Role
 ECS Task ──────────► Task Role
 EKS Pod ───────────► IAM Role through IRSA
 ```
+```
+Application / Workload
+        │
+        │ Has an IAM role associated with it
+        ▼
+AWS provides temporary credentials
+        │
+        ▼
+Application uses AWS APIs
+```
