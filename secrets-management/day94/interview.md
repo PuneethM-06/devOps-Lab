@@ -132,3 +132,19 @@ Vault revokes credentials
       ↓
 Credentials can no longer access the database
 ```
+8. ### DATABASE DYNAMIC SECRETS 
+```
+Application requests credentials
+        ↓
+Vault authenticates and checks policy
+        ↓
+Database Secrets Engine generates credentials
+        ↓
+Application uses credentials
+        ↓
+Lease manages lifetime
+        ↓
+TTL expires
+        ↓
+Vault revokes the credentials
+```
