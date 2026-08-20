@@ -54,3 +54,4 @@ IAM Authorization
              ▼
         Secret retrieved
 ```
+> Secrets Manager stores the secret, KMS protects it through encryption, and IAM controls access to it.
