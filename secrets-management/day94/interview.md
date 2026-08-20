@@ -52,3 +52,14 @@ Vault Policy
     - **KV secrets engine** → Stores static key-value secrets
     - **Database secrets engine** → Generates dynamic database credentials
     - **PKI secrets engine** → Generates certificates
+
+4. ### SECRET ENGINES
+- A **Secrets Engine** is the Vault component responsible for storing, generating, or managing secrets.
+1. **KV Secrets Engine**
+- Used to store static key-value secrets.
+
+2. **Database Secrets Engine**
+- Used to generate dynamic database credentials.
+
+3. **PKI Secrets Engine**
+- Used to generate and manage certificates.
