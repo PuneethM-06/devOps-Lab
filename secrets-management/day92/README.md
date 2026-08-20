@@ -57,3 +57,20 @@ AWS provides temporary credentials
         ▼
 Application uses AWS APIs
 ```
+6. ### ASSUME ROLE AND TRUST POLICIE
+- An identiy does not randomly start using an IAM role. It must be allowed by the **trust policy**
+```
+EC2 Instance
+      │
+      ▼
+Trust Policy says:
+"EC2 is allowed to assume this role"
+      │
+      ▼
+IAM Role
+      │
+      ▼
+Permissions:
+s3:GetObject
+```
+- So AssumeRole is essentially the process where a trusted entity takes on an IAM role and receives temporary credentials with that role's permissions.
