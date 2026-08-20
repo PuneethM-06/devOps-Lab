@@ -12,3 +12,23 @@
     - Long-lived shared credentials
     - Manual credential rotation
     - Uncontrolled access to sensitive data
+
+2. ### STATIC SECRETS vs DYNAMIC SECRETS
+- A **static secret** is a credential that already exists and remains the same until someone changes or rotates it.
+- A **dynamic secret** is generated when it is requested.
+```
+Application
+      │
+      │ Request credentials
+      ▼
+HashiCorp Vault
+      │
+      │ Generates new credentials
+      ▼
+Database
+      │
+      ▼
+username: v-app-123
+password: random-password
+TTL: 1 hour
+```
