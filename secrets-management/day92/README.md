@@ -78,3 +78,22 @@ s3:GetObject
 7. ### LEAST PRIVILGE AND BLAST RADIUS
 - If the application using BadRole gets compromised, the attacker inherits a massive set of permissions.**This is blast radius**
 - The more permissions an identity has, the more damage can potentially be done if that identity is compromised.
+
+8. ### IRSA: IAM ROLES AND KUBERNETES SERVICE ACCOUNT
+- **IRSA stands for IAM Roles for Service ACcount**s
+- **This is used to help pods running in k8s service access AWS services**
+```
+Kubernetes Pod
+      │
+      ▼
+Kubernetes ServiceAccount
+      │
+      ▼
+Associated IAM Role
+      │
+      ▼
+Temporary AWS Credentials
+      │
+      ▼
+AWS Secrets Manager
+```
