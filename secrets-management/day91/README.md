@@ -17,3 +17,19 @@
     2. Control access **using IAM**
     3. Encrypt secrets **using KMS**
     4. **Rotate** supported secrets automatically
+
+4. ### HOW DOES AWS SECRETS MANAGER STORE AND PROTECT SECRETS?
+**High Level**
+```
+You / Application
+       │
+       │ Store secret
+       ▼
+AWS Secrets Manager
+       │
+       ├── Encrypts the secret using AWS KMS
+       │
+       ├── Controls access using IAM
+       │
+       └── Stores and manages versions
+```
