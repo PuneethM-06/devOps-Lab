@@ -36,3 +36,21 @@ AWS Secrets Manager
 1. **Secrets manager** - Stores and manages the secrets 
 2. **AWS KMS** - handles the encryption at rest 
 3. **IAM** - decides who or what is allowed to retrieve it
+```
+Application
+     │
+     │ "I need this secret"
+     ▼
+AWS Secrets Manager
+     │
+     │ Is this identity allowed?
+     ▼
+IAM Authorization
+     │
+     ├── ❌ No → Access denied
+     │
+     └── ✅ Yes
+             │
+             ▼
+        Secret retrieved
+```
