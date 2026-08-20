@@ -82,3 +82,18 @@ Applications usally arent aware of version and instead they use **staging labels
 }
 ```
 - `"Action": "secretsmanager:GetSecretValue",` is important and this is the role 
+
+8. ### FETCHING SECRETS AT RUNTIME 
+```
+Application starts
+        │
+        │ Authenticates using its AWS identity
+        ▼
+AWS IAM checks permissions
+        │
+        ▼
+AWS Secrets Manager
+        │
+        ▼
+Application retrieves secret at runtime
+```
