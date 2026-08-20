@@ -179,3 +179,20 @@ Kubernetes Secret
         ▼
 Pod / Application
 ```
+12. ### secretStore vs ClusterSecretStore
+- **SecretStore** - It is namespace scoped
+- This means it can be used only within the namespace where it is cleared 
+
+- **ClusterSecretStore**
+- A ClusterSecretStore is cluster scoped 
+```
+                    ClusterSecretStore
+                            │
+                            ▼
+                    AWS Secrets Manager
+                     /        |        \
+                    ▼         ▼         ▼
+                 dev        staging    prod
+              namespace    namespace  namespace
+```
+- It can be referenced by ExternalSecret resources across multiple namespaces
