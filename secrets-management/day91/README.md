@@ -74,3 +74,11 @@ Applications usally arent aware of version and instead they use **staging labels
 - **KMS** - Provides protection to secrets at rest by encrypting them 
 
 7. ### IAM PERMISSIONS FOR ACCESSING SECRETS 
+```
+{
+  "Effect": "Allow",
+  "Action": "secretsmanager:GetSecretValue",
+  "Resource": "arn:aws:secretsmanager:region:account-id:secret:my-db-secret"
+}
+```
+- `"Action": "secretsmanager:GetSecretValue",` is important and this is the role 
