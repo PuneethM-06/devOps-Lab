@@ -23,3 +23,8 @@ IAM User
 - It ha 2 major parts:
     1. **Permisions policy** - What the role is allowed to do 
     2. **Trust Policy** - Who or what is allowed to assume the role 
+4. ### TEMPORARY CREDENTIALS 
+These typically includes:
+    1. Access Key ID
+    2. Secret Access Key
+    3. Session token 
