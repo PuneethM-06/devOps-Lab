@@ -69,3 +69,8 @@ Applications usally arent aware of version and instead they use **staging labels
 - The two important ones are:
     1. **AWSCURRENT** - Latest version 
     2. **AWSPREVIOUS** - The version before latest 
+
+6. ### ENCRYPTION AND ROLE OF AWS KMS
+- **KMS** - Provides protection to secrets at rest by encrypting them 
+
+7. ### IAM PERMISSIONS FOR ACCESSING SECRETS 
