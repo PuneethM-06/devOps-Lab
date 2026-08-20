@@ -108,3 +108,6 @@ Rotation
     ▼
 New password
 ```
+Rotation can be of two types
+    1. Manual - someone can change automatically 
+    2. Automatic - AWS Secrets Manager can rotate supported secrets using a configured rotation process.
