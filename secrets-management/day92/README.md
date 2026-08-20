@@ -160,3 +160,22 @@ Application / Pod
 - **External Secrets Operator (ESO)** is a Kubernetes operator that connects Kubernetes to an **external secret management system.**
 
 11. ### HOW EXTERNAL SECRETS OPERATOR WORK 
+```
+AWS Secrets Manager
+        │
+        │ 1. ESO authenticates to AWS
+        ▼
+External Secrets Operator
+        │
+        │ 2. Reads configuration
+        ▼
+ExternalSecret
+        │
+        │ 3. Fetches the requested secret
+        ▼
+Kubernetes Secret
+        │
+        │ 4. Application consumes it
+        ▼
+Pod / Application
+```
