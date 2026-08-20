@@ -47,11 +47,21 @@ AWS Secrets Manager
      ▼
 IAM Authorization
      │
-     ├── ❌ No → Access denied
+     ├──  No → Access denied
      │
-     └── ✅ Yes
+     └──  Yes
              │
              ▼
         Secret retrieved
 ```
 > Secrets Manager stores the secret, KMS protects it through encryption, and IAM controls access to it.
+
+5. ### SECRETS, VERSIONS AND STAGING LABELS
+- Everytime a password is rotated it creates a new version of it.
+```
+Today:
+DB_PASSWORD = password-v1
+
+Later, after rotation:
+DB_PASSWORD = password-v2
+```
