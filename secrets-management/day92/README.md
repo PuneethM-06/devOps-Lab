@@ -12,3 +12,9 @@ IAM User
    │
    └── Permissions
 ```
+- **IAM ROLE** - It is identity with set of permissions 
+- The entity could be:
+    1. EC2 instance 
+    2. Lambda
+    3. ECS task
+    4. K8s workload
