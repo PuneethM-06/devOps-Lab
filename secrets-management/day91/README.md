@@ -65,3 +65,7 @@ DB_PASSWORD = password-v1
 Later, after rotation:
 DB_PASSWORD = password-v2
 ```
+Applications usally arent aware of version and instead they use **staging labels by AWS**
+- The two important ones are:
+    1. **AWSCURRENT** - Latest version 
+    2. **AWSPREVIOUS** - The version before latest 
