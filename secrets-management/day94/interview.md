@@ -107,4 +107,28 @@ TTL: 1 hour
     - Which secret was generated
     - How long it is valid
     - When it should expire
-    - Whether it can be renewed or revoked
+    - Whether it can be renewed or 
+
+7. ### RENEWAL AND REVOCATION 
+- **A lease can be renewed to extend its lifetime, if renewal is allowed.**
+```
+Application
+      ↓
+Credentials have TTL: 1 hour
+      ↓
+Application still needs them
+      ↓
+Lease renewed
+      ↓
+TTL extended
+```
+- **Revocation** - Revocation means Vault invalidates the secret **before or when its lease ends.**
+```
+Vault-generated credentials
+      ↓
+TTL expires or lease is revoked
+      ↓
+Vault revokes credentials
+      ↓
+Credentials can no longer access the database
+```
