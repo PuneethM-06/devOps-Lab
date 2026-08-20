@@ -28,3 +28,13 @@ These typically includes:
     1. Access Key ID
     2. Secret Access Key
     3. Session token 
+```
+Static credentials:
+Valid until manually revoked/rotated 
+
+Temporary credentials:
+Valid for a limited time
+        │
+        ▼
+Expire automatically 
+```
