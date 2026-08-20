@@ -18,3 +18,8 @@ IAM User
     2. Lambda
     3. ECS task
     4. K8s workload
+
+3. ### WHAT AN IAM ROLE ACTUALLY IS
+- It ha 2 major parts:
+    1. **Permisions policy** - What the role is allowed to do 
+    2. **Trust Policy** - Who or what is allowed to assume the role 
