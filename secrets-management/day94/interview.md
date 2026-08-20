@@ -32,3 +32,17 @@ username: v-app-123
 password: random-password
 TTL: 1 hour
 ```
+3. ### VAULT CORE CONCEPTS
+1. **Authentication**
+- It authenticates the identity of the user or the application requesting the creds 
+2. **Policies**
+- It checks policies identified with that identity
+```
+Application A
+      │
+      ▼
+Vault Policy
+      │
+      ├── Can read database credentials ✅
+      └── Cannot read production API keys ❌
+```
