@@ -9,3 +9,11 @@
 3. No centralized access control 
 4. Poor auditing 
 5. Accidential exposure
+
+3. ### WHAT IS AWS SECRETS MANAGER
+- A centralized AWS managed service for storing, managinf and retrieving secrets securely 
+- AWS Secrets Manager can help you with:
+    1. Store secrets
+    2. Control access **using IAM**
+    3. Encrypt secrets **using KMS**
+    4. **Rotate** supported secrets automatically
