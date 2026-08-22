@@ -128,7 +128,7 @@ No copy-pasted theory. Everything here was typed and run by me.
 
 #### Observability
 - [x] Day 79 — Prometheus — instrument Flask app with metrics
-- [ x] Day 80 — PromQL — rate, histogram_quantile, alerts
+- [x] Day 80 — PromQL — rate, histogram_quantile, alerts
 - [x] Day 81 — Grafana — dashboards from Prometheus data
 - [x] Day 82 — OpenTelemetry — trace a request across services
 - [x] Day 83 — Grafana Loki — structured logs, LogQL queries
