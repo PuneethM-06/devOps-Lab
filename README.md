@@ -149,10 +149,10 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 90 — Image signing with cosign
 
 #### Secrets Management
-- [ ] Day 91 — AWS Secrets Manager — store, fetch at runtime
-- [ ] Day 92 — IAM roles everywhere — no static credentials
-- [ ] Day 93 — External Secrets Operator — sync AWS secrets to K8s
-- [ ] Day 94 — HashiCorp Vault — dynamic secrets demo
+- [x] Day 91 — AWS Secrets Manager — store, fetch at runtime
+- [x] Day 92 — IAM roles everywhere — no static credentials
+- [x] Day 93 — External Secrets Operator — sync AWS secrets to K8s
+- [x] Day 94 — HashiCorp Vault — dynamic secrets demo
 
 #### Policy as Code
 - [ ] Day 95 — OPA / Conftest — write Terraform policies
