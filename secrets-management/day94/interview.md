@@ -148,3 +148,38 @@ TTL expires
         ↓
 Vault revokes the credentials
 ```
+9. ### COMPLETE DYNAMIC SECRETS FL0W
+```
+Application
+      │
+      │ 1. Authenticate
+      ▼
+HashiCorp Vault
+      │
+      │ 2. Vault verifies identity
+      ▼
+Vault Policy
+      │
+      │ 3. Is access allowed?
+      ▼
+Database Secrets Engine
+      │
+      │ 4. Generate credentials
+      ▼
+Database
+      │
+      │ Creates a new database user
+      ▼
+Username + Password
+      │
+      │ 5. Returned to application
+      ▼
+Application uses credentials
+      │
+      ▼
+Lease + TTL
+      │
+      ├── Renew → Extend lifetime
+      │
+      └── Expire / Revoke → Credentials become invalid
+```
