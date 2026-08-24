@@ -12,3 +12,6 @@
 
 3. **Excellent Concurrency Support**
 - Can handle **100's of concurrent workloads**
+
+4. **Excellent networking support**
+- Has **strong netwoking primitives**
