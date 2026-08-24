@@ -174,3 +174,13 @@ and **Logical Operators**
 ||    OR
 !     NOT
 ```
+**if else**
+- Basic syntax is
+```
+if condition {
+
+}
+else {
+
+}
+```
