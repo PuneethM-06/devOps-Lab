@@ -270,3 +270,13 @@ func sayHello(name string) {
 - b int → parameter b is an integer
 - final int → function returns an integer
 - return a + b → sends the result back
+
+16. ### Multiple return values
+```
+func divide(a, b int) (int, error) {
+    ...
+}
+func main() {
+    result, err := divide(10, 20)
+}
+```
