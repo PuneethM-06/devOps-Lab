@@ -397,3 +397,11 @@ func (s Service) Print() {
 }
 ```
 - Print here is a method name 
+```
+service.Print()
+Calls func (s Service) Print() {
+
+    fmt.Println(s.Name)
+
+} And gives the name
+```
