@@ -24,3 +24,14 @@ name := "Puneeth"
 age := 25
 isEngineer =: true
 ```
+3. ### Declaring a variable with var
+- The **explicit syntax is**
+` var name string = "Puneeth"`
+```
+var       name       string       =       "Puneeth"
+│          │           │                    │
+│          │           │                    └── value
+│          │           └── data type
+│          └── variable name
+└── keyword saying "declare a variable"
+```
