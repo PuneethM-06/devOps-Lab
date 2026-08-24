@@ -35,3 +35,5 @@ var       name       string       =       "Puneeth"
 │          └── variable name
 └── keyword saying "declare a variable"
 ```
+**Note** - It is not mandate to infer the type in Go and it can do it for itself
+- Example: `var name = "Puneeth"`
