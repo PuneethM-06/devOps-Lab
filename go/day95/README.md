@@ -196,3 +196,19 @@ if condition1 {
 
 }
 ```
+12. ### for loops 
+- Unlike laguages such as python or Java, Go does not have `while` or `do-while`, Go basically uses `for loop` for all looping
+- Example:
+```
+for i := 0; i < 5; i++ {
+    fmt.Println(i)
+}
+```
+- Lets break that apart:
+```
+for i := 0; i < 5; i++ {
+    │    │          │
+    │    │          └── increment i
+    │    └── continue while this is true
+    └── create i
+```
