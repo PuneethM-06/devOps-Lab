@@ -16,3 +16,15 @@ func main(){
 		fmt.Println(err)
 	}
 }
+
+type Service struct {
+	Name string
+	Port int
+	Status string
+}
+
+service := Service{
+	Name: "Puneeth",
+	Port: 8080,
+	Status: "running"
+}
