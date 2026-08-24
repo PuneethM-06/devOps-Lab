@@ -11,7 +11,7 @@ func startService()error {
 	return nil
 }
 func main(){
-	err = startService()
+	err := startService()
 	if err != nil {
 		fmt.Println(err)
 	}
