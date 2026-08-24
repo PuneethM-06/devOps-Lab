@@ -1,7 +1,6 @@
-service := Service{
-    Name:   "api",
-    Port:   8080,
-    Status: "running",
+func (s *Service)Stop(){
+	s.Status = "stopped"
 }
-servicePtr := &service
-servicePtr.Status = "stopped"
+
+service.Stop()
+fmt.Println(service.Status)
