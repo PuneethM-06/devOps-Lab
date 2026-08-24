@@ -1,15 +1,12 @@
- func divide(a int, b int)(int, error){
-	if b == 0{
-		return 0, errors.New("cannot divide by zero")
-	} else{
-		return a/b, nil 
-	}
- }
- func main(){
-	div, err := divide(10, 2)
+func getPort()(int, error) {
+	return 8080, nil
+}
+
+func startService()error {
+	result, err := getPort()
 	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println(div)
+		return err
 	}
- }
+	fmt.Println(result)
+	return nil
+
