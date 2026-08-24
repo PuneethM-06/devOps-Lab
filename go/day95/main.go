@@ -1,7 +1,6 @@
-func add(a int,b int)int{
-	return a+b
+func calculate (a int, b int)(int, int){
+	return (a + b, a - b)
 }
-func main() {
-	result := add(10,20)
-	fmt.Println(result)
+func main(){
+	result := calculate(10,20)
 }
