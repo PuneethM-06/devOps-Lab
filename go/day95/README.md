@@ -380,3 +380,20 @@ service := Service{
     fmt.Println(service.Name)
 }
 ```
+
+22. ### struct methods
+- Go allows you to attach a **function-like behaviour dirctly to a type**
+- That called as a method
+- Example:
+```
+Instead if:
+printService(service)
+```
+
+- A method looks like:
+```
+func (s Service) Print() {
+    fmt.Println(s.Name)
+}
+```
+- Print here is a method name 
