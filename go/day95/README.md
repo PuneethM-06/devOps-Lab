@@ -62,3 +62,21 @@ string → ""
 int    → 0
 bool   → false
 ```
+
+6. ### Variables can change 
+```
+package main
+
+import "fmt"
+
+func main() {
+    service := "nginx"
+
+    fmt.Println(service)
+
+    service = "api"
+
+    fmt.Println(service)
+}
+```
+- service gets value ngnix and later it is changed to api 
