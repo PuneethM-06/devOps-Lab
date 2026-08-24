@@ -80,3 +80,14 @@ func main() {
 }
 ```
 - service gets value ngnix and later it is changed to api 
+
+7. ### Data Types
+| Type      | Stores          | Example   |
+| --------- | --------------- | --------- |
+| `string`  | Text            | `"hello"` |
+| `int`     | Whole numbers   | `8080`    |
+| `float64` | Decimal numbers | `99.5`    |
+| `bool`    | True/false      | `true`    |
+
+8. ### Type conversion
+- There will be use cases for type conversion 
