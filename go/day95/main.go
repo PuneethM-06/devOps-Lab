@@ -1,6 +1,6 @@
-func main (){
-	sayHello("Puneeth")
+func add(a int,b int)int{
+	return a+b
 }
-func sayHello(name string) {
-    fmt.Println("Hello from Go", name)
+func main() {
+	add(10,20)
 }

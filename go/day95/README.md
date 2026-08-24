@@ -258,6 +258,15 @@ func main (){
 	sayHello("Puneeth")
 }
 func sayHello(name string) {
-    fmt.Println("Hello from Go", name)
+    fmt.Println("Hello ", name)
 }
 ```
+15. ### return values - functions 
+``` function add(a int, b int)int{
+    return a+b
+}
+```
+- a int → parameter a is an integer
+- b int → parameter b is an integer
+- final int → function returns an integer
+- return a + b → sends the result back
