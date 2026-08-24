@@ -363,3 +363,11 @@ service := Service{
 }
 ```
 - **defining service**
+
+19. ### Accessing fields 
+- we can access using `.` operator
+- Example:
+`fmt.Println(service.Name)`
+
+20. ### Changing fields
+- Example: `Service.Status = "stopped"`
