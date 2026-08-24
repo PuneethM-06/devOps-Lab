@@ -279,4 +279,14 @@ func divide(a, b int) (int, error) {
 func main() {
     result, err := divide(10, 20)
 }
+
+```
+- Example:
+```
+func calculate (a int, b int)(int, int){
+	return (a + b, a - b)
+}
+func main(){
+	sum, diff := calculate(10,20)
+}
 ```
