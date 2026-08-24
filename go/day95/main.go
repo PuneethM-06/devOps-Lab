@@ -1,8 +1,10 @@
 func main (){
-	replicas := 3
-	if replicas > 2 {
-		fmt.Println("Multiple replicas running")
+	cpuUsage := 75.0
+	if cpuUsage > 80 {
+		fmt.Println("High CPU Usage")
+	} else if cpuUsage >50 {
+		fmt.Println("Moderate CPU usage")
 	}else{
-		fmt.Println("Single replica running")
+		fmt.Println("low CPU usage")
 	}
 }
