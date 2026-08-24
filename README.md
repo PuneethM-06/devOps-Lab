@@ -154,16 +154,16 @@ No copy-pasted theory. Everything here was typed and run by me.
 - [x] Day 93 — External Secrets Operator — sync AWS secrets to K8s
 - [x] Day 94 — HashiCorp Vault — dynamic secrets demo
 
-#### Policy as Code
-- [ ] Day 95 — OPA / Conftest — write Terraform policies
-- [ ] Day 96 — Enforce in pipeline — block non-compliant infra
-
 #### GoLang (Cloud Platform Kit Focus)
-- [ ] Day 97 — Variables, data types, loops, functions, structs, interfaces, error handling
-- [ ] Day 98 — File handling, JSON, environment variables, packages, modules (`go mod`)
-- [ ] Day 99 — HTTP client/server (`net/http`), REST APIs, routing, middleware
-- [ ] Day 100 — AWS SDK for Go (v2), IAM authentication, S3, STS, CloudWatch basics
-- [ ] Day 101 — CLI tools (Cobra), logging, configuration management, project structure
+- [ ] Day 95 — Variables, data types, loops, functions, structs, interfaces, error handling
+- [ ] Day 96 — File handling, JSON, environment variables, packages, modules (`go mod`)
+- [ ] Day 97 — HTTP client/server (`net/http`), REST APIs, routing, middleware
+- [ ] Day 98 — AWS SDK for Go (v2), IAM authentication, S3, STS, CloudWatch basics
+- [ ] Day 99 — CLI tools (Cobra), logging, configuration management, project structure
+
+#### Policy as Code - Optional 
+- [ ] Day 100 — OPA / Conftest — write Terraform policies
+- [ ] Day 101 — Enforce in pipeline — block non-compliant infra
 
 #### Project 1 — cloud-platform-kit
 - [ ] Week 1 — Scaffold 3 microservices, Dockerfile each
