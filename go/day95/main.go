@@ -1,8 +1,8 @@
- func divide(a int, b int)(int, erro){
+ func divide(a int, b int)(int, error){
 	if b == 0{
-		return errors.New("cannot divide by zero")
+		return 0, errors.New("cannot divide by zero")
 	} else{
-		return a/b
+		return a/b, nil 
 	}
  }
  func main(){
