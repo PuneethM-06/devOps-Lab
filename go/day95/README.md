@@ -446,4 +446,22 @@ func (s Service) Print() {
       ↑
  pointer to original
  ```
- 
+
+25. ### Interfaces
+- Interface describes behavior, not concrete types
+- An interface defines what something can DO, without defining How it does 
+```
+type Runner interface {
+    Run()
+}
+```
+```
+STRUCT                    INTERFACE
+
+"What are you?"           "What can you do?"
+
+Service                   Runner
+├── Name                  └── Run()
+├── Port
+└── Status
+```
