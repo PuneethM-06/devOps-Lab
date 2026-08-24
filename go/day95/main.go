@@ -7,4 +7,9 @@
  }
  func main(){
 	div, err := divide(10, 2)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(div)
+	}
  }
