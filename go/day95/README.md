@@ -91,3 +91,13 @@ func main() {
 
 8. ### Type conversion
 - There will be use cases for type conversion 
+- Example:
+```
+port := 8080
+portString := port
+```
+**Numeric conversion**
+```
+x := 10
+y := float64(x)
+```
