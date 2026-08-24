@@ -101,3 +101,10 @@ portString := port
 x := 10
 y := float64(x)
 ```
+
+9. ### Arrays
+- An array has a **fixed size**
+- Example:
+```
+ports := [3]int{8081,8082,8083}
+```
