@@ -303,4 +303,21 @@ func main(){
 	div, err := divide(10, 2)
  }
  ```
- 
+
+ 17. ### Error propogation 
+ - Pass the error upward until the layer that actually knows what to do with it can handle it.
+ ```
+ LOWER LEVEL
+   ↓
+DISCOVER error
+   ↓
+RETURN error
+   ↓
+HIGHER LEVEL
+   ↓
+RETURN error
+   ↓
+APPROPRIATE LEVEL
+   ↓
+HANDLE error
+```
