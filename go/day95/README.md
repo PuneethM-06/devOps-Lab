@@ -143,3 +143,19 @@ servicePort := map[string]int{
     "worker": 8081
 }
 ```
+
+11. ### Control Flow
+**if**
+- Basic syntax is:
+```
+if condition {
+
+}
+```
+- Example:
+```
+production := true
+if production {
+    fmt.Println("Prod is true")
+}
+```
