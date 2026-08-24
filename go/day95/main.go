@@ -1,5 +1,5 @@
 func getPort()(int, error) {
-	return 8080, nil
+	return 0, errors.New("port not configured")
 }
 
 func startService()error {
@@ -9,4 +9,10 @@ func startService()error {
 	}
 	fmt.Println(result)
 	return nil
-
+}
+func main(){
+	err = startService()
+	if err != nil {
+		fmt.Println(err)
+	}
+}
