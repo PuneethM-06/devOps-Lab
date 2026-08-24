@@ -179,8 +179,8 @@ and **Logical Operators**
 ```
 if condition {
 
-}
-else {
+}else {
 
 }
 ```
+**In Go, else must be on the same line as the closing } of the if block.**
