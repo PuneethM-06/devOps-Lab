@@ -1,14 +1,14 @@
-func main (){
-	cpuUsage := 75.0
-	if cpuUsage > 80 {
-		fmt.Println("High CPU Usage")
-	} else if cpuUsage >50 {
-		fmt.Println("Moderate CPU usage")
-	}else{
-		fmt.Println("low CPU usage")
-	}
+func main() {
+	status := "running"
 
-	for i :=1; i <=5; i++ {
-		fmt.Println(i)
-	}
+	switch status {
+	case "running":
+		fmt.Println("Service is running")
+	case "stopped":
+		fmt.Println("Service is stopped")
+	case "failed":
+		fmt.Println("service has failed")	
+	default:
+		fmt.Println("unknown status")
+	}	
 }

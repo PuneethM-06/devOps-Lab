@@ -221,3 +221,18 @@ services := []string{"api", "worker", "frontend"}
 for index, service := range services {
     fmt.Println(index, service)
 }
+```
+13. ### Switch 
+- A switch is useful when we are checking one value against multiple possible values 
+```
+switch status {
+case "running":
+    fmt.Println("Service is running")
+case "stopped":
+    fmt.Println("Service is stopped")
+case "failed":
+    fmt.Println("Service has failed")
+default:
+    fmt.Println("Unknown status")
+}
+```
