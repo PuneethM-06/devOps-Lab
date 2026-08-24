@@ -122,3 +122,16 @@ services := []string{
     "worker",
     "frontend"
 }
+```
+**slices ensure we dont need to know the capacity in-hand before**
+
+10. ### MAPS
+- Maps are used based on `key-value` pair 
+- Example:
+```
+serviceStatus := map[string]string {
+    "api": "running",
+    "worker": "failed"
+}
+```
+- `serviceStatus[api] gives you running`
