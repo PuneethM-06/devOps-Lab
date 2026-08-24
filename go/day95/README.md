@@ -135,3 +135,11 @@ serviceStatus := map[string]string {
 }
 ```
 - `serviceStatus[api] gives you running`
+- In devOps, maps are extrememly useful
+- Example:
+```
+servicePort := map[string]int{
+    "api": 8080,
+    "worker": 8081
+}
+```
