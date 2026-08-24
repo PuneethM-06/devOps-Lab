@@ -212,3 +212,12 @@ for i := 0; i < 5; i++ {
     │    └── continue while this is true
     └── create i
 ```
+
+13. ### looping over collections
+- Example:
+```
+services := []string{"api", "worker", "frontend"}
+
+for index, service := range services {
+    fmt.Println(index, service)
+}
