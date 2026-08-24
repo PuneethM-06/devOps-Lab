@@ -108,3 +108,17 @@ y := float64(x)
 ```
 ports := [3]int{8081,8082,8083}
 ```
+
+**But arrays aren't something that is used most commonly, instead we make uses of slices**
+- Example:
+```
+ports := []int{8080, 8081, 8082}
+```
+Unlike Arrays here we have `[]` instead of `[3]`
+- Example:
+```
+services := []string{
+    "api",
+    "worker",
+    "frontend"
+}
