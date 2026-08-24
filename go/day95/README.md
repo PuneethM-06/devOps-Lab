@@ -371,3 +371,12 @@ service := Service{
 
 20. ### Changing fields
 - Example: `Service.Status = "stopped"`
+
+21. ### structs + functions 
+ We can pass a struct into a function just like we passed integers and strings 
+ - Example
+ ```
+ func printService(service Service) {
+    fmt.Println(service.Name)
+}
+```

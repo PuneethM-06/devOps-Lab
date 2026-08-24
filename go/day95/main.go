@@ -9,6 +9,9 @@ func startService()error {
 	}
 	fmt.Println(result)
 	return nil
+func printService(service Service) {
+	fmt.Println(service.Name)
+}
 }
 func main(){
 	err := startService()
@@ -28,3 +31,4 @@ service := Service{
 	Port: 8080,
 	Status: "running"
 }
+
