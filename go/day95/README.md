@@ -342,3 +342,24 @@ func main(){
 	}
 }
 ```
+18. ### structs
+- Lets you create your own data type made up of mutiple fields 
+- Example
+```
+type Service struct {
+    Name       string
+    Port       int
+    Production bool
+    Status     string
+}
+```
+In the above example, we are **creating struct**
+```
+service := Service{
+    Name:       "api",
+    Port:       8080,
+    Production: true,
+    Status:     "running",
+}
+```
+- **defining service**
