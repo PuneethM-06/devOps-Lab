@@ -159,3 +159,18 @@ if production {
     fmt.Println("Prod is true")
 }
 ```
+**Operators used**
+```
+==    equal
+!=    not equal
+>     greater than
+<     less than
+>=    greater than or equal
+<=    less than or equal
+```
+and **Logical Operators**
+```
+&&    AND
+||    OR
+!     NOT
+```
