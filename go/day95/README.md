@@ -421,4 +421,19 @@ service := Service{
 - you now have two service values
 - So anotherService.Status = "stopped"
 - this does not make the changes on the original serive
- 
+
+- **The address opreator is &**
+- Example: ` p := &service`
+
+**Dereferncing**
+- It means, give me value of the pointer it points to
+- *p means give me the actual value that p points to
+
+24. ### Why pointer matters with methods 
+- Example:
+```
+func (s Service) Print() {
+    fmt.Println(s.Name)
+}
+```
+- If you see `(s Service)` it creates a **copy** to the original service and if we need to make modifications to the actual service then we make use of `(s *Service)`
