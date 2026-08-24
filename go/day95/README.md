@@ -437,3 +437,13 @@ func (s Service) Print() {
 }
 ```
 - If you see `(s Service)` it creates a **copy** to the original service and if we need to make modifications to the actual service then we make use of `(s *Service)`
+```
+(s Service)
+     ↑
+   copy
+
+(s *Service)
+      ↑
+ pointer to original
+ ```
+ 
