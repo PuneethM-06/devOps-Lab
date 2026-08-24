@@ -42,3 +42,17 @@ var       name       string       =       "Puneeth"
 - This is called as the shorthand and instead of writing `var name string = "Puneeth"`, we can do `name := "Puneeth"`
 - It is a shortend way of saying **Create this variable and infer its type from the value**
 
+**Note** - Shorthand is used only for variables
+
+4. ### Constants
+- A constant is a value that should not change 
+- Example: `const maxRetries = 5` or `const defaultPort = 8080` 
+
+5. ### Go Important: Zero Values
+- If a variable is declared without giving its value, Go gives it a **value Zero**
+- Example:
+```
+var name string 
+var age int 
+var active bool
+```
