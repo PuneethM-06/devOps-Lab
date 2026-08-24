@@ -236,3 +236,19 @@ default:
     fmt.Println("Unknown status")
 }
 ```
+14. ### functions
+- A function is a named block of code that performs a specific task 
+- Basic syntax
+```
+func sayHello() {
+    fmt.Println("Hello")
+}
+```
+```
+func       sayHello       ()       {
+│              │           │        │
+│              │           │        └── function body
+│              │           └── parameters
+│              └── function name
+└── keyword meaning "function"
+```
