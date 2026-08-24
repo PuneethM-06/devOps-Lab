@@ -37,3 +37,8 @@ var       name       string       =       "Puneeth"
 ```
 **Note** - It is not mandate to infer the type in Go and it can do it for itself
 - Example: `var name = "Puneeth"`
+
+3. ### The shorthand `:=`
+- This is called as the shorthand and instead of writing `var name string = "Puneeth"`, we can do `name := "Puneeth"`
+- It is a shortend way of saying **Create this variable and infer its type from the value**
+
