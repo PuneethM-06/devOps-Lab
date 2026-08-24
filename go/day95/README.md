@@ -184,3 +184,15 @@ if condition {
 }
 ```
 **In Go, else must be on the same line as the closing } of the if block.**
+
+**else if**
+- basic syntax
+```
+if condition1 {
+
+}else if condition 2{
+
+}else{
+
+}
+```
