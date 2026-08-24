@@ -252,3 +252,12 @@ func       sayHello       ()       {
 │              └── function name
 └── keyword meaning "function"
 ```
+15. ### Passing functional parameters
+```
+func main (){
+	sayHello("Puneeth")
+}
+func sayHello(name string) {
+    fmt.Println("Hello from Go", name)
+}
+```
