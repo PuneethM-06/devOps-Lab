@@ -1,7 +1,10 @@
-func calculate (a int, b int)(int, int){
-	return a + b, a - b
-}
-func main(){
-	sum, diff := calculate(10,20)
-	fmt.Println("sum:", sum, "Diff:", diff)
-}
+ func divide(a int, b int)(int, erro){
+	if b == 0{
+		return errors.New("cannot divide by zero")
+	} else{
+		return a/b
+	}
+ }
+ func main(){
+	div, err := divide(10, 2)
+ }
