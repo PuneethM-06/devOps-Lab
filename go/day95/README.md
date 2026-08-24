@@ -405,3 +405,20 @@ Calls func (s Service) Print() {
 
 } And gives the name
 ```
+23. ### what is a pointer
+- Pointer **stores address of another value**
+**Normal value assignment creates a copy**
+- Suppose
+```
+service := Service{
+    Name:   "api",
+    Port:   8080,
+    Status: "running",
+}
+```
+- then we do
+`anotherService := service`
+- you now have two service values
+- So anotherService.Status = "stopped"
+- this does not make the changes on the original serive
+ 
