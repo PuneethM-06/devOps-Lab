@@ -56,3 +56,9 @@ var name string
 var age int 
 var active bool
 ```
+Go automatically gives these values
+```
+string → ""
+int    → 0
+bool   → false
+```
