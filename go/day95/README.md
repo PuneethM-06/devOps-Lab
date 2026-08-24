@@ -447,21 +447,94 @@ func (s Service) Print() {
  pointer to original
  ```
 
-25. ### Interfaces
-- Interface describes behavior, not concrete types
-- An interface defines what something can DO, without defining How it does 
-```
+# Day 95 — Interfaces
+
+## What is an Interface?
+
+An interface defines a **behavior contract**.
+
+It answers:
+
+> What can this type do?
+
+```go
 type Runner interface {
     Run()
 }
 ```
-```
-STRUCT                    INTERFACE
 
-"What are you?"           "What can you do?"
+Anything that has a `Run()` method satisfies the `Runner` interface.
 
-Service                   Runner
-├── Name                  └── Run()
-├── Port
-└── Status
+## Struct vs Interface
+
+**Struct → describes data**
+
+```go
+type Service struct {
+    Name   string
+    Port   int
+    Status string
+}
 ```
+
+**Interface → describes behavior**
+
+```go
+type Runner interface {
+    Run()
+}
+```
+
+### Mental Model
+
+```text
+Struct     → What data does it have?
+Interface  → What can it do?
+Method     → How does it do it?
+```
+
+## Implicit Implementation
+
+Go does **not** use an `implements` keyword.
+
+```go
+type Runner interface {
+    Run()
+}
+
+type Server struct{}
+
+func (s Server) Run() {
+    fmt.Println("Server running")
+}
+```
+
+`Server` automatically satisfies `Runner` because it has the required `Run()` method.
+
+## Why Interfaces Matter
+
+Interfaces let code depend on **behavior instead of a specific implementation**.
+
+For example:
+
+```text
+              Storage
+                 │
+               Save()
+              /     \
+             /       \
+        S3Storage  LocalStorage
+```
+
+Both can be used as `Storage` because both provide `Save()`.
+
+Useful for:
+
+- Decoupling components
+- Testing
+- Swapping implementations
+- AWS/service abstractions
+
+## Key Takeaway
+
+> **An interface is a contract describing behavior. A type satisfies the interface automatically when it has all the required methods.**
