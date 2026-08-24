@@ -15,3 +15,12 @@
 
 4. **Excellent networking support**
 - Has **strong netwoking primitives**
+
+2. ### Variables and constants
+- A variable is simply a named place to store progammatic values
+- Example:
+```
+name := "Puneeth"
+age := 25
+isEngineer =: true
+```
