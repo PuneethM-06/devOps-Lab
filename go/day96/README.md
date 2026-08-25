@@ -121,3 +121,12 @@ type ScanRequest struct {
 }
 ```
 - This works for both, Marshall and Unmarshall
+
+6. ### Environment Variables 
+- Environment variables are used instead of using hardcoded values 
+- Example:
+```
+PORT=8080
+ENVIRONMENT=production
+AWS_REGION=ap-south-1
+```
