@@ -1,15 +1,7 @@
-data := []byte(`{
-  "repository": "github.com/mycompany/payment-service",
-  "branch": "main"
-}`)
-type ScanRequest struct {
-	Repository string 
-	Branch string
+
+APP_ENV=production
+environment := os.Getenv("APP_ENV")
+
+if environment == "" {
+	fmt.Println("APP_ENV does not exist")
 }
-var scanRequest ScanRequest 
-err := json.Unmarshal(data, &scanRequest)
-if err != nil {
-	fmt.Println(err)
-	return
-}
-fmt.Println(scanRequest.Repository, scanRequest.Branch)

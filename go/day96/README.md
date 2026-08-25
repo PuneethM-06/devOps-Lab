@@ -133,4 +133,8 @@ AWS_REGION=ap-south-1
 **Reading an Environment variable***
 `os.Getenv("PORT")`
 - `os.Getenv` returns a String always 
-
+- Example:
+```
+APP_ENV=production
+environment := os.Getenv("APP_ENV")
+```
