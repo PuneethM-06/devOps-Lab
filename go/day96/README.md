@@ -166,3 +166,6 @@ func GetPort() int {
 ```
 - GetPort() -> capital G ->. It means that it is accessible outside config 
 - getPort() -> small g -> It means that it is only usable inside config 
+
+9. ### go.mod 
+- go.mod identifies your Go module/project and declares its dependencies and Go version.
