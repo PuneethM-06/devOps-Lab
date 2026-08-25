@@ -107,3 +107,17 @@ type ScanRequest struct {
   "branch": "main"
 }
 ```
+- **So we can explicitly tell Go which JSON names belongs to each field**
+```
+type ScanRequest struct {
+    Repository string `json:"repository"`
+    Branch     string `json:"branch"`
+}
+```
+```
+type ScanRequest struct {
+    Repository string `json:"repository"`
+    Branch     string `json:"branch"`
+}
+```
+- This works for both, Marshall and Unmarshall
