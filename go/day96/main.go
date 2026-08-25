@@ -1,7 +1,8 @@
-data, err := os.ReadFile("message.txt")
+data := "Cloud Platform kit"
 
-if err != nil {
-	fmt.Println("Failed to read message.txt")
-	return 
+err := os.WriteFile("output.txt", data, 0644)
+if err != nil{
+	fmt.Println("Failed to write file")
+	return
 }
-fmt.Println(string(data)
+fmt.Println("file written successfully ")
