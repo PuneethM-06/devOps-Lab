@@ -149,3 +149,20 @@ if environment == "" {
 	fmt.Println("APP_ENV does not exist")
 }
 ```
+
+7. ### Packages 
+- Every go file belongs to a package.
+- Example: `package main`
+- **Package is a way to group related Go code**
+
+8. ### Using code from another package 
+- Example
+```
+package config
+
+func GetPort() int {
+    return 8080
+}
+```
+- GetPort() -> capital G ->. It means that it is accessible outside config 
+- getPort() -> small g -> It means that it is only usable inside config 
