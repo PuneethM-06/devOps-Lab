@@ -138,3 +138,14 @@ AWS_REGION=ap-south-1
 APP_ENV=production
 environment := os.Getenv("APP_ENV")
 ```
+- If APP_ENV does not exist then it returns an **empty string**
+- So we can write 
+```
+
+APP_ENV=production
+environment := os.Getenv("APP_ENV")
+
+if environment == "" {
+	fmt.Println("APP_ENV does not exist")
+}
+```
