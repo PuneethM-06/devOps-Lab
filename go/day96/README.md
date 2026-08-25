@@ -30,3 +30,9 @@ fmt.Println("file written successfully ")
 JSON → Go struct
 Go struct → JSON
 ```
+- These have names,
+1. **JSON -> Go is called Unmarshal**
+2. **Go -> JSON is called Marshal**
+
+4. ### Marshall - Go -> 
+- Go's standard library has the `encoding/json` package 

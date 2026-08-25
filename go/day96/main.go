@@ -1,8 +1,15 @@
-data := "Cloud Platform kit"
-
-err := os.WriteFile("output.txt", data, 0644)
-if err != nil{
-	fmt.Println("Failed to write file")
-	return
+type Service struct {
+	Name string 
+	Port int 
+	Status string 
 }
-fmt.Println("file written successfully ")
+
+servce := Service {
+	Name: "api",
+	Port: "8080",
+	Status: "running"
+}
+data, err := json.Marshal(service)
+if err != nil {
+	fmt.Println(err)
+}
