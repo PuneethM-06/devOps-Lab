@@ -56,3 +56,13 @@ if err != nil {
 }
 fmt.Println(string(data))
 ```
+
+5. ### UnMarshall
+- Here we will be turning JSON to Struct 
+```
+JSON
+ ↓
+json.Unmarshal()
+ ↓
+Go struct
+```
