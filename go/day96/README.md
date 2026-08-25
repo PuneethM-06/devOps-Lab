@@ -14,7 +14,7 @@ data         → content to write
 ```
 - Example:
 ```
-data := "Cloud Platform kit"
+data := []byte("Cloud Platform kit")
 
 err := os.WriteFile("output.txt", data, 0644)
 if err != nil{
@@ -22,4 +22,11 @@ if err != nil{
 	return
 }
 fmt.Println("file written successfully ")
+```
+
+3. ### JSON 
+- When an JSON is receievd there are 2 ways of converting 
+```
+JSON → Go struct
+Go struct → JSON
 ```
