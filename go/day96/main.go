@@ -4,12 +4,14 @@ type Service struct {
 	Status string 
 }
 
-servce := Service {
+service := Service {
 	Name: "api",
-	Port: "8080",
+	Port: 8080,
 	Status: "running"
 }
 data, err := json.Marshal(service)
 if err != nil {
 	fmt.Println(err)
+	return
 }
+fmt.Println(string(data))
