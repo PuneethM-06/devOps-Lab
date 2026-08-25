@@ -1,17 +1,11 @@
-type Service struct {
-	Name string 
-	Port int 
-	Status string 
+type ScanRequest struct {
+	Repository string 
+	Branch string
 }
-
-service := Service {
-	Name: "api",
-	Port: 8080,
-	Status: "running"
-}
-data, err := json.Marshal(service)
+var scanRequest ScanRequest 
+res, err := json.Unmarshal(data, &scanRequest)
 if err != nil {
 	fmt.Println(err)
 	return
 }
-fmt.Println(string(data))
+fmt.Println(ScanRequest.Repository, scanRequest.Branch)

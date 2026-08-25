@@ -66,3 +66,4 @@ json.Unmarshal()
  ↓
 Go struct
 ```
+- err := json.unmarshall(data, &service)
