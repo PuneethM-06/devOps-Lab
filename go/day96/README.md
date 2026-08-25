@@ -85,3 +85,25 @@ if err != nil {
 }
 fmt.Println(scanRequest.Repository, scanRequest.Branch)
 ```
+5. ### Json Tags 
+- Currently we have
+```
+type ScanRequest struct {
+    Repository string
+    Branch     string
+}
+```
+- Go will normally map JSON like:
+```
+{
+  "Repository": "...",
+  "Branch": "..."
+}
+```
+- but API conventionally use lowercase names 
+```
+{
+  "repository": "...",
+  "branch": "main"
+}
+```
