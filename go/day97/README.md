@@ -44,3 +44,7 @@ FPrintln -> Writes to w -> HTTP Client
 - So far we have created the Server and we have created the handler
 - But the server does not know about the handler yet, the way of doing it is `http.handleFunc("/", handler)`
 - It means to say, any **request coming to "/" run handler**
+
+**Note**:
+1. HandleFunc       → register the route
+2. ListenAndServe   → start the server
