@@ -1,5 +1,9 @@
 
 func handler(w http.ResponseWriter, r *http.Request){
+	if r.Method != "GET"{
+		fmt.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	fmt.FPrintln(w, "Hello from Server")
 }
 
@@ -11,3 +15,4 @@ func healthHandler(w http.ResponseWriter, r *http.Request){
 	fmt.FPrintln(w, "OK")
 	fmt.Println(r.Method)
 }
+
