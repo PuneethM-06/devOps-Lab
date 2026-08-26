@@ -256,6 +256,7 @@ data := []byte(`{"repository":"payment-service"}`)
 resp, err := http.Post(
     "http://localhost:8080/scan",
     "application/json",
+	bytes.NewBuffer(data)
     body,
 )
 ```
@@ -263,3 +264,11 @@ resp, err := http.Post(
     1. Where we are sending it
     2. What kind of data are we sending
     3. Body  - The actual data 
+-  bytes.NewBuffer(data) because it does not need raw []byte data and expects an io.Reader
+
+### 8. Receiving JSON 
+- Server recieves the JSON sent by HTTP request using `r.Body`
+- 
+
+### 9. Middleware
+- Suppose every API request needs to be logged, without middleware we'd have to put this inside every handler 
