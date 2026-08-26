@@ -18,20 +18,31 @@ func handler(w http.ResponseWriter, r *http.Request){
 	}
 
 	var scanRequest ScanRequest
+	var scanResponse ScanResponse
+
 	err = json.Unmarshal(data, &scanRequest)
 	if err != nil {
 		http.Error(w, "Invalid JSON", http.StatusBadRequest)
 		return
 	}
 	fmt.Fprintln(w, scanRequest.Repository)
+	scanResponse.Repository = scanRequest.Repository
+	scanResponse.Status = "Scan started"
+
+	scan, err := json.Marshall(ScanResponse)
+	if err != nil {
+		http.Error(w, "Failed", http.StatusInternalServerError)
+		return 
+	}
+
 }
 type ScanRequest struct {
 	Repository string `json:"repository"`
 }
 
-type scanResponse struct {
-	Repository string 
-	status string 
+type ScanResponse struct {
+	Repository string `json:"repository"`
+	Status string `json:"status"`
 }
 
 func main(){
