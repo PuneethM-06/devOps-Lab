@@ -38,4 +38,5 @@ func handler(w http.ResponseWriter, r *http.Request){
 ```
 r → incoming request
 w → outgoing response
+FPrintln -> Writes to w -> HTTP Client
 ```
