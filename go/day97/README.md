@@ -85,3 +85,9 @@ func handler(w http.ResponseWriter, r *http.Request){
 405 → HTTP method not allowed
 500 → server encountered an error
 ```
+- Example:
+```
+if resp.StatusCode != {
+    //code
+}
+```

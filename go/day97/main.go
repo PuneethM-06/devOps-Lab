@@ -23,3 +23,7 @@ if err != nil {
 
 res, err := io.ReadAll(resp.Body)
 fmt.Println(string(res))
+
+if resp.StatusCode != 200 {
+
+}
