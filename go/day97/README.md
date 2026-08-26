@@ -248,3 +248,17 @@ defer resp.Body.Close()
 ```
 
 This allows the HTTP client to release or reuse the underlying connection properly.
+
+### 7. POST
+- Example:
+```
+resp, err := http.Post(
+    "http://localhost:8080/scan",
+    "application/json",
+    body,
+)
+```
+- There are three things:
+    1. Where we are sending it
+    2. What kind of data are we sending
+    3. Body  - The actual data 
