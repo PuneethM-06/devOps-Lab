@@ -282,3 +282,14 @@ Handler
    ↓
 Response
 ```
+- Example code:
+```
+func loggingMiddleware(next http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+
+        fmt.Println(r.Method, r.URL)
+
+        next.ServeHTTP(w, r)
+    })
+}
+```
