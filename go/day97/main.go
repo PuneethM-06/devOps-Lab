@@ -3,11 +3,15 @@ import (
 	"fmt"
 	"net/http"
 )
-http.HandleFunc("/scan", handler)
-http.ListenAndServe(":8080", nil )
+func handler(w http.ResponseWriter, r *http.Request){
+	fmt.FPrintln(w, "Server")
+}
 
-func main() {
-	func handler(w http.ResponseWriter, r *httpRequest) {
-		fmt.FPrintln("Server")
-	}
+type ScanRequest struct {
+	Repository string `json:"repository"`
+}
+
+func main(){
+	http.HandleFunc("/scan", handler)
+	http.ListenAndServe(":8080", nil)
 }
