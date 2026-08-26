@@ -7,6 +7,10 @@ import (
 	"net/http"
 )
 func handler(w http.ResponseWriter, r *http.Request){
+	if r.Method != "POST"{
+		http.Error(w, "Method Not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 	data, err := io.ReadAll(r.Body)
 	if err != nil {
 		http.Error(w, "Bad request", http.StatusBadRequest)
