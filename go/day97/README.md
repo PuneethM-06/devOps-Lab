@@ -64,6 +64,7 @@ will all reach healthHandler
 if r.Methid != "GET" {
     //reject the request
 }
+```
 - Example:
 ```
 func handler(w http.ResponseWriter, r *http.Request){
@@ -73,4 +74,14 @@ func handler(w http.ResponseWriter, r *http.Request){
     }
     fmt.FPrintln(w, "Hello from Server")
 }
+```
+5. ### HTTP Status Code
+```
+200 → request succeeded
+400 → client sent a bad request
+401 → not authenticated
+403 → authenticated but not allowed
+404 → resource/route not found
+405 → HTTP method not allowed
+500 → server encountered an error
 ```
