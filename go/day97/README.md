@@ -27,3 +27,15 @@ func handler(w http.ResponseWriter, r *http.Request){
 
 }
 ```
+- It has two parameters:
+    1. **r *http.Request**
+        - This is responsible for **representing the incoming http request**
+        - The incoming request contains a lot of things such as **Headers, Query Parameters, Request Body, Method etc.**
+        - so we can do things like **r.Method, r.URL**
+    2. **w http.ResponseWriter**
+        - used to send the **response back to the client**
+        
+```
+r → incoming request
+w → outgoing response
+```
