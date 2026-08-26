@@ -5,3 +5,19 @@
 - The basic Go Package is `net/http`
 - The basic Go command to start a server is **http.ListenAndServe(":8080",nil)**
 - **Listen for incoming HTTP traffic onm port 8080**
+
+2. ### Handler
+- Handler is a code that runs when an HTTP request comes in
+```
+Client
+  │
+  │ GET /health
+  ▼
+Go HTTP Server
+  │
+  ▼
+Handler
+  │
+  ▼
+Response
+```
