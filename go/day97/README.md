@@ -252,6 +252,7 @@ This allows the HTTP client to release or reuse the underlying connection proper
 ### 7. POST
 - Example:
 ```
+data := []byte(`{"repository":"payment-service"}`)
 resp, err := http.Post(
     "http://localhost:8080/scan",
     "application/json",
