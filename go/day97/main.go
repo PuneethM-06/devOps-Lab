@@ -16,3 +16,10 @@ func healthHandler(w http.ResponseWriter, r *http.Request){
 	fmt.Println(r.Method)
 }
 
+if err != nil {
+	fmt.Println(err)
+	return
+}
+
+res, err := io.ReadAll(resp.Body)
+fmt.Println(string(res))
