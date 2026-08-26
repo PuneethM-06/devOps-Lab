@@ -48,3 +48,19 @@ FPrintln -> Writes to w -> HTTP Client
 **Note**:
 1. HandleFunc       → register the route
 2. ListenAndServe   → start the server
+
+ 4. ### Restricting HTTP Methods
+ - Right now
+ ```
+ GET /health
+POST /health
+DELETE /health
+PUT /health
+```
+will all reach healthHandler
+- But suppose /health should only accept GET
+- We can do
+```
+if r.Methid != "GET" {
+    //reject the request
+}
