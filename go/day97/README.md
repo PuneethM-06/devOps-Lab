@@ -272,3 +272,13 @@ resp, err := http.Post(
 
 ### 9. Middleware
 - Suppose every API request needs to be logged, without middleware we'd have to put this inside every handler 
+- That is repetitive 
+```
+Request
+   ↓
+Middleware
+   ↓
+Handler
+   ↓
+Response
+```
