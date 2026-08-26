@@ -64,3 +64,13 @@ will all reach healthHandler
 if r.Methid != "GET" {
     //reject the request
 }
+- Example:
+```
+func handler(w http.ResponseWriter, r *http.Request){
+    if r.Method != "GET"{
+        http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+        return
+    }
+    fmt.FPrintln(w, "Hello from Server")
+}
+```
