@@ -29,6 +29,11 @@ type ScanRequest struct {
 	Repository string `json:"repository"`
 }
 
+type scanResponse struct {
+	Repository string 
+	status string 
+}
+
 func main(){
 	http.HandleFunc("/scan", handler)
 	http.ListenAndServe(":8080", nil)
