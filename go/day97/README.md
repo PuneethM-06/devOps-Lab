@@ -293,3 +293,8 @@ func loggingMiddleware(next http.Handler) http.Handler {
     })
 }
 ```
+1. **next** - next http.handler - Specifies the handler that should run after the middleware
+2. **2. next.ServeHTTP(w, r)** - Logging is done send the request to the next handler 
+
+### 10. How do we attach Middleware to our server 
+- `http.ListenAndServe(":8080", loggingMiddleware(healthHander))`
