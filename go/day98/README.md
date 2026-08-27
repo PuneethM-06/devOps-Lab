@@ -44,3 +44,5 @@ Temporary Credentials
 3. ### How AWS Authentication Works in Go
 -  This is where **Credential provider chain** comes in
 - **Application asks SDK for credentials, the SDK determines where to obtain them**
+
+4. ### IAM Roles and Credentials Provider chain 
