@@ -22,3 +22,21 @@ Load AWS Configuration
       └── Other settings
 
 ```
+2. **Region**
+- AWS resources are associated with the region so we mention them here 
+
+3. **Credentials**
+- AWS credentials to authenticate the application 
+- so in production we ideally want 
+```
+Go Application
+      │
+      ▼
+AWS SDK
+      │
+      ▼
+IAM Role
+      │
+      ▼
+Temporary Credentials
+```
